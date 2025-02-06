@@ -1,0 +1,162 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@stylistic",
+    "eslint-plugin-import"
+  ],
+  "parserOptions": {
+    "projectService": true,
+    "tsconfigRootDir": "."
+  },
+  "ignorePatterns": ["./scripts/*"],
+  "rules": {
+    "no-console": "warn",
+    "@stylistic/comma-dangle": ["error", "always-multiline"],
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true
+      }
+    ],
+    "@typescript-eslint/no-floating-promises": "warn",
+    "@typescript-eslint/consistent-type-definitions": "error",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-confusing-non-null-assertion": "error",
+    "@typescript-eslint/no-duplicate-type-constituents": "error",
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-for-in-array": "error",
+    "@typescript-eslint/consistent-indexed-object-style": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase", "PascalCase"],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase", "PascalCase"],
+        "modifiers": ["exported"]
+      },
+      {
+        "selector": "variable",
+        "format": ["UPPER_CASE"],
+        "modifiers": ["global", "exported"],
+        "types": ["array", "boolean", "number", "string"]
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase"],
+        "modifiers": ["unused"],
+        "leadingUnderscore": "require"
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "class",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": ["enum", "enumMember"],
+        "format": ["UPPER_CASE"]
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": ["method", "property"],
+        "format": ["camelCase", "PascalCase", "snake_case"]
+      },
+      {
+        "selector": ["memberLike", "classProperty"],
+        "modifiers": ["private"],
+        "format": ["camelCase"],
+        "leadingUnderscore": "require"
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "import",
+        "format": ["camelCase", "PascalCase", "UPPER_CASE"]
+      }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        },
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["sibling", "parent"],
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/server",
+            "position": "before",
+            "group": "internal"
+          },
+          {
+            "pattern": "@/common",
+            "position": "before",
+            "group": "internal"
+          },
+          {
+            "pattern": "@/client/app",
+            "position": "before",
+            "group": "internal"
+          },
+          {
+            "pattern": "@/client/widgets",
+            "position": "before",
+            "group": "internal"
+          },
+          {
+            "pattern": "@/client/features",
+            "position": "before",
+            "group": "internal"
+          },
+          {
+            "pattern": "@/client/entities",
+            "position": "before",
+            "group": "internal"
+          },
+          {
+            "pattern": "@/client/shared",
+            "position": "before",
+            "group": "internal"
+          }
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/internal-regex": "^@"
+  }
+}
