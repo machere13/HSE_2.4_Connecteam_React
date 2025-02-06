@@ -1,0 +1,101 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "declaration-empty-line-before": null,
+    "selector-class-pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$",
+    "selector-id-pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$",
+    "media-feature-range-notation": "prefix",
+    "property-no-vendor-prefix": [
+      true,
+      { "ignoreProperties": ["user-select"] }
+    ],
+    "order/properties-order": [
+      [
+        {
+          "properties": [
+            "position",
+            "inset",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "z-index"
+          ],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": [
+            "display",
+            "flex-direction",
+            "flex-wrap",
+            "justify-content",
+            "align-items",
+            "align-content",
+            "gap"
+          ],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": ["width", "min-width", "max-width"],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": ["height", "min-height", "max-height"],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": ["box-sizing"],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": [
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left"
+          ],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": [
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left"
+          ],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": [
+            "font-family",
+            "font-size",
+            "font-weight",
+            "line-height",
+            "color",
+            "text-align"
+          ],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": [
+            "background",
+            "background-color",
+            "background-image",
+            "border-radius",
+            "box-shadow",
+            "opacity"
+          ],
+          "emptyLineBefore": "always"
+        },
+        {
+          "properties": ["transition", "transform", "animation"],
+          "emptyLineBefore": "always"
+        }
+      ],
+      { "unspecified": "bottom" }
+    ]
+  }
+}
