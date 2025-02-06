@@ -1,15 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
-import React from 'react';
 
 import {
-  MAIN_PAGE,
+  PREVIEW_PAGE,
 } from './paths';
 
-import MainPage from '../pages/MainPage/MainPage';
+import PreviewPage from '../components/pages/PreviewPage/PreviewPage';
 
 export const router = createBrowserRouter([
   {
-    path: MAIN_PAGE,
-    element: <MainPage />,
+    path: PREVIEW_PAGE,
+    element: <PreviewPage />,
   }
 ]);

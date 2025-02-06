@@ -1,1 +1,1 @@
-export const MAIN_PAGE = '/'
+export const PREVIEW_PAGE = '/preview'
