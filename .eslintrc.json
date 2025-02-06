@@ -9,16 +9,21 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@stylistic",
-    "eslint-plugin-import"
+    "import"
   ],
   "parserOptions": {
-    "projectService": true,
+    "project": "./tsconfig.json",
     "tsconfigRootDir": "."
   },
-  "ignorePatterns": ["./scripts/*"],
+  "ignorePatterns": [
+    "./scripts/*"
+  ],
   "rules": {
     "no-console": "warn",
-    "@stylistic/comma-dangle": ["error", "always-multiline"],
+    "@stylistic/comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
     "no-unused-expressions": "off",
     "@typescript-eslint/no-unused-expressions": [
       "error",
@@ -40,63 +45,120 @@
       "error",
       {
         "selector": "default",
-        "format": ["camelCase"]
+        "format": [
+          "camelCase"
+        ]
       },
       {
         "selector": "variable",
-        "format": ["camelCase", "PascalCase"],
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ],
         "leadingUnderscore": "allow"
       },
       {
         "selector": "variable",
-        "format": ["camelCase", "PascalCase"],
-        "modifiers": ["exported"]
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ],
+        "modifiers": [
+          "exported"
+        ]
       },
       {
         "selector": "variable",
-        "format": ["UPPER_CASE"],
-        "modifiers": ["global", "exported"],
-        "types": ["array", "boolean", "number", "string"]
+        "format": [
+          "UPPER_CASE"
+        ],
+        "modifiers": [
+          "global",
+          "exported"
+        ],
+        "types": [
+          "array",
+          "boolean",
+          "number",
+          "string"
+        ]
       },
       {
         "selector": "parameter",
-        "format": ["camelCase"],
-        "modifiers": ["unused"],
+        "format": [
+          "camelCase"
+        ],
+        "modifiers": [
+          "unused"
+        ],
         "leadingUnderscore": "require"
       },
       {
         "selector": "typeLike",
-        "format": ["PascalCase"]
+        "format": [
+          "PascalCase"
+        ]
       },
       {
         "selector": "class",
-        "format": ["PascalCase"]
+        "format": [
+          "PascalCase"
+        ]
       },
       {
-        "selector": ["enum", "enumMember"],
-        "format": ["UPPER_CASE"]
+        "selector": [
+          "enum",
+          "enumMember"
+        ],
+        "format": [
+          "UPPER_CASE"
+        ]
       },
       {
         "selector": "function",
-        "format": ["camelCase", "PascalCase"]
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ]
       },
       {
-        "selector": ["method", "property"],
-        "format": ["camelCase", "PascalCase", "snake_case"]
+        "selector": [
+          "method",
+          "property"
+        ],
+        "format": [
+          "camelCase",
+          "PascalCase",
+          "snake_case"
+        ]
       },
       {
-        "selector": ["memberLike", "classProperty"],
-        "modifiers": ["private"],
-        "format": ["camelCase"],
+        "selector": [
+          "memberLike",
+          "classProperty"
+        ],
+        "modifiers": [
+          "private"
+        ],
+        "format": [
+          "camelCase"
+        ],
         "leadingUnderscore": "require"
       },
       {
         "selector": "parameter",
-        "format": ["camelCase", "PascalCase"]
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ]
       },
       {
         "selector": "import",
-        "format": ["camelCase", "PascalCase", "UPPER_CASE"]
+        "format": [
+          "camelCase",
+          "PascalCase",
+          "UPPER_CASE"
+        ]
       }
     ],
     "import/order": [
@@ -110,7 +172,10 @@
           "builtin",
           "external",
           "internal",
-          ["sibling", "parent"],
+          [
+            "sibling",
+            "parent"
+          ],
           "type"
         ],
         "pathGroups": [
