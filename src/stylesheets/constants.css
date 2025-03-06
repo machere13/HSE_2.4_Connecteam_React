@@ -33,4 +33,14 @@
     --spacing-30: 30px;
     --spacing-45: 45px;
     --spacing-60: 60px;
+
+    /* Border radius */
+    --border-radius-10: 10px;
+    --border-radius-12: 12px;
+    --border-radius-13: 13px;
+    --border-radius-15: 15px;
+    --border-radius-19: 19px;
+    --border-radius-20: 20px;
+    --border-radius-24: 24px;
+    --border-radius-35: 35px;
 }
