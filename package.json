@@ -10,18 +10,12 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -40,27 +34,21 @@
     "nth-check": "^2.0.1"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "3.2.4",
-    "@storybook/addon-essentials": "8.5.3",
-    "@storybook/addon-interactions": "8.5.3",
-    "@storybook/addon-onboarding": "8.5.3",
-    "@storybook/blocks": "8.5.3",
-    "@storybook/preset-create-react-app": "8.5.3",
-    "@storybook/react": "8.5.3",
-    "@storybook/react-webpack5": "8.5.3",
-    "@storybook/test": "8.5.3",
-    "@stylistic/eslint-plugin": "^3.0.1",
+    "@chromatic-com/storybook": "^3.2.5",
+    "@craco/craco": "^7.1.0",
+    "@storybook/addon-essentials": "^8.6.4",
+    "@storybook/addon-interactions": "^8.6.4",
+    "@storybook/addon-onboarding": "^8.6.4",
+    "@storybook/blocks": "^8.6.4",
+    "@storybook/preset-create-react-app": "^8.6.4",
+    "@storybook/react": "^8.6.4",
+    "@storybook/react-webpack5": "^8.6.4",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "@typescript-eslint/eslint-plugin": "^8.23.0",
-    "@typescript-eslint/parser": "^8.23.0",
-    "eslint": "^9.19.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-storybook": "^0.11.2",
+    "classnames": "^2.5.1",
     "prop-types": "15.8.1",
-    "storybook": "8.5.3",
+    "storybook": "^8.6.4",
+    "storybook-css-modules": "^1.0.8",
     "stylelint": "^16.15.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-order": "^6.0.4",
