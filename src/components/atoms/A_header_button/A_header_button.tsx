@@ -10,7 +10,7 @@ export interface A_header_button_Props {
 
 export default function A_header_button({ label, to }: A_header_button_Props) {
   return (
-    <Link to={to} className={cn('text_button', styles.wrapper)}>
+    <Link to={to} className={cn('text_description', styles.wrapper)}>
       {label}
     </Link>
   );
