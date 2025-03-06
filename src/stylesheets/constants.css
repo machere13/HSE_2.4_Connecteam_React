@@ -20,5 +20,17 @@
         rgb(255 255 255 / 80%) 64%,
         rgb(255 255 255 / 91%) 79%,
         rgb(255 255 255 / 100%) 100%
-    )
+    );
+
+    /* Spacing */
+    --spacing-5: 5px;
+    --spacing-9: 9px;
+    --spacing-10: 10px;
+    --spacing-15: 15px;
+    --spacing-20: 20px;
+    --spacing-22: 22px;
+    --spacing-25: 25px;
+    --spacing-30: 30px;
+    --spacing-45: 45px;
+    --spacing-60: 60px;
 }
