@@ -38,10 +38,10 @@
     font-family: Hauora;
     font-weight: 600;
     src: 
-        url('../assets/fonts/Hauora-Semibold.woff2') format('woff2'),
-        url('../assets/fonts/Hauora-Semibold.woff') format('woff'),
-        url('../assets/fonts/Hauora-Semibold.otf') format('opentype'),
-        url('../assets/fonts/Hauora-Semibold.ttf') format('truetype');
+        url('../assets/fonts/Hauora-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/Hauora-SemiBold.woff') format('woff'),
+        url('../assets/fonts/Hauora-SemiBold.otf') format('opentype'),
+        url('../assets/fonts/Hauora-SemiBold.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
