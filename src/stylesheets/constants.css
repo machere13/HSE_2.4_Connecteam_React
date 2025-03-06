@@ -43,4 +43,56 @@
     --border-radius-20: 20px;
     --border-radius-24: 24px;
     --border-radius-35: 35px;
+
+    /* Fonts */
+    --font-head-0: 500 94px/.93 'Inter Tight', sans-serif;
+    --font-head-1: 500 45px/1.2 'Inter Tight', sans-serif;
+    --font-head-2: 500 35px/1.2 'Inter Tight', sans-serif;
+    --font-head-cards: 600 25px/1.2 'Hauora', sans-serif;
+    --font-head-article: 500 25px/1.2 'Inter Tight', sans-serif;
+    --font-cursor-text: 400 20px/1.2 'Inter', sans-serif;
+    --font-body-text: 500 18px/1.2 'Hauora', sans-serif;
+    --font-body-article-text: 400 18px/1.2 'Hauora', sans-serif;
+    --font-button-text: 500 15px/1.2 'Hauora', sans-serif;
+    --font-description-text: 400 14px/1.2 'Hauora', sans-serif;
+}
+
+.text_head_0{
+    font: var(--font-head-0);
+}
+
+.text_head_1{
+    font: var(--font-head-1);
+}
+
+.text_head_2{
+    font: var(--font-head-2);
+}
+
+.text_head_cards{
+    font: var(--font-head-cards);
+}
+
+.text_head_article{
+    font: var(--font-head-article);
+}
+
+.text_cursor{
+    font: var(--font-cursor-text);
+}
+
+.text_body{
+    font: var(--font-body-text);
+}
+
+.text_body_article{
+    font: var(--font-body-article-text);
+}
+
+.text_button{
+    font: var(--font-button-text);
+}
+
+.text_description{
+    font: var(--font-description-text);
 }

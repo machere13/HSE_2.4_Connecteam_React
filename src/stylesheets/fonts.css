@@ -1,71 +1,71 @@
 @font-face {
     font-family: Hauora;
-    src: 
-        url('../assets/fonts/Hauora-Light.woff2') format(woff2)
-        url('../assets/fonts/Hauora-Light.woff') format(woff)
-        url('../assets/fonts/Hauora-Light.otf') format(opentype)
-        url('../assets/fonts/Hauora-Light.ttf') format(truetype);
     font-weight: 300;
+    src: 
+        url('../assets/fonts/Hauora-Light.woff2') format('woff2'),
+        url('../assets/fonts/Hauora-Light.woff') format('woff'),
+        url('../assets/fonts/Hauora-Light.otf') format('opentype'),
+        url('../assets/fonts/Hauora-Light.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: Hauora;
-    src: 
-        url('../assets/fonts/Hauora-Regular.woff2') format(woff2)
-        url('../assets/fonts/Hauora-Regular.woff') format(woff)
-        url('../assets/fonts/Hauora-Regular.otf') format(opentype)
-        url('../assets/fonts/Hauora-Regular.ttf') format(truetype);
     font-weight: 400;
+    src: 
+        url('../assets/fonts/Hauora-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Hauora-Regular.woff') format('woff'),
+        url('../assets/fonts/Hauora-Regular.otf') format('opentype'),
+        url('../assets/fonts/Hauora-Regular.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: Hauora;
-    src: 
-        url('../assets/fonts/Hauora-Medium.woff2') format(woff2)
-        url('../assets/fonts/Hauora-Medium.woff') format(woff)
-        url('../assets/fonts/Hauora-Medium.otf') format(opentype)
-        url('../assets/fonts/Hauora-Medium.ttf') format(truetype);
     font-weight: 500;
+    src: 
+        url('../assets/fonts/Hauora-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Hauora-Medium.woff') format('woff'),
+        url('../assets/fonts/Hauora-Medium.otf') format('opentype'),
+        url('../assets/fonts/Hauora-Medium.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: Hauora;
-    src: 
-        url('../assets/fonts/Hauora-Semibold.woff2') format(woff2)
-        url('../assets/fonts/Hauora-Semibold.woff') format(woff)
-        url('../assets/fonts/Hauora-Semibold.otf') format(opentype)
-        url('../assets/fonts/Hauora-Semibold.ttf') format(truetype);
     font-weight: 600;
+    src: 
+        url('../assets/fonts/Hauora-Semibold.woff2') format('woff2'),
+        url('../assets/fonts/Hauora-Semibold.woff') format('woff'),
+        url('../assets/fonts/Hauora-Semibold.otf') format('opentype'),
+        url('../assets/fonts/Hauora-Semibold.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: Inter;
-    src: 
-        url('../assets/fonts/Inter-Regular.woff2') format(woff2)
-        url('../assets/fonts/Inter-Regular.woff') format(woff)
-        url('../assets/fonts/Inter-Regular.otf') format(opentype)
-        url('../assets/fonts/Inter-Regular.ttf') format(truetype);
     font-weight: 400;
+    src: 
+        url('../assets/fonts/Inter-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Inter-Regular.woff') format('woff'),
+        url('../assets/fonts/Inter-Regular.otf') format('opentype'),
+        url('../assets/fonts/Inter-Regular.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Inter Tight';
-    src: 
-        url('../assets/fonts/InterTight-Medium.woff2') format(woff2)
-        url('../assets/fonts/InterTight-Medium.woff') format(woff)
-        url('../assets/fonts/InterTight-Medium.otf') format(opentype)
-        url('../assets/fonts/InterTight-Medium.ttf') format(truetype);
     font-weight: 500;
+    src: 
+        url('../assets/fonts/InterTight-Medium.woff2') format('woff2'),
+        url('../assets/fonts/InterTight-Medium.woff') format('woff'),
+        url('../assets/fonts/InterTight-Medium.otf') format('opentype'),
+        url('../assets/fonts/InterTight-Medium.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
