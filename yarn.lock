@@ -1919,7 +1919,7 @@
   resolved "https://registry.npmjs.org/@storybook/global/-/global-5.0.0.tgz"
   integrity sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==
 
-"@storybook/icons@^1.2.12":
+"@storybook/icons@^1.2.10", "@storybook/icons@^1.2.12":
   version "1.3.2"
   resolved "https://registry.npmjs.org/@storybook/icons/-/icons-1.3.2.tgz"
   integrity sha512-t3xcbCKkPvqyef8urBM0j/nP6sKtnlRkVgC+8JTbTAZQjaTmOjes3byEgzs89p4B/K6cJsg9wLW2k3SknLtYJw==
@@ -9703,12 +9703,19 @@ statuses@2.0.1:
   resolved "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
+storybook-addon-pseudo-states@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/storybook-addon-pseudo-states/-/storybook-addon-pseudo-states-4.0.2.tgz"
+  integrity sha512-dTHkeq4VzqIrJfR8k2BHkX190cQ+aYBZUktWNZpDw3N5tJ8IwaRLzf6ZjHDHY6xwDshaNiTO5UkziRE0Ytukkw==
+  dependencies:
+    "@storybook/icons" "^1.2.10"
+
 storybook-css-modules@^1.0.8:
   version "1.0.8"
   resolved "https://registry.npmjs.org/storybook-css-modules/-/storybook-css-modules-1.0.8.tgz"
   integrity sha512-anITwllH6nLw0quPElVBLRrE8QDbcRv0Dgl8sKLOc4uiqw+g1GE2l21Stjx3Wyv2O6ZKJScbyOpOuuz3SmeaOQ==
 
-"storybook@^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0", storybook@^8.6.4:
+storybook@^8.2.0, "storybook@^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0", storybook@^8.6.4:
   version "8.6.4"
   resolved "https://registry.npmjs.org/storybook/-/storybook-8.6.4.tgz"
   integrity sha512-XXh1Acvf1r3BQX0BDLQw6yhZ7yUGvYxIcKOBuMdetnX7iXtczipJTfw0uyFwk0ltkKEE9PpJvivYmARF3u64VQ==
