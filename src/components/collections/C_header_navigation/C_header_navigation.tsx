@@ -1,5 +1,5 @@
-import A_header_button from "@/components/atoms/A_header_button/A_header_button"
-import { PREVIEW_PAGE, ARTICLES_PAGE, CASES_PAGE, INTERACTIVES_PAGE } from "@/router/paths"
+import A_header_button from "../../../components/atoms/A_header_button/A_header_button"
+import { PREVIEW_PAGE, ARTICLES_PAGE, CASES_PAGE, INTERACTIVES_PAGE } from "../../../router/paths"
 
 import styles from './C_header_navigation.module.css'
 

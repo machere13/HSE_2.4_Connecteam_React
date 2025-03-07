@@ -18,4 +18,5 @@
     color: var(--color-blue);
 
     background: var(--color-white);
+    border-color: var(--color-white)
 }
