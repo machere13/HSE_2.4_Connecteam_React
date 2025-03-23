@@ -2,7 +2,7 @@ import React from 'react'
 import C_header_navigation from '@/components/collections/C_header_navigation/C_header_navigation'
 import Q_Icon from '@/components/quarks/Q_Icon'
 import A_photo from '@/components/atoms/A_photo/A_photo'
-import Photo from '../../../assets/images/author_1.jpg'
+import Photo from '../../../assets/images/Author01.jpg'
 
 export default function PreviewPage() {
   return (
