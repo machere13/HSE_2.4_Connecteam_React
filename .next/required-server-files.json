@@ -197,6 +197,7 @@
       "inlineCss": false,
       "useCache": false,
       "optimizePackageImports": [
+        "@heroicons/react",
         "lucide-react",
         "date-fns",
         "lodash-es",

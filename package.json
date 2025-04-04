@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/helpers": "^7.27.0",
     "@babel/runtime": "^7.27.0",
+    "@netlify/plugin-nextjs": "^5.10.3",
     "@svgr/plugin-svgo": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "cra-template": "1.2.0",
@@ -23,7 +24,8 @@
     "test": "next test",
     "eject": "next eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "export": "next export"    
   },
   "browserslist": {
     "production": [
