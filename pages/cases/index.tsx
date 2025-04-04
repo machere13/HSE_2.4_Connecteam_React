@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ROUTES } from '@/routes'
 
 const cases = [
   { id: 1, slug: 'yandex-rebranding', title: 'Ребрендинг «Яндекс Музыки»'},
@@ -13,7 +14,7 @@ export default function CasesList() {
       <div>
         {cases.map(caseItem => (
           <div key={caseItem.id}>
-            <Link href={`/cases/${caseItem.slug}`}>
+            <Link href={ROUTES.CASES.bySlug(caseItem.slug)}>
               <h2>{caseItem.title}</h2>
             </Link>
           </div>
