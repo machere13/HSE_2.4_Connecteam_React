@@ -1,31 +1,37 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "ES2022"],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "ES2022",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["next"],
+    "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "strictFunctionTypes": true,
-    "alwaysStrict": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "strictNullChecks": true,
-    "useUnknownInCatchVariables": true,
     "strictBindCallApply": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "useUnknownInCatchVariables": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
