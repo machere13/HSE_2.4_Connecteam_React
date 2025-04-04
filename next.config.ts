@@ -3,11 +3,10 @@ import path from 'path'
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: process.env.NETLIFY ? 'export' : undefined,
   distDir: '.next',
   images: {
     domains: [],
-    unoptimized: process.env.NETLIFY ? true : false
+    unoptimized: false
   },
 
   webpack: (config) => {
