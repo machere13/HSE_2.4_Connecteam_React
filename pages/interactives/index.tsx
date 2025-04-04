@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import { ROUTES } from '@/routes'
 
 const tests = [
   { 
     id: 4, 
-    slug: 'tests/team', 
+    slug: 'team', 
     title: 'Тест: Командная работа', 
   }
 ]
@@ -16,7 +17,7 @@ export default function InteractivesList() {
       <div>
         {tests.map(test => (
           <div key={test.id}>
-            <Link href={`/interactives/${test.slug}`}
+            <Link href={ROUTES.INTERACTIVES.TESTS.bySlug(test.slug)}
             >
               {test.title}
             </Link>
@@ -24,9 +25,9 @@ export default function InteractivesList() {
         ))}
       </div>
       <div>
-        <Link href="/interactives/itbunker">IT-bunker</Link>
-        <Link href="/interactives/itmafia">IT-mafia</Link>
-        <Link href="/interactives/generator">Generator</Link>
+        <Link href={ROUTES.INTERACTIVES.IT_BUNKER}>IT-bunker</Link>
+        <Link href={ROUTES.INTERACTIVES.IT_MAFIA}>IT-mafia</Link>
+        <Link href={ROUTES.INTERACTIVES.GENERATOR}>Generator</Link>
       </div>
     </div>
   )

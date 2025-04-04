@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ROUTES } from '@/routes'
 
 const articles = [
   { id: 1, slug: 'collegue-friendship', title: 'Дружба с коллегой' },
@@ -12,7 +13,7 @@ export default function ArticlesList() {
       <ul>
         {articles.map(article => (
           <li key={article.id}>
-            <Link href={`/articles/${article.slug}`}>
+            <Link href={ROUTES.CASES.bySlug(article.slug)}>
               {article.title}
             </Link>
           </li>

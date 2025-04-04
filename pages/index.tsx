@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import C_header_navigation from '@/components/collections/C_header_navigation/C_header_navigation'
 
 export default function Home() {
   return (
@@ -6,17 +7,7 @@ export default function Home() {
       <h1>Главная страница</h1>
       
       <nav>
-        <ul>
-          <li>
-            <Link href="/articles">Статьи</Link>
-          </li>
-          <li>
-            <Link href="/cases">Кейсы</Link>
-          </li>
-          <li>
-            <Link href="/interactives">Интерактивы</Link>
-          </li>
-        </ul>
+        <C_header_navigation/>
       </nav>
     </div>
   )
