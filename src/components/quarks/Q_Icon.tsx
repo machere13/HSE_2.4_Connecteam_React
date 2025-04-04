@@ -1,10 +1,10 @@
 import React from 'react';
-import { ReactComponent as SearchIcon } from '@/assets/icons/SearchIcon.svg';
-import { ReactComponent as LinkIcon } from '@/assets/icons/LinkIcon.svg';
-import { ReactComponent as TelegramIcon } from '@/assets/icons/TelegramIcon.svg';
-import { ReactComponent as VkIcon } from '@/assets/icons/VkIcon.svg';
-import { ReactComponent as YoutubeIcon } from '@/assets/icons/YoutubeIcon.svg';
-import { ReactComponent as  ThunderIcon } from '@/assets/icons/ThunderIcon.svg'
+import SearchIcon from '@/assets/icons/SearchIcon.svg';
+import LinkIcon from '@/assets/icons/LinkIcon.svg';
+import TelegramIcon from '@/assets/icons/TelegramIcon.svg';
+import VkIcon from '@/assets/icons/VkIcon.svg';
+import YoutubeIcon from '@/assets/icons/YoutubeIcon.svg';
+import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
 
 export type IconProps = {
   name:
