@@ -1,11 +1,69 @@
 {
   "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "preview": {
-    "previewModeId": "5a6691fff6ed7dcdb56c52d05791aae5",
-    "previewModeSigningKey": "351358f27dbb7b484a930e97bc8ed0bb22d0dd8498d2e394e7b7ab1ef8d87af3",
-    "previewModeEncryptionKey": "6d2875bf2588aba721e724341cc032d070f6e43ed08a886c0992f8ed3a1bcb34"
+  "routes": {
+    "/articles": {
+      "initialRevalidateSeconds": 60,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/PwfBcP43fafaxPxznNuAF/articles.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/articles/collegue-friendship": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/articles/[slug]",
+      "dataRoute": "/_next/data/PwfBcP43fafaxPxznNuAF/articles/collegue-friendship.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/articles/technical-jargon": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/articles/[slug]",
+      "dataRoute": "/_next/data/PwfBcP43fafaxPxznNuAF/articles/technical-jargon.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
   },
-  "notFoundRoutes": []
+  "dynamicRoutes": {
+    "/articles/[slug]": {
+      "routeRegex": "^/articles/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/PwfBcP43fafaxPxznNuAF/articles/[slug].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/PwfBcP43fafaxPxznNuAF/articles/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "27c525180bd29c3a6dcb35a16bc196b9",
+    "previewModeSigningKey": "e2f6853f9ab14da8edbf2f119189ce6a25beb81e7abe38ed1a25f5a83c247291",
+    "previewModeEncryptionKey": "1bec23a97093e8ea0c464f5b425ecdfa914de16eab79d227093e327d71ac04f3"
+  }
 }
