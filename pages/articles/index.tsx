@@ -21,11 +21,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-interface Props {
-  articles: Article[]
-}
-
-export default function ArticlesList({ articles }: Props) {
+export default function ArticlesPage({ articles }: { articles: Article[] }) {
   return (
     <div>
       <h1>Все статьи</h1>

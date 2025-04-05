@@ -92,31 +92,39 @@
   "dataRoutes": [
     {
       "page": "/articles",
-      "dataRouteRegex": "^/_next/data/PwfBcP43fafaxPxznNuAF/articles\\.json$"
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/articles\\.json$"
     },
     {
       "page": "/articles/[slug]",
       "routeKeys": {
         "nxtPslug": "nxtPslug"
       },
-      "dataRouteRegex": "^/_next/data/PwfBcP43fafaxPxznNuAF/articles/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/PwfBcP43fafaxPxznNuAF/articles/(?<nxtPslug>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/articles/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/articles/(?<nxtPslug>[^/]+?)\\.json$"
+    },
+    {
+      "page": "/cases",
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/cases\\.json$"
     },
     {
       "page": "/cases/[slug]",
       "routeKeys": {
         "nxtPslug": "nxtPslug"
       },
-      "dataRouteRegex": "^/_next/data/PwfBcP43fafaxPxznNuAF/cases/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/PwfBcP43fafaxPxznNuAF/cases/(?<nxtPslug>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/cases/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/cases/(?<nxtPslug>[^/]+?)\\.json$"
+    },
+    {
+      "page": "/interactives",
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/interactives\\.json$"
     },
     {
       "page": "/interactives/tests/[slug]",
       "routeKeys": {
         "nxtPslug": "nxtPslug"
       },
-      "dataRouteRegex": "^/_next/data/PwfBcP43fafaxPxznNuAF/interactives/tests/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/PwfBcP43fafaxPxznNuAF/interactives/tests/(?<nxtPslug>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/interactives/tests/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/interactives/tests/(?<nxtPslug>[^/]+?)\\.json$"
     }
   ],
   "rsc": {

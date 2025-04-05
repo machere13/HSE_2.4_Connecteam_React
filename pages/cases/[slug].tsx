@@ -1,24 +1,52 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
+import { getCases, Case } from '@/api/cases'
 
-type Params = {
-  slug: string;
-};
+export const getStaticPaths: GetStaticPaths = async () => {
+  const cases = await getCases()
 
-export const getServerSideProps: GetServerSideProps<{ slug: string }> = async (context) => {
-  const { slug } = context.params as Params;
-  
-  return { props: { slug } };
-};
+  const paths = cases.map(caseItem => ({
+    params: { slug: caseItem.slug }
+  }))
 
-type Props = {
-  slug: string;
-};
+  return {
+    paths,
+    fallback: false // или 'blocking' если хотите ISR
+  }
+}
 
-export default function CasePage({ slug }: Props) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  try {
+    const cases = await getCases()
+    const caseItem = cases.find(c => c.slug === params?.slug)
+
+    if (!caseItem) {
+      return { notFound: true }
+    }
+
+    return {
+      props: { case: caseItem },
+      revalidate: 10
+    }
+  } catch (error) {
+    console.error('Error fetching case:', error)
+    return {
+      notFound: true
+    }
+  }
+}
+
+export default function CasePage({ case: caseItem }: { case: Case }) {
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <div>Загрузка...</div>
+  }
+
   return (
     <div>
-      <h1>Кейс: {slug}</h1>
-      <p>Здесь будет контент кейса...</p>
+      <h1>{caseItem.title}</h1>
+      <p>{caseItem.content}</p>
     </div>
-  );
+  )
 }

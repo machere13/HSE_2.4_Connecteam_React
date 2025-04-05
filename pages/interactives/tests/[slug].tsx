@@ -1,25 +1,44 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
+import { getTests, getTestBySlug, Test } from '@/api/tests'
 import Link from 'next/link'
 
-type Params = {
-  slug: string
+export const getStaticPaths: GetStaticPaths = async () => {
+  const tests = await getTests()
+  const paths = tests.map(test => ({
+    params: { slug: test.slug }
+  }))
+
+  return {
+    paths,
+    fallback: false
+  }
 }
 
-export const getServerSideProps: GetServerSideProps<{ slug: string }, Params> = async (context) => {
-  const { slug } = context.params as Params
-  
-  return { props: { slug } }
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const test = await getTestBySlug(params?.slug as string)
+
+  if (!test) {
+    return { notFound: true }
+  }
+
+  return {
+    props: { test },
+    revalidate: 10
+  }
 }
 
-type Props = {
-  slug: string
-}
+export default function TestPage({ test }: { test: Test }) {
+  const router = useRouter()
 
-export default function TestPage({ slug }: Props) {
+  if (router.isFallback) {
+    return <div>Загрузка...</div>
+  }
+
   return (
     <div>
-      <h1>Тест: {slug}</h1>
-      <p>Здесь будет содержание теста...</p>
+      <h1>{test.title}</h1>
+      <p>{test.content}</p>
       <Link href="/interactives">
         Вернуться назад
       </Link>
