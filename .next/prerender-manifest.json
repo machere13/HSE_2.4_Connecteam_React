@@ -1,11 +1,209 @@
 {
   "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "preview": {
-    "previewModeId": "5a6691fff6ed7dcdb56c52d05791aae5",
-    "previewModeSigningKey": "351358f27dbb7b484a930e97bc8ed0bb22d0dd8498d2e394e7b7ab1ef8d87af3",
-    "previewModeEncryptionKey": "6d2875bf2588aba721e724341cc032d070f6e43ed08a886c0992f8ed3a1bcb34"
+  "routes": {
+    "/interactives/tests/team": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/interactives/tests/[slug]",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/interactives/tests/team.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/interactives/tests/non": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/interactives/tests/[slug]",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/interactives/tests/non.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/interactives/tests/test3": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/interactives/tests/[slug]",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/interactives/tests/test3.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/interactives/tests/test4": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/interactives/tests/[slug]",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/interactives/tests/test4.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/cases": {
+      "initialRevalidateSeconds": 60,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/cases.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/cases/yandex-rebranding": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/cases/[slug]",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/cases/yandex-rebranding.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/cases/spotify-race": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/cases/[slug]",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/cases/spotify-race.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/articles/collegue-friendship": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/articles/[slug]",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/articles/collegue-friendship.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/articles/technical-jargon": {
+      "initialRevalidateSeconds": 10,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/articles/[slug]",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/articles/technical-jargon.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/articles": {
+      "initialRevalidateSeconds": 60,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/articles.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/interactives": {
+      "initialRevalidateSeconds": 60,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/interactives.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
   },
-  "notFoundRoutes": []
+  "dynamicRoutes": {
+    "/interactives/tests/[slug]": {
+      "routeRegex": "^/interactives/tests/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/interactives/tests/[slug].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/interactives/tests/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/cases/[slug]": {
+      "routeRegex": "^/cases/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/cases/[slug].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/cases/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/articles/[slug]": {
+      "routeRegex": "^/articles/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/AfuP4Db55U6whls1BQp_n/articles/[slug].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/AfuP4Db55U6whls1BQp_n/articles/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "f1256bc765c1fb1cadeb735c9bb85370",
+    "previewModeSigningKey": "4c52405a08f4aa6d860f8b7817552f65419d7188ed434af8519e7c9b45282b29",
+    "previewModeEncryptionKey": "09409365703e7f4e1ff8db7fc0eea431a56b0b87f0ba5cd9ac2d8f3accb2c317"
+  }
 }

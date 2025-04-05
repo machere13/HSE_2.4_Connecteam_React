@@ -1,21 +1,34 @@
-import Link from 'next/link'
-import { ROUTES } from '@/routes'
+import { GetStaticProps } from 'next'
+import { getArticles, Article } from '@/api/articles'
 
-const articles = [
-  { id: 1, slug: 'collegue-friendship', title: 'Дружба с коллегой' },
-  { id: 2, slug: 'technical-jargon', title: 'Технический жаргон:' }
-]
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const articles = await getArticles()
+    
+    return {
+      props: {
+        articles
+      },
+      revalidate: 60
+    }
+  } catch (error) {
+    console.error('Error:', error)
+    return {
+      props: {
+        articles: []
+      }
+    }
+  }
+}
 
-export default function ArticlesList() {
+export default function ArticlesPage({ articles }: { articles: Article[] }) {
   return (
     <div>
       <h1>Все статьи</h1>
       <ul>
         {articles.map(article => (
           <li key={article.id}>
-            <Link href={ROUTES.CASES.bySlug(article.slug)}>
-              {article.title}
-            </Link>
+            <a href={`/articles/${article.slug}`}>{article.title}</a>
           </li>
         ))}
       </ul>

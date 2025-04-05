@@ -1,24 +1,52 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
+import { getArticles, Article } from '@/api/articles'
 
-type Params = {
-  slug: string;
-};
+export const getStaticPaths: GetStaticPaths = async () => {
+  const articles = await getArticles()
 
-export const getServerSideProps: GetServerSideProps<{ slug: string }, Params> = async (context) => {
-  const { slug } = context.params as Params;
-  
-  return { props: { slug } };
-};
+  const paths = articles.map(article => ({
+    params: { slug: article.slug }
+  }))
 
-type Props = {
-  slug: string;
-};
+  return {
+    paths,
+    fallback: false
+  }
+}
 
-export default function ArticlePage({ slug }: Props) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  try {
+    const articles = await getArticles()
+    const article = articles.find(a => a.slug === params?.slug)
+
+    if (!article) {
+      return { notFound: true }
+    }
+
+    return {
+      props: { article },
+      revalidate: 10
+    }
+  } catch (error) {
+    console.error('Error fetching article:', error)
+    return {
+      notFound: true
+    }
+  }
+}
+
+export default function ArticlePage({ article }: { article: Article }) {
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <div>Загрузка...</div>
+  }
+
   return (
     <div>
-      <h1>Статья: {slug}</h1>
-      <p>Здесь будет контент статьи...</p>
+      <h1>{article.title}</h1>
+      <p>{article.content}</p>
     </div>
-  );
+  )
 }

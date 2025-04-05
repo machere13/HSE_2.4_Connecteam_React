@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import { ROUTES } from '@/routes'
+import { getTests, Test } from '@/api/tests'
 
-const tests = [
-  { 
-    id: 4, 
-    slug: 'team', 
-    title: 'Тест: Командная работа', 
+export const getStaticProps = async () => {
+  const tests = await getTests()
+  return {
+    props: { tests },
+    revalidate: 60
   }
-]
+}
 
-export default function InteractivesList() {
+export default function InteractivesPage({ tests }: { tests: Test[] }) {
   return (
     <div>
       <h1>Интерактивы</h1>
@@ -17,13 +18,13 @@ export default function InteractivesList() {
       <div>
         {tests.map(test => (
           <div key={test.id}>
-            <Link href={ROUTES.INTERACTIVES.TESTS.bySlug(test.slug)}
-            >
+            <Link href={ROUTES.INTERACTIVES.TESTS.bySlug(test.slug)}>
               {test.title}
             </Link>
           </div>
         ))}
       </div>
+      
       <div>
         <Link href={ROUTES.INTERACTIVES.IT_BUNKER}>IT-bunker</Link>
         <Link href={ROUTES.INTERACTIVES.IT_MAFIA}>IT-mafia</Link>
