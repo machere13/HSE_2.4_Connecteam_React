@@ -1,21 +1,29 @@
 import Link from 'next/link'
 import { ROUTES } from '@/routes'
+import { getCases, Case } from '@/api/cases'
 
-const cases = [
-  { id: 1, slug: 'yandex-rebranding', title: 'Ребрендинг «Яндекс Музыки»'},
-  { id: 2, slug: 'spotify-race', title: 'Как Spotify выигрывает гонку стриминговых сервисов — взгляд изнутри команды'},
-]
+export const getStaticProps = async () => {
+  const cases = await getCases()
+  return {
+    props: { cases },
+    revalidate: 60
+  }
+}
 
-export default function CasesList() {
+export default function CasesPage({ cases }: { cases: Case[] }) {
   return (
     <div>
       <h1>Все кейсы</h1>
-      
       <div>
         {cases.map(caseItem => (
           <div key={caseItem.id}>
-            <Link href={ROUTES.CASES.bySlug(caseItem.slug)}>
+            <Link 
+              href={ROUTES.CASES.bySlug(caseItem.slug)} 
+            >
               <h2>{caseItem.title}</h2>
+              <p>
+                {caseItem.content.substring(0, 150)}...
+              </p>
             </Link>
           </div>
         ))}

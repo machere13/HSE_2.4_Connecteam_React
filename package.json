@@ -10,7 +10,6 @@
     "@svgr/webpack": "^8.1.0",
     "cra-template": "1.2.0",
     "next": "^15.2.4",
-    "postcss": "^8.5.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.1.5",
@@ -25,7 +24,8 @@
     "eject": "next eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "export": "next export"    
+    "export": "next export",
+    "media:css": "postcss src/**/*.module.css --replace"
   },
   "browserslist": {
     "production": [
@@ -53,7 +53,11 @@
     "@storybook/react-webpack5": "^8.6.4",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "chokidar": "^4.0.3",
     "classnames": "^2.5.1",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-prettify": "^0.3.4",
     "prop-types": "15.8.1",
     "storybook": "^8.6.4",
     "storybook-addon-pseudo-states": "^4.0.2",
@@ -61,7 +65,8 @@
     "stylelint": "^16.15.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-order": "^6.0.4",
-    "typescript": "4.9.5",
+    "tsx": "^4.19.3",
+    "typescript": "^4.9.5",
     "webpack": "5.97.1"
   }
 }
