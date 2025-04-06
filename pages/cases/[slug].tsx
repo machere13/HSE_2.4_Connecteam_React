@@ -11,7 +11,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false // или 'blocking' если хотите ISR
+    fallback: false
   }
 }
 

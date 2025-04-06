@@ -1,13 +1,13 @@
-.wrapper{
-    width: 60px;
+.wrapper {
+  width: 60px;
 
-    height: 60px;
+  height: 60px;
 }
 
-.wrapper > img{
-    width: 100%;
+.wrapper > img {
+  width: 100%;
 
-    height: 100%;
+  height: 100%;
 
-    border-radius: 100%;
+  border-radius: 100%;
 }
