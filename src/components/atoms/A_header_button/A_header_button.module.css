@@ -10,13 +10,21 @@
     border: 1.5px solid var(--color-blue);
 }
 
-.wrapper:hover{
-    border-color: var(--color-white)
-}
-
 .wrapper:active{
     color: var(--color-blue);
 
     background: var(--color-white);
     border-color: var(--color-white)
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.wrapper:hover {
+		border-color: var(--color-white);
+	}
+}
+
+@media (hover: none) and (pointer: coarse) {
+	.wrapper:active {
+		border-color: var(--color-white);
+	}
 }
