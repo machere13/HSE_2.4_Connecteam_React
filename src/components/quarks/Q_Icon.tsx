@@ -1,4 +1,5 @@
 import React from 'react';
+import LogoFull from '@/assets/icons/LogoFull.svg';
 import SearchIcon from '@/assets/icons/SearchIcon.svg';
 import LinkIcon from '@/assets/icons/LinkIcon.svg';
 import TelegramIcon from '@/assets/icons/TelegramIcon.svg';
@@ -8,6 +9,7 @@ import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
 
 export type IconProps = {
   name:
+    | 'logoFull'
     | 'searchIcon'
     | 'linkIcon'
     | 'telegramIcon'
@@ -30,12 +32,13 @@ const Q_Icon: React.FC<IconProps> = ({
   onClick,
 }) => {
   const icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
+    logoFull: LogoFull,
     searchIcon: SearchIcon,
     linkIcon: LinkIcon,
     telegramIcon: TelegramIcon,
     vkIcon: VkIcon,
     youtubeIcon: YoutubeIcon,
-    thunderIcon: ThunderIcon
+    thunderIcon: ThunderIcon,
   };
 
   const SvgIcon = icons[name];

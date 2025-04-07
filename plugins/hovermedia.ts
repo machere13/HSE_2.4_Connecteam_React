@@ -10,14 +10,28 @@ const hoverMediaPlugin: PluginCreator<{}> = () => {
       root.walkRules(rule => {
         if (rule.selector.includes(':hover') && 
             !(rule.parent && rule.parent.type === 'atrule')) {
-          hoverRules.push(rule.clone());
           
+          const hoverRule = rule.clone();
+          hoverRule.raws = {
+            before: '\n\t',
+            between: ' ',
+            semicolon: true,
+            after: '\n\t'
+          };
+          hoverRules.push(hoverRule);
+
           const activeRule = rule.clone();
           activeRule.selectors = activeRule.selectors.map(sel => 
             sel.replace(/:hover/g, ':active')
           );
+          activeRule.raws = {
+            before: '\n\t',
+            between: ' ',
+            semicolon: true,
+            after: '\n\t'
+          };
           activeRules.push(activeRule);
-          
+
           rule.remove();
         }
       });
@@ -26,28 +40,49 @@ const hoverMediaPlugin: PluginCreator<{}> = () => {
         const hoverMedia = new AtRule({
           name: 'media',
           params: '(hover: hover) and (pointer: fine)',
-          raws: { before: '\n', between: ' ', after: '\n' }
+          raws: { 
+            before: '\n', 
+            between: ' ',
+            after: '\n'
+          }
         });
-        
+
         hoverRules.forEach(rule => {
-          rule.raws.before = '\n\t';
+          rule.walkDecls(decl => {
+            decl.raws = {
+              before: '\n\t\t',
+              between: ': ',
+              important: ' !important'
+            };
+          });
           hoverMedia.append(rule);
         });
-        hoverMedia.raws.after = '\n';
+
         root.append(hoverMedia);
       }
 
       if (activeRules.length > 0) {
         const activeMedia = new AtRule({
-          name: 'media', 
+          name: 'media',
           params: '(hover: none) and (pointer: coarse)',
-          raws: { before: '\n', between: ' ', after: '\n' }
+          raws: { 
+            before: '\n', 
+            between: ' ',
+            after: '\n'
+          }
         });
-        
+
         activeRules.forEach(rule => {
-          rule.raws.before = '\n\t';
+          rule.walkDecls(decl => {
+            decl.raws = {
+              before: '\n\t\t',
+              between: ': ',
+              important: ' !important'
+            };
+          });
           activeMedia.append(rule);
         });
+
         root.append(activeMedia);
       }
     }
