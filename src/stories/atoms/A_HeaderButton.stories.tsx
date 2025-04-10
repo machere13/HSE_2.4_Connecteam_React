@@ -1,18 +1,18 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { MemoryRouter } from "react-router-dom";
-import A_header_button from "@/components/atoms/A_header_button/A_header_button";
-import { A_header_button_Props } from "@/components/atoms/A_header_button/A_header_button";
+import A_HeaderButton from "@/components/atoms/A_HeaderButton/A_HeaderButton";
+import { A_HeaderButtonProps } from "@/components/atoms/A_HeaderButton/A_HeaderButton";
 
-const meta: Meta<A_header_button_Props> = {
-    title: 'Atoms/A_header_button',
-    component: A_header_button
+const meta: Meta<A_HeaderButtonProps> = {
+    title: 'Atoms/A_HeaderButton',
+    component: A_HeaderButton
 };
 
 export default meta;
 
-const Template: StoryFn<A_header_button_Props> = (args: A_header_button_Props) => (
+const Template: StoryFn<A_HeaderButtonProps> = (args: A_HeaderButtonProps) => (
   <MemoryRouter>
-    <A_header_button {...args} />
+    <A_HeaderButton {...args} />
   </MemoryRouter>
 );
 

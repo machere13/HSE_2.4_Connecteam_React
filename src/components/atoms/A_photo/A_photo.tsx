@@ -1,13 +1,13 @@
-import styles from './A_photo.module.css'
+import styles from './A_Photo.module.css'
 import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
-export interface A_photo_Props {
+export interface A_PhotoProps {
     src: string | StaticImageData;
     alt: string;
 };
 
-export default function A_photo({ src, alt }: A_photo_Props) {
+export default function A_Photo({ src, alt }: A_PhotoProps) {
     return (
         <div className={styles.wrapper}>
             <Image

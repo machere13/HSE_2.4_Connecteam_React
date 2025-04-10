@@ -1,18 +1,18 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { MemoryRouter } from "react-router-dom";
-import A_photo, { A_photo_Props } from "@/components/atoms/A_photo/A_photo";
+import A_Photo, { A_PhotoProps } from "@/components/atoms/A_Photo/A_Photo";
 import Photo from '@/assets/images/Author01.jpg';
 
-const meta: Meta<A_photo_Props> = {
-  title: 'Atoms/A_photo',
-  component: A_photo
+const meta: Meta<A_PhotoProps> = {
+  title: 'Atoms/A_Photo',
+  component: A_Photo
 };
 
 export default meta;
 
-const Template: StoryFn<A_photo_Props> = (args: A_photo_Props) => (
+const Template: StoryFn<A_PhotoProps> = (args: A_PhotoProps) => (
   <MemoryRouter>
-    <A_photo {...args} />
+    <A_Photo {...args} />
   </MemoryRouter>
 );
 
