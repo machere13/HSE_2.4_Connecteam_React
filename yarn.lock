@@ -1644,7 +1644,7 @@
   resolved "https://registry.npmjs.org/@storybook/react-dom-shim/-/react-dom-shim-8.6.12.tgz"
   integrity sha512-51QvoimkBzYs8s3rCYnY5h0cFqLz/Mh0vRcughwYaXckWzDBV8l67WBO5Xf5nBsukCbWyqBVPpEQLww8s7mrLA==
 
-"@storybook/react@8.6.12":
+"@storybook/react@^8.6.12", "@storybook/react@8.6.12":
   version "8.6.12"
   resolved "https://registry.npmjs.org/@storybook/react/-/react-8.6.12.tgz"
   integrity sha512-NzxlHLA5DkDgZM/dMwTYinuzRs6rsUPmlqP+NIv6YaciQ4NGnTYyOC7R/SqI6HHFm8ZZ5eMYvpfiFmhZ9rU+rQ==
