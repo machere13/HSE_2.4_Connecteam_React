@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function itmafia() {
+export default function ITMafiaPage() {
   return (
     <div>itmafia</div>
   )
