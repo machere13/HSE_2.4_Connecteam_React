@@ -26,7 +26,6 @@ const nextConfig: NextConfig = {
 
   experimental: {
     externalDir: false,
-    optimizePackageImports: ['@heroicons/react']
   }
 }
 
