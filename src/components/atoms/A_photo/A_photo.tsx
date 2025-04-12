@@ -4,7 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 export interface A_PhotoProps {
     src: string | StaticImageData;
     alt: string;
-};
+}
 
 export default function A_Photo({ src, alt }: A_PhotoProps) {
     return (

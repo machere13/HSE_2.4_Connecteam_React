@@ -1,0 +1,76 @@
+{
+    "extends": [
+      "next",
+      "next/core-web-vitals",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json",
+      "tsconfigRootDir": "."
+    },
+    "plugins": ["@typescript-eslint", "react", "react-hooks", "jsx-a11y"],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/ban-types": [
+        "error",
+        {
+          "types": {
+            "{}": {
+              "message": "Use 'object' instead",
+              "fixWith": "object"
+            }
+          },
+          "extendDefaults": true
+        }
+      ],
+      "@typescript-eslint/no-extra-semi": "error",
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "function",
+          "format": null,
+          "modifiers": ["exported"],
+          "custom": {
+            "regex": "^(A|M|O|W|C|Q)_[A-Z][a-zA-Z0-9]*$",
+            "match": true
+          }
+        }
+      ],
+      "import/no-anonymous-default-export": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "typescript": {}
+      }
+    },
+    "overrides": [
+      {
+        "files": ["**/*.stories.tsx", "pages/**/*.tsx"],
+        "rules": {
+          "@typescript-eslint/naming-convention": "off"
+        }
+      },
+      {
+        "files": [
+          "next.config.ts",
+          "postcss.config.ts",
+          "**/api/*.ts",
+          "**/routes.ts",
+          "**/plugins/*.ts"
+        ],
+        "rules": {
+          "@typescript-eslint/naming-convention": "off",
+          "@typescript-eslint/ban-types": "off"
+        }
+      }
+    ]
+}
