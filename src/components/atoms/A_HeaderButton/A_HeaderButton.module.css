@@ -17,6 +17,11 @@
     border-color: var(--color-white)
 }
 
+.wrapper:focus{
+    outline: 0;
+    border-color: var(--color-white);
+}
+
 @media (hover: hover) and (pointer: fine) {
 	.wrapper:hover {
 		border-color: var(--color-white);
