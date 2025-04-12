@@ -1,6 +1,5 @@
 import styles from './A_Photo.module.css'
-import { StaticImageData } from 'next/image';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 export interface A_PhotoProps {
     src: string | StaticImageData;
