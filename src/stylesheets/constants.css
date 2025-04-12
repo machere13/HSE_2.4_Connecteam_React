@@ -34,7 +34,7 @@
     --spacing-45: 45px;
     --spacing-60: 60px;
 
-    /* Border radius */
+    /* Border Radius */
     --border-radius-10: 10px;
     --border-radius-12: 12px;
     --border-radius-13: 13px;
@@ -43,6 +43,41 @@
     --border-radius-20: 20px;
     --border-radius-24: 24px;
     --border-radius-35: 35px;
+
+    /* Font Family */
+    --font-family-inter: 'Inter', sans-serif;
+    --font-family-inter-tight: 'Inter Tight', sans-serif;
+    --font-family-hauora: 'Hauora', sans-serif;
+
+    /* Font Weight */
+    --font-weight-headers: 500;
+    --font-weight-subheaders: 600;
+    --font-weight-body: 400;
+    --font-weight-captions: 400;
+
+    /* Line Height */
+    --font-line-height-headers: 1.2;
+    --font-line-height-subheaders: 1.2;
+    --font-line-height-body: 1.2;
+    --font-line-height-captions: 1.2;
+
+    /* Letter Spacing */
+    --font-letter-spacing-headers: 1.5%;
+    --font-letter-spacing-subheaders: 1.5%;
+    --font-letter-spacing-body: 1.5%;
+    --font-letter-spacing-captions: 1.5%;
+
+    /* Font Size */
+    --font-size-headers-0: 94px;
+    --font-size-headers-1: 45px;
+    --font-size-headers-2: 35px;
+    --font-size-headers-cards: 25px;
+    --font-size-headers-article: 25px;
+    --font-size-body-cursor: 20px;
+    --font-size-body: 18px;
+    --font-size-body-article: 18px;
+    --font-size-body-button: 15px;
+    --font-size-captions: 14px;
 
     /* Fonts */
     --font-head-0: 500 94px/.93 'Inter Tight', sans-serif;
@@ -55,6 +90,34 @@
     --font-body-article-text: 400 18px/1.2 'Hauora', sans-serif;
     --font-button-text: 500 15px/1.2 'Hauora', sans-serif;
     --font-description-text: 400 14px/1.2 'Hauora', sans-serif;
+
+    @media (max-width: 1028px) {
+        /* Font Size */
+        --font-size-headers-0: 40px;
+        --font-size-headers-1: 45px;
+        --font-size-headers-2: 35px;
+        --font-size-headers-cards: 25px;
+        --font-size-headers-article: 25px;
+        --font-size-body-cursor: 20px;
+        --font-size-body: 18px;
+        --font-size-body-article: 18px;
+        --font-size-body-button: 15px;
+        --font-size-captions: 14px;
+    }
+
+    @media (max-width: 720px) {
+        /* Font Size */
+        --font-size-headers-0: 20px;
+        --font-size-headers-1: 45px;
+        --font-size-headers-2: 35px;
+        --font-size-headers-cards: 25px;
+        --font-size-headers-article: 25px;
+        --font-size-body-cursor: 20px;
+        --font-size-body: 18px;
+        --font-size-body-article: 18px;
+        --font-size-body-button: 15px;
+        --font-size-captions: 14px;
+    }
 }
 
 .text_head_0{
