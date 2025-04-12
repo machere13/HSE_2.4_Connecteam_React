@@ -48,24 +48,24 @@
 
 @font-face {
     font-family: Inter;
-    font-weight: 400;
+    font-weight: 100 900;
     src: 
-        url('../assets/fonts/Inter-Regular.woff2') format('woff2'),
-        url('../assets/fonts/Inter-Regular.woff') format('woff'),
-        url('../assets/fonts/Inter-Regular.otf') format('opentype'),
-        url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+        url('../assets/fonts/Inter.var.woff2') format('woff2'),
+        url('../assets/fonts/Inter.var.woff') format('woff'),
+        url('../assets/fonts/Inter.var.otf') format('opentype'),
+        url('../assets/fonts/Inter.var.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Inter Tight';
-    font-weight: 500;
+    font-weight: 100 900;
     src: 
-        url('../assets/fonts/InterTight-Medium.woff2') format('woff2'),
-        url('../assets/fonts/InterTight-Medium.woff') format('woff'),
-        url('../assets/fonts/InterTight-Medium.otf') format('opentype'),
-        url('../assets/fonts/InterTight-Medium.ttf') format('truetype');
+        url('../assets/fonts/InterTight.var.woff2') format('woff2'),
+        url('../assets/fonts/InterTight.var.woff') format('woff'),
+        url('../assets/fonts/InterTight.var.otf') format('opentype'),
+        url('../assets/fonts/InterTight.var.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
