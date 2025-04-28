@@ -1,241 +1,249 @@
 [
-    {
-      "id": 1,
-      "slug": "collegue-friendship",
-      "metatags": {
-        "image": "url",
-        "type": "article"
-      },
-      "title": "Дружба с коллегой",
-      "description": "«Сделай по-братски» или как работа может вас поссорить",
-      "cardDisplay": {
-        "background": "url",
-        "card": "standard",
-        "rotate": "none",
-        "thunder": false
-      },
-      "article": {
-        "author": {
-            "image": "url",
-            "name": "machere13",
-            "description": "Frontend Developer"
-        },
-        "type": "big",
-        "content": [
-            {
-                "type": "heading-1",
-                "text": "Дружба с коллегой"
-            },
-            {
-                "type": "heading-3",
-                "text": "«Сделай по-братски» или как работа может вас поссорить"  
-            },
-            {
-                "type": "tags",
-                "items": ["Коммуникация", "3 мин"]
-            },
-            {
-                "type": "image",
-                "image": "url",
-                "description": null
-            },
-            {
-                "type": "previewParagraph",
-                "text": "ляляля"
-            },
-            {
-                "type": "whiteBox",
-                "title": "Определение",
-                "text": "ляляля"
-            },
-            {
-                "type": "paragraph",
-                "text": "ляляля"
-            },
-            {
-                "type": "list",
-                "text": "ллялля:",
-                "items": [
-                    {
-                        "title": "title1",
-                        "description": "desc1"
-                    },
-                    {
-                        "title": "title1",
-                        "description": "desc1"
-                    },
-                    {
-                        "title": "title1",
-                        "description": "desc1"
-                    }
-                ]
-            },
-            {
-                "type": "telegram"
-            },
-            {
-                "type": "examples",
-                "items": [
-                    {
-                        "title": "Amazon",
-                        "description": "Amazon lyalya"
-                    },
-                    {
-                        "title": "Amazon",
-                        "description": "Amazon lyalya"
-                    },
-                    {
-                        "title": "Amazon",
-                        "description": "Amazon lyalya"
-                    }
-                ]
-            },
-            {
-                "type": "moreInCase",
-                "link": "url"
-            },
-            {
-                "type": "tips",
-                "title": "Советы по внедрению",
-                "items": ["Чёткое понимание цели каждого созвона поможет избежать бесполезных обсуждений и сфокусироваться на важных вопросах", "лялля", "ляляля"]
-            },
-            {
-                "type": "paragraph",
-                "text": "adadad"
-            },
-            {
-                "type": "conclusions",
-                "items": [
-                    {
-                        "title": "ddwdw",
-                        "description": "dewdwd"
-                    },
-                    {
-                        "title": "ddwdw",
-                        "description": "dewdwd"
-                    },
-                    {
-                        "title": "ddwdw",
-                        "description": "dewdwd"
-                    }
-                ]
-            }
-        ],
-        "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
-      }
+  {
+    "id": 1,
+    "slug": "collegue-friendship",
+    "metatags": {
+      "image": "url",
+      "type": "article"
     },
-    {
-        "id": 2,
-        "slug": "techical-jargon",
-        "metatags": {
+    "title": "Дружба с коллегой",
+    "description": "«Сделай по-братски» или как работа может вас поссорить",
+    "cardDisplay": {
+      "background": "url",
+      "card": "standard",
+      "rotate": "none",
+      "thunder": false
+    },
+    "article": {
+      "author": {
+        "image": "url",
+        "name": "machere13",
+        "description": "Frontend Developer"
+      },
+      "type": "big",
+      "content": [
+        {
+          "type": "heading-1",
+          "text": "Дружба с коллегой"
+        },
+        {
+          "type": "heading-3",
+          "text": "«Сделай по-братски» или как работа может вас поссорить"
+        },
+        {
+          "type": "tags",
+          "items": ["Коммуникация", "3 мин"]
+        },
+        {
+          "type": "image",
           "image": "url",
-          "type": "article"
+          "description": null
         },
-        "title": "Дружба с коллегой",
-        "description": "«Сделай по-братски» или как работа может вас поссорить",
-        "cardDisplay": {
-          "background": "url",
-          "card": "standard",
-          "rotate": "none",
-          "thunder": false
+        {
+          "type": "previewParagraph",
+          "text": "ляляля"
         },
-        "article": {
-          "author": {
-              "image": "url",
-              "name": "machere13",
-              "description": "Frontend Developer"
-          },
-          "type": "big",
-          "content": [
-              {
-                  "type": "heading-1",
-                  "text": "Дружба с коллегой"
-              },
-              {
-                  "type": "heading-3",
-                  "text": "«Сделай по-братски» или как работа может вас поссорить"  
-              },
-              {
-                  "type": "tags",
-                  "items": ["Коммуникация", "3 мин"]
-              },
-              {
-                  "type": "image",
-                  "image": "url",
-                  "description": null
-              },
-              {
-                  "type": "previewParagraph",
-                  "text": "ляляля"
-              },
-              {
-                  "type": "list",
-                  "text": "ллялля:",
-                  "items": [
-                      {
-                          "title": "title1",
-                          "description": "desc1"
-                      },
-                      {
-                          "title": "title1",
-                          "description": "desc1"
-                      },
-                      {
-                          "title": "title1",
-                          "description": "desc1"
-                      }
-                  ]
-              },
-              {
-                  "type": "telegram"
-              },
-              {
-                "type": "cardList",
-                "title": "Что надо делать?",
-                "items": [
-                    {
-                        "title": "ddwdw",
-                        "description": "dewdwd"
-                    },
-                    {
-                        "title": "ddwdw",
-                        "description": "dewdwd"
-                    },
-                    {
-                        "title": "ddwdw",
-                        "description": "dewdwd"
-                    }
-                ]
+        {
+          "type": "whiteBox",
+          "title": "Определение",
+          "text": "ляляля"
+        },
+        {
+          "type": "paragraph",
+          "text": "ляляля"
+        },
+        {
+          "type": "list",
+          "text": "ллялля:",
+          "items": [
+            {
+              "title": "title1",
+              "description": "desc1"
             },
-              {
-                  "type": "super",
-                  "title": "Почему это супер?",
-                  "items": ["Чёткое понимание цели каждого созвона поможет избежать бесполезных обсуждений и сфокусироваться на важных вопросах", "лялля", "ляляля"]
-              },
-              {
-                  "type": "paragraph",
-                  "text": "adadad"
-              },
-              {
-                  "type": "cardList",
-                  "title": "Что не надо делать?",
-                  "items": [
-                      {
-                          "title": "ddwdw",
-                          "description": "dewdwd"
-                      },
-                      {
-                          "title": "ddwdw",
-                          "description": "dewdwd"
-                      },
-                      {
-                          "title": "ddwdw",
-                          "description": "dewdwd"
-                      }
-                  ]
-              }
-          ],
-          "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
+            {
+              "title": "title1",
+              "description": "desc1"
+            },
+            {
+              "title": "title1",
+              "description": "desc1"
+            }
+          ]
+        },
+        {
+          "type": "telegram"
+        },
+        {
+          "type": "examples",
+          "items": [
+            {
+              "title": "Amazon",
+              "description": "Amazon lyalya"
+            },
+            {
+              "title": "Amazon",
+              "description": "Amazon lyalya"
+            },
+            {
+              "title": "Amazon",
+              "description": "Amazon lyalya"
+            }
+          ]
+        },
+        {
+          "type": "moreInCase",
+          "link": "url"
+        },
+        {
+          "type": "tips",
+          "title": "Советы по внедрению",
+          "items": [
+            "Чёткое понимание цели каждого созвона поможет избежать бесполезных обсуждений и сфокусироваться на важных вопросах",
+            "лялля",
+            "ляляля"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "adadad"
+        },
+        {
+          "type": "conclusions",
+          "items": [
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            },
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            },
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            }
+          ]
         }
-      }
+      ],
+      "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "techical-jargon",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "Дружба с коллегой",
+    "description": "«Сделай по-братски» или как работа может вас поссорить",
+    "cardDisplay": {
+      "background": "url",
+      "card": "standard",
+      "rotate": "none",
+      "thunder": false
+    },
+    "article": {
+      "author": {
+        "image": "url",
+        "name": "machere13",
+        "description": "Frontend Developer"
+      },
+      "type": "big",
+      "content": [
+        {
+          "type": "heading-1",
+          "text": "Дружба с коллегой"
+        },
+        {
+          "type": "heading-3",
+          "text": "«Сделай по-братски» или как работа может вас поссорить"
+        },
+        {
+          "type": "tags",
+          "items": ["Коммуникация", "3 мин"]
+        },
+        {
+          "type": "image",
+          "image": "url",
+          "description": null
+        },
+        {
+          "type": "previewParagraph",
+          "text": "ляляля"
+        },
+        {
+          "type": "list",
+          "text": "ллялля:",
+          "items": [
+            {
+              "title": "title1",
+              "description": "desc1"
+            },
+            {
+              "title": "title1",
+              "description": "desc1"
+            },
+            {
+              "title": "title1",
+              "description": "desc1"
+            }
+          ]
+        },
+        {
+          "type": "telegram"
+        },
+        {
+          "type": "cardList",
+          "title": "Что надо делать?",
+          "items": [
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            },
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            },
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            }
+          ]
+        },
+        {
+          "type": "super",
+          "title": "Почему это супер?",
+          "items": [
+            "Чёткое понимание цели каждого созвона поможет избежать бесполезных обсуждений и сфокусироваться на важных вопросах",
+            "лялля",
+            "ляляля"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "adadad"
+        },
+        {
+          "type": "cardList",
+          "title": "Что не надо делать?",
+          "items": [
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            },
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            },
+            {
+              "title": "ddwdw",
+              "description": "dewdwd"
+            }
+          ]
+        }
+      ],
+      "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
+    }
+  }
 ]

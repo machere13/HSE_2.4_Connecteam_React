@@ -6,10 +6,10 @@ const nextConfig: NextConfig = {
   distDir: '.next',
   images: {
     domains: [],
-    unoptimized: false
+    unoptimized: false,
   },
 
-  webpack: (config) => {
+  webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, 'src'),
@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
 
   experimental: {
     externalDir: false,
-  }
+  },
 }
 
 export default nextConfig

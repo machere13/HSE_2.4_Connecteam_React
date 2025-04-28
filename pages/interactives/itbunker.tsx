@@ -1,7 +1,5 @@
 import React from 'react'
 
 export default function ITBunkerPage() {
-  return (
-    <div>itbunker</div>
-  )
+  return <div>itbunker</div>
 }

@@ -6,7 +6,7 @@ export const getStaticProps = async () => {
   const cases = await getCases()
   return {
     props: { cases },
-    revalidate: 60
+    revalidate: 60,
   }
 }
 
@@ -17,13 +17,9 @@ export default function CasesPage({ cases }: { cases: Case[] }) {
       <div>
         {cases.map(caseItem => (
           <div key={caseItem.id}>
-            <Link 
-              href={ROUTES.CASES.bySlug(caseItem.slug)} 
-            >
+            <Link href={ROUTES.CASES.bySlug(caseItem.slug)}>
               <h2>{caseItem.title}</h2>
-              <p>
-                {caseItem.content.substring(0, 150)}...
-              </p>
+              <p>{caseItem.content.substring(0, 150)}...</p>
             </Link>
           </div>
         ))}

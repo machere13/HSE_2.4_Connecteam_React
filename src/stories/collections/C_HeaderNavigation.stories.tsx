@@ -1,21 +1,21 @@
-import { Meta, StoryFn } from '@storybook/react';
-import { MemoryRouter } from 'react-router-dom';
-import C_HeaderNavigation from '@/components/collections/C_HeaderNavigation/C_HeaderNavigation';
+import { Meta, StoryFn } from '@storybook/react'
+import { MemoryRouter } from 'react-router-dom'
+import C_HeaderNavigation from '@/components/collections/C_HeaderNavigation/C_HeaderNavigation'
 
 const meta: Meta<typeof C_HeaderNavigation> = {
   title: 'Collections/C_HeaderNavigation',
   component: C_HeaderNavigation,
   decorators: [
-    (Story) => (
+    Story => (
       <MemoryRouter>
         <Story />
       </MemoryRouter>
     ),
   ],
-};
+}
 
-export default meta;
+export default meta
 
-const Template: StoryFn<typeof C_HeaderNavigation> = () => <C_HeaderNavigation />;
+const Template: StoryFn<typeof C_HeaderNavigation> = () => <C_HeaderNavigation />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})

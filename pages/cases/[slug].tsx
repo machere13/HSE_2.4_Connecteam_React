@@ -6,12 +6,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const cases = await getCases()
 
   const paths = cases.map(caseItem => ({
-    params: { slug: caseItem.slug }
+    params: { slug: caseItem.slug },
   }))
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   }
 }
 
@@ -26,12 +26,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     return {
       props: { case: caseItem },
-      revalidate: 10
+      revalidate: 10,
     }
   } catch (error) {
     console.error('Error fetching case:', error)
     return {
-      notFound: true
+      notFound: true,
     }
   }
 }

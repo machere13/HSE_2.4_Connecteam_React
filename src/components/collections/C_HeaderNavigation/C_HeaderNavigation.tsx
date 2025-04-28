@@ -1,4 +1,4 @@
-import A_HeaderButton from "@/components/atoms/A_HeaderButton/A_HeaderButton"
+import A_HeaderButton from '@/components/atoms/A_HeaderButton/A_HeaderButton'
 import { ROUTES } from '@/routes'
 
 import styles from './C_HeaderNavigation.module.css'

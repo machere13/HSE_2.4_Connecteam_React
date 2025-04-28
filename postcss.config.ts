@@ -1,7 +1,5 @@
-import hoverMediaPlugin from './plugins/hovermedia';
+import hoverMediaPlugin from './plugins/hovermedia'
 
 export default {
-  plugins: [
-    hoverMediaPlugin(),
-  ]
-};
+  plugins: [hoverMediaPlugin()],
+}

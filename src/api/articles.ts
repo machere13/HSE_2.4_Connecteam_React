@@ -19,13 +19,13 @@ export const articlesHandler = async () => {
     const articles = await getArticles()
     return {
       status: 200,
-      data: articles
+      data: articles,
     }
   } catch (error) {
     console.error('Error fetching articles:', error)
     return {
       status: 500,
-      error: 'Failed to load articles'
+      error: 'Failed to load articles',
     }
   }
 }
