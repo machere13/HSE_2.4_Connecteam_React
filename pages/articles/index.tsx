@@ -4,19 +4,19 @@ import { getArticles, Article } from '@/api/articles'
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const articles = await getArticles()
-    
+
     return {
       props: {
-        articles
+        articles,
       },
-      revalidate: 60
+      revalidate: 60,
     }
   } catch (error) {
     console.error('Error:', error)
     return {
       props: {
-        articles: []
-      }
+        articles: [],
+      },
     }
   }
 }

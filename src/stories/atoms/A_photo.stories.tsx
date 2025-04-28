@@ -1,9 +1,9 @@
-import { Meta, StoryFn } from "@storybook/react";
-import { MemoryRouter } from "react-router-dom";
-import A_Photo, { A_PhotoProps } from "@/components/atoms/A_Photo/A_Photo";
-import Photo_01 from '@/assets/images/A_Photo/A_Photo_01.webp';
-import Photo_02 from '@/assets/images/A_Photo/A_Photo_02.webp';
-import Photo_03 from '@/assets/images/A_Photo/A_Photo_03.webp';
+import { Meta, StoryFn } from '@storybook/react'
+import { MemoryRouter } from 'react-router-dom'
+import A_Photo, { A_PhotoProps } from '@/components/atoms/A_Photo/A_Photo'
+import Photo_01 from '@/assets/images/A_Photo/A_Photo_01.webp'
+import Photo_02 from '@/assets/images/A_Photo/A_Photo_02.webp'
+import Photo_03 from '@/assets/images/A_Photo/A_Photo_03.webp'
 
 const meta: Meta<A_PhotoProps> = {
   title: 'Atoms/A_Photo',
@@ -26,18 +26,18 @@ const meta: Meta<A_PhotoProps> = {
       },
     },
   },
-};
+}
 
-export default meta;
+export default meta
 
 const Template: StoryFn<A_PhotoProps> = (args: A_PhotoProps) => (
   <MemoryRouter>
     <A_Photo {...args} />
   </MemoryRouter>
-);
+)
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
   src: Photo_01,
-  alt: "Avatar",
-};
+  alt: 'Avatar',
+}

@@ -6,22 +6,11 @@
     "selector-class-pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$",
     "selector-id-pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$",
     "media-feature-range-notation": "prefix",
-    "property-no-vendor-prefix": [
-      true,
-      { "ignoreProperties": ["user-select"] }
-    ],
+    "property-no-vendor-prefix": [true, { "ignoreProperties": ["user-select"] }],
     "order/properties-order": [
       [
         {
-          "properties": [
-            "position",
-            "inset",
-            "top",
-            "right",
-            "bottom",
-            "left",
-            "z-index"
-          ],
+          "properties": ["position", "inset", "top", "right", "bottom", "left", "z-index"],
           "emptyLineBefore": "always"
         },
         {
@@ -59,13 +48,7 @@
           "emptyLineBefore": "always"
         },
         {
-          "properties": [
-            "margin",
-            "margin-top",
-            "margin-right",
-            "margin-bottom",
-            "margin-left"
-          ],
+          "properties": ["margin", "margin-top", "margin-right", "margin-bottom", "margin-left"],
           "emptyLineBefore": "always"
         },
         {

@@ -6,12 +6,12 @@ import Link from 'next/link'
 export const getStaticPaths: GetStaticPaths = async () => {
   const tests = await getTests()
   const paths = tests.map(test => ({
-    params: { slug: test.slug }
+    params: { slug: test.slug },
   }))
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   }
 }
 
@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: { test },
-    revalidate: 10
+    revalidate: 10,
   }
 }
 
@@ -39,9 +39,7 @@ export default function TestPage({ test }: { test: Test }) {
     <div>
       <h1>{test.title}</h1>
       <p>{test.content}</p>
-      <Link href="/interactives">
-        Вернуться назад
-      </Link>
+      <Link href='/interactives'>Вернуться назад</Link>
     </div>
   )
 }
