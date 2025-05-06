@@ -6,12 +6,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const articles = await getArticles()
 
   const paths = articles.map(article => ({
-    params: { slug: article.slug }
+    params: { slug: article.slug },
   }))
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   }
 }
 
@@ -26,12 +26,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     return {
       props: { article },
-      revalidate: 10
+      revalidate: 10,
     }
   } catch (error) {
     console.error('Error fetching article:', error)
     return {
-      notFound: true
+      notFound: true,
     }
   }
 }

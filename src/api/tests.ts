@@ -24,13 +24,13 @@ export const testsHandler = async () => {
     const tests = await getTests()
     return {
       status: 200,
-      data: tests
+      data: tests,
     }
   } catch (error) {
     console.error('Error fetching tests:', error)
     return {
       status: 500,
-      error: 'Failed to load tests'
+      error: 'Failed to load tests',
     }
   }
 }

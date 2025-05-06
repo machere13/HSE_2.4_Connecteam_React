@@ -1,13 +1,10 @@
-import C_header_navigation from '@/components/collections/C_header_navigation/C_header_navigation'
+import O_Header from '@/components/organisms/O_Header/O_Header'
 
-export default function Home() {
+export default function MainPage() {
   return (
     <div>
       <h1>Главная страница</h1>
-      
-      <nav>
-        <C_header_navigation/>
-      </nav>
+      <O_Header />
     </div>
   )
 }

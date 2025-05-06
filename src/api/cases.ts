@@ -24,13 +24,13 @@ export const casesHandler = async () => {
     const cases = await getCases()
     return {
       status: 200,
-      data: cases
+      data: cases,
     }
   } catch (error) {
     console.error('Error fetching cases:', error)
     return {
       status: 500,
-      error: 'Failed to load cases'
+      error: 'Failed to load cases',
     }
   }
 }

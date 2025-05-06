@@ -6,10 +6,10 @@ const nextConfig: NextConfig = {
   distDir: '.next',
   images: {
     domains: [],
-    unoptimized: false
+    unoptimized: false,
   },
 
-  webpack: (config) => {
+  webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, 'src'),
@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
 
     config.module.rules.push({
       test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
+      issuer: /\.tsx?$/,
       use: ['@svgr/webpack'],
     })
 
@@ -26,8 +26,7 @@ const nextConfig: NextConfig = {
 
   experimental: {
     externalDir: false,
-    optimizePackageImports: ['@heroicons/react']
-  }
+  },
 }
 
 export default nextConfig

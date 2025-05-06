@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding: var(--spacing-25) var(--spacing-60);
+
+  background: var(--color-blue);
+
+  border-radius: 0 0 var(--border-radius-15) var(--border-radius-15);
+}
+
+.logo_wrapper {
+  height: 24px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-60);
+}
