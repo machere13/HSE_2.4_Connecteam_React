@@ -12,7 +12,7 @@
       "background": "url",
       "card": "standard",
       "rotate": "none",
-      "thunder": false
+      "hasIcon": false
     },
     "article": {
       "author": {
@@ -36,8 +36,7 @@
         },
         {
           "type": "image",
-          "image": "url",
-          "description": null
+          "image": "url"
         },
         {
           "type": "previewParagraph",
@@ -53,8 +52,8 @@
           "text": "ляляля"
         },
         {
-          "type": "list",
-          "text": "ллялля:",
+          "type": "elements",
+          "title": "ллялля:",
           "items": [
             {
               "title": "title1",
@@ -71,7 +70,8 @@
           ]
         },
         {
-          "type": "telegram"
+          "type": "telegram",
+          "link": "https://t.me/connecteam"
         },
         {
           "type": "examples",
@@ -95,8 +95,9 @@
           "link": "url"
         },
         {
-          "type": "tips",
+          "type": "highlightedSection",
           "title": "Советы по внедрению",
+          "titleType": "small",
           "items": [
             "Чёткое понимание цели каждого созвона поможет избежать бесполезных обсуждений и сфокусироваться на важных вопросах",
             "лялля",
@@ -108,7 +109,9 @@
           "text": "adadad"
         },
         {
-          "type": "conclusions",
+          "type": "cardList",
+          "title": "Выводы",
+          "titleType": "small",
           "items": [
             {
               "title": "ddwdw",
@@ -141,7 +144,7 @@
       "background": "url",
       "card": "standard",
       "rotate": "none",
-      "thunder": false
+      "hasIcon": false
     },
     "article": {
       "author": {
@@ -165,16 +168,15 @@
         },
         {
           "type": "image",
-          "image": "url",
-          "description": null
+          "image": "url"
         },
         {
           "type": "previewParagraph",
           "text": "ляляля"
         },
         {
-          "type": "list",
-          "text": "ллялля:",
+          "type": "elements",
+          "title": "ллялля:",
           "items": [
             {
               "title": "title1",
@@ -191,11 +193,13 @@
           ]
         },
         {
-          "type": "telegram"
+          "type": "telegram",
+          "link": "https://t.me/connecteam"
         },
         {
           "type": "cardList",
           "title": "Что надо делать?",
+          "titleType": "big",
           "items": [
             {
               "title": "ddwdw",
@@ -212,8 +216,9 @@
           ]
         },
         {
-          "type": "super",
+          "type": "highlightedSection",
           "title": "Почему это супер?",
+          "titleType": "small",
           "items": [
             "Чёткое понимание цели каждого созвона поможет избежать бесполезных обсуждений и сфокусироваться на важных вопросах",
             "лялля",
@@ -227,6 +232,7 @@
         {
           "type": "cardList",
           "title": "Что не надо делать?",
+          "titleType": "big",
           "items": [
             {
               "title": "ddwdw",
