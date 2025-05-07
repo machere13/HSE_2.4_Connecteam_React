@@ -14,6 +14,7 @@
       "rotate": "none",
       "hasIcon": false
     },
+    "filter": "tools",
     "article": {
       "author": {
         "image": "url",
@@ -166,6 +167,7 @@
       "rotate": "none",
       "hasIcon": false
     },
+    "filter": "communication",
     "article": {
       "author": {
         "image": "url",
@@ -277,6 +279,7 @@
       "rotate": "right",
       "hasIcon": false
     },
+    "filter": "communication",
     "article": {
       "author": {
         "image": "url",
@@ -359,6 +362,7 @@
       "rotate": "left",
       "hasIcon": false
     },
+    "filter": "organization",
     "article": {
       "author": {
         "image": "url",
@@ -406,6 +410,7 @@
       "rotate": "left",
       "hasIcon": false
     },
+    "filter": "conflict",
     "article": {
       "author": {
         "image": "url",
