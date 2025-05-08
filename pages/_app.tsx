@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png" />
         
-        <link rel="manifest" href="/favicon/manifest.json" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
         
         <link rel="mask-icon" href="/favicon/mask-icon.svg" color="#000000" />
         
