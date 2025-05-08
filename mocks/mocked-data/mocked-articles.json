@@ -381,7 +381,7 @@
         },
         {
           "type": "tags",
-          "items": ["Коммуникация", "3 мин"]
+          "items": ["testing filter", "Организация"]
         },
         {
           "type": "highlightedSection",
@@ -429,7 +429,7 @@
         },
         {
           "type": "tags",
-          "items": ["Коммуникация", "3 мин"]
+          "items": ["testing filter", "Личный конфликт"]
         },
         {
           "type": "highlightedSection",

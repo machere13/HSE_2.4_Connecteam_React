@@ -190,7 +190,7 @@
             },
             {
               "type": "tags",
-              "items": ["Дизайн", "Опыт команды", "7 мин"]
+              "items": ["testing filter", "Руководство командой"]
             },
             {
               "type": "previewParagraph",
@@ -249,7 +249,7 @@
             },
             {
               "type": "tags",
-              "items": ["Дизайн", "Опыт команды", "7 мин"]
+              "items": ["testing filter", "История компании"]
             },
             {
               "type": "previewParagraph",
@@ -308,7 +308,7 @@
             },
             {
               "type": "tags",
-              "items": ["Дизайн", "Опыт команды", "7 мин"]
+              "items": ["testing filter", "Лайфхаки от команды"]
             },
             {
               "type": "previewParagraph",
