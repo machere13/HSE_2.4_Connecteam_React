@@ -16,6 +16,8 @@ export default function App({ Component, pageProps }: AppProps) {
         
         <link rel="manifest" href="/favicon/site.webmanifest" />
         
+        <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+
         <link rel="mask-icon" href="/favicon/mask-icon.svg" color="#000000" />
         
         <meta name="theme-color" content="#4200FF" />
