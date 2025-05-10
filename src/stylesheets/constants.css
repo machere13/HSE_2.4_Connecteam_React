@@ -1,18 +1,22 @@
 :root {
   /* Colors */
-  --color-black: rgb(0 0 0 / 100%);
-  --color-white: rgb(255 255 255 / 100%);
-  --color-main-white: rgb(242 242 242 / 100%);
-  --color-blue: rgb(66 0 255 / 100%);
-  --color-light-blue: rgb(179 196 255 / 100%);
-  --color-purple: rgb(149 42 255 / 100%);
+  --color-main-white: rgb(255 255 255 / 100%);
+  --color-main-main-white: rgb(242 242 242 / 100%);
+  --color-main-grid: rgb(226 226 226 / 100%);
+  --color-main-black: rgb(0 0 0 / 100%);
+  --color-main-blue: rgb(66 0 255 / 100%);
+  --color-main-purple: rgb(149 42 255 / 100%);
+  --color-main-pink: rgb(255 61 148 / 100%);
+  --color-main-orange: rgb(246 71 4 / 100%);
+  --color-light-blue: rgb(185 201 255 / 100%);
   --color-light-purple: rgb(212 197 255 / 100%);
-  --color-pink: rgb(255 61 168 / 100%);
+  --color-light-purple-2: rgb(188 164 255 / 100%);
   --color-light-pink: rgb(255 163 214 / 100%);
-  --color-orange: rgb(247 82 0 / 100%);
   --color-light-orange: rgb(255 165 88 / 100%);
-  --color-acid-blue: rgb(0 51 255 / 100%);
-  --color-grid: rgb(226 226 226 / 100%);
+  --color-click-blue: rgb(34 83 255 / 100%);
+  --color-click-purple: rgb(182 109 255 / 100%);
+  --color-click-pink: rgb(255 125 197 / 100%);
+  --color-click-orange: rgb(255 119 51 / 100%);
   --color-white-gradient: linear-gradient(
     to bottom,
     rgb(255 255 255 / 0%) 0%,
