@@ -1,0 +1,47 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    width: 100vw;
+
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+  
+.cursor {
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+
+.cursor_icon path {
+    fill: currentcolor;
+}
+
+.cursor_icon {
+    color: inherit;
+}
+
+.icon_wrapper, .cursor svg path{
+    width: 25px;
+    min-width: 25px;
+    max-width: 25px;
+
+    height: 25px;
+    min-height: 25px;
+    max-height: 25px;
+}
+
+.label {
+    padding: var(--spacing-3) var(--spacing-8);
+
+    color: var(--color-main-white);
+
+    border-radius: var(--border-radius-15);
+
+    transform: translateY(-5px) translateX(20px);
+    white-space: nowrap;
+}

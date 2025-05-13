@@ -6,6 +6,7 @@ import TelegramIcon from '@/assets/icons/TelegramIcon.svg'
 import VkIcon from '@/assets/icons/VkIcon.svg'
 import YoutubeIcon from '@/assets/icons/YoutubeIcon.svg'
 import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
+import CursorIcon from '@/assets/icons/CursorIcon.svg'
 
 export type IconProps = {
   name:
@@ -16,6 +17,7 @@ export type IconProps = {
     | 'vkIcon'
     | 'youtubeIcon'
     | 'thunderIcon'
+    | 'cursorIcon'
   width?: string
   height?: string
   fill?: string
@@ -39,6 +41,7 @@ const Q_Icon: React.FC<IconProps> = ({
     vkIcon: VkIcon,
     youtubeIcon: YoutubeIcon,
     thunderIcon: ThunderIcon,
+    cursorIcon: CursorIcon,
   }
 
   const SvgIcon = icons[name]

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './O_header.module.css'
+import styles from './O_Header.module.css'
 import Link from 'next/link'
 import { ROUTES } from '@/routes'
 import Q_Icon from '@/components/quarks/Q_Icon'
