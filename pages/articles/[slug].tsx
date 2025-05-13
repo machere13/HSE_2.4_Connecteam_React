@@ -1,6 +1,9 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-import { getArticles, Article } from '@/api/articles'
+
+import { getArticles } from '@/api/articles'
+
+import type { Article } from '@/api/articles'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = await getArticles()

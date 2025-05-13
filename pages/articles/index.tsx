@@ -1,5 +1,7 @@
-import { GetStaticProps } from 'next'
-import { getArticles, Article } from '@/api/articles'
+import { getArticles } from '@/api/articles'
+
+import type { Article } from '@/api/articles'
+import type { GetStaticProps } from 'next'
 
 export const getStaticProps: GetStaticProps = async () => {
   try {

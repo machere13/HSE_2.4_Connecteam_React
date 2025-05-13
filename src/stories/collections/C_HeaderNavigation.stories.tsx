@@ -1,6 +1,8 @@
-import { Meta, StoryFn } from '@storybook/react'
 import { MemoryRouter } from 'react-router-dom'
+
 import C_HeaderNavigation from '@/components/collections/C_HeaderNavigation/C_HeaderNavigation'
+
+import type { Meta, StoryFn } from '@storybook/react'
 
 const meta: Meta<typeof C_HeaderNavigation> = {
   title: 'Collections/C_HeaderNavigation',

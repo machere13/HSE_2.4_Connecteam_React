@@ -1,9 +1,12 @@
-import { Meta, StoryFn } from '@storybook/react'
 import { MemoryRouter } from 'react-router-dom'
-import A_Photo, {A_PhotoProps} from '@/components/atoms/A_Photo/A_Photo'
+
 import Photo_01 from '@/assets/images/A_Photo/A_Photo_01.webp'
 import Photo_02 from '@/assets/images/A_Photo/A_Photo_02.webp'
 import Photo_03 from '@/assets/images/A_Photo/A_Photo_03.webp'
+import A_Photo from '@/components/atoms/A_Photo/A_Photo'
+
+import type { A_PhotoProps } from '@/components/atoms/A_Photo/A_Photo'
+import type { Meta, StoryFn } from '@storybook/react'
 
 const meta: Meta<A_PhotoProps> = {
   title: 'Atoms/A_Photo',
