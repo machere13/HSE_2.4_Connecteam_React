@@ -1,7 +1,10 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { useRouter } from 'next/router'
-import { getTests, getTestBySlug, Test } from '@/api/tests'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+import { getTests, getTestBySlug } from '@/api/tests'
+
+import type { Test } from '@/api/tests'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const tests = await getTests()

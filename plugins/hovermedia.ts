@@ -1,6 +1,8 @@
-import { PluginCreator, Rule, AtRule, Root } from 'postcss'
+import { AtRule } from 'postcss'
 
-const hoverMediaPlugin: PluginCreator<{}> = () => {
+import type { PluginCreator, Rule, Root } from 'postcss'
+
+const hoverMediaPlugin: PluginCreator<void> = () => {
   return {
     postcssPlugin: 'postcss-hover-media',
     Once(root: Root) {

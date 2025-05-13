@@ -1,6 +1,9 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-import { getCases, Case } from '@/api/cases'
+
+import { getCases } from '@/api/cases'
+
+import type { Case } from '@/api/cases'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const cases = await getCases()

@@ -1,5 +1,5 @@
-import O_Header from "@/components/organisms/O_Header/O_Header"
-import A_Cursor from "@/components/atoms/A_Cursor/A_Cursor"
+import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
+import O_Header from '@/components/organisms/O_Header/O_Header'
 
 export default function MainPage() {
   const cursors = [
@@ -8,23 +8,23 @@ export default function MainPage() {
       icon: 'cursor-orbital',
       speed: 1,
       color: '#F64704',
-      label: 'Анастасия'
+      label: 'Анастасия',
     },
     {
       style: 'wave' as const,
       icon: 'cursor-wave',
       speed: 2,
       color: '#FF3DA8',
-      label: 'Ваня'
+      label: 'Ваня',
     },
     {
       style: 'orbital' as const,
       icon: 'cursor-orbital',
       speed: 2,
       color: '#952AFF',
-      label: 'Артем'
-    }
-  ];
+      label: 'Артем',
+    },
+  ]
   return (
     <div>
       <h1>Главная страница</h1>

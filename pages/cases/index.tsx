@@ -1,6 +1,9 @@
 import Link from 'next/link'
+
+import { getCases } from '@/api/cases'
 import { ROUTES } from '@/routes'
-import { getCases, Case } from '@/api/cases'
+
+import type { Case } from '@/api/cases'
 
 export const getStaticProps = async () => {
   const cases = await getCases()
