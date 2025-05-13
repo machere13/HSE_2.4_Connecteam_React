@@ -28,7 +28,9 @@
   );
 
   /* Spacing */
+  --spacing-3: 3px;
   --spacing-5: 5px;
+  --spacing-8: 8px;
   --spacing-9: 9px;
   --spacing-10: 10px;
   --spacing-15: 15px;
@@ -83,6 +85,7 @@
   --font-size-body-article: 18px;
   --font-size-body-button: 15px;
   --font-size-captions: 14px;
+  --font-size-captions-s: 12px;
 
   /* Fonts */
   --font-head-0: 500 94px/0.93 'Inter Tight', sans-serif;
@@ -163,4 +166,12 @@
 
 .text_description {
   font: var(--font-description-text);
+}
+
+.text_captions_s_inter{
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-captions-s);
+  font-weight: var(--font-weight-captions);
+  line-height: var(--font-line-height-captions);
+  letter-spacing: var(--font-letter-spacing-captions);
 }
