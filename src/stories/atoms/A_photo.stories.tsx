@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { MemoryRouter } from 'react-router-dom'
-import A_Photo, { A_PhotoProps } from '@/components/atoms/A_Photo/A_Photo'
+import A_Photo, {A_PhotoProps} from '@/components/atoms/A_Photo/A_Photo'
 import Photo_01 from '@/assets/images/A_Photo/A_Photo_01.webp'
 import Photo_02 from '@/assets/images/A_Photo/A_Photo_02.webp'
 import Photo_03 from '@/assets/images/A_Photo/A_Photo_03.webp'
