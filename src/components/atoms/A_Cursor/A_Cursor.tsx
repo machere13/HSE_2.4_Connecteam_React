@@ -3,7 +3,7 @@ import cn from 'classnames'
 import Q_Icon from '@/components/quarks/Q_Icon'
 import styles from './A_Cursor.module.css'
 
-type CursorStyle = 'orbital' | 'wave' | 'random' | 'follow-path'
+type CursorStyle = 'orbital' | 'wave'
 type Position = { x: number; y: number }
 
 interface CursorConfig {
@@ -46,19 +46,6 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
             return {
               x: pos.x + Math.sin(elapsed * config.speed) * 2,
               y: pos.y + Math.cos(elapsed * config.speed * 0.7) * 3,
-            }
-          case 'random':
-            if (Math.random() > 0.98) {
-              return {
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-              }
-            }
-            return pos
-          case 'follow-path':
-            return {
-              x: (pos.x + Math.sin(elapsed * config.speed) * 10) % window.innerWidth,
-              y: (pos.y + Math.cos(elapsed * config.speed * 0.5) * 8) % window.innerHeight,
             }
           default:
             return pos
