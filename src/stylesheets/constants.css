@@ -98,8 +98,10 @@
   --font-body-article-text: 400 18px/1.2 'Hauora', sans-serif;
   --font-button-text: 500 15px/1.2 'Hauora', sans-serif;
   --font-description-text: 400 14px/1.2 'Hauora', sans-serif;
+}
 
-  @media (max-width: 1028px) {
+@media (max-width: 1028px) {
+  :root{
     /* Font Size */
     --font-size-headers-0: 40px;
     --font-size-headers-1: 45px;
@@ -112,8 +114,10 @@
     --font-size-body-button: 15px;
     --font-size-captions: 14px;
   }
+}
 
-  @media (max-width: 720px) {
+@media (max-width: 720px) {
+  :root{
     /* Font Size */
     --font-size-headers-0: 20px;
     --font-size-headers-1: 45px;
