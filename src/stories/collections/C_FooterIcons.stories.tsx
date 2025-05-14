@@ -2,7 +2,7 @@ import { MemoryRouter } from 'react-router-dom'
 
 import C_FooterIcons from '@/components/collections/C_FooterIcons/C_FooterIcons'
 
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<typeof C_FooterIcons> = {
   title: 'Collections/C_FooterIcons',
@@ -18,6 +18,8 @@ const meta: Meta<typeof C_FooterIcons> = {
 
 export default meta
 
-const Template: StoryFn<typeof C_FooterIcons> = () => <C_FooterIcons />
+type Story = StoryObj<typeof C_FooterIcons>
 
-export const Default = Template.bind({})
+export const Default: Story = {
+  render: () => <C_FooterIcons />,
+}

@@ -2,7 +2,7 @@ import { MemoryRouter } from 'react-router-dom'
 
 import C_HeaderNavigation from '@/components/collections/C_HeaderNavigation/C_HeaderNavigation'
 
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<typeof C_HeaderNavigation> = {
   title: 'Collections/C_HeaderNavigation',
@@ -18,6 +18,8 @@ const meta: Meta<typeof C_HeaderNavigation> = {
 
 export default meta
 
-const Template: StoryFn<typeof C_HeaderNavigation> = () => <C_HeaderNavigation />
+type Story = StoryObj<typeof C_HeaderNavigation>
 
-export const Default = Template.bind({})
+export const Default: Story = {
+  render: () => <C_HeaderNavigation />,
+}
