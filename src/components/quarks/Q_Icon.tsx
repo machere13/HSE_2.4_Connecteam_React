@@ -9,7 +9,7 @@ import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
 import VKIcon from '@/assets/icons/VKIcon.svg'
 import YoutubeIcon from '@/assets/icons/YoutubeIcon.svg'
 
-export type IconProps = {
+export type Q_IconProps = {
   name:
     | 'logoFull'
     | 'searchIcon'
@@ -26,7 +26,7 @@ export type IconProps = {
   onClick?: () => void
 }
 
-const Q_Icon: React.FC<IconProps> = ({
+const Q_Icon: React.FC<Q_IconProps> = ({
   name,
   width = '24',
   height = '24',
