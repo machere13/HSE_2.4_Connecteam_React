@@ -1,5 +1,5 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
-import C_FooterIcons from '@/components/collections/C_FooterIcons/C_FooterIcons'
+import W_FooterIcons from '@/components/wrappers/W_FooterIcons/W_FooterIcons'
 import O_Header from '@/components/organisms/O_Header/O_Header'
 
 export default function MainPage() {
@@ -31,7 +31,7 @@ export default function MainPage() {
       <h1>Главная страница</h1>
       <O_Header />
       <A_Cursor cursors={cursors} />
-      <C_FooterIcons></C_FooterIcons>
+      <W_FooterIcons></W_FooterIcons>
     </div>
   )
 }
