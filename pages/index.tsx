@@ -1,6 +1,6 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
-import W_FooterIcons from '@/components/wrappers/W_FooterIcons/W_FooterIcons'
 import O_Header from '@/components/organisms/O_Header/O_Header'
+import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 
 export default function MainPage() {
   const cursors = [
@@ -31,7 +31,7 @@ export default function MainPage() {
       <h1>Главная страница</h1>
       <O_Header />
       <A_Cursor cursors={cursors} />
-      <W_FooterIcons></W_FooterIcons>
+      <O_Footer />
     </div>
   )
 }
