@@ -6,10 +6,10 @@ import Q_Icon from '@/components/quarks/Q_Icon'
 
 import styles from './A_Cursor.module.css'
 
-type CursorStyle = 'orbital' | 'wave'
+export type CursorStyle = 'orbital' | 'wave'
 type Position = { x: number; y: number }
 
-interface CursorConfig {
+export interface CursorConfig {
   style: CursorStyle
   icon: string
   speed: number
