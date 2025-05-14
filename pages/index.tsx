@@ -1,6 +1,6 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
-import O_Header from '@/components/organisms/O_Header/O_Header'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
+import O_Header from '@/components/organisms/O_Header/O_Header'
 
 export default function MainPage() {
   const cursors = [
