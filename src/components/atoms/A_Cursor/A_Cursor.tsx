@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
+
 import cn from 'classnames'
+
 import Q_Icon from '@/components/quarks/Q_Icon'
+
 import styles from './A_Cursor.module.css'
 
 type CursorStyle = 'orbital' | 'wave'
@@ -28,33 +31,36 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
     startTimeRef.current = performance.now()
   }, [cursors])
 
-  const animate = useCallback((time: number) => {
-    if (!startTimeRef.current) startTimeRef.current = time
-    const elapsed = (time - startTimeRef.current) / 1000
+  const animate = useCallback(
+    (time: number) => {
+      if (!startTimeRef.current) startTimeRef.current = time
+      const elapsed = (time - startTimeRef.current) / 1000
 
-    setPositions(prevPositions =>
-      prevPositions.map((pos, index) => {
-        const config = cursors[index]
+      setPositions(prevPositions =>
+        prevPositions.map((pos, index) => {
+          const config = cursors[index]
 
-        switch (config.style) {
-          case 'orbital':
-            return {
-              x: window.innerWidth / 2 + Math.cos(elapsed * config.speed * 0.5) * 200,
-              y: window.innerHeight / 2 + Math.sin(elapsed * config.speed) * 150,
-            }
-          case 'wave':
-            return {
-              x: pos.x + Math.sin(elapsed * config.speed) * 2,
-              y: pos.y + Math.cos(elapsed * config.speed * 0.7) * 3,
-            }
-          default:
-            return pos
-        }
-      })
-    )
+          switch (config.style) {
+            case 'orbital':
+              return {
+                x: window.innerWidth / 2 + Math.cos(elapsed * config.speed * 0.5) * 200,
+                y: window.innerHeight / 2 + Math.sin(elapsed * config.speed) * 150,
+              }
+            case 'wave':
+              return {
+                x: pos.x + Math.sin(elapsed * config.speed) * 2,
+                y: pos.y + Math.cos(elapsed * config.speed * 0.7) * 3,
+              }
+            default:
+              return pos
+          }
+        }),
+      )
 
-    animationRef.current = requestAnimationFrame(animate)
-  }, [cursors])
+      animationRef.current = requestAnimationFrame(animate)
+    },
+    [cursors],
+  )
 
   useEffect(() => {
     animationRef.current = requestAnimationFrame(animate)
@@ -67,12 +73,13 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setPositions(prev => 
+      setPositions(prev =>
         prev.map(pos => ({
           x: Math.min(pos.x, window.innerWidth),
-          y: Math.min(pos.y, window.innerHeight)
-        }))
-  )}
+          y: Math.min(pos.y, window.innerHeight),
+        })),
+      )
+    }
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
@@ -90,14 +97,14 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
               transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`,
               color: config.color,
               position: 'absolute',
-              transition: 'transform 0.1s ease-out'
+              transition: 'transform 0.1s ease-out',
             }}
           >
             <div className={styles.icon_wrapper}>
               <Q_Icon
                 name='cursorIcon'
-                width="25"
-                height="25"
+                width='25'
+                height='25'
                 fill={config.color || '#000000'}
                 className={styles.cursor_icon}
               />
@@ -110,7 +117,7 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
                   background: config.color,
                 }}
               >
-                <span className="text_captions_s_inter">{config.label}</span>
+                <span className='text_captions_s_inter'>{config.label}</span>
               </div>
             )}
           </div>

@@ -1,4 +1,5 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
+import A_FooterIcon from '@/components/atoms/A_FooterIcon/A_FooterIcon'
 import O_Header from '@/components/organisms/O_Header/O_Header'
 
 export default function MainPage() {
@@ -30,6 +31,7 @@ export default function MainPage() {
       <h1>Главная страница</h1>
       <O_Header />
       <A_Cursor cursors={cursors} />
+      <A_FooterIcon href='https://t.me/connecteam' iconName='telegramIcon'></A_FooterIcon>
     </div>
   )
 }
