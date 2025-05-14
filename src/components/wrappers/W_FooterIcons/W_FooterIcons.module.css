@@ -1,0 +1,15 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+}
+
+.wrapper > p{
+    color: var(--color-main-white);
+}
+
+@media (max-width: 720px) {
+    .wrapper > p{
+        display: none;
+    }
+}
