@@ -1,5 +1,6 @@
 import React from 'react'
 
+import CloseIcon from '@/assets/icons/CloseIcon.svg'
 import CursorIcon from '@/assets/icons/CursorIcon.svg'
 import LinkIcon from '@/assets/icons/LinkIcon.svg'
 import LogoFull from '@/assets/icons/LogoFull.svg'
@@ -19,6 +20,7 @@ export type Q_IconProps = {
     | 'youtubeIcon'
     | 'thunderIcon'
     | 'cursorIcon'
+    | 'closeIcon'
   width?: string
   height?: string
   fill?: string
@@ -43,6 +45,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
     youtubeIcon: YoutubeIcon,
     thunderIcon: ThunderIcon,
     cursorIcon: CursorIcon,
+    closeIcon: CloseIcon,
   }
 
   const SvgIcon = icons[name]
