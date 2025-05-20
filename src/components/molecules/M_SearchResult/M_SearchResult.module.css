@@ -19,13 +19,13 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.wrapper:hover {
-		background: var(--color-light-blue);
-	}
+  .wrapper:hover {
+    background: var(--color-light-blue);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.wrapper:active {
-		background: var(--color-light-blue);
-	}
+  .wrapper:active {
+    background: var(--color-light-blue);
+  }
 }
