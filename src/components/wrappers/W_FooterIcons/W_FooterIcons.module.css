@@ -5,6 +5,8 @@
 }
 
 .wrapper > p {
+  padding-left: var(--spacing-15);
+
   color: var(--color-main-white);
 }
 
