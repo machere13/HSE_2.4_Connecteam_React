@@ -1,9 +1,13 @@
 .wrapper {
+  position: absolute;
+
+  width: 100%;
+
   height: fit-content;
 
   border-radius: var(--border-radius-15);
 
-  transform: translateY(-15px);
+  transform: translateY(-30px);
   overflow: hidden;
 }
 
