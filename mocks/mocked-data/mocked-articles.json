@@ -387,9 +387,7 @@
           "type": "highlightedSection",
           "title": "Организация",
           "titleType": "big",
-          "items": [
-            "testing filter 'Организация'"
-          ]
+          "items": ["testing filter 'Организация'"]
         }
       ],
       "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
@@ -435,9 +433,7 @@
           "type": "highlightedSection",
           "title": "Личный конфликт",
           "titleType": "big",
-          "items": [
-            "testing filter 'Личный конфликт'"
-          ]
+          "items": ["testing filter 'Личный конфликт'"]
         }
       ],
       "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]

@@ -36,18 +36,20 @@
   --spacing-22: 22px;
   --spacing-25: 25px;
   --spacing-30: 30px;
+  --spacing-35: 35px;
+  --spacing-40: 40px;
   --spacing-45: 45px;
-  --spacing-60: 60px;
+  --spacing-50: 50px;
+  --spacing-73: 73px;
+  --spacing-85: 85px;
+  --spacing-100: 100px;
+  --spacing-130: 130px;
+  --spacing-165: 165px;
+  --spacing-300: 300px;
 
   /* Border Radius */
-  --border-radius-10: 10px;
-  --border-radius-12: 12px;
-  --border-radius-13: 13px;
   --border-radius-15: 15px;
-  --border-radius-19: 19px;
   --border-radius-20: 20px;
-  --border-radius-24: 24px;
-  --border-radius-35: 35px;
 
   /* Font Family */
   --font-family-inter: 'Inter', sans-serif;
@@ -73,94 +75,219 @@
   --font-letter-spacing-captions: 1.5%;
 
   /* Font Size */
-  --font-size-headers-0: 94px;
-  --font-size-headers-1: 45px;
-  --font-size-headers-2: 35px;
-  --font-size-headers-cards: 25px;
-  --font-size-headers-article: 25px;
-  --font-size-body-cursor: 20px;
-  --font-size-body: 18px;
-  --font-size-body-article: 18px;
-  --font-size-body-button: 15px;
-  --font-size-captions: 14px;
+  --font-size-headers-1: 64px;
+  --font-size-headers-2: 45px;
+  --font-size-headers-3: 35px;
+  --font-size-headers-4: 30px;
+  --font-size-headers-5: 25px;
+  --font-size-headers-6: 25px;
+  --font-size-body-1: 18px;
+  --font-size-body-2: 18px;
+  --font-size-captions-l: 15px;
+  --font-size-captions-m: 14px;
+  --font-size-captions-s: 12px;
+  --font-size-button-l: 18px;
+  --font-size-button-s: 15px;
+}
 
-  /* Fonts */
-  --font-head-0: 500 94px/0.93 'Inter Tight', sans-serif;
-  --font-head-1: 500 45px/1.2 'Inter Tight', sans-serif;
-  --font-head-2: 500 35px/1.2 'Inter Tight', sans-serif;
-  --font-head-cards: 600 25px/1.2 'Hauora', sans-serif;
-  --font-head-article: 500 25px/1.2 'Inter Tight', sans-serif;
-  --font-cursor-text: 400 20px/1.2 'Inter', sans-serif;
-  --font-body-text: 500 18px/1.2 'Hauora', sans-serif;
-  --font-body-article-text: 400 18px/1.2 'Hauora', sans-serif;
-  --font-button-text: 500 15px/1.2 'Hauora', sans-serif;
-  --font-description-text: 400 14px/1.2 'Hauora', sans-serif;
-
-  @media (max-width: 1028px) {
+@media (max-width: 1028px) {
+  :root {
     /* Font Size */
-    --font-size-headers-0: 40px;
-    --font-size-headers-1: 45px;
-    --font-size-headers-2: 35px;
-    --font-size-headers-cards: 25px;
-    --font-size-headers-article: 25px;
-    --font-size-body-cursor: 20px;
-    --font-size-body: 18px;
-    --font-size-body-article: 18px;
-    --font-size-body-button: 15px;
-    --font-size-captions: 14px;
-  }
+    --font-size-headers-1: 64px;
+    --font-size-headers-2: 45px;
+    --font-size-headers-3: 35px;
+    --font-size-headers-4: 30px;
+    --font-size-headers-5: 25px;
+    --font-size-headers-6: 25px;
+    --font-size-body-1: 18px;
+    --font-size-body-2: 18px;
+    --font-size-captions-l: 15px;
+    --font-size-captions-m: 14px;
+    --font-size-captions-s: 12px;
+    --font-size-button-l: 18px;
+    --font-size-button-s: 15px;
 
-  @media (max-width: 720px) {
+    /* Spacing */
+    --spacing-3: 3px;
+    --spacing-5: 5px;
+    --spacing-8: 8px;
+    --spacing-9: 9px;
+    --spacing-10: 10px;
+    --spacing-15: 15px;
+    --spacing-20: 20px;
+    --spacing-22: 22px;
+    --spacing-25: 25px;
+    --spacing-30: 28px;
+    --spacing-35: 30px;
+    --spacing-40: 30px;
+    --spacing-45: 35px;
+    --spacing-50: 40px;
+    --spacing-73: 50px;
+    --spacing-85: 80px;
+    --spacing-100: 85px;
+    --spacing-130: 90px;
+    --spacing-165: 120px;
+    --spacing-300: 165px;
+
+    /* Border Radius */
+    --border-radius-15: 15px;
+    --border-radius-20: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
     /* Font Size */
-    --font-size-headers-0: 20px;
-    --font-size-headers-1: 45px;
-    --font-size-headers-2: 35px;
-    --font-size-headers-cards: 25px;
-    --font-size-headers-article: 25px;
-    --font-size-body-cursor: 20px;
-    --font-size-body: 18px;
-    --font-size-body-article: 18px;
-    --font-size-body-button: 15px;
-    --font-size-captions: 14px;
+    --font-size-headers-1: 40px;
+    --font-size-headers-2: 23px;
+    --font-size-headers-3: 23px;
+    --font-size-headers-4: 20px;
+    --font-size-headers-5: 20px;
+    --font-size-headers-6: 17px;
+    --font-size-body-1: 14px;
+    --font-size-body-2: 14px;
+    --font-size-captions-l: 14px;
+    --font-size-captions-m: 14px;
+    --font-size-captions-s: 14px;
+    --font-size-button-l: 15px;
+    --font-size-button-s: 13px;
+
+    /* Spacing */
+    --spacing-3: 3px;
+    --spacing-5: 5px;
+    --spacing-8: 8px;
+    --spacing-9: 9px;
+    --spacing-10: 10px;
+    --spacing-15: 15px;
+    --spacing-20: 20px;
+    --spacing-22: 20px;
+    --spacing-25: 25px;
+    --spacing-30: 25px;
+    --spacing-35: 25px;
+    --spacing-40: 15px;
+    --spacing-45: 25px;
+    --spacing-50: 25px;
+    --spacing-73: 20px;
+    --spacing-85: 70px;
+    --spacing-100: 70px;
+    --spacing-130: 45px;
+    --spacing-165: 70px;
+    --spacing-300: 25px;
+
+    /* Border Radius */
+    --border-radius-15: 10px;
+    --border-radius-20: 15px;
   }
 }
 
-.text_head_0 {
-  font: var(--font-head-0);
+h1 {
+  font-family: var(--font-family-inter-tight);
+  font-size: var(--font-size-headers-1);
+  font-weight: var(--font-weight-headers);
+  line-height: var(--font-line-height-headers);
+  letter-spacing: var(--font-letter-spacing-headers);
 }
 
-.text_head_1 {
-  font: var(--font-head-1);
+h2 {
+  font-family: var(--font-family-inter-tight);
+  font-size: var(--font-size-headers-2);
+  font-weight: var(--font-weight-headers);
+  line-height: var(--font-line-height-headers);
+  letter-spacing: var(--font-letter-spacing-headers);
 }
 
-.text_head_2 {
-  font: var(--font-head-2);
+h3 {
+  font-family: var(--font-family-inter-tight);
+  font-size: var(--font-size-headers-3);
+  font-weight: var(--font-weight-headers);
+  line-height: var(--font-line-height-headers);
+  letter-spacing: var(--font-letter-spacing-headers);
 }
 
-.text_head_cards {
-  font: var(--font-head-cards);
+h4 {
+  font-family: var(--font-family-inter-tight);
+  font-size: var(--font-size-headers-4);
+  font-weight: var(--font-weight-headers);
+  line-height: var(--font-line-height-headers);
+  letter-spacing: var(--font-letter-spacing-headers);
 }
 
-.text_head_article {
-  font: var(--font-head-article);
+h5 {
+  font-family: var(--font-family-hauora);
+  font-size: var(--font-size-headers-5);
+  font-weight: var(--font-weight-headers);
+  line-height: var(--font-line-height-headers);
+  letter-spacing: var(--font-letter-spacing-headers);
 }
 
-.text_cursor {
-  font: var(--font-cursor-text);
+h6 {
+  font-family: var(--font-family-inter-tight);
+  font-size: var(--font-size-headers-5);
+  font-weight: var(--font-weight-headers);
+  line-height: var(--font-line-height-headers);
+  letter-spacing: var(--font-letter-spacing-headers);
 }
 
-.text_body {
-  font: var(--font-body-text);
+p {
+  font-family: var(--font-family-hauora);
+  font-size: var(--font-size-body-1);
+  font-weight: var(--font-weight-body-1);
+  line-height: var(--font-line-height-body-1);
+  letter-spacing: var(--font-letter-spacing-body-1);
 }
 
-.text_body_article {
-  font: var(--font-body-article-text);
+.text_body_2 {
+  font-family: var(--font-family-hauora);
+  font-size: var(--font-size-body-2);
+  font-weight: var(--font-weight-body-2);
+  line-height: var(--font-line-height-body-2);
+  letter-spacing: var(--font-letter-spacing-body-2);
 }
 
-.text_button {
-  font: var(--font-button-text);
+.text_captions_l {
+  font-family: var(--font-family-hauora);
+  font-size: var(--font-size-captions-l);
+  font-weight: var(--font-weight-captions);
+  line-height: var(--font-line-height-captions);
+  letter-spacing: var(--font-letter-spacing-captions);
 }
 
-.text_description {
-  font: var(--font-description-text);
+.text_captions_m {
+  font-family: var(--font-family-hauora);
+  font-size: var(--font-size-captions-m);
+  font-weight: var(--font-weight-captions);
+  line-height: var(--font-line-height-captions);
+  letter-spacing: var(--font-letter-spacing-captions);
+}
+
+.text_captions_s {
+  font-family: var(--font-family-hauora);
+  font-size: var(--font-size-captions-s);
+  font-weight: var(--font-weight-captions);
+  line-height: var(--font-line-height-captions);
+  letter-spacing: var(--font-letter-spacing-captions);
+}
+
+.text_captions_s_inter {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-captions-s);
+  font-weight: var(--font-weight-captions);
+  line-height: var(--font-line-height-captions);
+  letter-spacing: var(--font-letter-spacing-captions);
+}
+
+.text_button_l {
+  font-family: var(--font-family-hauora);
+  font-size: var(--font-size-button-l);
+  font-weight: var(--font-weight-buttons);
+  line-height: var(--font-line-height-buttons);
+  letter-spacing: var(--font-letter-spacing-buttons);
+}
+
+.text_button_s {
+  font-family: var(--font-family-hauora);
+  font-size: var(--font-size-button-s);
+  font-weight: var(--font-weight-buttons);
+  line-height: var(--font-line-height-buttons);
+  letter-spacing: var(--font-letter-spacing-buttons);
 }

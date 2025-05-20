@@ -145,14 +145,14 @@
       ],
       "stickers": ["Запросить данные у аналитиков", "провести 3 интервью с ца"],
       "comments": [
-          {
-              "comment": "«Яндекс Музыка создаёт для каждого персональный музыкальный мир. Это возможно благодаря умной системе рекомендаций — она открывает именно тех артистов, которых нужно услышать прямо сейчас»",
-              "author": "Никита Квасник, дизайн-директор Яндекс Музыки"
-          },
-          {
-              "comment": "«Если вы хотите проверить свой дизайн на успех, попробуйте методологию DMS (Distinctive Memory Assets)»",
-              "author": "Никита Квасник, дизайн-директор Яндекс Музыки"
-          }
+        {
+          "comment": "«Яндекс Музыка создаёт для каждого персональный музыкальный мир. Это возможно благодаря умной системе рекомендаций — она открывает именно тех артистов, которых нужно услышать прямо сейчас»",
+          "author": "Никита Квасник, дизайн-директор Яндекс Музыки"
+        },
+        {
+          "comment": "«Если вы хотите проверить свой дизайн на успех, попробуйте методологию DMS (Distinctive Memory Assets)»",
+          "author": "Никита Квасник, дизайн-директор Яндекс Музыки"
+        }
       ]
     }
   },
@@ -202,16 +202,19 @@
           "text": "testing filter 'Руководство командой'"
         }
       ],
-      "stickers": ["testing filter 'Руководство командой'", "testing filter 'Руководство командой'"],
+      "stickers": [
+        "testing filter 'Руководство командой'",
+        "testing filter 'Руководство командой'"
+      ],
       "comments": [
-          {
-              "comment": "testing filter 'Руководство командой'",
-              "author": "testing filter 'Руководство командой'"
-          },
-          {
-              "comment": "testing filter 'Руководство командой'",
-              "author": "testing filter 'Руководство командой'"
-          }
+        {
+          "comment": "testing filter 'Руководство командой'",
+          "author": "testing filter 'Руководство командой'"
+        },
+        {
+          "comment": "testing filter 'Руководство командой'",
+          "author": "testing filter 'Руководство командой'"
+        }
       ]
     }
   },
@@ -263,14 +266,14 @@
       ],
       "stickers": ["testing filter 'История компании'", "testing filter 'История компании'"],
       "comments": [
-          {
-              "comment": "testing filter 'История компании'",
-              "author": "testing filter 'История компании'"
-          },
-          {
-              "comment": "testing filter 'История компании'",
-              "author": "testing filter 'История компании'"
-          }
+        {
+          "comment": "testing filter 'История компании'",
+          "author": "testing filter 'История компании'"
+        },
+        {
+          "comment": "testing filter 'История компании'",
+          "author": "testing filter 'История компании'"
+        }
       ]
     }
   },
@@ -322,14 +325,14 @@
       ],
       "stickers": ["testing filter 'Лайфхаки от команды'", "testing filter 'Лайфхаки от команды'"],
       "comments": [
-          {
-              "comment": "testing filter 'Лайфхаки от команды'",
-              "author": "testing filter 'Лайфхаки от команды'"
-          },
-          {
-              "comment": "testing filter 'Лайфхаки от команды'",
-              "author": "testing filter 'Лайфхаки от команды'"
-          }
+        {
+          "comment": "testing filter 'Лайфхаки от команды'",
+          "author": "testing filter 'Лайфхаки от команды'"
+        },
+        {
+          "comment": "testing filter 'Лайфхаки от команды'",
+          "author": "testing filter 'Лайфхаки от команды'"
+        }
       ]
     }
   }
