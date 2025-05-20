@@ -1,0 +1,15 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    min-width: 30px;
+
+    height: 30px;
+    min-height: 30px;
+
+    background: var(--color-main-purple);
+    border-radius: var(--border-radius-15);
+    cursor: pointer;
+}
