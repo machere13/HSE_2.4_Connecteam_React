@@ -1,0 +1,38 @@
+.wrapper {
+  height: fit-content;
+
+  border-radius: var(--border-radius-15);
+
+  transform: translateY(-15px);
+  overflow: hidden;
+}
+
+.content{
+    width: 100%;
+
+    max-height: 220px;
+
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.plate {
+  width: 100%;
+
+  min-height: 30px;
+
+  background: var(--color-main-white);
+}
+
+.empty_wrapper {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  padding: var(--spacing-10) var(--spacing-20);
+
+  color: var(--color-main-black);
+
+  background: var(--color-main-white);
+}
