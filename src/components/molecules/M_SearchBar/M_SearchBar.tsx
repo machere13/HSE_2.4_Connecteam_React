@@ -32,7 +32,9 @@ export default function M_SearchBar({ onSearchChange, onClear }: M_SearchBarProp
     <div className={styles.wrapper}>
       <input type='text' className='text_captions_l' ref={inputRef} onChange={handleInputChange} />
       {showClearIcon && (
-        <Q_Icon name='closeIcon' width='12' height='12' onClick={handleClearInput} />
+        <button onClick={handleClearInput} className={styles.button} aria-label='Очистить поиск'>
+          <Q_Icon name='closeIcon' width='12' height='12' />
+        </button>
       )}
     </div>
   )
