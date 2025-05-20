@@ -6,7 +6,7 @@
 
   width: 100%;
 
-  padding: var(--spacing-45) var(--spacing-60);
+  padding: var(--spacing-40) var(--spacing-50);
 
   background: var(--color-main-blue);
   border-radius: var(--border-radius-15) var(--border-radius-15) 0 0;
