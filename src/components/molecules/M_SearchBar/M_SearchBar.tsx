@@ -1,23 +1,39 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 import Q_Icon from '@/components/quarks/Q_Icon'
 
 import styles from './M_SearchBar.module.css'
 
-export default function M_SearchBar() {
+interface M_SearchBarProps {
+  onSearchChange: (query: string) => void
+  onClear: () => void
+}
+
+export default function M_SearchBar({ onSearchChange, onClear }: M_SearchBarProps) {
   const inputRef = useRef<HTMLInputElement>(null)
+  const [showClearIcon, setShowClearIcon] = useState(false)
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setShowClearIcon(value.length > 0)
+    onSearchChange(value)
+  }
 
   const handleClearInput = () => {
     if (inputRef.current) {
       inputRef.current.value = ''
       inputRef.current.focus()
     }
+    setShowClearIcon(false)
+    onClear()
   }
 
   return (
     <div className={styles.wrapper}>
-      <input type='text' className='text_captions_l' ref={inputRef} />
-      <Q_Icon name='closeIcon' width='12' height='12' onClick={handleClearInput} />
+      <input type='text' className='text_captions_l' ref={inputRef} onChange={handleInputChange} />
+      {showClearIcon && (
+        <Q_Icon name='closeIcon' width='12' height='12' onClick={handleClearInput} />
+      )}
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
-import M_SearchBar from '@/components/molecules/M_SearchBar/M_SearchBar'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import O_Header from '@/components/organisms/O_Header/O_Header'
 
@@ -33,7 +32,6 @@ export default function MainPage() {
       <O_Header />
       <A_Cursor cursors={cursors} />
       <O_Footer />
-      <M_SearchBar />
     </div>
   )
 }

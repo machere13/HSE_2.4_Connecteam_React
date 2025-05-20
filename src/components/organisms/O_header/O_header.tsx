@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import C_HeaderNavigation from '@/components/collections/C_HeaderNavigation/C_HeaderNavigation'
 import Q_Icon from '@/components/quarks/Q_Icon'
+import W_SearchBarWithResults from '@/components/wrappers/W_SearchBarWithResults/W_SearchBarWithResults'
 import { ROUTES } from '@/routes'
 
 import styles from './O_Header.module.css'
@@ -16,6 +17,7 @@ export default function O_Header() {
       </Link>
       <div className={styles.content}>
         <C_HeaderNavigation />
+        <W_SearchBarWithResults />
       </div>
     </div>
   )
