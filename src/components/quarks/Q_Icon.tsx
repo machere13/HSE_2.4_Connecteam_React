@@ -1,13 +1,15 @@
 import React from 'react'
+
+import CursorIcon from '@/assets/icons/CursorIcon.svg'
+import LinkIcon from '@/assets/icons/LinkIcon.svg'
 import LogoFull from '@/assets/icons/LogoFull.svg'
 import SearchIcon from '@/assets/icons/SearchIcon.svg'
-import LinkIcon from '@/assets/icons/LinkIcon.svg'
 import TelegramIcon from '@/assets/icons/TelegramIcon.svg'
-import VkIcon from '@/assets/icons/VkIcon.svg'
-import YoutubeIcon from '@/assets/icons/YoutubeIcon.svg'
 import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
+import VKIcon from '@/assets/icons/VKIcon.svg'
+import YoutubeIcon from '@/assets/icons/YoutubeIcon.svg'
 
-export type IconProps = {
+export type Q_IconProps = {
   name:
     | 'logoFull'
     | 'searchIcon'
@@ -16,6 +18,7 @@ export type IconProps = {
     | 'vkIcon'
     | 'youtubeIcon'
     | 'thunderIcon'
+    | 'cursorIcon'
   width?: string
   height?: string
   fill?: string
@@ -23,7 +26,7 @@ export type IconProps = {
   onClick?: () => void
 }
 
-const Q_Icon: React.FC<IconProps> = ({
+const Q_Icon: React.FC<Q_IconProps> = ({
   name,
   width = '24',
   height = '24',
@@ -36,9 +39,10 @@ const Q_Icon: React.FC<IconProps> = ({
     searchIcon: SearchIcon,
     linkIcon: LinkIcon,
     telegramIcon: TelegramIcon,
-    vkIcon: VkIcon,
+    vkIcon: VKIcon,
     youtubeIcon: YoutubeIcon,
     thunderIcon: ThunderIcon,
+    cursorIcon: CursorIcon,
   }
 
   const SvgIcon = icons[name]

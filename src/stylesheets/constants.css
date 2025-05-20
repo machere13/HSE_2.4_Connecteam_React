@@ -4,7 +4,7 @@
   --color-main-main-white: rgb(242 242 242 / 100%);
   --color-main-grid: rgb(226 226 226 / 100%);
   --color-main-black: rgb(0 0 0 / 100%);
-  --color-main-blue: rgb(66 0 255 / 100%);
+  --color-main-blue: rgb(66 29 255 / 100%);
   --color-main-purple: rgb(149 42 255 / 100%);
   --color-main-pink: rgb(255 61 148 / 100%);
   --color-main-orange: rgb(246 71 4 / 100%);
@@ -28,7 +28,9 @@
   );
 
   /* Spacing */
+  --spacing-3: 3px;
   --spacing-5: 5px;
+  --spacing-8: 8px;
   --spacing-9: 9px;
   --spacing-10: 10px;
   --spacing-15: 15px;
@@ -58,21 +60,24 @@
 
   /* Font Weight */
   --font-weight-headers: 500;
-  --font-weight-subheaders: 600;
-  --font-weight-body: 400;
-  --font-weight-captions: 400;
+  --font-weight-body-1: 500;
+  --font-weight-body-2: 400;
+  --font-weight-captions: 500;
+  --font-weight-buttons: 500;
 
   /* Line Height */
   --font-line-height-headers: 1.2;
-  --font-line-height-subheaders: 1.2;
-  --font-line-height-body: 1.2;
+  --font-line-height-body-1: 1.2;
+  --font-line-height-body-2: 1.2;
   --font-line-height-captions: 1.2;
+  --font-line-height-buttons: 1.2;
 
   /* Letter Spacing */
   --font-letter-spacing-headers: 1.5%;
-  --font-letter-spacing-subheaders: 1.5%;
-  --font-letter-spacing-body: 1.5%;
+  --font-letter-spacing-body-1: 1.5%;
+  --font-letter-spacing-body-2: 1.5%;
   --font-letter-spacing-captions: 1.5%;
+  --font-letter-spacing-buttons: 1.5%;
 
   /* Font Size */
   --font-size-headers-1: 64px;

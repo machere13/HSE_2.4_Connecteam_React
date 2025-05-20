@@ -1,5 +1,8 @@
+import Image from 'next/image'
+
 import styles from './A_Photo.module.css'
-import Image, { StaticImageData } from 'next/image'
+
+import type { StaticImageData } from 'next/image'
 
 export interface A_PhotoProps {
   src: string | StaticImageData

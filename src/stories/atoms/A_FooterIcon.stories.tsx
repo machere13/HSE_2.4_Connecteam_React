@@ -1,13 +1,13 @@
 import { MemoryRouter } from 'react-router-dom'
 
-import A_HeaderButton from '@/components/atoms/A_HeaderButton/A_HeaderButton'
+import A_FooterIcon from '@/components/atoms/A_FooterIcon/A_FooterIcon'
 
-import type { A_HeaderButtonProps } from '@/components/atoms/A_HeaderButton/A_HeaderButton'
+import type { A_FooterIconProps } from '@/components/atoms/A_FooterIcon/A_FooterIcon'
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<A_HeaderButtonProps> = {
-  title: 'Atoms/A_HeaderButton',
-  component: A_HeaderButton,
+const meta: Meta<A_FooterIconProps> = {
+  title: 'Atoms/A_FooterIcon',
+  component: A_FooterIcon,
   decorators: [
     Story => (
       <MemoryRouter>
@@ -19,11 +19,11 @@ const meta: Meta<A_HeaderButtonProps> = {
 
 export default meta
 
-type Story = StoryObj<A_HeaderButtonProps>
+type Story = StoryObj<A_FooterIconProps>
 
 export const Default: Story = {
   args: {
-    label: 'Button',
+    iconName: 'telegramIcon',
     to: '/',
   },
 }

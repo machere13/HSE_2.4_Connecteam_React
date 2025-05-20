@@ -1,20 +1,20 @@
 .wrapper {
   padding: var(--spacing-5) var(--spacing-15);
 
-  color: var(--color-white);
+  color: var(--color-main-white);
 
-  background: var(--color-blue);
+  background: var(--color-main-blue);
   border-radius: var(--border-radius-20);
 
   transition: all 0.2s;
-  border: 1.5px solid var(--color-blue);
+  border: 1.5px solid var(--color-main-blue);
 }
 
 .wrapper:active {
   color: var(--color-blue);
 
-  background: var(--color-white);
-  border-color: var(--color-white);
+  background: var(--color-main-white);
+  border-color: var(--color-main-white);
 }
 
 .wrapper:focus {
@@ -24,12 +24,12 @@
 
 @media (hover: hover) and (pointer: fine) {
   .wrapper:hover {
-    border-color: var(--color-white);
+    border-color: var(--color-main-white);
   }
 }
 
 @media (hover: none) and (pointer: coarse) {
   .wrapper:active {
-    border-color: var(--color-white);
+    border-color: var(--color-main-white);
   }
 }

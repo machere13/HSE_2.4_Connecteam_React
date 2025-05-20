@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import cn from 'classnames'
+import Link from 'next/link'
 
 import styles from './A_HeaderButton.module.css'
 
@@ -10,7 +10,7 @@ export interface A_HeaderButtonProps {
 
 export default function A_HeaderButton({ label, to }: A_HeaderButtonProps) {
   return (
-    <Link href={to} className={cn('text_description', styles.wrapper)}>
+    <Link href={to} className={cn('text_button_s', styles.wrapper)}>
       {label}
     </Link>
   )
