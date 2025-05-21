@@ -1,4 +1,5 @@
 import { getArticles } from '@/api/articles'
+import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 
 import type { Article } from '@/api/articles'
 import type { GetStaticProps } from 'next'
@@ -26,6 +27,7 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function ArticlesPage({ articles }: { articles: Article[] }) {
   return (
     <div>
+      <SO_Header />
       <h1>Все статьи</h1>
       <ul>
         {articles.map(article => (

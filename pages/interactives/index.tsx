@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { getTests } from '@/api/tests'
+import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import { ROUTES } from '@/routes'
 
 import type { Test } from '@/api/tests'
@@ -16,6 +17,7 @@ export const getStaticProps = async () => {
 export default function InteractivesPage({ tests }: { tests: Test[] }) {
   return (
     <div>
+      <SO_Header />
       <h1>Интерактивы</h1>
 
       <div>
