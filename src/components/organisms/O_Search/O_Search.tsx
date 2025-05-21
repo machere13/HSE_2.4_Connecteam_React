@@ -7,7 +7,11 @@ import W_SearchBarWithResults from '@/components/wrappers/W_SearchBarWithResults
 
 import styles from './O_Search.module.css'
 
-export default function O_Search() {
+type O_SearchProps = {
+  headerRef: React.RefObject<HTMLElement | null>
+}
+
+export default function O_Search({ headerRef }: O_SearchProps) {
   const [isSearchVisible, setIsSearchVisible] = useState(false)
   const [shouldRender, setShouldRender] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
@@ -23,7 +27,12 @@ export default function O_Search() {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+      const target = e.target as Node
+
+      const clickedOutsideSearch = searchRef.current && !searchRef.current.contains(target)
+      const clickedOutsideHeader = headerRef.current && !headerRef.current.contains(target)
+
+      if (clickedOutsideSearch && clickedOutsideHeader) {
         setIsSearchVisible(false)
       }
     }
@@ -46,7 +55,7 @@ export default function O_Search() {
       document.removeEventListener('mousedown', handleClickOutside)
       document.removeEventListener('keydown', handleEscape)
     }
-  }, [isSearchVisible])
+  }, [isSearchVisible, headerRef])
 
   useEffect(() => {
     if (!isSearchVisible && shouldRender) {
