@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 
 import { getArticles } from '@/api/articles'
+import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 
 import type { Article } from '@/api/articles'
 import type { GetStaticPaths, GetStaticProps } from 'next'
@@ -48,6 +49,7 @@ export default function ArticlePage({ article }: { article: Article }) {
 
   return (
     <div>
+      <SO_Header />
       <h1>{article.title}</h1>
       <p>{article.content}</p>
     </div>

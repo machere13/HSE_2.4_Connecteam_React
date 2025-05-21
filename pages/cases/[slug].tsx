@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 
 import { getCases } from '@/api/cases'
+import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 
 import type { Case } from '@/api/cases'
 import type { GetStaticPaths, GetStaticProps } from 'next'
@@ -48,6 +49,7 @@ export default function CasePage({ case: caseItem }: { case: Case }) {
 
   return (
     <div>
+      <SO_Header />
       <h1>{caseItem.title}</h1>
       <p>{caseItem.content}</p>
     </div>

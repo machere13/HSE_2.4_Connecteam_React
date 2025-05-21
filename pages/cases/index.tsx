@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { getCases } from '@/api/cases'
+import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import { ROUTES } from '@/routes'
 
 import type { Case } from '@/api/cases'
@@ -16,6 +17,7 @@ export const getStaticProps = async () => {
 export default function CasesPage({ cases }: { cases: Case[] }) {
   return (
     <div>
+      <SO_Header />
       <h1>Все кейсы</h1>
       <div>
         {cases.map(caseItem => (
