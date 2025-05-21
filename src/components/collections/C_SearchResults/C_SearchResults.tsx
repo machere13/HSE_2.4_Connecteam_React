@@ -5,7 +5,7 @@ import M_SearchResult from '@/components/molecules/M_SearchResult/M_SearchResult
 import styles from './C_SearchResults.module.css'
 
 interface SearchResultItem {
-  href: string
+  url: string
   title: string
   description: string
   id?: string | number
@@ -35,8 +35,8 @@ export default function C_SearchResults({
         <div className={styles.content}>
           {results.map(result => (
             <M_SearchResult
-              key={result.id || result.href}
-              href={result.href}
+              key={result.id || result.url}
+              href={result.url}
               title={result.title}
               description={result.description}
             />
