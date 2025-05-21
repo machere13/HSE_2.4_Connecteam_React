@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 
+import cn from 'classnames'
+
 import A_SearchButton from '@/components/atoms/A_SearchButton/A_SearchButton'
 import W_SearchBarWithResults from '@/components/wrappers/W_SearchBarWithResults/W_SearchBarWithResults'
 
@@ -7,10 +9,16 @@ import styles from './O_Search.module.css'
 
 export default function O_Search() {
   const [isSearchVisible, setIsSearchVisible] = useState(false)
+  const [shouldRender, setShouldRender] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
 
   const toggleSearch = () => {
-    setIsSearchVisible(prev => !prev)
+    if (!isSearchVisible) {
+      setShouldRender(true)
+      setIsSearchVisible(true)
+    } else {
+      setIsSearchVisible(false)
+    }
   }
 
   useEffect(() => {
@@ -29,6 +37,7 @@ export default function O_Search() {
     if (isSearchVisible) {
       document.addEventListener('mousedown', handleClickOutside)
       document.addEventListener('keydown', handleEscape)
+
       const input = searchRef.current?.querySelector('input')
       input?.focus()
     }
@@ -39,10 +48,21 @@ export default function O_Search() {
     }
   }, [isSearchVisible])
 
+  useEffect(() => {
+    if (!isSearchVisible && shouldRender) {
+      const timer = setTimeout(() => {
+        setShouldRender(false)
+      }, 150)
+
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isSearchVisible, shouldRender])
+
   return (
     <div className={styles.wrapper} ref={searchRef}>
-      <div className={`${styles.searchContainer} ${isSearchVisible ? styles.visible : ''}`}>
-        {isSearchVisible && <W_SearchBarWithResults />}
+      <div className={cn(styles.search_wrapper, isSearchVisible && styles.visible)}>
+        {shouldRender && <W_SearchBarWithResults />}
       </div>
       <A_SearchButton onClick={toggleSearch} isActive={isSearchVisible} />
     </div>
