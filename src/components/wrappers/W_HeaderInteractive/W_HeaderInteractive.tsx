@@ -10,7 +10,7 @@ export default function W_HeaderInteractive() {
   return (
     <div className={styles.wrapper}>
       <C_HeaderNavigation />
-      <O_Search headerRef={headerRef}/>
+      <O_Search headerRef={headerRef} />
     </div>
   )
 }
