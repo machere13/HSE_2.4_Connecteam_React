@@ -9,7 +9,9 @@ export default function O_Search() {
   const [isSearchVisible, setIsSearchVisible] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
 
-  const toggleSearch = () => setIsSearchVisible(!isSearchVisible)
+  const toggleSearch = () => {
+    setIsSearchVisible(prev => !prev)
+  }
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -27,6 +29,8 @@ export default function O_Search() {
     if (isSearchVisible) {
       document.addEventListener('mousedown', handleClickOutside)
       document.addEventListener('keydown', handleEscape)
+      const input = searchRef.current?.querySelector('input')
+      input?.focus()
     }
 
     return () => {
@@ -37,8 +41,10 @@ export default function O_Search() {
 
   return (
     <div className={styles.wrapper} ref={searchRef}>
-      {isSearchVisible && <W_SearchBarWithResults />}
-      <A_SearchButton onClick={toggleSearch} />
+      <div className={`${styles.searchContainer} ${isSearchVisible ? styles.visible : ''}`}>
+        {isSearchVisible && <W_SearchBarWithResults />}
+      </div>
+      <A_SearchButton onClick={toggleSearch} isActive={isSearchVisible} />
     </div>
   )
 }

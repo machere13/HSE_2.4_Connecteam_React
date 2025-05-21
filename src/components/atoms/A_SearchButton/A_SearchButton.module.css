@@ -9,9 +9,31 @@
     height: 30px;
     min-height: 30px;
 
-    background: var(--color-main-purple);
+    background: var(--color-main-blue);
     border-radius: var(--border-radius-15);
+
+    transition: background .2s;
     cursor: pointer;
     border: 0;
     outline: 0;
+}
+
+.wrapper.active {
+    background: var(--color-main-purple);
+}
+
+.wrapper.active:active, .wrapper:active {
+    background: var(--color-click-purple);
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.wrapper:hover {
+		background: var(--color-main-purple);
+	}
+}
+
+@media (hover: none) and (pointer: coarse) {
+	.wrapper:active {
+		background: var(--color-main-purple);
+	}
 }

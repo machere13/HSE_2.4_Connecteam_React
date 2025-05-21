@@ -1,14 +1,17 @@
 import React from 'react'
 
+import cn from 'classnames'
+
 import Q_Icon from '@/components/quarks/Q_Icon'
 
 import styles from './A_SearchButton.module.css'
 
 interface A_SearchButtonProps {
   onClick: () => void
+  isActive?: boolean
 }
 
-export default function A_SearchButton({ onClick }: A_SearchButtonProps) {
+export default function A_SearchButton({ onClick, isActive = false }: A_SearchButtonProps) {
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
@@ -18,7 +21,7 @@ export default function A_SearchButton({ onClick }: A_SearchButtonProps) {
 
   return (
     <button
-      className={styles.wrapper}
+      className={cn(styles.wrapper, isActive && styles.active)}
       onClick={onClick}
       onKeyDown={handleKeyDown}
       aria-label='Поиск'
