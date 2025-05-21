@@ -11,7 +11,7 @@ export interface A_HeaderButtonProps {
 
 export default function A_HeaderButton({ label, to }: A_HeaderButtonProps) {
   const pathname = usePathname()
-  const isActive = pathname === to || pathname.startsWith(to + '/')
+  const isActive = pathname === to
 
   return (
     <Link
