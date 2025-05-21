@@ -1,4 +1,20 @@
-.wrapper{
+.wrapper {
     display: flex;
     gap: var(--spacing-5);
+}
+  
+.search_wrapper {
+    width: 1px;
+
+    opacity: 0;
+
+    transition: 
+      width .15s ease-in-out,
+      opacity .1s ease-in-out .05s;
+}
+  
+.search_wrapper.visible {
+    width: 206px;
+
+    opacity: 1;
 }
