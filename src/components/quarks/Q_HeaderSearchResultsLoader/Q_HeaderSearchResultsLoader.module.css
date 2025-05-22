@@ -1,0 +1,25 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--spacing-10) var(--spacing-20);
+
+    background: var(--color-main-white);
+    border-radius: 0 0 var(--border-radius-15) var(--border-radius-15);
+}
+
+.loader_wrapper {
+    animation: spinning 1.5s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

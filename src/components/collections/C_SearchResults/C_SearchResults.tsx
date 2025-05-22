@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Q_HeaderSearchResultsLoader from '@/components/quarks/Q_HeaderSearchResultsLoader/Q_HeaderSearchResultsLoader'
 import M_SearchResult from '@/components/molecules/M_SearchResult/M_SearchResult'
 
 import styles from './C_SearchResults.module.css'
@@ -26,7 +27,7 @@ export default function C_SearchResults({
     <div className={styles.wrapper}>
       <div className={styles.plate}></div>
       {isLoading ? (
-        <div className={styles.loader}>Загрузка...</div>
+        <Q_HeaderSearchResultsLoader />
       ) : results.length === 0 ? (
         <div className={styles.empty_wrapper}>
           <p className='text_captions_l'>{emptyMessage}</p>
