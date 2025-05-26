@@ -36,6 +36,7 @@ const meta: Meta<A_PhotoProps> = {
       },
     },
   },
+  tags: ['autodocs'],
 }
 
 export default meta

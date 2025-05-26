@@ -7,9 +7,14 @@ import styles from './M_SearchBar.module.css'
 interface M_SearchBarProps {
   onSearchChange: (query: string) => void
   onClear: () => void
+  initialValue?: string
 }
 
-export default function M_SearchBar({ onSearchChange, onClear }: M_SearchBarProps) {
+export default function M_SearchBar({
+  onSearchChange,
+  onClear,
+  initialValue = '',
+}: M_SearchBarProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [showClearIcon, setShowClearIcon] = useState(false)
 
@@ -30,7 +35,13 @@ export default function M_SearchBar({ onSearchChange, onClear }: M_SearchBarProp
 
   return (
     <div className={styles.wrapper}>
-      <input type='text' className='text_captions_l' ref={inputRef} onChange={handleInputChange} />
+      <input
+        type='text'
+        className='text_captions_l'
+        ref={inputRef}
+        onChange={handleInputChange}
+        defaultValue={initialValue}
+      />
       {showClearIcon && (
         <button onClick={handleClearInput} className={styles.button} aria-label='Очистить поиск'>
           <Q_Icon name='closeIcon' width='12' height='12' />

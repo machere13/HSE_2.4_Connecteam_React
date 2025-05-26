@@ -1,15 +1,15 @@
 import React from 'react'
 
-import styles from './Q_HeaderSearchResultsLoader.module.css'
-
 import Q_Icon from '../Q_Icon'
+
+import styles from './Q_HeaderSearchResultsLoader.module.css'
 
 export default function Q_HeaderSearchResultsLoader() {
   return (
     <div className={styles.wrapper}>
-        <div className={styles.loader_wrapper}>
-            <Q_Icon name='headerSearchResultsLoaderIcon' width='45' height='45' />
-        </div>
+      <div className={styles.loader_wrapper}>
+        <Q_Icon name='headerSearchResultsLoaderIcon' width='45' height='45' />
+      </div>
     </div>
   )
 }

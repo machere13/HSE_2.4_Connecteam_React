@@ -39,6 +39,7 @@ const meta: Meta<Q_IconProps> = {
     height: '24',
     fill: 'none',
   },
+  tags: ['autodocs'],
 }
 
 export default meta

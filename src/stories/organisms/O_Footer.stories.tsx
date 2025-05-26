@@ -8,6 +8,7 @@ const meta: Meta<typeof O_Footer> = {
   parameters: {
     layout: 'fullscreen',
   },
+  tags: ['autodocs'],
 }
 
 export default meta

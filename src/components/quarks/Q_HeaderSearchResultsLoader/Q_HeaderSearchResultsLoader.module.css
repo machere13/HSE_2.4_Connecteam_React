@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,11 +10,15 @@
 }
 
 .loader_wrapper {
-    animation: spinning 1.5s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: step-spinning 1s steps(12) infinite;
     transform-origin: center;
 }
 
-@keyframes spinning {
+@keyframes step-spinning {
     0% {
         transform: rotate(0deg);
     }

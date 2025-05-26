@@ -2,14 +2,14 @@ import React from 'react'
 
 import CloseIcon from '@/assets/icons/CloseIcon.svg'
 import CursorIcon from '@/assets/icons/CursorIcon.svg'
+import HeaderSearchResultsLoaderIcon from '@/assets/icons/HeaderSearchResultsLoaderIcon.svg'
 import LinkIcon from '@/assets/icons/LinkIcon.svg'
 import LogoFull from '@/assets/icons/LogoFull.svg'
 import SearchIcon from '@/assets/icons/SearchIcon.svg'
 import TelegramIcon from '@/assets/icons/TelegramIcon.svg'
 import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
-import VKIcon from '@/assets/icons/VKIcon.svg'
+import VkIcon from '@/assets/icons/VkIcon.svg'
 import YoutubeIcon from '@/assets/icons/YoutubeIcon.svg'
-import HeaderSearchResultsLoaderIcon from '@/assets/icons/HeaderSearchResultsLoaderIcon.svg'
 
 export type Q_IconProps = {
   name:
@@ -43,7 +43,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
     searchIcon: SearchIcon,
     linkIcon: LinkIcon,
     telegramIcon: TelegramIcon,
-    vkIcon: VKIcon,
+    vkIcon: VkIcon,
     youtubeIcon: YoutubeIcon,
     thunderIcon: ThunderIcon,
     cursorIcon: CursorIcon,

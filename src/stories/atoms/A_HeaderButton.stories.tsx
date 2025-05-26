@@ -1,5 +1,3 @@
-import { MemoryRouter } from 'react-router-dom'
-
 import A_HeaderButton from '@/components/atoms/A_HeaderButton/A_HeaderButton'
 
 import type { A_HeaderButtonProps } from '@/components/atoms/A_HeaderButton/A_HeaderButton'
@@ -8,13 +6,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 const meta: Meta<A_HeaderButtonProps> = {
   title: 'Atoms/A_HeaderButton',
   component: A_HeaderButton,
-  decorators: [
-    Story => (
-      <MemoryRouter>
-        <Story />
-      </MemoryRouter>
-    ),
-  ],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -39,5 +31,19 @@ export const Active: Story = {
   args: { ...Default.args },
   parameters: {
     pseudo: { active: true },
+  },
+}
+
+export const OnPage: Story = {
+  args: {
+    ...Default.args,
+    to: '/path',
+  },
+  parameters: {
+    nextjs: {
+      navigation: {
+        pathname: '/path',
+      },
+    },
   },
 }
