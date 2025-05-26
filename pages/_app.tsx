@@ -1,5 +1,6 @@
 import '@/index.css'
 import Head from 'next/head'
+import { Error418Provider } from "@/providers/Error418Provider";
 
 import type { AppProps } from 'next/app'
 
@@ -24,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='theme-color' content='#4200FF' />
         <meta name='msapplication-TileColor' content='#4200FF' />
       </Head>
-      <Component {...pageProps} />
+      <Error418Provider>
+        <Component {...pageProps} />
+      </Error418Provider>
     </>
   )
 }
