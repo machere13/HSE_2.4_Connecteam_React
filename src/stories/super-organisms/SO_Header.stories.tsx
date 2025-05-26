@@ -1,12 +1,14 @@
+import React from 'react'
+
 import { MemoryRouter } from 'react-router-dom'
 
-import C_FooterIcons from '@/components/collections/C_FooterIcons/C_FooterIcons'
+import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<typeof C_FooterIcons> = {
-  title: 'Collections/C_FooterIcons',
-  component: C_FooterIcons,
+const meta: Meta<typeof SO_Header> = {
+  title: 'SuperOrganisms/SO_Header',
+  component: SO_Header,
   decorators: [
     Story => (
       <MemoryRouter>
@@ -16,11 +18,12 @@ const meta: Meta<typeof C_FooterIcons> = {
   ],
   tags: ['autodocs'],
 }
-
 export default meta
 
-type Story = StoryObj<typeof C_FooterIcons>
+type Story = StoryObj<typeof SO_Header>
 
 export const Default: Story = {
-  render: () => <C_FooterIcons />,
+  render: () => {
+    return <SO_Header />
+  },
 }

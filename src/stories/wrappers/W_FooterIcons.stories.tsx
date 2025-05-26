@@ -14,6 +14,7 @@ const meta: Meta<typeof W_FooterIcons> = {
       </MemoryRouter>
     ),
   ],
+  tags: ['autodocs'],
 }
 
 export default meta

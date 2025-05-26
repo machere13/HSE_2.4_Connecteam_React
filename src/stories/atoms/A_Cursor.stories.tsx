@@ -23,6 +23,7 @@ const meta: Meta<typeof A_Cursor> = {
       ],
     },
   },
+  tags: ['autodocs'],
 }
 
 export default meta

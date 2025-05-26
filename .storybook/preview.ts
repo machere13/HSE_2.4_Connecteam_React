@@ -1,6 +1,10 @@
 import type { Preview } from '@storybook/react'
 import '../src/index.css'
 
+import { initialize, mswDecorator } from 'msw-storybook-addon'
+
+initialize()
+
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -66,7 +70,6 @@ const preview: Preview = {
       },
       defaultViewport: 'desktop',
     },
-
     layout: 'fullscreen',
     backgrounds: {
       default: 'light',
@@ -76,6 +79,7 @@ const preview: Preview = {
       ],
     },
   },
+  decorators: [mswDecorator],
 }
 
 export default preview

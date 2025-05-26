@@ -8,72 +8,94 @@ import W_SearchBarWithResults from '@/components/wrappers/W_SearchBarWithResults
 import styles from './O_Search.module.css'
 
 type O_SearchProps = {
-  headerRef: React.RefObject<HTMLElement | null>
+  isOpen?: boolean
+  onToggle?: (isOpen: boolean) => void
 }
 
-export default function O_Search({ headerRef }: O_SearchProps) {
-  const [isSearchVisible, setIsSearchVisible] = useState(false)
+export default function O_Search({ isOpen: propIsOpen, onToggle }: O_SearchProps) {
+  const [internalIsOpen, setInternalIsOpen] = useState(false)
   const [shouldRender, setShouldRender] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
+  const isControlled = propIsOpen !== undefined
+  const isOpen = isControlled ? propIsOpen : internalIsOpen
 
   const toggleSearch = () => {
-    if (!isSearchVisible) {
-      setShouldRender(true)
-      setIsSearchVisible(true)
-    } else {
-      setIsSearchVisible(false)
+    const newState = !isOpen
+    if (onToggle) {
+      onToggle(newState)
+    } else if (!isControlled) {
+      setInternalIsOpen(newState)
     }
+    if (newState) setShouldRender(true)
   }
 
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as Node
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
 
-      const clickedOutsideSearch = searchRef.current && !searchRef.current.contains(target)
-      const clickedOutsideHeader = headerRef.current && !headerRef.current.contains(target)
+      const isHeader = target.closest('.SO_Header_wrapper__aKq5Y')
+      const isSearch = searchRef.current?.contains(target)
 
-      if (clickedOutsideSearch && clickedOutsideHeader) {
-        setIsSearchVisible(false)
+      if (!isSearch && !isHeader) {
+        if (onToggle) {
+          onToggle(false)
+        } else if (!isControlled) {
+          setInternalIsOpen(false)
+        }
       }
     }
 
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setIsSearchVisible(false)
-      }
+    if (isOpen) {
+      document.addEventListener('click', handleClickOutside)
+      return () => document.removeEventListener('click', handleClickOutside)
     }
 
-    if (isSearchVisible) {
-      document.addEventListener('mousedown', handleClickOutside)
-      document.addEventListener('keydown', handleEscape)
-
-      const input = searchRef.current?.querySelector('input')
-      input?.focus()
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-      document.removeEventListener('keydown', handleEscape)
-    }
-  }, [isSearchVisible, headerRef])
+    return undefined
+  }, [isOpen, onToggle, isControlled])
 
   useEffect(() => {
-    if (!isSearchVisible && shouldRender) {
-      const timer = setTimeout(() => {
-        setShouldRender(false)
-      }, 150)
+    if (propIsOpen !== undefined) {
+      setInternalIsOpen(propIsOpen)
+      if (propIsOpen) setShouldRender(true)
+    }
+  }, [propIsOpen])
 
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        if (onToggle) {
+          onToggle(false)
+        } else if (!isControlled) {
+          setInternalIsOpen(false)
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [isOpen, onToggle, isControlled])
+
+  useEffect(() => {
+    if (!isOpen && shouldRender) {
+      const timer = setTimeout(() => setShouldRender(false), 150)
       return () => clearTimeout(timer)
     }
+
     return undefined
-  }, [isSearchVisible, shouldRender])
+  }, [isOpen, shouldRender])
+
+  useEffect(() => {
+    if (isOpen) {
+      searchRef.current?.querySelector('input')?.focus()
+    }
+  }, [isOpen])
 
   return (
     <div className={styles.wrapper} ref={searchRef}>
-      <div className={cn(styles.search_wrapper, isSearchVisible && styles.visible)}>
+      <div className={cn(styles.search_wrapper, isOpen && styles.visible)}>
         {shouldRender && <W_SearchBarWithResults />}
       </div>
-      <A_SearchButton onClick={toggleSearch} isActive={isSearchVisible} />
+      <A_SearchButton onClick={toggleSearch} isActive={isOpen} />
     </div>
   )
 }

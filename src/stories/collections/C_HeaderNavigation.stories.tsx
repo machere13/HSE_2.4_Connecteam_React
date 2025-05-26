@@ -14,6 +14,7 @@ const meta: Meta<typeof C_HeaderNavigation> = {
       </MemoryRouter>
     ),
   ],
+  tags: ['autodocs'],
 }
 
 export default meta

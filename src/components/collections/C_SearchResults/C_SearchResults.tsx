@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Q_HeaderSearchResultsLoader from '@/components/quarks/Q_HeaderSearchResultsLoader/Q_HeaderSearchResultsLoader'
 import M_SearchResult from '@/components/molecules/M_SearchResult/M_SearchResult'
+import Q_HeaderSearchResultsLoader from '@/components/quarks/Q_HeaderSearchResultsLoader/Q_HeaderSearchResultsLoader'
 
 import styles from './C_SearchResults.module.css'
 

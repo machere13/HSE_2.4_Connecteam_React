@@ -15,6 +15,7 @@ const meta: Meta<A_FooterIconProps> = {
       </MemoryRouter>
     ),
   ],
+  tags: ['autodocs'],
 }
 
 export default meta
