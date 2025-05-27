@@ -2,6 +2,7 @@ import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import { Meta } from '@/lib/Meta'
 
 export default function MainPage() {
   const cursors = [
@@ -28,11 +29,20 @@ export default function MainPage() {
     },
   ]
   return (
-    <div>
-      <SO_Header />
-      <Q_Grid variant='gray' />
-      <A_Cursor cursors={cursors} />
-      <O_Footer />
-    </div>
+    <>
+      <Meta
+        title='Главная | Connecteam'
+        description='Connecteam — медиа-сервис про деловую коммуникацию в IT-команде'
+        image='https://connecteam.space/og-image.png'
+        url='https://connecteam.space'
+        keywords='медиа-сервис, коммуникация, IT, Connecteam'
+      />
+      <div>
+        <SO_Header />
+        <Q_Grid variant='gray' />
+        <A_Cursor cursors={cursors} />
+        <O_Footer />
+      </div>
+    </>
   )
 }

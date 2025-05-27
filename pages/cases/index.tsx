@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { getCases } from '@/api/cases'
+import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import { ROUTES } from '@/routes'
 
@@ -18,6 +19,7 @@ export default function CasesPage({ cases }: { cases: Case[] }) {
   return (
     <div>
       <SO_Header />
+      <Q_Grid variant='gray' />
       <h1>Все кейсы</h1>
       <div>
         {cases.map(caseItem => (
