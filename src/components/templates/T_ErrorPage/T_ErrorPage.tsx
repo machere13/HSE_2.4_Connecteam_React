@@ -6,16 +6,18 @@ import O_Footer from "@/components/organisms/O_Footer/O_Footer";
 interface ErrorTemplateProps {
   errorType?: "403" | "404" | "418" | "500" | "502" | "505";
   homeUrl?: string;
+  onClose?: () => void;
 }
 
 export const T_ErrorPage = ({
   errorType = "404",
   homeUrl = "/",
+  onClose
 }: ErrorTemplateProps) => {
   return (
     <div className={styles.wrapper}>
       <SO_Header />
-      <W_ErrorBlock errorType={errorType} homeUrl={homeUrl} />
+      <W_ErrorBlock errorType={errorType} homeUrl={homeUrl} onClose={onClose}/>
       <O_Footer />
     </div>
   );
