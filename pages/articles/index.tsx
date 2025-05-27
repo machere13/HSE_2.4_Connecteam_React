@@ -1,8 +1,8 @@
-import { getArticles } from '@/api/articles'
+import { getArticles } from '@/api/getArticles'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 
-import type { Article } from '@/api/articles'
+import type { ArticleData } from '@/types/article'
 import type { GetStaticProps } from 'next'
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default function ArticlesPage({ articles }: { articles: Article[] }) {
+export default function ArticlesPage({ articles }: { articles: ArticleData[] }) {
   return (
     <div>
       <SO_Header />
@@ -35,6 +35,7 @@ export default function ArticlesPage({ articles }: { articles: Article[] }) {
         {articles.map(article => (
           <li key={article.id}>
             <a href={`/articles/${article.slug}`}>{article.title}</a>
+            <p>{article.description}</p>
           </li>
         ))}
       </ul>

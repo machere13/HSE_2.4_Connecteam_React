@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import { getCases } from '@/api/cases'
+import { getCases } from '@/api/getCases'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import { ROUTES } from '@/routes'
 
-import type { Case } from '@/api/cases'
+import type { CaseData } from '@/types/case'
 
 export const getStaticProps = async () => {
   const cases = await getCases()
@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function CasesPage({ cases }: { cases: Case[] }) {
+export default function CasesPage({ cases }: { cases: CaseData[] }) {
   return (
     <div>
       <SO_Header />
@@ -23,12 +23,10 @@ export default function CasesPage({ cases }: { cases: Case[] }) {
       <h1>Все кейсы</h1>
       <div>
         {cases.map(caseItem => (
-          <div key={caseItem.id}>
-            <Link href={ROUTES.CASES.bySlug(caseItem.slug)}>
-              <h2>{caseItem.title}</h2>
-              <p>{caseItem.content.substring(0, 150)}...</p>
-            </Link>
-          </div>
+          <li key={caseItem.id}>
+            <a href={`/cases/${caseItem.slug}`}>{caseItem.title}</a>
+            <p>{caseItem.description}</p>
+          </li>
         ))}
       </div>
     </div>
