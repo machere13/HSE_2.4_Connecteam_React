@@ -1,6 +1,7 @@
 import '@/index.css'
 import Head from 'next/head'
-import { Error418Provider } from "@/providers/Error418Provider";
+
+import { Error418Provider } from '@/providers/Error418Provider'
 
 import type { AppProps } from 'next/app'
 
