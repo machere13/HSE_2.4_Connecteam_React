@@ -1,6 +1,6 @@
-import Q_Icon from '@/components/quarks/Q_Icon'
+import Q_Icon from '@/components/quarks/Q_Icon/Q_Icon'
 
-import type { Q_IconProps } from '@/components/quarks/Q_Icon'
+import type { Q_IconProps } from '@/components/quarks/Q_Icon/Q_Icon'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<Q_IconProps> = {

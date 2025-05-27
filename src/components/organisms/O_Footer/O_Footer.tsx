@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Q_Icon from '@/components/quarks/Q_Icon'
+import Q_Icon from '@/components/quarks/Q_Icon/Q_Icon'
 import W_FooterIcons from '@/components/wrappers/W_FooterIcons/W_FooterIcons'
 
 import styles from './O_Footer.module.css'

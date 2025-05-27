@@ -2,3 +2,9 @@
     display: flex;
     gap: var(--spacing-25);
 }
+
+@media (max-width: 1028px) {
+    .wrapper{
+        display: none;
+    }
+}

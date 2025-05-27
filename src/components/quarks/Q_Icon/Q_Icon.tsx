@@ -1,5 +1,6 @@
 import React from 'react'
 
+import BurgerMenuIcon from '@/assets/icons/BurgerMenuIcon.svg'
 import CloseIcon from '@/assets/icons/CloseIcon.svg'
 import CursorIcon from '@/assets/icons/CursorIcon.svg'
 import ErrorCode403Icon from '@/assets/icons/ErrorIcons/Q_ErrorCode/Code403.svg'
@@ -17,6 +18,7 @@ import ErrorSignature505Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Si
 import HeaderSearchResultsLoaderIcon from '@/assets/icons/HeaderSearchResultsLoaderIcon.svg'
 import LinkIcon from '@/assets/icons/LinkIcon.svg'
 import LogoFull from '@/assets/icons/LogoFull.svg'
+import LogoShort from '@/assets/icons/LogoShort.svg'
 import SearchIcon from '@/assets/icons/SearchIcon.svg'
 import TelegramIcon from '@/assets/icons/TelegramIcon.svg'
 import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
@@ -26,6 +28,7 @@ import YoutubeIcon from '@/assets/icons/YoutubeIcon.svg'
 export type Q_IconProps = {
   name:
     | 'logoFull'
+    | 'logoShort'
     | 'searchIcon'
     | 'linkIcon'
     | 'telegramIcon'
@@ -47,6 +50,7 @@ export type Q_IconProps = {
     | 'errorSignature500Icon'
     | 'errorSignature502Icon'
     | 'errorSignature505Icon'
+    | 'burgerMenuIcon'
   width?: string
   height?: string
   fill?: string
@@ -64,6 +68,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
 }) => {
   const icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     logoFull: LogoFull,
+    logoShort: LogoShort,
     searchIcon: SearchIcon,
     linkIcon: LinkIcon,
     telegramIcon: TelegramIcon,
@@ -85,6 +90,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
     errorSignature500Icon: ErrorSignature500Icon,
     errorSignature502Icon: ErrorSignature502Icon,
     errorSignature505Icon: ErrorSignature505Icon,
+    burgerMenuIcon: BurgerMenuIcon,
   }
 
   const SvgIcon = icons[name]

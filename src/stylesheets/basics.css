@@ -3,3 +3,9 @@ body{
 
     background: var(--color-main-main-white);
 }
+
+button, input{
+    background: transparent;
+    outline: 0;
+    border: 0;
+}
