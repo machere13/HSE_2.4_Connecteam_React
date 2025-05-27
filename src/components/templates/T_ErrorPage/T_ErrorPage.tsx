@@ -1,4 +1,5 @@
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
+import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_ErrorBlock from '@/components/wrappers/W_ErrorBlock/W_ErrorBlock'
 
@@ -15,6 +16,7 @@ export const T_ErrorPage = ({ errorType = '404', homeUrl = '/', onClose }: Error
     <div className={styles.wrapper}>
       <SO_Header />
       <W_ErrorBlock errorType={errorType} homeUrl={homeUrl} onClose={onClose} />
+      <Q_Grid variant='gray' />
       <O_Footer />
     </div>
   )
