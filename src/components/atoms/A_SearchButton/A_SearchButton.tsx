@@ -2,7 +2,7 @@ import React from 'react'
 
 import cn from 'classnames'
 
-import Q_Icon from '@/components/quarks/Q_Icon'
+import Q_Icon from '@/components/quarks/Q_Icon/Q_Icon'
 
 import styles from './A_SearchButton.module.css'
 

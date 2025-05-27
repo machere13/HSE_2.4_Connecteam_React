@@ -1,0 +1,10 @@
+.wrapper{
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1028px) {
+    .wrapper{
+        display: block;
+    }
+}

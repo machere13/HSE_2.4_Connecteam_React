@@ -21,8 +21,6 @@
     color: var(--color-main-white);
 
     background: transparent;
-    border: 0;
-    outline: 0;
     overflow-y: hidden;
 }
 
@@ -38,7 +36,5 @@
     align-items: center;
 
     background: transparent;
-    border: 0;
-    outline: 0;
     cursor: pointer;
 }

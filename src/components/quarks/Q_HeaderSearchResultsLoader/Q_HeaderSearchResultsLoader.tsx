@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Q_Icon from '../Q_Icon'
+import Q_Icon from '../Q_Icon/Q_Icon'
 
 import styles from './Q_HeaderSearchResultsLoader.module.css'
 
