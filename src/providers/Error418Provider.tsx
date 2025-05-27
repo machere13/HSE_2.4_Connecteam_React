@@ -26,7 +26,7 @@ export const Error418Provider = ({ children }: { children: React.ReactNode }) =>
   }, []);
 
   if (showError418) {
-    return <T_ErrorPage errorType="418" />;
+    return <T_ErrorPage errorType="418" onClose={() => setShowError418(false)} />;
   }
 
   return <>{children}</>;
