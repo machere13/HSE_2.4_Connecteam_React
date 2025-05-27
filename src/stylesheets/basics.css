@@ -1,0 +1,5 @@
+body{
+    min-height: 100vh;
+
+    background: var(--color-main-main-white);
+}

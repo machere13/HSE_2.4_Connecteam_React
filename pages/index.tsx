@@ -1,5 +1,6 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
+import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 
 export default function MainPage() {
@@ -28,8 +29,8 @@ export default function MainPage() {
   ]
   return (
     <div>
-      <h1>Главная страница</h1>
       <SO_Header />
+      <Q_Grid variant='gray' />
       <A_Cursor cursors={cursors} />
       <O_Footer />
     </div>

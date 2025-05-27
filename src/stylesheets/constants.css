@@ -26,6 +26,8 @@
     rgb(255 255 255 / 91%) 79%,
     rgb(255 255 255 / 100%) 100%
   );
+  --color-grid-gray: rgb(226 226 226 / 100%);
+  --color-grid-blue: rgb(113 64 255 / 100%);
 
   /* Spacing */
   --spacing-3: 3px;
