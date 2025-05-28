@@ -1,12 +1,12 @@
 import { MemoryRouter } from 'react-router-dom'
 
-import W_FooterIcons from '@/components/wrappers/W_FooterIcons/W_FooterIcons'
+import W_FooterButtons from '@/components/wrappers/W_FooterButtons/W_FooterButtons'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<typeof W_FooterIcons> = {
-  title: 'Wrappers/W_FooterIcons',
-  component: W_FooterIcons,
+const meta: Meta<typeof W_FooterButtons> = {
+  title: 'Wrappers/W_FooterButtons',
+  component: W_FooterButtons,
   decorators: [
     Story => (
       <MemoryRouter>
@@ -19,8 +19,8 @@ const meta: Meta<typeof W_FooterIcons> = {
 
 export default meta
 
-type Story = StoryObj<typeof W_FooterIcons>
+type Story = StoryObj<typeof W_FooterButtons>
 
 export const Default: Story = {
-  render: () => <W_FooterIcons />,
+  render: () => <W_FooterButtons />,
 }
