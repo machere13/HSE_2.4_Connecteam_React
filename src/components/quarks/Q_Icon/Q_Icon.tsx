@@ -2,6 +2,7 @@ import React from 'react'
 
 import BurgerMenuIcon from '@/assets/icons/BurgerMenuIcon.svg'
 import CloseIcon from '@/assets/icons/CloseIcon.svg'
+import CopyLinkIcon from '@/assets/icons/CopyLinkIcon.svg'
 import CursorIcon from '@/assets/icons/CursorIcon.svg'
 import ErrorCode403Icon from '@/assets/icons/ErrorIcons/Q_ErrorCode/Code403.svg'
 import ErrorCode404Icon from '@/assets/icons/ErrorIcons/Q_ErrorCode/Code404.svg'
@@ -37,6 +38,7 @@ export type Q_IconProps = {
     | 'thunderIcon'
     | 'cursorIcon'
     | 'closeIcon'
+    | 'copyLinkIcon'
     | 'headerSearchResultsLoaderIcon'
     | 'errorCode403Icon'
     | 'errorCode404Icon'
@@ -77,6 +79,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
     thunderIcon: ThunderIcon,
     cursorIcon: CursorIcon,
     closeIcon: CloseIcon,
+    copyLinkIcon: CopyLinkIcon,
     headerSearchResultsLoaderIcon: HeaderSearchResultsLoaderIcon,
     errorCode403Icon: ErrorCode403Icon,
     errorCode404Icon: ErrorCode404Icon,
