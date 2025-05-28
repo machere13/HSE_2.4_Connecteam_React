@@ -24,16 +24,15 @@
 .tooltip {
     position: absolute;
     bottom: -30px;
-    left: 50%;
+    left: 0;
 
     color: var(--color-main-purple);
 
-    transform: translateX(-50%);
     animation: fade-in-out 2s ease-in-out;
     white-space: nowrap;
-  }
+}
   
-  @keyframes fade-in-out {
+@keyframes fade-in-out {
     0% {
       opacity: 0;
     }
@@ -49,4 +48,4 @@
     100% {
       opacity: 0;
     }
-  }
+}

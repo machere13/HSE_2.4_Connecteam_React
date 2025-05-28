@@ -3,6 +3,7 @@ import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import { Meta } from '@/lib/Meta'
+import C_ShareButtons from '@/components/collections/C_ShareButtons/C_ShareButtons'
 
 export default function MainPage() {
   const cursors = [
@@ -42,6 +43,7 @@ export default function MainPage() {
         <Q_Grid variant='gray' />
         <A_Cursor cursors={cursors} />
         <O_Footer />
+        <C_ShareButtons />
       </div>
     </>
   )
