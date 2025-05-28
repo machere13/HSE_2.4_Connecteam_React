@@ -2,6 +2,7 @@ import '@/index.css'
 import Head from 'next/head'
 
 import A_UserCursor from '@/components/atoms/A_UserCursor/A_UserCursor'
+import { Q_ScrollBar } from '@/components/quarks/Q_ScrollBar/Q_ScrollBar'
 import { Error418Provider } from '@/providers/Error418Provider'
 
 import type { AppProps } from 'next/app'
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='msapplication-TileColor' content='#4200FF' />
       </Head>
       <A_UserCursor />
+      <Q_ScrollBar />
       <Error418Provider>
         <Component {...pageProps} />
       </Error418Provider>

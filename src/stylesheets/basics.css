@@ -13,3 +13,12 @@ button, input{
     outline: 0;
     border: 0;
 }
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+  
+html::-webkit-scrollbar {
+    display: none;
+}
