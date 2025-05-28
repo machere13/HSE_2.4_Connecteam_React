@@ -19,7 +19,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<{ article: ArticleData }, { slug: string }> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<{ article: ArticleData }, { slug: string }> = async ({
+  params,
+}) => {
   try {
     const articles = await getArticles()
     const article = articles.find(a => a.slug === params?.slug)
@@ -65,7 +67,11 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           case 'image':
             return <img key={index} src={block.image} alt={block.description || ''} />
           case 'previewParagraph':
-            return <p key={index} style={{ fontStyle: 'italic' }}>{block.text}</p>
+            return (
+              <p key={index} style={{ fontStyle: 'italic' }}>
+                {block.text}
+              </p>
+            )
           case 'tags':
             return (
               <ul key={index} style={{ display: 'flex', gap: '8px' }}>
@@ -76,7 +82,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
             )
           case 'whiteBox':
             return (
-              <div key={index} style={{ background: '#f9f9f9', padding: '16px', borderRadius: '8px' }}>
+              <div
+                key={index}
+                style={{ background: '#f9f9f9', padding: '16px', borderRadius: '8px' }}
+              >
                 <strong>{block.title}</strong>
                 <p>{block.text}</p>
               </div>
@@ -97,7 +106,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           case 'telegram':
             return (
               <p key={index}>
-                Подписывайтесь на <a href={block.link} target="_blank" rel="noopener noreferrer">наш Telegram</a>
+                Подписывайтесь на{' '}
+                <a href={block.link} target='_blank' rel='noopener noreferrer'>
+                  наш Telegram
+                </a>
               </p>
             )
           case 'examples':
@@ -140,7 +152,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           case 'moreInCase':
             return (
               <p key={index}>
-                Подробнее в <a href={block.link} target="_blank" rel="noopener noreferrer">этом случае</a>
+                Подробнее в{' '}
+                <a href={block.link} target='_blank' rel='noopener noreferrer'>
+                  этом случае
+                </a>
               </p>
             )
           default:

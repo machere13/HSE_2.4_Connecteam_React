@@ -73,7 +73,9 @@ export default function CasePage({ case: caseItem }: { case: CaseData }) {
           case 'telegram':
             return (
               <p key={index}>
-                <a href={block.link} target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a href={block.link} target='_blank' rel='noopener noreferrer'>
+                  Telegram
+                </a>
               </p>
             )
           case 'video':
@@ -81,12 +83,7 @@ export default function CasePage({ case: caseItem }: { case: CaseData }) {
               <div key={index}>
                 <h4>{block.title}</h4>
                 <video src={block.video} controls>
-                  <track
-                    kind="captions"
-                    srcLang="ru"
-                    label="Русские субтитры"
-                    default
-                  />
+                  <track kind='captions' srcLang='ru' label='Русские субтитры' default />
                 </video>
               </div>
             )

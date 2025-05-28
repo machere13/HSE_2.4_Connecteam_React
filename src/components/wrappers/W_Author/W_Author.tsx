@@ -4,11 +4,17 @@ import M_Person from '@/components/molecules/M_Person/M_Person'
 
 import styles from './W_Author.module.css'
 
-export default function W_Author() {
+import type { M_PersonProps } from '@/components/molecules/M_Person/M_Person'
+
+interface W_AuthorProps {
+  author: M_PersonProps
+}
+
+export default function W_Author({ author }: W_AuthorProps) {
   return (
     <div className={styles.wrapper}>
-        <h5>Статью подготовили</h5>
-        <M_Person />
+      <h5>Статью подготовили</h5>
+      <M_Person {...author} />
     </div>
   )
 }
