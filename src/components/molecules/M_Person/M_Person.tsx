@@ -4,7 +4,7 @@ import A_Photo from '@/components/atoms/A_Photo/A_Photo'
 
 import styles from './M_Person.module.css'
 
-interface M_PersonProps {
+export interface M_PersonProps {
   name: string
   role: string
   photoSrc: string
