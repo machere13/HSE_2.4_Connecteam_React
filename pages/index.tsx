@@ -2,7 +2,7 @@ import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
-import W_ShareButtons from '@/components/wrappers/W_ShareButtons/W_ShareButtons'
+import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
 import { Meta } from '@/lib/Meta'
 
 export default function MainPage() {
@@ -43,7 +43,7 @@ export default function MainPage() {
         <Q_Grid variant='gray' />
         <A_Cursor cursors={cursors} />
         <O_Footer />
-        <W_ShareButtons />
+        <W_ArticleAboutInfo />
       </div>
     </>
   )
