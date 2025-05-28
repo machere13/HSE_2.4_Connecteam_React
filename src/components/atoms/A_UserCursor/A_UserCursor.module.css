@@ -1,0 +1,45 @@
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform .01s linear;
+    pointer-events: none;
+}
+  
+.cursor_icon path {
+    fill: var(--color-main-black);
+}
+  
+.icon_wrapper,
+.cursor svg path {
+    width: 25px;
+    min-width: 25px;
+    max-width: 25px;
+  
+    height: 25px;
+    min-height: 25px;
+    max-height: 25px;
+}
+  
+.label {
+    display: flex;
+    justify-content: center;
+
+    min-width: 36px;
+
+    padding: var(--spacing-3) var(--spacing-8);
+
+    color: var(--color-main-white);
+
+    background: var(--color-main-black);
+    border-radius: var(--border-radius-15);
+
+    transition: transform .3s ease-out;
+    white-space: nowrap;
+}
+  

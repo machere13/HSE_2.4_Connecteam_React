@@ -4,6 +4,10 @@ body{
     background: var(--color-main-main-white);
 }
 
+* {
+    cursor: none;
+}
+
 button, input{
     background: transparent;
     outline: 0;

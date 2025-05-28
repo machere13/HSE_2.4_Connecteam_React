@@ -1,6 +1,7 @@
 import '@/index.css'
 import Head from 'next/head'
 
+import A_UserCursor from '@/components/atoms/A_UserCursor/A_UserCursor'
 import { Error418Provider } from '@/providers/Error418Provider'
 
 import type { AppProps } from 'next/app'
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='theme-color' content='#4200FF' />
         <meta name='msapplication-TileColor' content='#4200FF' />
       </Head>
+      <A_UserCursor />
       <Error418Provider>
         <Component {...pageProps} />
       </Error418Provider>
