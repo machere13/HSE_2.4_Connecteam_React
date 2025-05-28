@@ -13,7 +13,7 @@ interface W_AuthorProps {
 export default function W_Author({ author }: W_AuthorProps) {
   return (
     <div className={styles.wrapper}>
-      <h5>Статью подготовили</h5>
+      <h6>Статью подготовили</h6>
       <M_Person {...author} />
     </div>
   )

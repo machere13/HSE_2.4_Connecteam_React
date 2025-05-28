@@ -12,29 +12,38 @@ interface A_ShareButtonProps {
 
 export default function A_ShareButton({
   name,
-  articleUrl = window.location.href,
-  articleTitle = document.title,
+  articleUrl = '',
+  articleTitle = '',
 }: A_ShareButtonProps) {
   const [isCopied, setIsCopied] = React.useState(false)
 
   const handleClick = () => {
+    const url = articleUrl || (typeof window !== 'undefined' ? window.location.href : '')
+    const title = articleTitle || (typeof window !== 'undefined' ? document.title : '')
+
     switch (name) {
       case 'copyLinkIcon':
-        navigator.clipboard.writeText(articleUrl)
-        setIsCopied(true)
-        setTimeout(() => setIsCopied(false), 2000)
+        if (typeof navigator !== 'undefined' && navigator.clipboard) {
+          navigator.clipboard.writeText(url)
+          setIsCopied(true)
+          setTimeout(() => setIsCopied(false), 2000)
+        }
         break
       case 'vkIcon':
-        window.open(
-          `https://vk.com/share.php?url=${encodeURIComponent(articleUrl)}&title=${encodeURIComponent(articleTitle)}`,
-          '_blank',
-        )
+        if (typeof window !== 'undefined') {
+          window.open(
+            `https://vk.com/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+            '_blank',
+          )
+        }
         break
       case 'telegramIcon':
-        window.open(
-          `https://t.me/share/url?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(articleTitle)}`,
-          '_blank',
-        )
+        if (typeof window !== 'undefined') {
+          window.open(
+            `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+            '_blank',
+          )
+        }
         break
       default:
         break
