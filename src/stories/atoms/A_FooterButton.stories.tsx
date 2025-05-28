@@ -1,13 +1,13 @@
 import { MemoryRouter } from 'react-router-dom'
 
-import A_FooterIcon from '@/components/atoms/A_FooterIcon/A_FooterIcon'
+import A_FooterButton from '@/components/atoms/A_FooterButton/A_FooterButton'
 
-import type { A_FooterIconProps } from '@/components/atoms/A_FooterIcon/A_FooterIcon'
+import type { A_FooterButtonProps } from '@/components/atoms/A_FooterButton/A_FooterButton'
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<A_FooterIconProps> = {
-  title: 'Atoms/A_FooterIcon',
-  component: A_FooterIcon,
+const meta: Meta<A_FooterButtonProps> = {
+  title: 'Atoms/A_FooterButton',
+  component: A_FooterButton,
   decorators: [
     Story => (
       <MemoryRouter>
@@ -20,7 +20,7 @@ const meta: Meta<A_FooterIconProps> = {
 
 export default meta
 
-type Story = StoryObj<A_FooterIconProps>
+type Story = StoryObj<A_FooterButtonProps>
 
 export const Default: Story = {
   args: {
