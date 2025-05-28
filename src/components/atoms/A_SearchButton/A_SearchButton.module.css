@@ -16,7 +16,6 @@
     border-radius: var(--border-radius-15);
 
     transition: background .2s;
-    cursor: pointer;
 }
 
 .wrapper.active {
