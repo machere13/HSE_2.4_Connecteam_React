@@ -27,6 +27,7 @@ export type ArticleContentItem =
 export interface ArticleData {
   id: number
   slug: string
+  updatedAt?: string
   metatags: {
     image: string
     type: string

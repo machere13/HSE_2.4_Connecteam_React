@@ -9,6 +9,8 @@
     "@svgr/plugin-svgo": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "next": "^15.2.4",
+    "next-sitemap": "^4.2.3",
+    "node-fetch": "^2.7.0",
     "nth-check": "2.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -29,7 +31,8 @@
     "check": "npm run type-check && npm run lint && npm run format:check",
     "fix": "npm run lint:fix && npm run format && npm run media:css",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate-sitemap": "next-sitemap"
   },
   "browserslist": {
     "production": [

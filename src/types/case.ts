@@ -30,6 +30,7 @@ export type CaseContentItem =
 export interface CaseData {
   id: number
   slug: string
+  updatedAt?: string
   metatags: {
     image: string
     type: string
