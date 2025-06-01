@@ -94,5 +94,6 @@
         "jest": true
       }
     }
-  ]
+  ],
+  "ignorePatterns": ["next-sitemap.config.js"]
 }

@@ -12,7 +12,7 @@ export interface A_PhotoProps {
 export default function A_Photo({ src, alt }: A_PhotoProps) {
   return (
     <div className={styles.wrapper}>
-      <Image src={src} alt={alt} width={60} height={60}/>
+      <Image src={src} alt={alt} width={60} height={60} />
     </div>
   )
 }
