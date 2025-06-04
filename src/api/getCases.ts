@@ -3,7 +3,7 @@ import rawData from '@/mocks/mocked-data/mocked-cases.json'
 
 import type { CaseData } from '@/types/case'
 
-const mockedCases = rawData as CaseData[]
+const mockedCases = rawData as unknown as CaseData[]
 
 export const getCases = async (): Promise<CaseData[]> => {
   if (config.mocked) {
