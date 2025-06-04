@@ -15,7 +15,7 @@
       "hasIcon": false
     },
     "filter": "experience",
-    "article": {
+    "case": {
       "author": {
         "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
         "name": "machere13",
@@ -169,7 +169,7 @@
       "hasIcon": false
     },
     "filter": "management",
-    "article": {
+    "case": {
       "author": {
         "image": "url",
         "name": "machere13",
@@ -227,7 +227,7 @@
       "hasIcon": false
     },
     "filter": "history",
-    "article": {
+    "case": {
       "author": {
         "image": "url",
         "name": "machere13",
@@ -282,7 +282,7 @@
       "hasIcon": false
     },
     "filter": "lifehacks",
-    "article": {
+    "case": {
       "author": {
         "image": "url",
         "name": "machere13",

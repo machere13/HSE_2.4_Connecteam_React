@@ -43,7 +43,7 @@ export interface CaseData {
     hasIcon: boolean
   }
   filter: string
-  article: {
+  case: {
     author: CaseAuthor
     type: string
     content: CaseContentItem[]

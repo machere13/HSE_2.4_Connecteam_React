@@ -31,7 +31,7 @@ export default function CasePage({ case: caseItem }: { case: CaseData }) {
   return (
     <div>
       <SO_Header />
-      {caseItem.article.content.map((block, index) => {
+      {caseItem.case.content.map((block, index) => {
         if (block.type === 'cardList') {
           const currentIndex = cardListIndex
           cardListIndex++
@@ -59,9 +59,9 @@ export default function CasePage({ case: caseItem }: { case: CaseData }) {
         )
       })}
 
-      {caseItem.article.comments.length > 0 && (
+      {caseItem.case.comments.length > 0 && (
         <div>
-          {caseItem.article.comments.map((comment, index) => (
+          {caseItem.case.comments.map((comment, index) => (
             <div key={index}>
               <p>{comment.comment}</p>
               <p>{comment.author}</p>
