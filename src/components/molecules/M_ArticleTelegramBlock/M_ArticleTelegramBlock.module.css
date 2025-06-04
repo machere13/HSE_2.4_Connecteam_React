@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-30);
+
+    padding: var(--spacing-30);
+
+    background: var(--color-main-white);
+    border-radius: var(--border-radius-15);
+}
+
+.text_wrapper{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-15);
+}
+
+.icon_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 68px;
+
+    height: 68px;
+
+    background: var(--color-main-blue);
+    border-radius: 100%;
+}

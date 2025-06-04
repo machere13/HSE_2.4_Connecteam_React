@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-10);
+
+  height: fit-content;
+}
+
+.line {
+  width: 3px;
+  min-width: 3px;
+  max-width: 3px;
+
+  background: var(--color-main-purple);
+
+  align-self: stretch;
+}

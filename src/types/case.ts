@@ -10,10 +10,9 @@ export interface CaseComment {
 }
 
 export type CaseContentItem =
-  | { type: 'heading-1'; text: string }
-  | { type: 'heading-3'; text: string }
+  | { type: 'heading-2'; text: string }
   | { type: 'tags'; items: string[] }
-  | { type: 'image'; image: string; description?: string }
+  | { type: 'image'; image: string; description?: string; alt: string }
   | { type: 'previewParagraph'; text: string }
   | { type: 'titleParagraph'; title: string; text: string }
   | { type: 'paragraph'; text: string }

@@ -1,9 +1,6 @@
-import Link from 'next/link'
-
 import { getCases } from '@/api/getCases'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
-import { ROUTES } from '@/routes'
 
 import type { CaseData } from '@/types/case'
 

@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-25);
+  
+    width: 100%;
+}
+  
+.small {
+    max-width: 100%;
+}
+  
+.big {
+    align-items: center;
+}
