@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   distDir: '.next',
   images: {
-    domains: [],
+    domains: ['res.cloudinary.com'],
     unoptimized: false,
   },
 

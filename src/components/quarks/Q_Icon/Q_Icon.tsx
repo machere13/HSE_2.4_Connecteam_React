@@ -20,6 +20,10 @@ import HeaderSearchResultsLoaderIcon from '@/assets/icons/HeaderSearchResultsLoa
 import LinkIcon from '@/assets/icons/LinkIcon.svg'
 import LogoFull from '@/assets/icons/LogoFull.svg'
 import LogoShort from '@/assets/icons/LogoShort.svg'
+import M_ArticleElementItemIcon01 from '@/assets/icons/M_ArticleElementItem/M_ArticleElementItemIcon01.svg'
+import M_ArticleElementItemIcon02 from '@/assets/icons/M_ArticleElementItem/M_ArticleElementItemIcon02.svg'
+import M_ArticleElementItemIcon03 from '@/assets/icons/M_ArticleElementItem/M_ArticleElementItemIcon03.svg'
+import M_ArticleElementItemIcon04 from '@/assets/icons/M_ArticleElementItem/M_ArticleElementItemIcon04.svg'
 import SearchIcon from '@/assets/icons/SearchIcon.svg'
 import TelegramIcon from '@/assets/icons/TelegramIcon.svg'
 import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
@@ -53,6 +57,10 @@ export type Q_IconProps = {
     | 'errorSignature502Icon'
     | 'errorSignature505Icon'
     | 'burgerMenuIcon'
+    | 'articleElementItemIcon01'
+    | 'articleElementItemIcon02'
+    | 'articleElementItemIcon03'
+    | 'articleElementItemIcon04'
   width?: string
   height?: string
   fill?: string
@@ -94,6 +102,10 @@ const Q_Icon: React.FC<Q_IconProps> = ({
     errorSignature502Icon: ErrorSignature502Icon,
     errorSignature505Icon: ErrorSignature505Icon,
     burgerMenuIcon: BurgerMenuIcon,
+    articleElementItemIcon01: M_ArticleElementItemIcon01,
+    articleElementItemIcon02: M_ArticleElementItemIcon02,
+    articleElementItemIcon03: M_ArticleElementItemIcon03,
+    articleElementItemIcon04: M_ArticleElementItemIcon04,
   }
 
   const SvgIcon = icons[name]

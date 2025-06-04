@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+
+    padding: var(--spacing-30);
+
+    border-radius: var(--border-radius-15);
+
+    transition: all .2s;
+}
+
+.bg_white {
+    color: var(--color-main-black);
+
+    background: var(--color-main-white);
+}
+  
+.bg_pink {
+    color: var(--color-main-white);
+
+    background: var(--color-main-pink);
+}
+  
+.rotate_left {
+    transform: rotate(-2deg);
+}
+  
+.rotate_right {
+    transform: rotate(2deg);
+}
+
+.rotate_left:hover, .rotate_right:hover{
+    transform: rotate(0);
+}

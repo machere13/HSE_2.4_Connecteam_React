@@ -17,19 +17,15 @@
     "filter": "experience",
     "article": {
       "author": {
-        "image": "url",
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
         "name": "machere13",
         "description": "Frontend Developer"
       },
       "type": "big",
       "content": [
         {
-          "type": "heading-1",
+          "type": "heading-2",
           "text": "Ребрендинг «Яндекс Музыки»"
-        },
-        {
-          "type": "heading-3",
-          "text": "В декабре 2023 года «Яндекс Музыка» провела первый за девять лет ребрендинг, обновив логотип, визуальный стиль и функциональность сервиса. Помимо обновлений в пользовательском опыте, этот кейс является ярким примером того, как слаженная коммуникация между членами команды может стать ключевым фактором успеха."
         },
         {
           "type": "tags",
@@ -37,7 +33,8 @@
         },
         {
           "type": "image",
-          "image": "url"
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+          "alt": "Иллюстрация логотипа Яндекс Музыки"
         },
         {
           "type": "previewParagraph",
@@ -87,7 +84,7 @@
         {
           "type": "video",
           "title": "Подробнее кейс разобрали в видео формате)",
-          "video": "url"
+          "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         },
         {
           "type": "highlightedSection",
@@ -181,11 +178,7 @@
       "type": "big",
       "content": [
         {
-          "type": "heading-1",
-          "text": "testing filter 'Руководство командой'"
-        },
-        {
-          "type": "heading-3",
+          "type": "heading-2",
           "text": "testing filter 'Руководство командой'"
         },
         {
@@ -243,11 +236,7 @@
       "type": "big",
       "content": [
         {
-          "type": "heading-1",
-          "text": "testing filter 'История компании'"
-        },
-        {
-          "type": "heading-3",
+          "type": "heading-2",
           "text": "testing filter 'История компании'"
         },
         {
@@ -302,11 +291,7 @@
       "type": "big",
       "content": [
         {
-          "type": "heading-1",
-          "text": "testing filter 'Лайфхаки от команды'"
-        },
-        {
-          "type": "heading-3",
+          "type": "heading-2",
           "text": "testing filter 'Лайфхаки от команды'"
         },
         {

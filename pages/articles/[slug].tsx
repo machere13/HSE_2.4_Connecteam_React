@@ -2,7 +2,10 @@ import { useRouter } from 'next/router'
 
 import { getArticles } from '@/api/getArticles'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
+import { BlockRenderer } from '@/lib/BlockRenderer'
 
+import type { M_PersonProps } from '@/components/molecules/M_Person/M_Person'
 import type { ArticleData } from '@/types/article'
 import type { GetStaticPaths, GetStaticProps } from 'next'
 
@@ -48,121 +51,61 @@ interface ArticlePageProps {
 
 export default function ArticlePage({ article }: ArticlePageProps) {
   const router = useRouter()
+  let cardListIndex = 0
 
   if (router.isFallback) {
     return <div>Загрузка...</div>
   }
 
+  const authorProps: M_PersonProps = {
+    name: article.article.author.name,
+    role: article.article.author.description,
+    photoSrc: article.article.author.image,
+  }
+
   return (
     <div>
       <SO_Header />
-      {article.article.content.map((block, index) => {
-        switch (block.type) {
-          case 'heading-1':
-            return <h1 key={index}>{block.text}</h1>
-          case 'heading-3':
-            return <h3 key={index}>{block.text}</h3>
-          case 'paragraph':
-            return <p key={index}>{block.text}</p>
-          case 'image':
-            return <img key={index} src={block.image} alt={block.description || ''} />
-          case 'previewParagraph':
+      <div>
+        <W_ArticleAboutInfo author={authorProps} />
+        {article.article.content.map((block, index) => {
+          if (block.type === 'cardList') {
+            const currentIndex = cardListIndex
+            cardListIndex++
             return (
-              <p key={index} style={{ fontStyle: 'italic' }}>
-                {block.text}
-              </p>
-            )
-          case 'tags':
-            return (
-              <ul key={index} style={{ display: 'flex', gap: '8px' }}>
-                {block.items.map((tag, i) => (
-                  <li key={i}>#{tag}</li>
-                ))}
-              </ul>
-            )
-          case 'whiteBox':
-            return (
-              <div
+              <BlockRenderer
                 key={index}
-                style={{ background: '#f9f9f9', padding: '16px', borderRadius: '8px' }}
-              >
-                <strong>{block.title}</strong>
-                <p>{block.text}</p>
-              </div>
+                block={block}
+                variant={{
+                  type: 'article',
+                  articleType: article.article.type,
+                  positionIndex: index,
+                }}
+                cardListIndex={currentIndex}
+              />
             )
-          case 'elements':
-            return (
-              <div key={index}>
-                <h4>{block.title}</h4>
-                <ul>
-                  {block.items.map((item, i) => (
-                    <li key={i}>
-                      <strong>{item.title}:</strong> {item.description}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          case 'telegram':
-            return (
-              <p key={index}>
-                Подписывайтесь на{' '}
-                <a href={block.link} target='_blank' rel='noopener noreferrer'>
-                  наш Telegram
-                </a>
-              </p>
-            )
-          case 'examples':
-            return (
-              <div key={index}>
-                <h4>Примеры:</h4>
-                <ul>
-                  {block.items.map((item, i) => (
-                    <li key={i}>
-                      <strong>{item.title}:</strong> {item.description}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          case 'highlightedSection':
-            return (
-              <div key={index} style={{ background: '#eef', padding: '16px', borderRadius: '8px' }}>
-                <h4>{block.title}</h4>
-                <ul>
-                  {block.items.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )
-          case 'cardList':
-            return (
-              <div key={index}>
-                <h4>{block.title}</h4>
-                <ul>
-                  {block.items.map((item, i) => (
-                    <li key={i}>
-                      <strong>{item.title}:</strong> {item.description}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          case 'moreInCase':
-            return (
-              <p key={index}>
-                Подробнее в{' '}
-                <a href={block.link} target='_blank' rel='noopener noreferrer'>
-                  этом случае
-                </a>
-              </p>
-            )
-          default:
-            const _exhaustiveCheck: never = block
-            return null
-        }
-      })}
+          }
+          return (
+            <BlockRenderer
+              key={index}
+              block={block}
+              variant={{
+                type: 'article',
+                articleType: article.article.type,
+                positionIndex: index,
+              }}
+            />
+          )
+        })}
+
+        {article.article.stickers && article.article.stickers.length > 0 && (
+          <div>
+            {article.article.stickers.map((sticker, index) => (
+              <span key={index}>{sticker}</span>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

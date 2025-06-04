@@ -5,18 +5,23 @@ export interface ArticleAuthor {
 }
 
 export type ArticleContentItem =
-  | { type: 'heading-1'; text: string }
-  | { type: 'heading-3'; text: string }
+  | { type: 'heading-2'; text: string }
+  | { type: 'heading-4'; text: string }
   | { type: 'tags'; items: string[] }
-  | { type: 'image'; image: string; description?: string }
+  | { type: 'image'; image: string; description?: string; alt: string }
   | { type: 'previewParagraph'; text: string }
   | { type: 'whiteBox'; title: string; text: string }
   | { type: 'paragraph'; text: string }
-  | { type: 'elements'; title: string; items: { title: string; description: string }[] }
+  | {
+      type: 'elements'
+      title: string
+      items: { title: string; text: string; index: 1 | 2 | 3 | 4 }[]
+    }
   | { type: 'telegram'; link: string }
-  | { type: 'examples'; items: { title: string; description: string }[] }
+  | { type: 'examples'; items: { title: string; text: string }[] }
   | { type: 'moreInCase'; link: string }
   | { type: 'highlightedSection'; title: string; titleType: 'small'; items: string[] }
+  | { type: 'pointedSection'; title: string; items: string[] }
   | {
       type: 'cardList'
       title: string
@@ -43,7 +48,7 @@ export interface ArticleData {
   filter: string
   article: {
     author: ArticleAuthor
-    type: string
+    type: 'big' | 'short' | 'superShort'
     content: ArticleContentItem[]
     stickers: string[]
   }

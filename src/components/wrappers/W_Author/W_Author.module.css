@@ -3,3 +3,38 @@
     flex-direction: column;
     gap: var(--spacing-10);
 }
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-15);
+
+  margin-bottom: var(--spacing-25);
+}
+
+.author_image {
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author_info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+.author_name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.author_description {
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-text-secondary);
+}
