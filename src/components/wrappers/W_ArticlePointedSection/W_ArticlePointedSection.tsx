@@ -11,9 +11,11 @@ interface W_ArticlePointedSectionProps {
 
 export default function W_ArticlePointedSection({ items, title }: W_ArticlePointedSectionProps) {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <h5>{title}</h5>
-      <C_ArticlePointedItems items={items} />
-    </div>
+      <ul>
+        <C_ArticlePointedItems items={items} />
+      </ul>
+    </section>
   )
 }

@@ -8,10 +8,10 @@ interface C_ArticleHighlightedItemsProps {
 
 export const C_ArticleHighlightedItems = ({ items }: C_ArticleHighlightedItemsProps) => {
   return (
-    <div className={styles.wrapper}>
+    <ul className={styles.wrapper}>
       {items.map(item => (
         <A_ArticleHighlightedItem key={item} text={item} />
       ))}
-    </div>
+    </ul>
   )
 }

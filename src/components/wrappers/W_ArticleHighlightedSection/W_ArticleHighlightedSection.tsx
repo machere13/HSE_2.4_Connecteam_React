@@ -16,13 +16,17 @@ export const W_ArticleHighlightedSection = ({
   titleType,
 }: W_ArticleHighlightedSectionProps) => {
   return (
-    <div className={cn(styles.wrapper, styles[titleType])}>
-      {titleType === 'small' ? (
-        <h5 className={styles.title}>{title}</h5>
-      ) : (
-        <h2 className={styles.title}>{title}</h2>
-      )}
-      <C_ArticleHighlightedItems items={items} />
-    </div>
+    <section className={cn(styles.wrapper, styles[titleType])}>
+      <article>
+        {titleType === 'small' ? (
+          <h5 className={styles.title}>{title}</h5>
+        ) : (
+          <h2 className={styles.title}>{title}</h2>
+        )}
+        <ul>
+          <C_ArticleHighlightedItems items={items} />
+        </ul>
+      </article>
+    </section>
   )
 }

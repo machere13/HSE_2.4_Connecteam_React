@@ -238,7 +238,7 @@ h6 {
   letter-spacing: var(--font-letter-spacing-headers);
 }
 
-p {
+p, .text_body_1 {
   font-family: var(--font-family-hauora);
   font-size: var(--font-size-body-1);
   font-weight: var(--font-weight-body-1);

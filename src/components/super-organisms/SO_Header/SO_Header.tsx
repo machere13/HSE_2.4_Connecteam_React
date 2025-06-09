@@ -19,7 +19,7 @@ export default function SO_Header() {
   }
 
   return (
-    <div className={styles.wrapper} ref={headerRef}>
+    <header className={styles.wrapper} ref={headerRef}>
       <Link href={ROUTES.MAIN} className={styles.logo_wrapper}>
         <Q_Icon name='logoFull' width='200' height='24' className={styles.logo_full} />
         <Q_Icon name='logoShort' width='44' height='32' className={styles.logo_short} />
@@ -27,6 +27,6 @@ export default function SO_Header() {
       <W_HeaderInteractive />
       <A_BurgerMenuButton onClick={toggleMenu} />
       {isMenuOpen && <O_HeaderBurgerMenu />}
-    </div>
+    </header>
   )
 }

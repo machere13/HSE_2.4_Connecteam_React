@@ -23,3 +23,7 @@ html {
 html::-webkit-scrollbar {
   display: none;
 }
+
+mark{
+  background: transparent;
+}

@@ -8,9 +8,9 @@ interface A_ArticleHighlightedItemProps {
 
 export const A_ArticleHighlightedItem = ({ text }: A_ArticleHighlightedItemProps) => {
   return (
-    <div className={styles.wrapper}>
+    <li className={styles.wrapper}>
       <div className={styles.line}></div>
-      <span className={cn(styles.text, 'text_body_2')}>{text}</span>
-    </div>
+      <mark className={cn(styles.text, 'text_body_2')}>{text}</mark>
+    </li>
   )
 }
