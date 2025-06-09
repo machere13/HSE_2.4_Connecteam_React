@@ -6,6 +6,10 @@
   height: fit-content;
 }
 
+.text{
+  padding: 4px 0;
+}
+
 .line {
   width: 3px;
   min-width: 3px;
