@@ -95,6 +95,9 @@
   --font-size-captions-s: 12px;
   --font-size-button-l: 18px;
   --font-size-button-s: 15px;
+
+  /* Max Width */
+  --max-width-content: 1440px;
 }
 
 @media (max-width: 1028px) {

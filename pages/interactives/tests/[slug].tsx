@@ -4,10 +4,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { getTests } from '@/api/getTests'
-import A_TestQuestionNumberTag from '@/components/atoms/A_TestQuestionNumberTag/A_TestQuestionNumberTag'
-import C_TestQuestionRadios from '@/components/collections/C_TestQuestionRadios/C_TestQuestionRadios'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
-import W_TestQuestionHeading from '@/components/wrappers/W_TestQuestionHeading/W_TestQuestionHeading'
+import W_TestQuestion from '@/components/wrappers/W_TestQuestion/W_TestQuestion'
 
 import type { Test, TestResult } from '@/types/test'
 import type { GetStaticPaths, GetStaticProps } from 'next'
@@ -91,20 +89,14 @@ export default function TestPage({ test }: { test: Test }) {
           </div>
         ) : (
           <div>
-            <div>
-              <W_TestQuestionHeading
-                currentNumber={currentQuestionIndex + 1}
-                totalQuestions={test.content.questions.length}
-                title={test.content.questions[currentQuestionIndex].title}
-              />
-              <C_TestQuestionRadios
-                answers={test.content.questions[currentQuestionIndex].answers}
-                selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
-                onAnswerSelect={answerIndex =>
-                  handleAnswerSelect(currentQuestionIndex, answerIndex)
-                }
-              />
-            </div>
+            <W_TestQuestion
+              currentNumber={currentQuestionIndex + 1}
+              totalQuestions={test.content.questions.length}
+              title={test.content.questions[currentQuestionIndex].title}
+              answers={test.content.questions[currentQuestionIndex].answers}
+              selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
+              onAnswerSelect={answerIndex => handleAnswerSelect(currentQuestionIndex, answerIndex)}
+            />
             <div>
               <button
                 onClick={handleNextQuestion}
