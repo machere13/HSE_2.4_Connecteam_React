@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-15);
+}
