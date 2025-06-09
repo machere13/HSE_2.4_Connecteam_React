@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import { getTests } from '@/api/tests'
+import { getTests } from '@/api/getTests'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import { ROUTES } from '@/routes'
 
-import type { Test } from '@/api/tests'
+import type { TestData } from '@/types/test'
 
 export const getStaticProps = async () => {
   const tests = await getTests()
@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function InteractivesPage({ tests }: { tests: Test[] }) {
+export default function InteractivesPage({ tests }: { tests: TestData[] }) {
   return (
     <div>
       <SO_Header />
