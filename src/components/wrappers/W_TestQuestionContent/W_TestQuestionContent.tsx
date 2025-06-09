@@ -1,7 +1,7 @@
 import React from 'react'
 
-import C_TestQuestionRadios from '@/components/collections/C_TestQuestionRadios/C_TestQuestionRadios'
 import W_TestQuestionHeading from '@/components/wrappers/W_TestQuestionHeading/W_TestQuestionHeading'
+import W_TestQuestionInteractive from '@/components/wrappers/W_TestQuestionInteractive/W_TestQuestionInteractive'
 
 import styles from './W_TestQuestionContent.module.css'
 
@@ -13,7 +13,9 @@ interface W_TestQuestionContentProps {
   title: string
   answers: TestAnswer[]
   selectedAnswerIndex: number | undefined
+  isLastQuestion: boolean
   onAnswerSelect: (answerIndex: number) => void
+  onNext: () => void
 }
 
 export default function W_TestQuestionContent({
@@ -22,7 +24,9 @@ export default function W_TestQuestionContent({
   title,
   answers,
   selectedAnswerIndex,
+  isLastQuestion,
   onAnswerSelect,
+  onNext,
 }: W_TestQuestionContentProps) {
   return (
     <div className={styles.wrapper}>
@@ -31,10 +35,12 @@ export default function W_TestQuestionContent({
         totalQuestions={totalQuestions}
         title={title}
       />
-      <C_TestQuestionRadios
+      <W_TestQuestionInteractive
         answers={answers}
         selectedAnswerIndex={selectedAnswerIndex}
+        isLastQuestion={isLastQuestion}
         onAnswerSelect={onAnswerSelect}
+        onNext={onNext}
       />
     </div>
   )
