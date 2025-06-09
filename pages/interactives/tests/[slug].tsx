@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { getTests } from '@/api/getTests'
 import A_TestQuestionNumberTag from '@/components/atoms/A_TestQuestionNumberTag/A_TestQuestionNumberTag'
-import A_TestQuestionRadio from '@/components/atoms/A_TestQuestionRadio/A_TestQuestionRadio'
+import C_TestQuestionRadios from '@/components/collections/C_TestQuestionRadios/C_TestQuestionRadios'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 
 import type { Test, TestResult } from '@/types/test'
@@ -96,16 +96,13 @@ export default function TestPage({ test }: { test: Test }) {
                 totalQuestions={test.content.questions.length}
               />
               <h3>{test.content.questions[currentQuestionIndex].title}</h3>
-              <div>
-                {test.content.questions[currentQuestionIndex].answers.map((answer, index) => (
-                  <A_TestQuestionRadio
-                    key={index}
-                    title={answer.title}
-                    isSelected={selectedAnswers[currentQuestionIndex] === index}
-                    onChange={() => handleAnswerSelect(currentQuestionIndex, index)}
-                  />
-                ))}
-              </div>
+              <C_TestQuestionRadios
+                answers={test.content.questions[currentQuestionIndex].answers}
+                selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
+                onAnswerSelect={answerIndex =>
+                  handleAnswerSelect(currentQuestionIndex, answerIndex)
+                }
+              />
             </div>
             <div>
               <Link href='/interactives'>Вернуться назад</Link>
