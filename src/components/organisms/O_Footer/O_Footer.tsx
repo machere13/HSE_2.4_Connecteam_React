@@ -7,12 +7,12 @@ import styles from './O_Footer.module.css'
 
 export default function O_Footer() {
   return (
-    <div className={styles.wrapper}>
+    <footer className={styles.wrapper}>
       <div className={styles.content}>
         <Q_Icon name='logoFull' width='200' height='24' />
         <p>Кольченко / Косарева / .machére13</p>
       </div>
       <W_FooterButtons />
-    </div>
+    </footer>
   )
 }

@@ -4,6 +4,6 @@ interface A_ArticleHeadingProps {
 }
 
 export const A_ArticleHeading = ({ text, level }: A_ArticleHeadingProps) => {
-  const Tag = level === 2 ? 'h2' : 'h4'
-  return <Tag>{text}</Tag>
+  const TitleTag = level === 2 ? 'h2' : 'h4'
+  return <TitleTag>{text}</TitleTag>
 }

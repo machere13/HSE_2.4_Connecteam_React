@@ -13,10 +13,10 @@ interface C_ArticleExampleItemsProps {
 
 export default function C_ArticleExampleItems({ examples }: C_ArticleExampleItemsProps) {
   return (
-    <div className={styles.wrapper}>
+    <ul className={styles.wrapper}>
       {examples.map((item, index) => (
         <M_ArticleExampleItem key={index} title={item.title} text={item.text} />
       ))}
-    </div>
+    </ul>
   )
 }

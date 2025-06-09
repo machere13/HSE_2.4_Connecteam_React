@@ -17,7 +17,7 @@ export default function C_ArticleElementItems({ elements }: C_ArticleElementItem
     return ((idx % 4) + 1) as 1 | 2 | 3 | 4
   }
   return (
-    <div className={styles.wrapper}>
+    <ul className={styles.wrapper}>
       {elements.map((item, index) => (
         <M_ArticleElementItem
           key={index}
@@ -26,6 +26,6 @@ export default function C_ArticleElementItems({ elements }: C_ArticleElementItem
           text={item.text}
         />
       ))}
-    </div>
+    </ul>
   )
 }

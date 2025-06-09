@@ -16,13 +16,13 @@ interface W_CardListProps {
 
 export const W_CardList = ({ items, title, titleType, variant }: W_CardListProps) => {
   return (
-    <div className={cn(styles.wrapper, styles[titleType])}>
+    <section className={cn(styles.wrapper, styles[titleType])}>
       {titleType === 'small' ? (
         <h3 className={styles.title}>{title}</h3>
       ) : (
         <h2 className={styles.title}>{title}</h2>
       )}
       <C_CardListItems items={items} variant={variant} />
-    </div>
+    </section>
   )
 }

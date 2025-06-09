@@ -10,10 +10,10 @@ interface C_ArticlePointedItemsProps {
 
 export default function C_ArticlePointedItems({ items }: C_ArticlePointedItemsProps) {
   return (
-    <div className={styles.wrapper}>
+    <ul className={styles.wrapper}>
       {items.map(item => (
         <A_ArticlePointedItem key={item} text={item} />
       ))}
-    </div>
+    </ul>
   )
 }

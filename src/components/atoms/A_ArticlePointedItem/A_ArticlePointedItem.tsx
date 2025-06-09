@@ -1,5 +1,7 @@
 import React from 'react'
 
+import cn from 'classnames'
+
 import styles from './A_ArticlePointedItem.module.css'
 
 interface A_ArticlePointedItemProps {
@@ -8,11 +10,11 @@ interface A_ArticlePointedItemProps {
 
 export default function A_ArticlePointedItem({ text }: A_ArticlePointedItemProps) {
   return (
-    <div className={styles.wrapper}>
+    <li className={styles.wrapper}>
       <div className={styles.point_wrapper}>
         <div className={styles.point}></div>
       </div>
-      <p>{text}</p>
-    </div>
+      <mark className={cn(styles.text, 'text_body_1')}>{text}</mark>
+    </li>
   )
 }
