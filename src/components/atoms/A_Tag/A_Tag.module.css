@@ -1,10 +1,10 @@
-.wrapper{
-    width: fit-content;
+.wrapper {
+  width: fit-content;
 
-    padding: var(--spacing-9) var(--spacing-20);
+  padding: var(--spacing-9) var(--spacing-20);
 
-    color: var(--color-main-purple);
+  color: var(--color-main-purple);
 
-    background: var(--color-main-white);
-    border-radius: var(--border-radius-20);
+  background: var(--color-main-white);
+  border-radius: var(--border-radius-20);
 }

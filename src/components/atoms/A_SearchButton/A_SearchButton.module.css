@@ -1,39 +1,40 @@
-.wrapper{
-    position: relative;
-    z-index: 3;
+.wrapper {
+  position: relative;
+  z-index: 3;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 30px;
-    min-width: 30px;
+  width: 30px;
+  min-width: 30px;
 
-    height: 30px;
-    min-height: 30px;
+  height: 30px;
+  min-height: 30px;
 
-    background: var(--color-main-blue);
-    border-radius: var(--border-radius-15);
+  background: var(--color-main-blue);
+  border-radius: var(--border-radius-15);
 
-    transition: background .2s;
+  transition: background 0.2s;
 }
 
 .wrapper.active {
-    background: var(--color-main-purple);
+  background: var(--color-main-purple);
 }
 
-.wrapper.active:active, .wrapper:active {
-    background: var(--color-click-purple);
+.wrapper.active:active,
+.wrapper:active {
+  background: var(--color-click-purple);
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.wrapper:hover {
-		background: var(--color-main-purple);
-	}
+  .wrapper:hover {
+    background: var(--color-main-purple);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.wrapper:active {
-		background: var(--color-main-purple);
-	}
+  .wrapper:active {
+    background: var(--color-main-purple);
+  }
 }

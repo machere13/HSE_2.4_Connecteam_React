@@ -10,7 +10,7 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     'storybook-css-modules',
     'storybook-addon-pseudo-states',
-    'msw-storybook-addon'
+    'msw-storybook-addon',
   ],
   framework: {
     name: '@storybook/nextjs',

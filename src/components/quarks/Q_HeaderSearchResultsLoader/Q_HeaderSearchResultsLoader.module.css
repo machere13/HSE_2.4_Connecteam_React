@@ -1,29 +1,29 @@
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding: var(--spacing-10) var(--spacing-20);
+  padding: var(--spacing-10) var(--spacing-20);
 
-    background: var(--color-main-white);
-    border-radius: 0 0 var(--border-radius-15) var(--border-radius-15);
+  background: var(--color-main-white);
+  border-radius: 0 0 var(--border-radius-15) var(--border-radius-15);
 }
 
 .loader_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    animation: step-spinning 1s steps(12) infinite;
-    transform-origin: center;
+  animation: step-spinning 1s steps(12) infinite;
+  transform-origin: center;
 }
 
 @keyframes step-spinning {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }

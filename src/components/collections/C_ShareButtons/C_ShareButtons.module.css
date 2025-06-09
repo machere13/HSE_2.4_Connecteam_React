@@ -1,4 +1,4 @@
-.wrapper{
-    display: flex;
-    gap: var(--spacing-10)
+.wrapper {
+  display: flex;
+  gap: var(--spacing-10);
 }

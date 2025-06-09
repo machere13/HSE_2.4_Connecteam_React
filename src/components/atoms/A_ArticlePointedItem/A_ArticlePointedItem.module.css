@@ -1,28 +1,28 @@
-.wrapper{
-    display: flex;
+.wrapper {
+  display: flex;
 }
 
-.point_wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.point_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 30px;
-    min-width: 30px;
-    max-width: 30px;
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
 
-    height: 21px;
+  height: 21px;
 }
 
-.point{
-    width: 4px;
-    min-width: 4px;
-    max-width: 4px;
+.point {
+  width: 4px;
+  min-width: 4px;
+  max-width: 4px;
 
-    height: 4px;
-    min-height: 4px;
-    max-height: 4px;
+  height: 4px;
+  min-height: 4px;
+  max-height: 4px;
 
-    background: var(--color-main-black);
-    border-radius: 100%;
+  background: var(--color-main-black);
+  border-radius: 100%;
 }

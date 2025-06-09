@@ -1,9 +1,9 @@
-.wrapper{
-    display: grid;
+.wrapper {
+  display: grid;
 
-    padding: var(--spacing-30);
+  padding: var(--spacing-30);
 
-    background: var(--color-main-white);
-    border-radius: var(--border-radius-15);
-    grid-template-columns: 1fr 740px 1fr;
+  background: var(--color-main-white);
+  border-radius: var(--border-radius-15);
+  grid-template-columns: 1fr 740px 1fr;
 }

@@ -4,7 +4,7 @@ import W_SearchBarWithResults from '@/components/wrappers/W_SearchBarWithResults
 
 declare global {
   interface Window {
-    __storybookSearchOverride?: (query: string) => Promise<any>
+    __storybookSearchOverride?: (query: string) => Promise<unknown>
   }
 }
 
@@ -19,9 +19,8 @@ export default function W_SearchBarWithResults_StoryWrapper({ forcedState }: Pro
 
   useEffect(() => {
     setInitialValue('storybook')
-
     if (forcedState === 'loading') {
-      window.__storybookSearchOverride = () => new Promise(() => {})
+      window.__storybookSearchOverride = () => new Promise(resolve => setTimeout(resolve))
     } else if (forcedState === 'empty') {
       window.__storybookSearchOverride = () => Promise.resolve([])
     }
