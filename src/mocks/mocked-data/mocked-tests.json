@@ -4,6 +4,7 @@
     "title": "Я что, плохо руковожу?",
     "description": "Пройди тест и узнай уровень своих гибких навыков как руководителя",
     "background": "url",
+    "slug": "sila",
     "content": {
       "questions": [
         {
