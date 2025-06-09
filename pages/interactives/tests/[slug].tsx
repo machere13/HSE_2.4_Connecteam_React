@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { getTests } from '@/api/getTests'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
-import W_TestQuestion from '@/components/wrappers/W_TestQuestion/W_TestQuestion'
+import W_TestQuestionContent from '@/components/wrappers/W_TestQuestionContent/W_TestQuestionContent'
 
 import type { Test, TestResult } from '@/types/test'
 import type { GetStaticPaths, GetStaticProps } from 'next'
@@ -89,7 +89,7 @@ export default function TestPage({ test }: { test: Test }) {
           </div>
         ) : (
           <div>
-            <W_TestQuestion
+            <W_TestQuestionContent
               currentNumber={currentQuestionIndex + 1}
               totalQuestions={test.content.questions.length}
               title={test.content.questions[currentQuestionIndex].title}
