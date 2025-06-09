@@ -1,17 +1,17 @@
-.wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-30);
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-30);
 
-    padding: var(--spacing-30);
+  padding: var(--spacing-30);
 
-    color: var(--color-main-white);
+  color: var(--color-main-white);
 
-    background: var(--color-main-pink);
-    border-radius: var(--border-radius-15);
+  background: var(--color-main-pink);
+  border-radius: var(--border-radius-15);
 }
 
-.wrapper > h3{
-    max-width: 350px;
+.wrapper > h3 {
+  max-width: 350px;
 }

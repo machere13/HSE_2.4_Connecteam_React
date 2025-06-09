@@ -1,11 +1,11 @@
-.wrapper{
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-20);
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-20);
 }
 
-.name_wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-5);
+.name_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
 }

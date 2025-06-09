@@ -1,0 +1,64 @@
+.wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: var(--spacing-30);
+
+  background: var(--color-main-white);
+  border-radius: var(--border-radius-15);
+
+  transition: all .2s;
+}
+
+.text {
+  color: var(--color-main-black);
+}
+
+.selected .text {
+  color: var(--color-main-white);
+}
+
+.selected {
+  background-color: var(--color-click-purple);
+}
+
+.input {
+  position: absolute;
+
+  width: 0;
+
+  height: 0;
+
+  opacity: 0;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.wrapper:hover {
+		background: var(--color-main-purple);
+	}
+    
+	.wrapper:hover .text {
+		color: var(--color-main-white);
+	}
+
+	.selected:hover {
+		background: var(--color-main-purple);
+	}
+}
+
+@media (hover: none) and (pointer: coarse) {
+	.wrapper:active {
+		background: var(--color-main-purple);
+	}
+
+	.wrapper:active .text {
+		color: var(--color-main-white);
+	}
+
+	.selected:active {
+		background: var(--color-main-purple);
+	}
+}

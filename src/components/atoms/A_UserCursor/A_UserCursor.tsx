@@ -60,6 +60,9 @@ export default function A_UserCursor() {
       } else if (target.closest('a, button, [role="button"]')) {
         setIsHovering(true)
         setHoverLabel('Клик')
+      } else if (target.closest('[data-cursor="radio"]')) {
+        setIsHovering(true)
+        setHoverLabel('Выбрать')
       } else {
         setIsHovering(false)
         setHoverLabel('')

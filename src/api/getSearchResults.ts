@@ -9,7 +9,7 @@ export type SearchResult = {
 
 export const getSearchResults = async (query: string): Promise<SearchResult[]> => {
   if (typeof window !== 'undefined' && typeof window.__storybookSearchOverride === 'function') {
-    return window.__storybookSearchOverride(query)
+    return window.__storybookSearchOverride(query) as unknown as SearchResult[]
   }
 
   if (config.mocked) {

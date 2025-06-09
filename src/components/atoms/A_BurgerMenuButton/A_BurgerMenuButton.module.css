@@ -1,9 +1,9 @@
-.wrapper{
-    display: none;
+.wrapper {
+  display: none;
 }
 
 @media (max-width: 1028px) {
-    .wrapper{
-        display: block;
-    }
+  .wrapper {
+    display: block;
+  }
 }

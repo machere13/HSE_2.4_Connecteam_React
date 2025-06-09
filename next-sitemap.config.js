@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require('node-fetch')
 
 const mockedArticles = [
   {
@@ -9,7 +9,7 @@ const mockedArticles = [
     slug: 'spotify-race',
     updatedAt: '2024-03-19',
   },
-];
+]
 
 const mockedCases = [
   {
@@ -20,9 +20,19 @@ const mockedCases = [
     slug: 'testing-filter-history',
     updatedAt: '2024-03-17',
   },
-];
+]
 
-const staticPages = ['/', '/about', '/cases', '/articles', '/interactives', '/interactives/generator', '/interactives/itbunker', '/interactives/itmafia', '/styleguide'];
+const staticPages = [
+  '/',
+  '/about',
+  '/cases',
+  '/articles',
+  '/interactives',
+  '/interactives/generator',
+  '/interactives/itbunker',
+  '/interactives/itmafia',
+  '/styleguide',
+]
 
 module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space',
@@ -66,12 +76,14 @@ module.exports = {
         lastmod: new Date(caseItem.updatedAt || Date.now()).toISOString(),
         priority: 0.7,
         changefreq: 'weekly',
-      }))
-    ];
+      })),
+    ]
   },
 
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/', disallow: ['/api'] }],
-    additionalSitemaps: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/sitemap.xml`],
-  }
+    additionalSitemaps: [
+      `${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/sitemap.xml`,
+    ],
+  },
 }

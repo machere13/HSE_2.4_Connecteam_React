@@ -1,24 +1,25 @@
-body{
-    min-height: 100vh;
+body {
+  min-height: 100vh;
 
-    background: var(--color-main-main-white);
+  background: var(--color-main-main-white);
 }
 
 * {
-    cursor: none;
+  cursor: none;
 }
 
-button, input{
-    background: transparent;
-    outline: 0;
-    border: 0;
+button,
+input {
+  background: transparent;
+  outline: 0;
+  border: 0;
 }
 
 html {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-  
+
 html::-webkit-scrollbar {
-    display: none;
+  display: none;
 }

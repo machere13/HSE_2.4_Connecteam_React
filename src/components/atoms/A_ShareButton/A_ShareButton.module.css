@@ -1,51 +1,51 @@
-.wrapper{
-    position: relative;
+.wrapper {
+  position: relative;
 
-    display: inline-block;
+  display: inline-block;
 }
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    width: 48px;
-    min-width: 48px;
-    max-width: 48px;
-  
-    height: 48px;
-    min-height: 48px;
-    max-height: 48px;
-  
-    background: var(--color-main-purple);
-    border-radius: var(--border-radius-15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  min-width: 48px;
+  max-width: 48px;
+
+  height: 48px;
+  min-height: 48px;
+  max-height: 48px;
+
+  background: var(--color-main-purple);
+  border-radius: var(--border-radius-15);
 }
 
 .tooltip {
-    position: absolute;
-    bottom: -30px;
-    left: 0;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
 
-    color: var(--color-main-purple);
+  color: var(--color-main-purple);
 
-    animation: fade-in-out 2s ease-in-out;
-    white-space: nowrap;
+  animation: fade-in-out 2s ease-in-out;
+  white-space: nowrap;
 }
-  
+
 @keyframes fade-in-out {
-    0% {
-      opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    20% {
-      opacity: 1;
-    }
+  20% {
+    opacity: 1;
+  }
 
-    80% {
-      opacity: 1;
-    }
+  80% {
+    opacity: 1;
+  }
 
-    100% {
-      opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
