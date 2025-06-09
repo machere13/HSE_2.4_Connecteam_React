@@ -95,18 +95,10 @@ export default function TestPage({ test }: { test: Test }) {
               title={test.content.questions[currentQuestionIndex].title}
               answers={test.content.questions[currentQuestionIndex].answers}
               selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
+              isLastQuestion={currentQuestionIndex === test.content.questions.length - 1}
               onAnswerSelect={answerIndex => handleAnswerSelect(currentQuestionIndex, answerIndex)}
+              onNext={handleNextQuestion}
             />
-            <div>
-              <button
-                onClick={handleNextQuestion}
-                disabled={selectedAnswers[currentQuestionIndex] === undefined}
-              >
-                {currentQuestionIndex === test.content.questions.length - 1
-                  ? 'Завершить тест'
-                  : 'Следующий вопрос'}
-              </button>
-            </div>
           </div>
         )}
       </div>
