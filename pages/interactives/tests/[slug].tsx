@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { getTests } from '@/api/getTests'
+import A_TestQuestionNumberTag from '@/components/atoms/A_TestQuestionNumberTag/A_TestQuestionNumberTag'
 import A_TestQuestionRadio from '@/components/atoms/A_TestQuestionRadio/A_TestQuestionRadio'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 
@@ -62,21 +63,18 @@ export default function TestPage({ test }: { test: Test }) {
   return (
     <div>
       <SO_Header />
-      <div className='max-w-2xl mx-auto p-6'>
-        <h1 className='text-3xl font-bold mb-6'>{test.title}</h1>
-        <p className='text-gray-600 mb-8'>{test.description}</p>
-
+      <div>
         {showResults ? (
-          <div className='bg-white rounded-lg shadow-lg p-6'>
-            <h2 className='text-2xl font-semibold mb-4'>Результаты теста</h2>
-            <div className='bg-gray-50 rounded-lg p-6 mb-6'>
-              <h3 className='text-xl font-semibold mb-4'>{getResult().title}</h3>
-              <p className='text-gray-700 mb-6'>{getResult().description}</p>
-              <p className='text-lg font-medium'>
+          <div>
+            <h2>Результаты теста</h2>
+            <div>
+              <h3>{getResult().title}</h3>
+              <p>{getResult().description}</p>
+              <p>
                 Результат {score} из {test.content.questions.length}
               </p>
             </div>
-            <div className='flex gap-4'>
+            <div>
               <button
                 onClick={() => {
                   setCurrentQuestionIndex(0)
@@ -84,30 +82,21 @@ export default function TestPage({ test }: { test: Test }) {
                   setShowResults(false)
                   setSelectedAnswers([])
                 }}
-                className='bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition'
               >
                 Пройти тест заново
               </button>
-              <Link
-                href='/interactives'
-                className='bg-gray-500 text-white px-6 py-2 rounded hover:bg-gray-600 transition'
-              >
-                Вернуться к тестам
-              </Link>
+              <Link href='/interactives'>Вернуться к тестам</Link>
             </div>
           </div>
         ) : (
-          <div className='space-y-6'>
-            <div className='bg-white rounded-lg shadow-lg p-6'>
-              <div className='mb-4'>
-                <span className='text-gray-600'>
-                  Вопрос {currentQuestionIndex + 1} из {test.content.questions.length}
-                </span>
-              </div>
-              <h3 className='text-xl font-semibold mb-6'>
-                {test.content.questions[currentQuestionIndex].title}
-              </h3>
-              <div className='space-y-3'>
+          <div>
+            <div>
+              <A_TestQuestionNumberTag
+                currentNumber={currentQuestionIndex + 1}
+                totalQuestions={test.content.questions.length}
+              />
+              <h3>{test.content.questions[currentQuestionIndex].title}</h3>
+              <div>
                 {test.content.questions[currentQuestionIndex].answers.map((answer, index) => (
                   <A_TestQuestionRadio
                     key={index}
@@ -118,21 +107,11 @@ export default function TestPage({ test }: { test: Test }) {
                 ))}
               </div>
             </div>
-            <div className='flex justify-between'>
-              <Link
-                href='/interactives'
-                className='bg-gray-500 text-white px-6 py-2 rounded hover:bg-gray-600 transition'
-              >
-                Вернуться назад
-              </Link>
+            <div>
+              <Link href='/interactives'>Вернуться назад</Link>
               <button
                 onClick={handleNextQuestion}
                 disabled={selectedAnswers[currentQuestionIndex] === undefined}
-                className={`px-6 py-2 rounded transition ${
-                  selectedAnswers[currentQuestionIndex] !== undefined
-                    ? 'bg-blue-500 text-white hover:bg-blue-600'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                }`}
               >
                 {currentQuestionIndex === test.content.questions.length - 1
                   ? 'Завершить тест'
