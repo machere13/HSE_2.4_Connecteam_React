@@ -1,20 +1,20 @@
 import cn from 'classnames'
 
-import { C_ArticleHighlightedItems } from '@/components/collections/C_ArticleHighlightedItems/C_ArticleHighlightedItems'
+import { C_MaterialHighlightedItems } from '@/components/collections/C_MaterialHighlightedItems/C_MaterialHighlightedItems'
 
-import styles from './W_ArticleHighlightedSection.module.css'
+import styles from './W_MaterialHighlightedSection.module.css'
 
-interface W_ArticleHighlightedSectionProps {
+interface W_MaterialHighlightedSectionProps {
   items: string[]
   title: string
   titleType: 'small' | 'big'
 }
 
-export const W_ArticleHighlightedSection = ({
+export const W_MaterialHighlightedSection = ({
   items,
   title,
   titleType,
-}: W_ArticleHighlightedSectionProps) => {
+}: W_MaterialHighlightedSectionProps) => {
   return (
     <section className={cn(styles.wrapper, styles[titleType])}>
       <article>
@@ -24,7 +24,7 @@ export const W_ArticleHighlightedSection = ({
           <h2 className={styles.title}>{title}</h2>
         )}
         <ul>
-          <C_ArticleHighlightedItems items={items} />
+          <C_MaterialHighlightedItems items={items} />
         </ul>
       </article>
     </section>

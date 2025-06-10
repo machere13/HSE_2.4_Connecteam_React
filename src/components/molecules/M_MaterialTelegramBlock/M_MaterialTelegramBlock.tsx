@@ -2,13 +2,13 @@ import React from 'react'
 
 import Q_Icon from '@/components/quarks/Q_Icon/Q_Icon'
 
-import styles from './M_ArticleTelegramBlock.module.css'
+import styles from './M_MaterialTelegramBlock.module.css'
 
-interface M_ArticleTelegramBlockProps {
+interface M_MaterialTelegramBlockProps {
   link: string
 }
 
-export default function M_ArticleTelegramBlock({ link }: M_ArticleTelegramBlockProps) {
+export default function M_MaterialTelegramBlock({ link }: M_MaterialTelegramBlockProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.text_wrapper}>
