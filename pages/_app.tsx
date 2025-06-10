@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import A_UserCursor from '@/components/atoms/A_UserCursor/A_UserCursor'
-import { Q_ScrollBar } from '@/components/quarks/Q_ScrollBar/Q_ScrollBar'
+import Q_ScrollBar from '@/components/quarks/Q_ScrollBar/Q_ScrollBar'
 import { initGA, logPageView } from '@/lib/analytics'
 import { Error418Provider } from '@/providers/Error418Provider'
 
