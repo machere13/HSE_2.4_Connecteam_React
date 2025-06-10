@@ -1,6 +1,8 @@
+import React from 'react'
+
 import Link from 'next/link'
 
-import { A_TestResultsTag } from '@/components/atoms/A_TestResultsTag/A_TestResultsTag'
+import A_TestResultsTag from '@/components/atoms/A_TestResultsTag/A_TestResultsTag'
 
 import styles from './W_TestResults.module.css'
 
@@ -14,7 +16,12 @@ interface W_TestResultsProps {
   onRestart: () => void
 }
 
-export const W_TestResults = ({ result, score, totalQuestions, onRestart }: W_TestResultsProps) => {
+export default function W_TestResults({
+  result,
+  score,
+  totalQuestions,
+  onRestart,
+}: W_TestResultsProps) {
   return (
     <section className={styles.wrapper}>
       <A_TestResultsTag score={score} totalQuestions={totalQuestions} />

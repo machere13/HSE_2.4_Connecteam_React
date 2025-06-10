@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 
 import { getCases } from '@/api/getCases'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
-import { BlockRenderer } from '@/lib/BlockRenderer'
+import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
 
 import type { CaseData } from '@/types/case'
 import type { GetStaticPaths, GetStaticProps } from 'next'
@@ -36,7 +36,7 @@ export default function CasePage({ case: caseItem }: { case: CaseData }) {
           const currentIndex = cardListIndex
           cardListIndex++
           return (
-            <BlockRenderer
+            <MaterialBlockRenderer
               key={index}
               block={block}
               variant={{
@@ -48,7 +48,7 @@ export default function CasePage({ case: caseItem }: { case: CaseData }) {
           )
         }
         return (
-          <BlockRenderer
+          <MaterialBlockRenderer
             key={index}
             block={block}
             variant={{
