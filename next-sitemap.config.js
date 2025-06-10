@@ -71,9 +71,9 @@ module.exports = {
         priority: 0.7,
         changefreq: 'weekly',
       })),
-      ...mockedCases.map(caseItem => ({
-        loc: `/cases/${caseItem.slug}`,
-        lastmod: new Date(caseItem.updatedAt || Date.now()).toISOString(),
+      ...mockedCases.map(caseArticle => ({
+        loc: `/cases/${caseArticle.slug}`,
+        lastmod: new Date(caseArticle.updatedAt || Date.now()).toISOString(),
         priority: 0.7,
         changefreq: 'weekly',
       })),
