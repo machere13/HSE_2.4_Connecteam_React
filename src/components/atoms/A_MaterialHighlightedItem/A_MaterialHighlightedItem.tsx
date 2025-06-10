@@ -1,12 +1,12 @@
 import cn from 'classnames'
 
-import styles from './A_ArticleHighlightedItem.module.css'
+import styles from './A_MaterialHighlightedItem.module.css'
 
-interface A_ArticleHighlightedItemProps {
+interface A_MaterialHighlightedItemProps {
   text: string
 }
 
-export const A_ArticleHighlightedItem = ({ text }: A_ArticleHighlightedItemProps) => {
+export const A_MaterialHighlightedItem = ({ text }: A_MaterialHighlightedItemProps) => {
   return (
     <li className={styles.wrapper}>
       <div className={styles.line}></div>

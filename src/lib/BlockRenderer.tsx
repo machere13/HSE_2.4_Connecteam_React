@@ -3,15 +3,15 @@ import { A_ArticleParagraph } from '../components/atoms/A_ArticleParagraph/A_Art
 import C_ArticleExampleItems from '../components/collections/C_ArticleExampleItems/C_ArticleExampleItems'
 import { C_Tags } from '../components/collections/C_Tags/C_Tags'
 import M_ArticleMoreInCaseBlock from '../components/molecules/M_ArticleMoreInCaseBlock/M_ArticleMoreInCaseBlock'
-import M_ArticleTelegramBlock from '../components/molecules/M_ArticleTelegramBlock/M_ArticleTelegramBlock'
 import M_CaseTitleParagraph from '../components/molecules/M_CaseTitleParagraph/M_CaseTitleParagraph'
 import M_MatetialImageBlock from '../components/molecules/M_MaterialImageBlock/M_MatetialImageBlock'
+import M_MaterialTelegramBlock from '../components/molecules/M_MaterialTelegramBlock/M_MaterialTelegramBlock'
 import M_MaterialVideoBlock from '../components/molecules/M_MaterialVideoBlock/M_MaterialVideoBlock'
 import M_MaterialWhiteBox from '../components/molecules/M_MaterialWhiteBox/M_MaterialWhiteBox'
 import W_ArticleElements from '../components/wrappers/W_ArticleElements/W_ArticleElements'
-import { W_ArticleHighlightedSection } from '../components/wrappers/W_ArticleHighlightedSection/W_ArticleHighlightedSection'
 import W_ArticlePointedSection from '../components/wrappers/W_ArticlePointedSection/W_ArticlePointedSection'
-import { W_CardList } from '../components/wrappers/W_CardList/W_CardList'
+import { W_MaterialCardList } from '../components/wrappers/W_MaterialCardList/W_MaterialCardList'
+import { W_MaterialHighlightedSection } from '../components/wrappers/W_MaterialHighlightedSection/W_MaterialHighlightedSection'
 
 import type { ContentItem } from '@/types/content'
 
@@ -43,7 +43,7 @@ export const BlockRenderer = ({ block, variant, cardListIndex }: BlockRendererPr
       return <C_Tags items={block.items} />
     case 'cardList':
       return (
-        <W_CardList
+        <W_MaterialCardList
           title={block.title || ''}
           items={block.items}
           titleType={block.titleType || 'small'}
@@ -54,10 +54,10 @@ export const BlockRenderer = ({ block, variant, cardListIndex }: BlockRendererPr
         />
       )
     case 'telegram':
-      return <M_ArticleTelegramBlock link={block.link} />
+      return <M_MaterialTelegramBlock link={block.link} />
     case 'highlightedSection':
       return (
-        <W_ArticleHighlightedSection
+        <W_MaterialHighlightedSection
           title={block.title}
           items={block.items}
           titleType={block.titleType}
