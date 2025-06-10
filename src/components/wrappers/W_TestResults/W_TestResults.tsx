@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { A_TestResultsTag } from '@/components/atoms/A_TestResultsTag/A_TestResultsTag'
+
 import styles from './W_TestResults.module.css'
 
 interface W_TestResultsProps {
@@ -18,9 +20,7 @@ export const W_TestResults = ({ result, score, totalQuestions, onRestart }: W_Te
       <article className={styles.result}>
         <h3 className={styles.result_title}>{result.title}</h3>
         <p className={styles.description}>{result.description}</p>
-        <p className={styles.score}>
-          Результат {score} из {totalQuestions}
-        </p>
+        <A_TestResultsTag score={score} totalQuestions={totalQuestions} />
       </article>
       <nav className={styles.actions}>
         <button className={styles.restart_button} onClick={onRestart}>
