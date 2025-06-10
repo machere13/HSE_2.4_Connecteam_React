@@ -66,6 +66,7 @@ export type Q_IconProps = {
   fill?: string
   className?: string
   onClick?: () => void
+  viewBox?: string
 }
 
 const Q_Icon: React.FC<Q_IconProps> = ({
@@ -75,6 +76,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
   fill = 'none',
   className,
   onClick,
+  viewBox,
 }) => {
   const icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     logoFull: LogoFull,
@@ -111,7 +113,15 @@ const Q_Icon: React.FC<Q_IconProps> = ({
   const SvgIcon = icons[name]
 
   return (
-    <SvgIcon width={width} height={height} fill={fill} className={className} onClick={onClick} />
+    <SvgIcon
+      width={width}
+      height={height}
+      fill={fill}
+      className={className}
+      onClick={onClick}
+      viewBox={viewBox}
+      preserveAspectRatio='xMidYMid meet'
+    />
   )
 }
 

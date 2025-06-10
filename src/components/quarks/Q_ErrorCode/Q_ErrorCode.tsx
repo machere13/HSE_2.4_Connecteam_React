@@ -17,13 +17,19 @@ const iconSizes: Record<string, { width: string; height: string }> = {
   errorCode505Icon: { width: '358', height: '140' },
 }
 
-export default function Q_ErrorCode({ errorType = '404' }: Q_ErrorCodeProps) {
+export default function Q_ErrorCode({ errorType = '404', width, height }: Q_ErrorCodeProps) {
   const iconName = `errorCode${errorType}Icon` as const
-  const size = iconSizes[iconName] || { width: 392, height: 140 }
+  const defaultSize = iconSizes[iconName]
 
   return (
-    <div className={styles.wrapper}>
-      <Q_Icon name={iconName} />
+    <div className={styles.wrapper} style={{ maxWidth: `${defaultSize.width}px` }}>
+      <Q_Icon
+        name={iconName}
+        className={styles.icon}
+        width={width || defaultSize.width}
+        height={height || defaultSize.height}
+        viewBox={`0 0 ${defaultSize.width} ${defaultSize.height}`}
+      />
     </div>
   )
 }
