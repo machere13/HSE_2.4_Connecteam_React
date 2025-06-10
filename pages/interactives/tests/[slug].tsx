@@ -4,8 +4,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { getTests } from '@/api/getTests'
+import O_Footer from '@/components/organisms/O_Footer/O_Footer'
+import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_TestQuestionContent from '@/components/wrappers/W_TestQuestionContent/W_TestQuestionContent'
+import { W_TestResults } from '@/components/wrappers/W_TestResults/W_TestResults'
 
 import type { Test, TestResult } from '@/types/test'
 import type { GetStaticPaths, GetStaticProps } from 'next'
@@ -62,31 +65,20 @@ export default function TestPage({ test }: { test: Test }) {
   return (
     <div>
       <SO_Header />
+      <Q_Grid variant='gray' />
       <div>
         {showResults ? (
-          <div>
-            <h2>Результаты теста</h2>
-            <div>
-              <h3>{getResult().title}</h3>
-              <p>{getResult().description}</p>
-              <p>
-                Результат {score} из {test.content.questions.length}
-              </p>
-            </div>
-            <div>
-              <button
-                onClick={() => {
-                  setCurrentQuestionIndex(0)
-                  setScore(0)
-                  setShowResults(false)
-                  setSelectedAnswers([])
-                }}
-              >
-                Пройти тест заново
-              </button>
-              <Link href='/interactives'>Вернуться к тестам</Link>
-            </div>
-          </div>
+          <W_TestResults
+            result={getResult()}
+            score={score}
+            totalQuestions={test.content.questions.length}
+            onRestart={() => {
+              setCurrentQuestionIndex(0)
+              setScore(0)
+              setShowResults(false)
+              setSelectedAnswers([])
+            }}
+          />
         ) : (
           <div>
             <W_TestQuestionContent
@@ -102,6 +94,7 @@ export default function TestPage({ test }: { test: Test }) {
           </div>
         )}
       </div>
+      <O_Footer />
     </div>
   )
 }
