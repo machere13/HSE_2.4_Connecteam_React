@@ -6,16 +6,9 @@ import Q_Icon from '@/components/quarks/Q_Icon/Q_Icon'
 
 import styles from './A_Cursor.module.css'
 
-export type CursorStyle = 'orbital' | 'wave'
-type Position = { x: number; y: number }
+import type { CursorConfig } from '@/types/cursor'
 
-export interface CursorConfig {
-  style: CursorStyle
-  icon: string
-  speed: number
-  color?: string
-  label?: string
-}
+type Position = { x: number; y: number }
 
 const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
   const [positions, setPositions] = useState<Position[]>([])
