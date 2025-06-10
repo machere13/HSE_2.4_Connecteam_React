@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styles from './Q_ScrollBar.module.css'
 
-export const Q_ScrollBar = () => {
+export default function Q_ScrollBar() {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {

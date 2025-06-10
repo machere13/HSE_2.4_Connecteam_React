@@ -2,7 +2,7 @@ import React from 'react'
 
 import C_ArticleElementItems from '@/components/collections/C_ArticleElementItems/C_ArticleElementItems'
 
-import styles from './W_ArticleElements.module.css'
+import styles from './W_ArticleElementsSection.module.css'
 
 import type { M_ArticleElementItemProps } from '@/components/molecules/M_ArticleElementItem/M_ArticleElementItem'
 
@@ -11,7 +11,7 @@ interface W_ArticleElementsProps {
   title: string
 }
 
-export default function W_ArticleElements({ items, title }: W_ArticleElementsProps) {
+export default function W_ArticleElementsSection({ items, title }: W_ArticleElementsProps) {
   return (
     <div className={styles.wrapper}>
       <p>{title}</p>

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { getArticles } from '@/api/getArticles'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
-import { BlockRenderer } from '@/lib/BlockRenderer'
+import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
 
 import type { M_PersonProps } from '@/components/molecules/M_Person/M_Person'
 import type { ArticleData } from '@/types/article'
@@ -73,7 +73,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
             const currentIndex = cardListIndex
             cardListIndex++
             return (
-              <BlockRenderer
+              <MaterialBlockRenderer
                 key={index}
                 block={block}
                 variant={{
@@ -86,7 +86,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
             )
           }
           return (
-            <BlockRenderer
+            <MaterialBlockRenderer
               key={index}
               block={block}
               variant={{

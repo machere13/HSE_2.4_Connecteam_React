@@ -2,7 +2,7 @@ import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
-import { Meta } from '@/lib/Meta'
+import { Meta } from '@/lib/meta'
 
 export default function MainPage() {
   const cursors = [

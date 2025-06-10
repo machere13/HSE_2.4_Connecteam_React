@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { getTests } from '@/api/getTests'
@@ -8,7 +7,7 @@ import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_TestQuestionContent from '@/components/wrappers/W_TestQuestionContent/W_TestQuestionContent'
-import { W_TestResults } from '@/components/wrappers/W_TestResults/W_TestResults'
+import W_TestResults from '@/components/wrappers/W_TestResults/W_TestResults'
 
 import type { Test, TestResult } from '@/types/test'
 import type { GetStaticPaths, GetStaticProps } from 'next'

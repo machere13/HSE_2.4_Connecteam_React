@@ -1,25 +1,27 @@
+import React from 'react'
+
 import cn from 'classnames'
 
 import C_CardListItems from '@/components/collections/C_MaterialCardListItems/C_MaterialCardListItems'
 
-import styles from './W_MaterialCardList.module.css'
+import styles from './W_MaterialCardListSection.module.css'
 
 import type { M_MaterialCardListItemProps } from '@/components/molecules/M_MaterialCardListItem/M_MaterialCardListItem'
 import type { CardListVariant } from '@/types/cardList'
 
-interface W_MaterialCardListProps {
+interface W_MaterialCardListSectionProps {
   items: M_MaterialCardListItemProps[]
   variant: CardListVariant
   title: string
   titleType: 'small' | 'big'
 }
 
-export const W_MaterialCardList = ({
+export default function W_MaterialCardListSection({
   items,
   title,
   titleType,
   variant,
-}: W_MaterialCardListProps) => {
+}: W_MaterialCardListSectionProps) {
   return (
     <section className={cn(styles.wrapper, styles[titleType])}>
       {titleType === 'small' ? (

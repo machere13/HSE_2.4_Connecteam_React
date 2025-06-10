@@ -1,6 +1,8 @@
+import React from 'react'
+
 import cn from 'classnames'
 
-import { C_MaterialHighlightedItems } from '@/components/collections/C_MaterialHighlightedItems/C_MaterialHighlightedItems'
+import C_MaterialHighlightedItems from '@/components/collections/C_MaterialHighlightedItems/C_MaterialHighlightedItems'
 
 import styles from './W_MaterialHighlightedSection.module.css'
 
@@ -10,11 +12,11 @@ interface W_MaterialHighlightedSectionProps {
   titleType: 'small' | 'big'
 }
 
-export const W_MaterialHighlightedSection = ({
+export default function W_MaterialHighlightedSection({
   items,
   title,
   titleType,
-}: W_MaterialHighlightedSectionProps) => {
+}: W_MaterialHighlightedSectionProps) {
   return (
     <section className={cn(styles.wrapper, styles[titleType])}>
       <article>
