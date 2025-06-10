@@ -17,13 +17,23 @@ const iconSizes: Record<string, { width: string; height: string }> = {
   errorSignature505Icon: { width: '581', height: '186' },
 }
 
-export default function Q_ErrorSignature({ errorType = '404' }: Q_ErrorSignatureProps) {
+export default function Q_ErrorSignature({
+  errorType = '404',
+  width,
+  height,
+}: Q_ErrorSignatureProps) {
   const iconName = `errorSignature${errorType}Icon` as const
-  const size = iconSizes[iconName] || { width: '581', height: '186' }
+  const defaultSize = iconSizes[iconName]
 
   return (
     <div className={styles.wrapper}>
-      <Q_Icon name={iconName} className={styles.icon} />
+      <Q_Icon
+        name={iconName}
+        className={styles.icon}
+        width={width || defaultSize.width}
+        height={height || defaultSize.height}
+        viewBox={`0 0 ${defaultSize.width} ${defaultSize.height}`}
+      />
     </div>
   )
 }

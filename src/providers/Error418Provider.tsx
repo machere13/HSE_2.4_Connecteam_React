@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { T_ErrorPage } from '@/components/templates/T_ErrorPage/T_ErrorPage'
+import T_ErrorPage from '@/components/templates/T_ErrorPage/T_ErrorPage'
 
 export const Error418Provider = ({ children }: { children: React.ReactNode }) => {
   const [showError418, setShowError418] = useState(false)
