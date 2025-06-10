@@ -15,14 +15,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<{ case: CaseData }> = async ({ params }) => {
   const cases = await getCases()
-  const caseItem = cases.find(c => c.slug === params?.slug)
+  const caseArticle = cases.find(c => c.slug === params?.slug)
 
-  if (!caseItem) return { notFound: true }
+  if (!caseArticle) return { notFound: true }
 
-  return { props: { case: caseItem }, revalidate: 10 }
+  return { props: { case: caseArticle }, revalidate: 10 }
 }
 
-export default function CasePage({ case: caseItem }: { case: CaseData }) {
+export default function CasePage({ case: caseArticle }: { case: CaseData }) {
   const router = useRouter()
   let cardListIndex = 0
 
@@ -31,7 +31,7 @@ export default function CasePage({ case: caseItem }: { case: CaseData }) {
   return (
     <div>
       <SO_Header />
-      {caseItem.case.content.map((block, index) => {
+      {caseArticle.case.content.map((block, index) => {
         if (block.type === 'cardList') {
           const currentIndex = cardListIndex
           cardListIndex++
@@ -59,9 +59,9 @@ export default function CasePage({ case: caseItem }: { case: CaseData }) {
         )
       })}
 
-      {caseItem.case.comments.length > 0 && (
+      {caseArticle.case.comments.length > 0 && (
         <div>
-          {caseItem.case.comments.map((comment, index) => (
+          {caseArticle.case.comments.map((comment, index) => (
             <div key={index}>
               <p>{comment.comment}</p>
               <p>{comment.author}</p>

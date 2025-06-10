@@ -19,10 +19,10 @@ export default function CasesPage({ cases }: { cases: CaseData[] }) {
       <Q_Grid variant='gray' />
       <h1>Все кейсы</h1>
       <div>
-        {cases.map(caseItem => (
-          <li key={caseItem.id}>
-            <a href={`/cases/${caseItem.slug}`}>{caseItem.title}</a>
-            <p>{caseItem.description}</p>
+        {cases.map(caseArticle => (
+          <li key={caseArticle.id}>
+            <a href={`/cases/${caseArticle.slug}`}>{caseArticle.title}</a>
+            <p>{caseArticle.description}</p>
           </li>
         ))}
       </div>
