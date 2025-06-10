@@ -17,19 +17,15 @@ interface W_TestResultsProps {
 export const W_TestResults = ({ result, score, totalQuestions, onRestart }: W_TestResultsProps) => {
   return (
     <section className={styles.wrapper}>
-      <article className={styles.result}>
-        <h3 className={styles.result_title}>{result.title}</h3>
-        <p className={styles.description}>{result.description}</p>
-        <A_TestResultsTag score={score} totalQuestions={totalQuestions} />
-      </article>
-      <nav className={styles.actions}>
-        <button className={styles.restart_button} onClick={onRestart}>
-          Пройти тест заново
-        </button>
-        <Link href='/interactives' className={styles.back_link}>
-          Вернуться к тестам
-        </Link>
-      </nav>
+      <A_TestResultsTag score={score} totalQuestions={totalQuestions} />
+      <div className={styles.text_wrapper}>
+        <h3>{result.title}</h3>
+        <p>{result.description}</p>
+      </div>
+      <div className={styles.buttons_wrapper}>
+        <button onClick={onRestart}>Пройти тест заново</button>
+        <Link href='/interactives'>Вернуться к тестам</Link>
+      </div>
     </section>
   )
 }
