@@ -76,7 +76,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
   fill = 'none',
   className,
   onClick,
-  viewBox,
+  viewBox = '0 0 36 36',
 }) => {
   const icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     logoFull: LogoFull,
@@ -121,6 +121,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
       onClick={onClick}
       viewBox={viewBox}
       preserveAspectRatio='xMidYMid meet'
+      style={{ overflow: 'visible' }}
     />
   )
 }

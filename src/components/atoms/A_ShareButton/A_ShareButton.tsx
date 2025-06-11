@@ -53,12 +53,15 @@ export default function A_ShareButton({
   return (
     <div className={styles.wrapper}>
       <button onClick={handleClick} className={styles.button} aria-label='Поделиться'>
-        <Q_Icon
-          name={name}
-          width='36'
-          height='36'
-          fill={name !== 'copyLinkIcon' ? '#FFF' : undefined}
-        />
+        <div className={styles.icon_wrapper}>
+          <Q_Icon
+            name={name}
+            width='30'
+            height='30'
+            fill={name !== 'copyLinkIcon' ? '#FFF' : undefined}
+            className={styles.icon}
+          />
+        </div>
       </button>
       {name === 'copyLinkIcon' && isCopied && (
         <div className={styles.tooltip}>
