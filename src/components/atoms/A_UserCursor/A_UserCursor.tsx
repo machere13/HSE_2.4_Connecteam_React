@@ -132,7 +132,13 @@ export default function A_UserCursor() {
       }}
     >
       <div className={styles.icon_wrapper}>
-        <Q_Icon name='cursorIcon' width='25' height='25' className={styles.cursor_icon} />
+        <Q_Icon
+          name='cursorIcon'
+          width='25'
+          height='25'
+          viewBox='0 0 25 25'
+          className={styles.cursor_icon}
+        />
       </div>
       <div
         className={styles.label}
