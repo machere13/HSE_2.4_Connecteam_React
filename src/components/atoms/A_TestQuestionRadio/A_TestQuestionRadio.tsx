@@ -29,7 +29,7 @@ export default function A_TestQuestionRadio({
       onClick={onChange}
       onKeyDown={handleKeyDown}
       aria-checked={isSelected}
-      data-cursor='radio'
+      data-cursor-type='radio'
     >
       <input type='radio' checked={isSelected} onChange={onChange} className={styles.input} />
       <p className={styles.text}>{title}</p>

@@ -65,12 +65,12 @@ export default function A_UserCursor() {
       if (target.closest('input, textarea, [contenteditable="true"]')) {
         setIsHovering(true)
         setHoverLabel('Ввести')
+      } else if (target.closest('[data-cursor-type="radio"]')) {
+        setIsHovering(true)
+        setHoverLabel('Выбрать')
       } else if (target.closest('a, button, [role="button"]')) {
         setIsHovering(true)
         setHoverLabel('Клик')
-      } else if (target.closest('[data-cursor="radio"]')) {
-        setIsHovering(true)
-        setHoverLabel('Выбрать')
       } else {
         setIsHovering(false)
         setHoverLabel('')
