@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Link from 'next/link'
-
+import A_BackButton from '@/components/atoms/A_BackButton/A_BackButton'
 import A_TestResultsTag from '@/components/atoms/A_TestResultsTag/A_TestResultsTag'
+import { ROUTES } from '@/routes'
 
 import styles from './W_TestResults.module.css'
 
@@ -31,7 +31,7 @@ export default function W_TestResults({
       </div>
       <div className={styles.buttons_wrapper}>
         <button onClick={onRestart}>Пройти тест заново</button>
-        <Link href='/interactives'>Вернуться к тестам</Link>
+        <A_BackButton href={ROUTES.INTERACTIVES.INDEX}>Вернуться к тестам</A_BackButton>
       </div>
     </section>
   )

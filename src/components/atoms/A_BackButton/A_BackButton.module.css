@@ -1,0 +1,28 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+
+    height: 35px;
+
+    padding: var(--spacing-10) var(--spacing-22);
+
+    color: var(--color-main-orange);
+
+    background: var(--color-main-white);
+    border-radius: var(--border-radius-20);
+
+    transition: .2s all;
+    white-space: nowrap;
+    border: 1.5px solid var(--color-main-orange);
+}
+
+.wrapper:hover{
+    color: var(--color-main-white);
+
+    background: var(--color-main-orange);
+}
+
+.wrapper:active{
+    background: var(--color-click-orange);
+    border-color: var(--color-click-orange);
+}

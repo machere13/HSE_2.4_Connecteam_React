@@ -14,7 +14,7 @@ export default function M_ArticleElementItem({ title, text, index }: M_ArticleEl
   const iconName = `articleElementItemIcon0${index}` as const
   return (
     <li className={styles.wrapper}>
-      <Q_Icon name={iconName} width='72' height='72' viewBox='0 0 72 72'/>
+      <Q_Icon name={iconName} width='72' height='72' viewBox='0 0 72 72' />
       <div className={styles.text_wrapper}>
         <h5>{title}</h5>
         <p>{text}</p>
