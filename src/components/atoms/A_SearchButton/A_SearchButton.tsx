@@ -27,7 +27,9 @@ export default function A_SearchButton({ onClick, isActive = false }: A_SearchBu
       aria-label='Поиск'
       tabIndex={0}
     >
-      <Q_Icon name='searchIcon' width='16' height='16' />
+      <div className={styles.icon_wrapper}>
+        <Q_Icon name='searchIcon' className={styles.icon} viewBox='0 0 16 16'/>
+      </div>
     </button>
   )
 }

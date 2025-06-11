@@ -56,10 +56,8 @@ export default function A_ShareButton({
         <div className={styles.icon_wrapper}>
           <Q_Icon
             name={name}
-            width='30'
-            height='30'
-            fill={name !== 'copyLinkIcon' ? '#FFF' : undefined}
             className={styles.icon}
+            fill={name !== 'copyLinkIcon' ? '#FFF' : undefined}
           />
         </div>
       </button>

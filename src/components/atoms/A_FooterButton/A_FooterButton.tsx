@@ -17,7 +17,7 @@ export default function A_FooterButton({ to, iconName }: A_FooterButtonProps) {
   return (
     <Link href={to} target='_blank'>
       <div className={styles.wrapper}>
-        <Q_Icon name={iconName} width='36' height='36' fill='#FFF' />
+        <Q_Icon name={iconName} viewBox='0 0 36 36' width='36' height='36' fill='#FFF' />
       </div>
     </Link>
   )
