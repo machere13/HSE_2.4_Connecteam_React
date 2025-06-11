@@ -98,6 +98,7 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
                 name='cursorIcon'
                 width='25'
                 height='25'
+                viewBox='0 0 25 25'
                 fill={config.color || '#000000'}
                 className={styles.cursor_icon}
               />
