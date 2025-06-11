@@ -28,7 +28,7 @@ export default function A_SearchButton({ onClick, isActive = false }: A_SearchBu
       tabIndex={0}
     >
       <div className={styles.icon_wrapper}>
-        <Q_Icon name='searchIcon' className={styles.icon} viewBox='0 0 16 16'/>
+        <Q_Icon name='searchIcon' className={styles.icon} viewBox='0 0 16 16' />
       </div>
     </button>
   )

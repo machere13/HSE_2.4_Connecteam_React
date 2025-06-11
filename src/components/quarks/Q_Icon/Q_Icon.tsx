@@ -119,7 +119,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
       fill={fill}
       className={className}
       onClick={onClick}
-      viewBox={name === 'logoFull' ? '0 0 200 24' : (viewBox || '0 0 36 36')}
+      viewBox={name === 'logoFull' ? '0 0 200 24' : viewBox || '0 0 36 36'}
       preserveAspectRatio={name === 'logoFull' ? 'none' : 'xMidYMid meet'}
       style={{
         overflow: 'visible',

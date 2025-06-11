@@ -16,6 +16,7 @@ interface W_TestQuestionContentProps {
   isLastQuestion: boolean
   onAnswerSelect: (answerIndex: number) => void
   onNext: () => void
+  onBack: () => void
 }
 
 export default function W_TestQuestionContent({
@@ -27,6 +28,7 @@ export default function W_TestQuestionContent({
   isLastQuestion,
   onAnswerSelect,
   onNext,
+  onBack,
 }: W_TestQuestionContentProps) {
   return (
     <div className={styles.wrapper}>
@@ -34,6 +36,7 @@ export default function W_TestQuestionContent({
         currentNumber={currentNumber}
         totalQuestions={totalQuestions}
         title={title}
+        onBack={onBack}
       />
       <W_TestQuestionInteractive
         answers={answers}

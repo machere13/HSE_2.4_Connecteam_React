@@ -32,7 +32,7 @@ export default function TestPage({ test }: { test: Test }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [showResults, setShowResults] = useState(false)
-  const [selectedAnswers, setSelectedAnswers] = useState<number[]>([])
+  const [selectedAnswers, setSelectedAnswers] = useState<(number | undefined)[]>([])
 
   if (router.isFallback) return <div>Загрузка...</div>
 
@@ -44,7 +44,9 @@ export default function TestPage({ test }: { test: Test }) {
 
   const handleNextQuestion = () => {
     const currentQuestion = test.content.questions[currentQuestionIndex]
-    const selectedAnswer = currentQuestion.answers[selectedAnswers[currentQuestionIndex]]
+    const selectedAnswerIndex = selectedAnswers[currentQuestionIndex]
+    const selectedAnswer =
+      selectedAnswerIndex !== undefined ? currentQuestion.answers[selectedAnswerIndex] : undefined
 
     if (selectedAnswer?.isCorrect) {
       setScore(prev => prev + 1)
@@ -54,6 +56,17 @@ export default function TestPage({ test }: { test: Test }) {
       setCurrentQuestionIndex(prev => prev + 1)
     } else {
       setShowResults(true)
+    }
+  }
+
+  const handleBack = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(prev => prev - 1)
+      const newSelectedAnswers = [...selectedAnswers]
+      newSelectedAnswers[currentQuestionIndex - 1] = undefined
+      setSelectedAnswers(newSelectedAnswers)
+    } else {
+      router.push('/interactives')
     }
   }
 
@@ -79,18 +92,17 @@ export default function TestPage({ test }: { test: Test }) {
             }}
           />
         ) : (
-          <div>
-            <W_TestQuestionContent
-              currentNumber={currentQuestionIndex + 1}
-              totalQuestions={test.content.questions.length}
-              title={test.content.questions[currentQuestionIndex].title}
-              answers={test.content.questions[currentQuestionIndex].answers}
-              selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
-              isLastQuestion={currentQuestionIndex === test.content.questions.length - 1}
-              onAnswerSelect={answerIndex => handleAnswerSelect(currentQuestionIndex, answerIndex)}
-              onNext={handleNextQuestion}
-            />
-          </div>
+          <W_TestQuestionContent
+            currentNumber={currentQuestionIndex + 1}
+            totalQuestions={test.content.questions.length}
+            title={test.content.questions[currentQuestionIndex].title}
+            answers={test.content.questions[currentQuestionIndex].answers}
+            selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
+            isLastQuestion={currentQuestionIndex === test.content.questions.length - 1}
+            onAnswerSelect={answerIndex => handleAnswerSelect(currentQuestionIndex, answerIndex)}
+            onNext={handleNextQuestion}
+            onBack={handleBack}
+          />
         )}
       </div>
       <O_Footer />
