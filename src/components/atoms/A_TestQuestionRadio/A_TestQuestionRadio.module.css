@@ -9,7 +9,7 @@
   background: var(--color-main-white);
   border-radius: var(--border-radius-15);
 
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .text {
@@ -36,29 +36,29 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.wrapper:hover {
-		background: var(--color-main-purple);
-	}
-    
-	.wrapper:hover .text {
-		color: var(--color-main-white);
-	}
+  .wrapper:hover {
+    background: var(--color-main-purple);
+  }
 
-	.selected:hover {
-		background: var(--color-main-purple);
-	}
+  .wrapper:hover .text {
+    color: var(--color-main-white);
+  }
+
+  .selected:hover {
+    background: var(--color-main-purple);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.wrapper:active {
-		background: var(--color-main-purple);
-	}
+  .wrapper:active {
+    background: var(--color-main-purple);
+  }
 
-	.wrapper:active .text {
-		color: var(--color-main-white);
-	}
+  .wrapper:active .text {
+    color: var(--color-main-white);
+  }
 
-	.selected:active {
-		background: var(--color-main-purple);
-	}
+  .selected:active {
+    background: var(--color-main-purple);
+  }
 }

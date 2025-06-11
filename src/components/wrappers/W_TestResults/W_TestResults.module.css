@@ -1,24 +1,24 @@
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-45);
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-45);
 
-    width: 100%;
-    max-width: 485px;
+  width: 100%;
+  max-width: 485px;
 
-    padding: 0 var(--spacing-50);
+  padding: 0 var(--spacing-50);
 }
 
-.text_wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-15);
+.text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-15);
 
-    text-align: center;
+  text-align: center;
 }
 
-.buttons_wrapper{
-    display: flex;
-    gap: var(--spacing-15);
+.buttons_wrapper {
+  display: flex;
+  gap: var(--spacing-15);
 }

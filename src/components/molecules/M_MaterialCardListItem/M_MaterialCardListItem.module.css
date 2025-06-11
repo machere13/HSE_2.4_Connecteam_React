@@ -31,15 +31,15 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.rotate_left:hover,
-.rotate_right:hover {
-		transform: rotate(0);
-	}
+  .rotate_left:hover,
+  .rotate_right:hover {
+    transform: rotate(0);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.rotate_left:active,
-.rotate_right:active {
-		transform: rotate(0);
-	}
+  .rotate_left:active,
+  .rotate_right:active {
+    transform: rotate(0);
+  }
 }
