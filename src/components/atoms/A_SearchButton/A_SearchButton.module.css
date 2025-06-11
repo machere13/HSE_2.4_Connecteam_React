@@ -38,3 +38,19 @@
     background: var(--color-main-purple);
   }
 }
+
+.icon_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 16px;
+
+  height: 16px;
+}
+
+.icon {
+  width: 100%;
+
+  height: 100%;
+}
