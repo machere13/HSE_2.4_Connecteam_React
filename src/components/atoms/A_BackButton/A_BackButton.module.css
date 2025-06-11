@@ -22,17 +22,17 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.wrapper:hover {
-		color: var(--color-main-white);
+  .wrapper:hover {
+    color: var(--color-main-white);
 
-		background: var(--color-main-orange);
-	}
+    background: var(--color-main-orange);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.wrapper:active {
-		color: var(--color-main-white);
+  .wrapper:active {
+    color: var(--color-main-white);
 
-		background: var(--color-main-orange);
-	}
+    background: var(--color-main-orange);
+  }
 }

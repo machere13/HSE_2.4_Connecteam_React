@@ -9,19 +9,14 @@ import styles from './T_ErrorPage.module.css'
 
 interface T_ErrorPageProps {
   errorType?: '403' | '404' | '418' | '500' | '502' | '505'
-  homeUrl?: string
   onClose?: () => void
 }
 
-export default function T_ErrorPage({
-  errorType = '404',
-  homeUrl = '/',
-  onClose,
-}: T_ErrorPageProps) {
+export default function T_ErrorPage({ errorType = '404', onClose }: T_ErrorPageProps) {
   return (
     <div className={styles.wrapper}>
       <SO_Header />
-      <W_ErrorBlock errorType={errorType} homeUrl={homeUrl} onClose={onClose} />
+      <W_ErrorBlock errorType={errorType} onClose={onClose} />
       <Q_Grid variant='gray' />
       <O_Footer />
     </div>

@@ -21,17 +21,17 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.wrapper:hover {
-		color: var(--color-main-black);
+  .wrapper:hover {
+    color: var(--color-main-black);
 
-		background: var(--color-light-blue);
-	}
+    background: var(--color-light-blue);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.wrapper:active {
-		color: var(--color-main-black);
+  .wrapper:active {
+    color: var(--color-main-black);
 
-		background: var(--color-light-blue);
-	}
+    background: var(--color-light-blue);
+  }
 }
