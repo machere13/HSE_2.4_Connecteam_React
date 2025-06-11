@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Link from 'next/link'
 
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
@@ -14,10 +16,7 @@ export default function GeneratorPage() {
         options={['Опция 1', 'Опция 2', 'Опция 3']}
         onSelect={console.log}
       />
-      <W_GeneratorTimeSetting
-        options={['Опци1я 1', 'Опция 2', 'Опция 3']}
-        onSelect={console.log}
-      />
+      <W_GeneratorTimeSetting options={['Опци1я 1', 'Опция 2', 'Опция 3']} onSelect={console.log} />
       <Link href={ROUTES.INTERACTIVES.INDEX}>Вернуться назад</Link>
     </div>
   )
