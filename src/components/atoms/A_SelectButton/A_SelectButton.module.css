@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  height: 44px;
+
+  padding: var(--spacing-15);
+
+  color: var(--color-main-black);
+
+  background: var(--color-main-main-white);
+  border-radius: var(--border-radius-20);
+
+  transition: 0.2s all;
+}
+
+.selected {
+  color: var(--color-main-white);
+
+  background: var(--color-main-blue);
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.wrapper:hover {
+		color: var(--color-main-black);
+
+		background: var(--color-light-blue);
+	}
+}
+
+@media (hover: none) and (pointer: coarse) {
+	.wrapper:active {
+		color: var(--color-main-black);
+
+		background: var(--color-light-blue);
+	}
+}

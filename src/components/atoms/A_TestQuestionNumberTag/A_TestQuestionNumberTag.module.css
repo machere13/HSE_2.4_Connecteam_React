@@ -1,17 +1,17 @@
-.wrapper{
-    display: flex;
-    align-items: center;
+.wrapper {
+  display: flex;
+  align-items: center;
 
-    width: fit-content;
+  width: fit-content;
 
-    height: 35px;
+  height: 35px;
 
-    padding: var(--spacing-20);
+  padding: var(--spacing-20);
 
-    background: var(--color-main-white);
-    border-radius: var(--border-radius-20);
+  background: var(--color-main-white);
+  border-radius: var(--border-radius-20);
 }
 
-.text{
-    color: var(--color-main-blue);
+.text {
+  color: var(--color-main-blue);
 }

@@ -1,11 +1,11 @@
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-45);
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-45);
 
-    width: 100%;
-    max-width: var(--max-width-content);
+  width: 100%;
+  max-width: var(--max-width-content);
 
-    padding: 0 var(--spacing-50);
+  padding: 0 var(--spacing-50);
 }
