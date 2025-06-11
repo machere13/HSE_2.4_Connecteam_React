@@ -11,44 +11,52 @@ export default function A_UserCursor() {
   const [isHovering, setIsHovering] = useState(false)
   const [hoverLabel, setHoverLabel] = useState('')
 
+  const prevPosition = useRef({ x: 0, y: 0 })
+  const velocityRef = useRef(0)
+  const tiltRef = useRef(0)
+  const rafId = useRef(0)
+  const isCursorActive = useRef(true)
+  const lastMoveTime = useRef(Date.now())
+
   useEffect(() => {
     setIsTouch(!window.matchMedia('(hover: hover)').matches)
   }, [])
-
-  const prev = useRef({ x: 0, y: 0 })
-  const currentTilt = useRef(0)
-  const rafId = useRef(0)
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX: x, clientY: y } = e
       setPosition({ x, y })
+      isCursorActive.current = true
+      lastMoveTime.current = Date.now()
 
-      const dx = x - prev.current.x
+      const dx = x - prevPosition.current.x
+      const dy = y - prevPosition.current.y
+      const distance = Math.sqrt(dx * dx + dy * dy)
+      velocityRef.current = distance * 0.5
+
       const maxTilt = 25
-      const angle = Math.max(-maxTilt, Math.min(maxTilt, dx * 1.2))
+      const targetTilt = Math.max(-maxTilt, Math.min(maxTilt, dx * 1.2))
+      tiltRef.current = targetTilt
+      setTilt(targetTilt)
 
-      animateTiltTo(angle)
-      prev.current = { x, y }
+      prevPosition.current = { x, y }
+
+      if (rafId.current) cancelAnimationFrame(rafId.current)
+      rafId.current = requestAnimationFrame(resetTiltGradually)
     }
 
-    const animateTiltTo = (target: number) => {
-      cancelAnimationFrame(rafId.current)
+    const resetTiltGradually = () => {
+      if (velocityRef.current < 0.1) {
+        tiltRef.current *= 0.85
+        setTilt(tiltRef.current)
 
-      const step = () => {
-        const diff = target - currentTilt.current
-        currentTilt.current += diff * 0.15
-        setTilt(currentTilt.current)
-
-        if (Math.abs(diff) > 0.5) {
-          rafId.current = requestAnimationFrame(step)
+        if (Math.abs(tiltRef.current) > 0.5) {
+          rafId.current = requestAnimationFrame(resetTiltGradually)
         } else {
-          currentTilt.current = target
-          setTilt(target)
+          tiltRef.current = 0
+          setTilt(0)
         }
       }
-
-      step()
     }
 
     const handleMouseOver = (e: MouseEvent) => {
@@ -69,13 +77,45 @@ export default function A_UserCursor() {
       }
     }
 
+    const handleMouseLeave = () => {
+      isCursorActive.current = false
+      tiltRef.current = 0
+      setTilt(0)
+      setIsHovering(false)
+      setHoverLabel('')
+    }
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        tiltRef.current = 0
+        setTilt(0)
+        setIsHovering(false)
+        setHoverLabel('')
+      }
+    }
+
+    const checkCursorInactive = setInterval(() => {
+      const timeSinceLastMove = Date.now() - lastMoveTime.current
+
+      if (timeSinceLastMove > 100 && Math.abs(tiltRef.current) > 1) {
+        tiltRef.current = 0
+        setTilt(0)
+      }
+      isCursorActive.current = false
+    }, 200)
+
     window.addEventListener('mousemove', handleMouseMove)
     window.addEventListener('mouseover', handleMouseOver)
+    document.addEventListener('mouseleave', handleMouseLeave)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
 
     return () => {
+      clearInterval(checkCursorInactive)
       cancelAnimationFrame(rafId.current)
       window.removeEventListener('mousemove', handleMouseMove)
       window.removeEventListener('mouseover', handleMouseOver)
+      document.removeEventListener('mouseleave', handleMouseLeave)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
     }
   }, [])
 
@@ -88,6 +128,7 @@ export default function A_UserCursor() {
       className={styles.cursor}
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
+        opacity: position.x === 0 && position.y === 0 ? 0 : 1,
       }}
     >
       <div className={styles.icon_wrapper}>
@@ -102,7 +143,7 @@ export default function A_UserCursor() {
             rotateZ(${tilt}deg)
             scale(${isHovering ? 1.15 : 1})
           `,
-          transition: 'transform 0.2s ease-out',
+          transition: 'transform 0.15s ease-out',
         }}
       >
         <span className='text_captions_s_inter'>{hoverLabel || 'Вы'}</span>
