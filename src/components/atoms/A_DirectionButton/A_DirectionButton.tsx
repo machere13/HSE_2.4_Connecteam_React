@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import styles from './A_DirectionButton.module.css'
 
-type ButtonVariant = 'purple' | 'pink' | 'blue' | 'orange'
+type ButtonVariant = 'purple' | 'pink' | 'blue' | 'orange_l' | 'orange_s'
 type ButtonTextSize = 'l' | 's'
 
 interface A_DirectionButtonProps {

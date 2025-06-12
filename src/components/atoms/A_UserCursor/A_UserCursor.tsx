@@ -61,6 +61,13 @@ export default function A_UserCursor() {
 
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement
+      const disabledElement = target.closest('button:disabled, [disabled], [aria-disabled="true"]')
+
+      if (disabledElement) {
+        setIsHovering(true)
+        setHoverLabel('Недоступно')
+        return
+      }
 
       if (target.closest('input, textarea, [contenteditable="true"]')) {
         setIsHovering(true)
