@@ -4,6 +4,7 @@ import cn from 'classnames'
 import Link from 'next/link'
 
 import A_ComingSoonTag from '@/components/atoms/A_ComingSoonTag/A_ComingSoonTag'
+import Q_ThunderIconTag from '@/components/quarks/Q_ThunderIconTag/Q_ThunderIconTag'
 
 import styles from './M_ArticleCard.module.css'
 
@@ -22,7 +23,6 @@ interface M_ArticleCardProps {
     hasIcon: boolean
     comingSoon: boolean
   }
-  icon?: React.ReactNode
 }
 
 export default function M_ArticleCard({
@@ -30,7 +30,6 @@ export default function M_ArticleCard({
   title,
   description,
   cardDisplay,
-  icon,
 }: M_ArticleCardProps) {
   const isImageBackground =
     cardDisplay.background.startsWith('http') || cardDisplay.background.startsWith('/')
@@ -51,7 +50,7 @@ export default function M_ArticleCard({
     >
       <div className={styles.content}>
         <div className={styles.additional_info_wrapper}>
-          {cardDisplay.hasIcon && icon && <div className={styles.icon_wrapper}>{icon}</div>}
+          {cardDisplay.hasIcon && <Q_ThunderIconTag />}
           {cardDisplay.comingSoon && <A_ComingSoonTag />}
         </div>
         <div className={styles.text_wrapper}>

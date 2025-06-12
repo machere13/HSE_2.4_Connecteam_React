@@ -56,7 +56,7 @@
 .additional_info_wrapper {
   display: flex;
   align-items: center;
-  gap: var(--spacing-5);
+  gap: var(--spacing-10);
 }
 
 .text_wrapper {
