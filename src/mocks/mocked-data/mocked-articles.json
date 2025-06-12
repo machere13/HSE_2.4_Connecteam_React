@@ -12,7 +12,8 @@
       "background": "url",
       "card": "big",
       "rotate": "none",
-      "hasIcon": false
+      "hasIcon": false,
+      "comingSoon": true
     },
     "filter": "tools",
     "article": {
@@ -180,7 +181,8 @@
       "background": "url",
       "card": "standard",
       "rotate": "none",
-      "hasIcon": false
+      "hasIcon": false,
+      "comingSoon": false
     },
     "filter": "communication",
     "article": {
@@ -293,7 +295,8 @@
       "background": "pink",
       "card": "standard",
       "rotate": "right",
-      "hasIcon": false
+      "hasIcon": false,
+      "comingSoon": false
     },
     "filter": "communication",
     "article": {
@@ -376,7 +379,8 @@
       "background": "purple",
       "card": "standard",
       "rotate": "left",
-      "hasIcon": false
+      "hasIcon": false,
+      "comingSoon": true
     },
     "filter": "organization",
     "article": {
@@ -422,7 +426,8 @@
       "background": "purple",
       "card": "standard",
       "rotate": "left",
-      "hasIcon": false
+      "hasIcon": false,
+      "comingSoon": true
     },
     "filter": "conflict",
     "article": {
