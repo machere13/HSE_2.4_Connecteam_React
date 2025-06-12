@@ -38,9 +38,11 @@ export interface CaseData {
   description: string
   cardDisplay: {
     background: string
-    card: 'big' | 'small'
-    rotate: string
+    card: 'big' | 'standard'
+    rotate: 'left' | 'right' | 'none'
+    textColor: 'white' | 'black'
     hasIcon: boolean
+    comingSoon: boolean
   }
   filter: string
   case: {

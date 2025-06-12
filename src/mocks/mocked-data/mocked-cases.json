@@ -3,16 +3,17 @@
     "id": 1,
     "slug": "yandex-music-rebranding",
     "metatags": {
-      "image": "url",
+      "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
       "type": "article"
     },
     "title": "Ребрендинг «Яндекс Музыки»",
-    "description": "В декабре 2023 года «Яндекс Музыка» провела первый за девять лет ребрендинг, обновив логотип, визуальный стиль и функциональность сервиса. Помимо обновлений в пользовательском опыте, этот кейс является ярким примером того, как слаженная коммуникация между членами команды может стать ключевым фактором успеха.",
+    "description": "В декабре 2023 года «Яндекс Музыка» провела первый за девять лет ребрендинг, обновив логотип, визуальный стиль и функциональность сервиса.",
     "cardDisplay": {
-      "background": "url",
+      "background": "pink",
       "card": "big",
       "rotate": "none",
-      "hasIcon": false,
+      "textColor": "white",
+      "hasIcon": true,
       "comingSoon": false
     },
     "filter": "experience",
@@ -159,14 +160,15 @@
     "slug": "testing-filter-management",
     "metatags": {
       "image": "url",
-      "type": "article"
+      "type": "articlezzzz"
     },
     "title": "testing filter 'Руководство командой'",
     "description": "testing filter 'Руководство командой'",
     "cardDisplay": {
-      "background": "url",
-      "card": "big",
-      "rotate": "none",
+      "background": "purple",
+      "card": "standard",
+      "rotate": "left",
+      "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
@@ -223,10 +225,11 @@
     "title": "testing filter 'История компании'",
     "description": "testing filter 'История компании'",
     "cardDisplay": {
-      "background": "url",
-      "card": "big",
-      "rotate": "none",
-      "hasIcon": false,
+      "background": "pink",
+      "card": "standard",
+      "rotate": "right",
+      "textColor": "white",
+      "hasIcon": true,
       "comingSoon": true
     },
     "filter": "history",
@@ -279,9 +282,10 @@
     "title": "testing filter 'Лайфхаки от команды'",
     "description": "testing filter 'Лайфхаки от команды'",
     "cardDisplay": {
-      "background": "url",
+      "background": "purple",
       "card": "big",
       "rotate": "none",
+      "textColor": "white",
       "hasIcon": false,
       "comingSoon": true
     },
