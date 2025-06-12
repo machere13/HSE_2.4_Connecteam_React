@@ -17,6 +17,7 @@ export default function A_FilterTag({ text, isActive = false, onClick }: A_Filte
     <button
       className={cn(styles.wrapper, 'text_body_1', isActive ? styles.active : '')}
       onClick={onClick}
+      data-cursor-type='radio'
     >
       {text}
       {isActive && <Q_Icon name='closeIcon' viewBox='0 0 12 12' width='16' height='16' />}
