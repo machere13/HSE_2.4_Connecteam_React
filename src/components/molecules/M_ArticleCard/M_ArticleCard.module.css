@@ -13,7 +13,7 @@
 
   border-radius: var(--border-radius-15);
 
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
   overflow: hidden;
 }
 
@@ -68,9 +68,35 @@
 }
 
 .text_white {
-    color: var(--color-main-white);
+  color: var(--color-main-white);
+}
+
+.text_black {
+  color: var(--color-main-black);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .left:hover,
+  .right:hover {
+    transform: rotate(0);
   }
-  
-  .text_black {
-    color: var(--color-main-black);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .left:active,
+  .right:active {
+    transform: rotate(0);
   }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wrapper:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .wrapper:active {
+    transform: translateY(-3px);
+  }
+}

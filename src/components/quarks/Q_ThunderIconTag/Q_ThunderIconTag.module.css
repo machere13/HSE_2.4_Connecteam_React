@@ -1,16 +1,16 @@
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 40px;
-    min-width: 40px;
-    max-width: 40px;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
 
-    height: 40px;
-    min-height: 40px;
-    max-height: 40px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
 
-    background: var(--color-main-white);
-    border-radius: 50%;
+  background: var(--color-main-white);
+  border-radius: 50%;
 }
