@@ -14,6 +14,7 @@ interface A_DirectionButtonProps {
   href: string
   variant?: ButtonVariant
   font?: ButtonTextSize
+  isExternal?: boolean
 }
 
 export default function A_DirectionButton({
@@ -21,7 +22,25 @@ export default function A_DirectionButton({
   href,
   variant = 'purple',
   font = 's',
+  isExternal = false,
 }: A_DirectionButtonProps) {
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        target='_blank'
+        rel='noopener noreferrer'
+        className={cn(
+          styles.wrapper,
+          styles[variant],
+          font === 's' ? 'text_button_s' : 'text_button_l',
+        )}
+      >
+        {children}
+      </a>
+    )
+  }
+
   return (
     <Link
       href={href}

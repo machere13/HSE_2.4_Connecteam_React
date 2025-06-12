@@ -1,87 +1,109 @@
-.wrapper{
-    display: flex;
-    align-items: center;
+.wrapper {
+  display: flex;
+  align-items: center;
 
-    width: fit-content;
+  width: fit-content;
 
-    border-radius: var(--border-radius-20);
+  border-radius: var(--border-radius-20);
 
-    transition: .2s all;
-    white-space: nowrap;
+  transition: 0.2s all;
+  white-space: nowrap;
 }
 
-.purple{
-    height: 35px;
+.purple {
+  height: 35px;
 
-    padding: var(--spacing-9) var(--spacing-20);
+  padding: var(--spacing-9) var(--spacing-20);
 
-    color: var(--color-main-white);
+  color: var(--color-main-white);
 
-    background: var(--color-main-purple);
+  background: var(--color-main-purple);
 }
 
-.purple:hover{
-    background: var(--color-light-purple);
+.purple:active {
+  background: var(--color-click-purple);
 }
 
-.purple:active{
-    background: var(--color-click-purple);
+.pink {
+  height: fit-content;
+
+  padding: var(--spacing-10) var(--spacing-22);
+
+  color: var(--color-main-white);
+
+  background: var(--color-main-pink);
 }
 
-.pink{
-    height: fit-content;
-
-    padding: var(--spacing-10) var(--spacing-22);
-
-    color: var(--color-main-white);
-
-    background: var(--color-main-pink);
+.pink:active {
+  background: var(--color-click-pink);
 }
 
-.pink:hover{
-    background: var(--color-light-pink);
+.blue {
+  height: fit-content;
+
+  padding: var(--spacing-9) var(--spacing-20);
+
+  color: var(--color-main-white);
+
+  background: var(--color-main-blue);
 }
 
-.pink:active{
-    background: var(--color-click-pink);
+.blue:active {
+  background: var(--color-click-blue);
 }
 
-.blue{
-    height: fit-content;
+.orange {
+  height: 35px;
 
-    padding: var(--spacing-9) var(--spacing-20);
+  padding: var(--spacing-9) var(--spacing-20);
 
-    color: var(--color-main-white);
+  color: var(--color-main-orange);
 
-    background: var(--color-main-blue);
+  background: var(--color-main-main-white);
+  border: 1.5px solid var(--color-main-orange);
 }
 
-.blue:hover{
-    background: var(--color-light-blue);
+.orange:active {
+  background: var(--color-click-orange);
+  border-color: var(--color-click-orange);
 }
 
-.blue:active{
-    background: var(--color-click-blue);
+@media (hover: hover) and (pointer: fine) {
+	.purple:hover {
+		background: var(--color-light-purple);
+	}
+
+	.pink:hover {
+		background: var(--color-light-pink);
+	}
+
+	.blue:hover {
+		background: var(--color-light-blue);
+	}
+
+	.orange:hover {
+		color: var(--color-main-white);
+
+		background: var(--color-main-orange);
+	}
 }
 
-.orange{
-    height: 35px;
+@media (hover: none) and (pointer: coarse) {
+	.purple:active {
+		background: var(--color-light-purple);
+	}
 
-    padding: var(--spacing-9) var(--spacing-20);
+	.pink:active {
+		background: var(--color-light-pink);
+	}
 
-    color: var(--color-main-orange);
+	.blue:active {
+		background: var(--color-light-blue);
+	}
 
-    background: var(--color-main-main-white);
-    border: 1.5px solid var(--color-main-orange);
-}
+	.orange:active {
+		color: var(--color-main-white);
 
-.orange:hover{
-    color: var(--color-main-white);
-
-    background: var(--color-main-orange);
-}
-
-.orange:active{
-    background: var(--color-click-orange);
-    border-color: var(--color-click-orange);
+		background: var(--color-main-orange);
+	}
 }
