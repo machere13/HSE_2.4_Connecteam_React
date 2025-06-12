@@ -52,7 +52,18 @@
   background: var(--color-click-blue);
 }
 
-.orange {
+.orange_l {
+  height: 40px;
+
+  padding: var(--spacing-9) var(--spacing-20);
+
+  color: var(--color-main-orange);
+
+  background: var(--color-main-main-white);
+  border: 1.5px solid var(--color-main-orange);
+}
+
+.orange_s {
   height: 35px;
 
   padding: var(--spacing-9) var(--spacing-20);
@@ -63,47 +74,47 @@
   border: 1.5px solid var(--color-main-orange);
 }
 
-.orange:active {
+.orange_l:active, .orange_s:active {
   background: var(--color-click-orange);
   border-color: var(--color-click-orange);
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.purple:hover {
-		background: var(--color-light-purple);
-	}
+  .purple:hover {
+    background: var(--color-light-purple);
+  }
 
-	.pink:hover {
-		background: var(--color-light-pink);
-	}
+  .pink:hover {
+    background: var(--color-light-pink);
+  }
 
-	.blue:hover {
-		background: var(--color-light-blue);
-	}
+  .blue:hover {
+    background: var(--color-light-blue);
+  }
 
-	.orange:hover {
-		color: var(--color-main-white);
+  .orange_l:hover , .orange_s:active{
+    color: var(--color-main-white);
 
-		background: var(--color-main-orange);
-	}
+    background: var(--color-main-orange);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.purple:active {
-		background: var(--color-light-purple);
-	}
+  .purple:active {
+    background: var(--color-light-purple);
+  }
 
-	.pink:active {
-		background: var(--color-light-pink);
-	}
+  .pink:active {
+    background: var(--color-light-pink);
+  }
 
-	.blue:active {
-		background: var(--color-light-blue);
-	}
+  .blue:active {
+    background: var(--color-light-blue);
+  }
 
-	.orange:active {
-		color: var(--color-main-white);
+  .orange_l:active, .orange_s:active {
+    color: var(--color-main-white);
 
-		background: var(--color-main-orange);
-	}
+    background: var(--color-main-orange);
+  }
 }

@@ -2,7 +2,6 @@
   /* Colors */
   --color-main-white: rgb(255 255 255 / 100%);
   --color-main-main-white: rgb(242 242 242 / 100%);
-  --color-main-grid: rgb(226 226 226 / 100%);
   --color-main-black: rgb(0 0 0 / 100%);
   --color-main-blue: rgb(66 29 255 / 100%);
   --color-main-purple: rgb(149 42 255 / 100%);
@@ -28,8 +27,8 @@
   );
   --color-grid-gray: rgb(226 226 226 / 100%);
   --color-grid-blue: rgb(113 64 255 / 100%);
-
-  /* Spacing */
+  --color-background-disabled: rgb(230 230 230 / 100%);
+  --color-text-disabled: rgb(180 180 180 / 100%) /* Spacing */;
   --spacing-3: 3px;
   --spacing-5: 5px;
   --spacing-8: 8px;

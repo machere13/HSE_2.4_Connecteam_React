@@ -1,6 +1,7 @@
 import React from 'react'
 
 import A_DirectionButton from '@/components/atoms/A_DirectionButton/A_DirectionButton'
+import A_HandleButton from '@/components/atoms/A_HandleButton/A_HandleButton'
 import A_TestResultsTag from '@/components/atoms/A_TestResultsTag/A_TestResultsTag'
 import { ROUTES } from '@/routes'
 
@@ -30,8 +31,8 @@ export default function W_TestResults({
         <p>{result.description}</p>
       </div>
       <div className={styles.buttons_wrapper}>
-        <button onClick={onRestart}>Пройти тест заново</button>
-        <A_DirectionButton href={ROUTES.INTERACTIVES.INDEX} variant='orange' font='l'>
+        <A_HandleButton onClick={onRestart}>Пройти тест заново</A_HandleButton>
+        <A_DirectionButton href={ROUTES.INTERACTIVES.INDEX} variant='orange_l' font='l'>
           Вернуться к тестам
         </A_DirectionButton>
       </div>

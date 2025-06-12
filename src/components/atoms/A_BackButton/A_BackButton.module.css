@@ -6,33 +6,56 @@
 
   padding: var(--spacing-10) var(--spacing-22);
 
-  color: var(--color-main-orange);
-
-  background: var(--color-main-main-white);
   border-radius: var(--border-radius-20);
 
   transition: 0.2s all;
   white-space: nowrap;
+}
+
+.orange {
+  color: var(--color-main-orange);
+
+  background: var(--color-main-main-white);
   border: 1.5px solid var(--color-main-orange);
 }
 
-.wrapper:active {
-  background: var(--color-click-orange);
-  border-color: var(--color-click-orange);
+.pink {
+  color: var(--color-main-white);
+
+  background: var(--color-main-pink);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .wrapper:hover {
+  .orange:hover {
     color: var(--color-main-white);
 
     background: var(--color-main-orange);
+  }
+
+  .pink:hover {
+    background: var(--color-light-pink);
   }
 }
 
 @media (hover: none) and (pointer: coarse) {
-  .wrapper:active {
+  .orange:active {
     color: var(--color-main-white);
 
     background: var(--color-main-orange);
   }
+
+  .pink:active {
+    background: var(--color-light-pink);
+  }
+}
+
+.orange:active {
+  color: var(--color-main-white);
+
+  background: var(--color-click-orange);
+  border-color: var(--color-click-orange);
+}
+
+.pink:active {
+  background: var(--color-click-pink);
 }

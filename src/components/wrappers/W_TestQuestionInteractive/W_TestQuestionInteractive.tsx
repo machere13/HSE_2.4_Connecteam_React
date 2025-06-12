@@ -1,5 +1,6 @@
 import React from 'react'
 
+import A_HandleButton from '@/components/atoms/A_HandleButton/A_HandleButton'
 import C_TestQuestionRadios from '@/components/collections/C_TestQuestionRadios/C_TestQuestionRadios'
 
 import styles from './W_TestQuestionInteractive.module.css'
@@ -28,13 +29,9 @@ export default function W_TestQuestionInteractive({
         selectedAnswerIndex={selectedAnswerIndex}
         onAnswerSelect={onAnswerSelect}
       />
-      <button
-        onClick={onNext}
-        disabled={selectedAnswerIndex === undefined}
-        className={styles.button}
-      >
+      <A_HandleButton onClick={onNext} disabled={selectedAnswerIndex === undefined}>
         {isLastQuestion ? 'Завершить тест' : 'Следующий вопрос'}
-      </button>
+      </A_HandleButton>
     </div>
   )
 }

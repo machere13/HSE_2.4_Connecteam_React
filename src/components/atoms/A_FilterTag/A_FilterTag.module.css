@@ -31,13 +31,13 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.wrapper:hover {
-		background: var(--color-light-purple);
-	}
+  .wrapper:hover {
+    background: var(--color-light-purple);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.wrapper:active {
-		background: var(--color-light-purple);
-	}
+  .wrapper:active {
+    background: var(--color-light-purple);
+  }
 }

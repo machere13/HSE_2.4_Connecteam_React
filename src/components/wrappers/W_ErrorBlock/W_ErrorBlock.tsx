@@ -16,7 +16,7 @@ export default function W_ErrorBlock({ errorType = '404', onClose }: W_ErrorBloc
       <Q_ErrorCode errorType={errorType} />
       <Q_ErrorSignature errorType={errorType} />
 
-      <A_BackButton onClick={onClose} href={ROUTES.MAIN}>
+      <A_BackButton onClick={onClose} href={ROUTES.MAIN} variant='pink'>
         Вернуться на главную
       </A_BackButton>
     </div>
