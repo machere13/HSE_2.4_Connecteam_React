@@ -44,7 +44,7 @@ export default function M_SearchBar({
       />
       {showClearIcon && (
         <button onClick={handleClearInput} className={styles.button} aria-label='Очистить поиск'>
-          <Q_Icon name='closeIcon' width='12' height='12' />
+          <Q_Icon name='closeIcon' width='12' height='12' viewBox='0 0 12 12' />
         </button>
       )}
     </div>
