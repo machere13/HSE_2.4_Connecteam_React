@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 import { getArticles } from '@/api/getArticles'
-import C_ArticleCards from '@/components/collections/C_ArticleCards/C_ArticleCards'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import W_ArticleCards from '@/components/wrappers/W_ArticleCards/W_ArticleCards'
 import W_FilterTags from '@/components/wrappers/W_FilterTags/W_FilterTags'
 
 import type { ArticleData } from '@/types/article'
@@ -34,11 +34,6 @@ export default function ArticlesPage({ articles }: { articles: ArticleData[] }) 
 
   const uniqueFilters = Array.from(new Set(articles.map(article => article.filter)))
 
-  const filteredArticles =
-    activeFilters.length > 0
-      ? articles.filter(article => activeFilters.includes(article.filter))
-      : articles
-
   const handleFilterClick = (filter: string) => {
     setActiveFilters(prev =>
       prev.includes(filter) ? prev.filter(f => f !== filter) : [...prev, filter],
@@ -56,7 +51,7 @@ export default function ArticlesPage({ articles }: { articles: ArticleData[] }) 
           activeTags={activeFilters}
           onTagClick={handleFilterClick}
         />
-        <C_ArticleCards articles={filteredArticles} />
+        <W_ArticleCards articles={articles} activeFilters={activeFilters} />
       </div>
     </div>
   )

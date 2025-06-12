@@ -459,5 +459,193 @@
       ],
       "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
     }
+  },
+  {
+    "id": 6,
+    "slug": "testing-filter-conflict",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "testing filter 'Личный конфликт'",
+    "description": "testing filter 'Личный конфликт'",
+    "cardDisplay": {
+      "background": "purple",
+      "card": "standard",
+      "rotate": "none",
+      "hasIcon": false,
+      "comingSoon": true
+    },
+    "filter": "conflict",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
+      },
+      "type": "superShort",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "testing filter 'Личный конфликт'"
+        },
+        {
+          "type": "heading-4",
+          "text": "testing filter 'Личный конфликт'"
+        },
+        {
+          "type": "tags",
+          "items": ["testing filter", "Личный конфликт"]
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Личный конфликт",
+          "titleType": "big",
+          "items": ["testing filter 'Личный конфликт'"]
+        }
+      ],
+      "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
+    }
+  },
+  {
+    "id": 7,
+    "slug": "testing-filter-conflict",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "testing filter 'Личный конфликт'",
+    "description": "testing filter 'Личный конфликт'",
+    "cardDisplay": {
+      "background": "purple",
+      "card": "standard",
+      "rotate": "none",
+      "hasIcon": false,
+      "comingSoon": true
+    },
+    "filter": "conflict",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
+      },
+      "type": "superShort",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "testing filter 'Личный конфликт'"
+        },
+        {
+          "type": "heading-4",
+          "text": "testing filter 'Личный конфликт'"
+        },
+        {
+          "type": "tags",
+          "items": ["testing filter", "Личный конфликт"]
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Личный конфликт",
+          "titleType": "big",
+          "items": ["testing filter 'Личный конфликт'"]
+        }
+      ],
+      "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
+    }
+  },
+  {
+    "id": 8,
+    "slug": "testing-filter-conflict",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "testing filter 'Личный конфликт'",
+    "description": "testing filter 'Личный конфликт'",
+    "cardDisplay": {
+      "background": "purple",
+      "card": "standard",
+      "rotate": "none",
+      "hasIcon": false,
+      "comingSoon": true
+    },
+    "filter": "conflict",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
+      },
+      "type": "superShort",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "testing filter 'Личный конфликт'"
+        },
+        {
+          "type": "heading-4",
+          "text": "testing filter 'Личный конфликт'"
+        },
+        {
+          "type": "tags",
+          "items": ["testing filter", "Личный конфликт"]
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Личный конфликт",
+          "titleType": "big",
+          "items": ["testing filter 'Личный конфликт'"]
+        }
+      ],
+      "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
+    }
+  },
+  {
+    "id": 8,
+    "slug": "testing-filter-conflict",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "testing filter 'Личный конфликт'",
+    "description": "testing filter 'Личный конфликт'",
+    "cardDisplay": {
+      "background": "purple",
+      "card": "standard",
+      "rotate": "none",
+      "hasIcon": false,
+      "comingSoon": true
+    },
+    "filter": "conflict",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
+      },
+      "type": "superShort",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "testing filter 'Личный конфликт'"
+        },
+        {
+          "type": "heading-4",
+          "text": "testing filter 'Личный конфликт'"
+        },
+        {
+          "type": "tags",
+          "items": ["testing filter", "Личный конфликт"]
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Личный конфликт",
+          "titleType": "big",
+          "items": ["testing filter 'Личный конфликт'"]
+        }
+      ],
+      "stickers": ["Не забыть поесть иначе умру", "Распределить задачи на неделю"]
+    }
   }
 ]
