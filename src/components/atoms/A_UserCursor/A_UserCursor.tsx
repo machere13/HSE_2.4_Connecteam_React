@@ -10,6 +10,7 @@ export default function A_UserCursor() {
   const [isTouch, setIsTouch] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
   const [hoverLabel, setHoverLabel] = useState('')
+  const [isPageLoading, setIsPageLoading] = useState(true)
 
   const prevPosition = useRef({ x: 0, y: 0 })
   const velocityRef = useRef(0)
@@ -20,6 +21,23 @@ export default function A_UserCursor() {
 
   useEffect(() => {
     setIsTouch(!window.matchMedia('(hover: hover)').matches)
+
+    const handleStartLoading = () => setIsPageLoading(true)
+
+    const handleStopLoading = () => setIsPageLoading(false)
+
+    window.addEventListener('load', handleStopLoading)
+    window.addEventListener('beforeunload', handleStartLoading)
+
+    const loadingTimeout = setTimeout(() => {
+      setIsPageLoading(false)
+    }, 1000)
+
+    return () => {
+      window.removeEventListener('load', handleStopLoading)
+      window.removeEventListener('beforeunload', handleStartLoading)
+      clearTimeout(loadingTimeout)
+    }
   }, [])
 
   useEffect(() => {
@@ -154,12 +172,14 @@ export default function A_UserCursor() {
             translateY(-5px)
             translateX(20px)
             rotateZ(${tilt}deg)
-            scale(${isHovering ? 1.15 : 1})
+            scale(${isHovering || isPageLoading ? 1.15 : 1})
           `,
           transition: 'transform 0.15s ease-out',
         }}
       >
-        <span className='text_captions_s_inter'>{hoverLabel || 'Вы'}</span>
+        <span className='text_captions_s_inter'>
+          {isPageLoading ? 'Загрузка...' : hoverLabel || 'Вы'}
+        </span>
       </div>
     </div>
   )
