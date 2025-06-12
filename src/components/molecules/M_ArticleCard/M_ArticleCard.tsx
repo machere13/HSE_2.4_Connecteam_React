@@ -1,0 +1,62 @@
+import React from 'react'
+
+import cn from 'classnames'
+import Link from 'next/link'
+
+import styles from './M_ArticleCard.module.css'
+
+type CardSize = 'big' | 'standard'
+type CardRotation = 'left' | 'right' | 'none'
+type CardBackground = 'pink' | 'purple'
+
+interface M_ArticleCardProps {
+  href: string
+  title: string
+  description: string
+  cardDisplay: {
+    background: string
+    card: CardSize
+    rotate: CardRotation
+    hasIcon: boolean
+    comingSoon: boolean
+  }
+  icon?: React.ReactNode
+}
+
+export default function M_ArticleCard({
+  href,
+  title,
+  description,
+  cardDisplay,
+  icon,
+}: M_ArticleCardProps) {
+  const isImageBackground =
+    cardDisplay.background.startsWith('http') || cardDisplay.background.startsWith('/')
+  const backgroundStyle = isImageBackground
+    ? { backgroundImage: `url(${cardDisplay.background})` }
+    : { backgroundColor: `var(--color-main-${cardDisplay.background as CardBackground})` }
+
+  return (
+    <Link
+      href={href}
+      className={cn(
+        styles.wrapper,
+        styles[cardDisplay.card],
+        styles[cardDisplay.rotate],
+        isImageBackground && styles.image_background,
+      )}
+      style={backgroundStyle}
+    >
+      <div className={styles.content}>
+        <div className={styles.additional_info_wrapper}>
+          {cardDisplay.hasIcon && icon && <div className={styles.icon_wrapper}>{icon}</div>}
+          {cardDisplay.comingSoon && <span className={styles.coming_soon}>Coming Soon</span>}
+        </div>
+        <div className={styles.text_wrapper}>
+          <h5 className={styles.title}>{title}</h5>
+          <p className={styles.description}>{description}</p>
+        </div>
+      </div>
+    </Link>
+  )
+}

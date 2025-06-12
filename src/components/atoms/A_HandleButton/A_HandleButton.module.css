@@ -42,29 +42,29 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.pink_l:hover,
-    .pink_s:hover {
-		background: var(--color-light-pink);
-	}
+  .pink_l:hover,
+  .pink_s:hover {
+    background: var(--color-light-pink);
+  }
 
-	.orange:hover {
-		color: var(--color-main-white);
+  .orange:hover {
+    color: var(--color-main-white);
 
-		background: var(--color-main-orange);
-	}
+    background: var(--color-main-orange);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.pink_l:active,
-    .pink_s:active {
-		background: var(--color-light-pink);
-	}
+  .pink_l:active,
+  .pink_s:active {
+    background: var(--color-light-pink);
+  }
 
-	.orange:active {
-		color: var(--color-main-white);
+  .orange:active {
+    color: var(--color-main-white);
 
-		background: var(--color-main-orange);
-	}
+    background: var(--color-main-orange);
+  }
 }
 
 .pink_l:active,

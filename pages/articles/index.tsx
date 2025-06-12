@@ -50,13 +50,11 @@ export default function ArticlesPage({ articles }: { articles: ArticleData[] }) 
       <Q_Grid variant='gray' />
       <div>
         <h1>Все статьи</h1>
-
         <W_FilterTags
           tags={uniqueFilters}
           activeTags={activeFilters}
           onTagClick={handleFilterClick}
         />
-
         <ul>
           {filteredArticles.map(article => (
             <li key={article.id}>

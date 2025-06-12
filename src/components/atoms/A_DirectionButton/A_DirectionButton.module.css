@@ -74,7 +74,8 @@
   border: 1.5px solid var(--color-main-orange);
 }
 
-.orange_l:active, .orange_s:active {
+.orange_l:active,
+.orange_s:active {
   background: var(--color-click-orange);
   border-color: var(--color-click-orange);
 }
@@ -92,7 +93,8 @@
     background: var(--color-light-blue);
   }
 
-  .orange_l:hover , .orange_s:active{
+  .orange_l:hover,
+  .orange_s:active {
     color: var(--color-main-white);
 
     background: var(--color-main-orange);
@@ -112,7 +114,8 @@
     background: var(--color-light-blue);
   }
 
-  .orange_l:active, .orange_s:active {
+  .orange_l:active,
+  .orange_s:active {
     color: var(--color-main-white);
 
     background: var(--color-main-orange);
