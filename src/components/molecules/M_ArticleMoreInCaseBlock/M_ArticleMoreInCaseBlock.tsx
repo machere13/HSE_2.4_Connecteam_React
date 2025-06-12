@@ -1,5 +1,7 @@
 import React from 'react'
 
+import A_DirectionButton from '@/components/atoms/A_DirectionButton/A_DirectionButton'
+
 import styles from './M_ArticleMoreInCaseBlock.module.css'
 
 interface M_ArticleMoreInCaseBlockProps {
@@ -10,9 +12,9 @@ export default function M_ArticleMoreInCaseBlock({ link }: M_ArticleMoreInCaseBl
   return (
     <div className={styles.wrapper}>
       <h3>Больше по&nbsp;теме в&nbsp;отдельном кейсе</h3>
-      <a href={link} target='_blank' rel='noreferrer'>
-        www
-      </a>
+      <A_DirectionButton href={link} variant='purple' font='s'>
+        Перейти в кейс
+      </A_DirectionButton>
     </div>
   )
 }
