@@ -42,6 +42,7 @@ export interface ArticleData {
     background: string
     card: 'big' | 'standard'
     rotate: 'left' | 'right' | 'none'
+    textColor: 'white' | 'black'
     hasIcon: boolean
     comingSoon: boolean
   }
