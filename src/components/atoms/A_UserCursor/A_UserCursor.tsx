@@ -19,6 +19,22 @@ export default function A_UserCursor() {
   const isCursorActive = useRef(true)
   const lastMoveTime = useRef(Date.now())
 
+  const [dots, setDots] = useState('')
+  const dotsInterval = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    dotsInterval.current = setInterval(() => {
+      setDots(prev => {
+        if (prev.length >= 3) return ''
+        return prev + '.'
+      })
+    }, 250)
+
+    return () => {
+      if (dotsInterval.current) clearInterval(dotsInterval.current)
+    }
+  }, [])
+
   useEffect(() => {
     setIsTouch(!window.matchMedia('(hover: hover)').matches)
 
@@ -178,7 +194,7 @@ export default function A_UserCursor() {
         }}
       >
         <span className='text_captions_s_inter'>
-          {isPageLoading ? 'Загрузка...' : hoverLabel || 'Вы'}
+          {isPageLoading ? `Загрузка${dots}` : hoverLabel || 'Вы'}
         </span>
       </div>
     </div>
