@@ -66,3 +66,11 @@
 
   width: 100%;
 }
+
+.text_white {
+    color: var(--color-main-white);
+  }
+  
+  .text_black {
+    color: var(--color-main-black);
+  }

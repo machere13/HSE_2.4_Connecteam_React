@@ -11,6 +11,7 @@ import styles from './M_ArticleCard.module.css'
 type CardSize = 'big' | 'standard'
 type CardRotation = 'left' | 'right' | 'none'
 type CardBackground = 'pink' | 'purple'
+type TextColor = 'white' | 'black'
 
 interface M_ArticleCardProps {
   href: string
@@ -20,6 +21,7 @@ interface M_ArticleCardProps {
     background: string
     card: CardSize
     rotate: CardRotation
+    textColor: TextColor
     hasIcon: boolean
     comingSoon: boolean
   }
@@ -53,7 +55,7 @@ export default function M_ArticleCard({
           {cardDisplay.hasIcon && <Q_ThunderIconTag />}
           {cardDisplay.comingSoon && <A_ComingSoonTag />}
         </div>
-        <div className={styles.text_wrapper}>
+        <div className={cn(styles.text_wrapper, styles[`text_${cardDisplay.textColor}`])}>
           <h5 className={styles.title}>{title}</h5>
           <p className={styles.description}>{description}</p>
         </div>
