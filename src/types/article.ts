@@ -32,7 +32,6 @@ export type ArticleContentItem =
 export interface ArticleData {
   id: number
   slug: string
-  updatedAt?: string
   metatags: {
     image: string
     type: string
@@ -41,14 +40,19 @@ export interface ArticleData {
   description: string
   cardDisplay: {
     background: string
-    card: string
-    rotate: string
+    card: 'big' | 'standard'
+    rotate: 'left' | 'right' | 'none'
     hasIcon: boolean
+    comingSoon: boolean
   }
   filter: string
   article: {
-    author: ArticleAuthor
-    type: 'big' | 'short' | 'superShort'
+    author: {
+      image: string
+      name: string
+      description: string
+    }
+    type: string
     content: ArticleContentItem[]
     stickers: string[]
   }

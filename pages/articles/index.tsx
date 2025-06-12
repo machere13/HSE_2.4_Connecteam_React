@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { getArticles } from '@/api/getArticles'
+import C_ArticleCards from '@/components/collections/C_ArticleCards/C_ArticleCards'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_FilterTags from '@/components/wrappers/W_FilterTags/W_FilterTags'
@@ -55,14 +56,7 @@ export default function ArticlesPage({ articles }: { articles: ArticleData[] }) 
           activeTags={activeFilters}
           onTagClick={handleFilterClick}
         />
-        <ul>
-          {filteredArticles.map(article => (
-            <li key={article.id}>
-              <a href={`/articles/${article.slug}`}>{article.title}</a>
-              <p>{article.description}</p>
-            </li>
-          ))}
-        </ul>
+        <C_ArticleCards articles={filteredArticles} />
       </div>
     </div>
   )
