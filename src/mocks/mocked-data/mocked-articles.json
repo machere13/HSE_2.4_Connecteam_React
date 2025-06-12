@@ -567,7 +567,7 @@
       "background": "purple",
       "card": "standard",
       "rotate": "none",
-      "hasIcon": false,
+      "hasIcon": true,
       "comingSoon": true
     },
     "filter": "conflict",

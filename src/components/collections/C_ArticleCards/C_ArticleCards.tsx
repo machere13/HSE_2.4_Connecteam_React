@@ -1,6 +1,7 @@
 import React from 'react'
 
 import M_ArticleCard from '@/components/molecules/M_ArticleCard/M_ArticleCard'
+import Q_ThunderIconTag from '@/components/quarks/Q_ThunderIconTag/Q_ThunderIconTag'
 
 import styles from './C_ArticleCards.module.css'
 
