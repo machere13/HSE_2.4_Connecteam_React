@@ -3,6 +3,8 @@ import React from 'react'
 import cn from 'classnames'
 import Link from 'next/link'
 
+import A_ComingSoonTag from '@/components/atoms/A_ComingSoonTag/A_ComingSoonTag'
+
 import styles from './M_ArticleCard.module.css'
 
 type CardSize = 'big' | 'standard'
@@ -50,7 +52,7 @@ export default function M_ArticleCard({
       <div className={styles.content}>
         <div className={styles.additional_info_wrapper}>
           {cardDisplay.hasIcon && icon && <div className={styles.icon_wrapper}>{icon}</div>}
-          {cardDisplay.comingSoon && <span className={styles.coming_soon}>Coming Soon</span>}
+          {cardDisplay.comingSoon && <A_ComingSoonTag />}
         </div>
         <div className={styles.text_wrapper}>
           <h5 className={styles.title}>{title}</h5>
