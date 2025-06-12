@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 import { getCases } from '@/api/getCases'
-import C_CaseCards from '@/components/collections/C_CaseCards/C_CaseCards'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import W_CaseCards from '@/components/wrappers/W_CaseCards/W_CaseCards'
 import W_FilterTags from '@/components/wrappers/W_FilterTags/W_FilterTags'
 
 import type { CaseData } from '@/types/case'
@@ -51,7 +51,7 @@ export default function CasesPage({ cases }: { cases: CaseData[] }) {
           activeTags={activeFilters}
           onTagClick={handleFilterClick}
         />
-        <C_CaseCards cases={cases} />
+        <W_CaseCards cases={cases} activeFilters={activeFilters} />
       </div>
     </div>
   )
