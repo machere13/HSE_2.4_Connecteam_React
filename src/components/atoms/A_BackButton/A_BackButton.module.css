@@ -8,7 +8,7 @@
 
   color: var(--color-main-orange);
 
-  background: var(--color-main-white);
+  background: var(--color-main-main-white);
   border-radius: var(--border-radius-20);
 
   transition: 0.2s all;

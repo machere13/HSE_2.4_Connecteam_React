@@ -1,9 +1,9 @@
+import { useState } from 'react'
+
 import { getArticles } from '@/api/getArticles'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_FilterTags from '@/components/wrappers/W_FilterTags/W_FilterTags'
-
-import { useState } from 'react'
 
 import type { ArticleData } from '@/types/article'
 import type { GetStaticProps } from 'next'
