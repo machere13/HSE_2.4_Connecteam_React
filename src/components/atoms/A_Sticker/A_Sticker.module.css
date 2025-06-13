@@ -1,0 +1,100 @@
+.wrapper {
+  position: absolute;
+  z-index: 9998;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 130px;
+
+  height: 135px;
+  cursor: grab;
+  background-repeat: no-repeat;
+}
+
+.wrapper:active {
+  cursor: grabbing;
+}
+
+.wrapper.error {
+  position: static;
+  cursor: default;
+}
+
+.sticker {
+  position: relative;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+  width: 100%;
+
+  height: 100%;
+
+  padding: 0;
+
+  background: none;
+  border: none;
+  touch-action: none;
+}
+
+.sticker:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+
+  height: 100%;
+  object-fit: contain;
+}
+
+.input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+
+  display: -webkit-box;
+
+  width: 70%;
+
+  margin-top: -7px;
+
+  color: var(--color-main-black);
+  text-align: center;
+
+  background: transparent;
+
+  transform: translate(-43%, -50%);
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  pointer-events: auto;
+}
+
+.input::-webkit-scrollbar {
+  display: none;
+}
+
+.input::placeholder {
+  color: rgb(0 0 0 / 50%);
+}
+
+.input:focus {
+  outline: none;
+}

@@ -1,6 +1,6 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
 
-import type { CursorConfig } from '@/components/atoms/A_Cursor/A_Cursor'
+import type { CursorConfig } from '@/types/cursor'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<typeof A_Cursor> = {

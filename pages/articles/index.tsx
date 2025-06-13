@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { getArticles } from '@/api/getArticles'
+import M_StickerContainer from '@/components/molecules/M_StickerContainer/M_StickerContainer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_ArticleCards from '@/components/wrappers/W_ArticleCards/W_ArticleCards'
@@ -52,6 +53,7 @@ export default function ArticlesPage({ articles }: { articles: ArticleData[] }) 
           onTagClick={handleFilterClick}
         />
         <W_ArticleCards articles={articles} activeFilters={activeFilters} />
+        <M_StickerContainer initialCount={4} />
       </div>
     </div>
   )
