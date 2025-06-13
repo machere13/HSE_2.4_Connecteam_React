@@ -7,7 +7,6 @@ interface MetaProps {
   description?: string
   image?: string
   url?: string
-  keywords?: string
   type?: string
 }
 
@@ -18,7 +17,6 @@ export const Meta = (props: MetaProps) => {
     <Head>
       <title>{meta.title}</title>
       <meta name='description' content={meta.description} />
-      <meta name='keywords' content={meta.keywords} />
       <meta property='og:type' content={meta.type} />
       <meta property='og:title' content={meta.title} />
       <meta property='og:description' content={meta.description} />

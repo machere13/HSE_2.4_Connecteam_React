@@ -17,7 +17,7 @@ interface M_CaseCardProps {
   href: string
   title: string
   cardDisplay: {
-    background: string
+    background: CardBackground | string
     card: CardSize
     rotate: CardRotation
     textColor: TextColor
