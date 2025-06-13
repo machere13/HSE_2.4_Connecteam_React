@@ -78,7 +78,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
                 block={block}
                 variant={{
                   type: 'article',
-                  articleType: article.article.type,
+                  articleType: article.article.type as 'big' | 'short' | 'superShort',
                   positionIndex: index,
                 }}
                 cardListIndex={currentIndex}
@@ -91,7 +91,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
               block={block}
               variant={{
                 type: 'article',
-                articleType: article.article.type,
+                articleType: article.article.type as 'big' | 'short' | 'superShort',
                 positionIndex: index,
               }}
             />

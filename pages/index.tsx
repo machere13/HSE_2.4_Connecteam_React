@@ -8,11 +8,7 @@ import { Meta } from '@/lib/meta'
 export default function MainPage() {
   return (
     <>
-      <Meta
-        title='Connecteam'
-        description='Медиа-сервис для IT-специалистов'
-        keywords='медиа-сервис, коммуникация, IT, Connecteam'
-      />
+      <Meta title='Connecteam' description='Медиа-сервис для IT-специалистов' />
       <SO_Header />
       <Q_Grid variant='gray' />
       <A_Cursor cursors={firstMainPageCursors} />
