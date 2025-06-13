@@ -103,12 +103,15 @@ export default function A_UserCursor() {
         return
       }
 
-      if (target.closest('input[type="range"]')) {
-        setIsHovering(true)
-        setHoverLabel('Настроить')
-      } else if (target.closest('input, textarea, [contenteditable="true"]')) {
+      if (target.closest('input, textarea, [contenteditable="true"]')) {
         setIsHovering(true)
         setHoverLabel('Ввести')
+      } else if (target.closest('[data-cursor-type="drag"]')) {
+        setIsHovering(true)
+        setHoverLabel('Тащить')
+      } else if (target.closest('input[type="range"]')) {
+        setIsHovering(true)
+        setHoverLabel('Настроить')
       } else if (target.closest('[data-cursor-type="radio"]')) {
         setIsHovering(true)
         setHoverLabel('Выбрать')
