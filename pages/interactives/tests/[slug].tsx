@@ -9,7 +9,7 @@ import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_TestQuestionContent from '@/components/wrappers/W_TestQuestionContent/W_TestQuestionContent'
 import W_TestResults from '@/components/wrappers/W_TestResults/W_TestResults'
 
-import type { Test, TestResult } from '@/types/test'
+import type { TestData, TestResult } from '@/types/test'
 import type { GetStaticPaths, GetStaticProps } from 'next'
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -18,7 +18,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps<{ test: Test }> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<{ test: TestData }> = async ({ params }) => {
   const tests = await getTests()
   const test = tests.find(t => t.slug === params?.slug)
 
@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<{ test: Test }> = async ({ params })
   return { props: { test }, revalidate: 10 }
 }
 
-export default function TestPage({ test }: { test: Test }) {
+export default function TestPage({ test }: { test: TestData }) {
   const router = useRouter()
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [score, setScore] = useState(0)

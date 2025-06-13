@@ -1,6 +1,7 @@
 import React from 'react'
 
 import M_CaseCard from '@/components/molecules/M_CaseCard/M_CaseCard'
+import { ROUTES } from '@/routes'
 
 import styles from './C_CaseCards.module.css'
 
@@ -16,7 +17,7 @@ export default function C_CaseCards({ cases }: C_CaseCardsProps) {
       {cases.map(caseItem => (
         <M_CaseCard
           key={caseItem.id}
-          href={`/cases/${caseItem.slug}`}
+          href={ROUTES.CASES.bySlug(caseItem.slug)}
           title={caseItem.title}
           cardDisplay={caseItem.cardDisplay}
         />

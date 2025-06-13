@@ -76,6 +76,10 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .wrapper:hover {
+    transform: translateY(-3px);
+  }
+
   .left:hover,
   .right:hover {
     transform: rotate(0);
@@ -83,20 +87,12 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
+  .wrapper:active {
+    transform: translateY(-3px);
+  }
+
   .left:active,
   .right:active {
     transform: rotate(0);
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .wrapper:hover {
-    transform: translateY(-3px);
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .wrapper:active {
-    transform: translateY(-3px);
   }
 }
