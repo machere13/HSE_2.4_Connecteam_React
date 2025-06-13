@@ -22,18 +22,16 @@ export interface TestContent {
 
 export interface TestData {
   id: number
+  slug: string
+  metatags: {
+    image: string
+    type: string
+  }
   title: string
   description: string
-  background: string
-  slug: string
-  content: TestContent
-}
-
-export interface Test {
-  id: number
-  slug: string
-  title: string
-  description: string
-  background: string
+  cardDisplay: {
+    background: string
+    textColor: 'white' | 'black'
+  }
   content: TestContent
 }

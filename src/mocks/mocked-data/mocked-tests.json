@@ -9,7 +9,7 @@
     "title": "Я что, плохо руковожу?",
     "description": "Пройди тест и узнай уровень своих гибких навыков как руководителя",
     "cardDisplay": {
-      "background": "url",
+      "background": "pink",
       "textColor": "black"
     },
     "content": {

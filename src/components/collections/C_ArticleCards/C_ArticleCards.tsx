@@ -1,6 +1,7 @@
 import React from 'react'
 
 import M_ArticleCard from '@/components/molecules/M_ArticleCard/M_ArticleCard'
+import { ROUTES } from '@/routes'
 
 import styles from './C_ArticleCards.module.css'
 
@@ -16,7 +17,7 @@ export default function C_ArticleCards({ articles }: C_ArticleCardsProps) {
       {articles.map(article => (
         <M_ArticleCard
           key={article.id}
-          href={`/articles/${article.slug}`}
+          href={ROUTES.ARTICLES.bySlug(article.slug)}
           title={article.title}
           description={article.description}
           cardDisplay={article.cardDisplay}

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { getTests } from '@/api/getTests'
+import C_TestCards from '@/components/collections/C_TestCards/C_TestCards'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import { ROUTES } from '@/routes'
@@ -21,13 +22,7 @@ export default function InteractivesPage({ tests }: { tests: TestData[] }) {
       <SO_Header />
       <Q_Grid variant='gray' />
       <h1>Интерактивы</h1>
-      <div>
-        {tests.map(test => (
-          <div key={test.id}>
-            <Link href={ROUTES.INTERACTIVES.TESTS.bySlug(test.slug)}>{test.title}</Link>
-          </div>
-        ))}
-      </div>
+      <C_TestCards tests={tests} />
 
       <div>
         <Link href={ROUTES.INTERACTIVES.IT_BUNKER}>IT-bunker</Link>
