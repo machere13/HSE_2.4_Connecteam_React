@@ -5,6 +5,10 @@
   "dependencies": {
     "@babel/helpers": "^7.27.0",
     "@babel/runtime": "^7.27.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.1",
+    "@mui/material": "^7.1.1",
     "@netlify/plugin-nextjs": "^5.10.3",
     "@svgr/plugin-svgo": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
