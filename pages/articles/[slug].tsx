@@ -107,7 +107,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           </div>
         )}
       </div>
-      <W_StickersContainer initialCount={2} />
+      <W_StickersContainer />
     </div>
   )
 }
