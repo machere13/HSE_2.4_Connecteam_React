@@ -4,6 +4,6 @@
   gap: var(--spacing-25);
 }
 
-.wrapper > h3{
-    text-align: center;
+.wrapper > h3 {
+  text-align: center;
 }
