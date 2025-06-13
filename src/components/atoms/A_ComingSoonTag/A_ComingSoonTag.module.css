@@ -1,13 +1,13 @@
-.wrapper{
-    display: flex;
-    align-items: center;
+.wrapper {
+  display: flex;
+  align-items: center;
 
-    width: fit-content;
+  width: fit-content;
 
-    padding: var(--spacing-9) var(--spacing-20);
+  padding: var(--spacing-9) var(--spacing-20);
 
-    color: var(--color-main-white);
+  color: var(--color-main-white);
 
-    border-radius: var(--border-radius-20);
-    border: 2px solid var(--color-main-white);
+  border-radius: var(--border-radius-20);
+  border: 2px solid var(--color-main-white);
 }
