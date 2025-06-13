@@ -109,6 +109,9 @@ export default function A_UserCursor() {
       } else if (target.closest('[data-cursor-type="radio"]')) {
         setIsHovering(true)
         setHoverLabel('Выбрать')
+      } else if (target.closest('video, [data-cursor-type="video"]')) {
+        setIsHovering(true)
+        setHoverLabel('Смотреть')
       } else if (target.closest('a, button, [role="button"]')) {
         setIsHovering(true)
         setHoverLabel('Клик')
