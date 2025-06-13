@@ -53,7 +53,7 @@ export default function CasesPage({ cases }: { cases: CaseData[] }) {
           onTagClick={handleFilterClick}
         />
         <W_CaseCards cases={cases} activeFilters={activeFilters} />
-        <W_StickersContainer initialCount={2} />
+        <W_StickersContainer />
       </div>
     </div>
   )

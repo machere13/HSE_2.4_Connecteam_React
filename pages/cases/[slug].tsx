@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 
 import { getCases } from '@/api/getCases'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
 
 import type { CaseData } from '@/types/case'
@@ -69,6 +70,7 @@ export default function CasePage({ case: caseArticle }: { case: CaseData }) {
           ))}
         </div>
       )}
+      <W_StickersContainer />
     </div>
   )
 }

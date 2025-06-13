@@ -53,7 +53,7 @@ export default function ArticlesPage({ articles }: { articles: ArticleData[] }) 
           onTagClick={handleFilterClick}
         />
         <W_ArticleCards articles={articles} activeFilters={activeFilters} />
-        <W_StickersContainer initialCount={2} />
+        <W_StickersContainer />
       </div>
     </div>
   )

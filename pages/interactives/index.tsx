@@ -24,7 +24,7 @@ export default function InteractivesPage({ tests }: { tests: TestData[] }) {
       <Q_Grid variant='gray' />
       <h1>Интерактивы</h1>
       <W_TestCardsWithTitle tests={tests} />
-      <W_StickersContainer initialCount={2} />
+      <W_StickersContainer />
       <div>
         <Link href={ROUTES.INTERACTIVES.IT_BUNKER}>IT-bunker</Link>
         <Link href={ROUTES.INTERACTIVES.IT_MAFIA}>IT-mafia</Link>

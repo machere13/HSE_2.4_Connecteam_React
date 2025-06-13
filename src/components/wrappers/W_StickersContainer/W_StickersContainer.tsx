@@ -6,7 +6,7 @@ interface W_StickersContainerProps {
   initialCount?: number
 }
 
-export default function W_StickersContainer({ initialCount = 3 }: W_StickersContainerProps) {
+export default function W_StickersContainer({ initialCount = 2 }: W_StickersContainerProps) {
   const [stickers, setStickers] = useState<
     Array<{ id: string; position: { x: number; y: number }; text: string }>
   >([])
