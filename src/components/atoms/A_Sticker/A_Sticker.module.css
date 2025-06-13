@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 130px;
+  width: fit-content;
 
   height: 135px;
   cursor: grab;
@@ -74,7 +74,7 @@ align-items: center;
 
   background: transparent;
 
-  transform: translate(-43%, -50%);
+  transform: translate(-50%, -50%);
   border: none;
   outline: none;
   resize: none;

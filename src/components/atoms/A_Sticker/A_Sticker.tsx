@@ -285,6 +285,7 @@ export default function A_Sticker({
               top: `${position.y}px`,
             }
       }
+      data-cursor-type="drag"
     >
       <div
         className={styles.sticker}
@@ -293,6 +294,8 @@ export default function A_Sticker({
         onTouchStart={handleTouchStart}
         role='button'
         tabIndex={0}
+        aria-grabbed={isDragging}
+        draggable='true'
       >
         {React.createElement(background)}
         <textarea
