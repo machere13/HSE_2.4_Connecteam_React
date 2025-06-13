@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { getArticles } from '@/api/getArticles'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
+import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
 
 import type { M_PersonProps } from '@/components/molecules/M_Person/M_Person'
@@ -106,6 +107,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           </div>
         )}
       </div>
+      <W_StickersContainer initialCount={2} />
     </div>
   )
 }

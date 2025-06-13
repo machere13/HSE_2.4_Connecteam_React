@@ -5,6 +5,7 @@ import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_CaseCards from '@/components/wrappers/W_CaseCards/W_CaseCards'
 import W_FilterTags from '@/components/wrappers/W_FilterTags/W_FilterTags'
+import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 
 import type { CaseData } from '@/types/case'
 import type { GetStaticProps } from 'next'
@@ -52,6 +53,7 @@ export default function CasesPage({ cases }: { cases: CaseData[] }) {
           onTagClick={handleFilterClick}
         />
         <W_CaseCards cases={cases} activeFilters={activeFilters} />
+        <W_StickersContainer initialCount={2} />
       </div>
     </div>
   )
