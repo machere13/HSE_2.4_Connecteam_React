@@ -18,7 +18,7 @@ interface M_ArticleCardProps {
   title: string
   description: string
   cardDisplay: {
-    background: string
+    background: CardBackground | string
     card: CardSize
     rotate: CardRotation
     textColor: TextColor
