@@ -89,6 +89,13 @@ export default function A_Sticker({
         setPosition(JSON.parse(savedPosition))
       }
     }
+
+    return () => {
+      if (typeof window !== 'undefined' && isLocalStorageAvailable()) {
+        localStorage.removeItem(`sticker-position-${id}`)
+        localStorage.removeItem(`sticker-text-${id}`)
+      }
+    }
   }, [id])
 
   const handleMouseDown = useCallback(
@@ -285,7 +292,7 @@ export default function A_Sticker({
               top: `${position.y}px`,
             }
       }
-      data-cursor-type="drag"
+      data-cursor-type='drag'
     >
       <div
         className={styles.sticker}
