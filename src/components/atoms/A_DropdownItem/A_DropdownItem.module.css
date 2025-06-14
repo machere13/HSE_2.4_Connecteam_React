@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  padding: var(--spacing-15);
+
+  background: var(--color-main-main-white);
+
+  transition: all 0.2s;
+}
+
+.wrapper:hover {
+  background: var(--color-light-blue);
+}
+
+.wrapper:active {
+  color: var(--color-main-white);
+
+  background: var(--color-main-blue);
+}
+
+.wrapper.active {
+  color: var(--color-main-white);
+
+  background: var(--color-main-blue);
+}
