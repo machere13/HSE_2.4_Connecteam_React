@@ -4,6 +4,7 @@
   display: block;
 
   width: 100%;
+  min-width: 240px;
 
   height: 276px;
 
@@ -55,6 +56,8 @@
 
 .additional_info_wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
   gap: var(--spacing-10);
 }

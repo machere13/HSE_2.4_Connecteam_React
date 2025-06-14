@@ -10,4 +10,5 @@
 
   border-radius: var(--border-radius-20);
   border: 2px solid var(--color-main-white);
+  white-space: nowrap;
 }
