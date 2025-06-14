@@ -5,28 +5,20 @@ import A_DropdownItem from '@/components/atoms/A_DropdownItem/A_DropdownItem'
 import styles from './C_DropdownItems.module.css'
 
 interface C_DropdownItemsProps {
-  items: {
-    id: string
-    title: string
-  }[]
-  activeItemId?: string
-  onItemClick?: (id: string) => void
+  items: string[]
+  activeItem?: string
+  onItemClick?: (item: string) => void
 }
 
-export default function C_DropdownItems({
-  items,
-  activeItemId,
-  onItemClick,
-}: C_DropdownItemsProps) {
+export default function C_DropdownItems({ items, activeItem, onItemClick }: C_DropdownItemsProps) {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.plate}></div>
+    <div className={styles.list}>
       {items.map(item => (
         <A_DropdownItem
-          key={item.id}
-          title={item.title}
-          isActive={item.id === activeItemId}
-          onClick={() => onItemClick?.(item.id)}
+          key={item}
+          title={item}
+          isActive={activeItem === item}
+          onClick={() => onItemClick?.(item)}
         />
       ))}
     </div>
