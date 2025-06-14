@@ -12,15 +12,19 @@ interface C_DropdownItemsProps {
 
 export default function C_DropdownItems({ items, activeItem, onItemClick }: C_DropdownItemsProps) {
   return (
-    <div className={styles.list}>
-      {items.map(item => (
-        <A_DropdownItem
-          key={item}
-          title={item}
-          isActive={activeItem === item}
-          onClick={() => onItemClick?.(item)}
-        />
-      ))}
+    <div className={styles.wrapper}>
+      <div className={styles.plate}></div>
+      <ul className={styles.list}>
+        {items.map(item => (
+          <A_DropdownItem
+            key={item}
+            title={item}
+            isActive={activeItem === item}
+            onClick={() => onItemClick?.(item)}
+            data-cursor-type='radio'
+          />
+        ))}
+      </ul>
     </div>
   )
 }

@@ -48,7 +48,7 @@ mark {
   background: transparent;
 }
 
-.page{
+.page {
   position: relative;
 
   display: flex;
@@ -60,7 +60,7 @@ mark {
   min-height: 100vh;
 }
 
-.header_content_gap{
+.header_content_gap {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,7 +69,7 @@ mark {
   width: 100%;
 }
 
-.header_tests_content_gap{
+.header_tests_content_gap {
   display: flex;
   flex-direction: column;
   align-items: center;

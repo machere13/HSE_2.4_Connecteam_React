@@ -101,7 +101,8 @@
 }
 
 @media (max-width: 720px) {
-  .big, .standard {
+  .big,
+  .standard {
     width: 100%;
   }
 }
