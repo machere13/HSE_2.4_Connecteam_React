@@ -16,7 +16,7 @@ export default function W_StickersContainer({ initialCount = 2 }: W_StickersCont
       id: `sticker-${index}`,
       position: {
         x: Math.random() * (window.innerWidth - 200),
-        y: Math.random() * (document.documentElement.scrollHeight - 200),
+        y: Math.random() * (window.innerHeight - 200),
       },
       text: '',
     }))

@@ -75,36 +75,38 @@ export default function TestPage({ test }: { test: TestData }) {
   }
 
   return (
-    <div>
-      <SO_Header />
-      <Q_Grid variant='gray' />
-      <div>
-        {showResults ? (
-          <W_TestResults
-            result={getResult()}
-            score={score}
-            totalQuestions={test.content.questions.length}
-            onRestart={() => {
-              setCurrentQuestionIndex(0)
-              setScore(0)
-              setShowResults(false)
-              setSelectedAnswers([])
-            }}
-          />
-        ) : (
-          <W_TestQuestionContent
-            currentNumber={currentQuestionIndex + 1}
-            totalQuestions={test.content.questions.length}
-            title={test.content.questions[currentQuestionIndex].title}
-            answers={test.content.questions[currentQuestionIndex].answers}
-            selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
-            isLastQuestion={currentQuestionIndex === test.content.questions.length - 1}
-            onAnswerSelect={answerIndex => handleAnswerSelect(currentQuestionIndex, answerIndex)}
-            onNext={handleNextQuestion}
-            onBack={handleBack}
-          />
-        )}
+    <div className='page'>
+      <div className='header_tests_content_gap'>
+        <SO_Header />
+        <div className='height_100'>
+          {showResults ? (
+            <W_TestResults
+              result={getResult()}
+              score={score}
+              totalQuestions={test.content.questions.length}
+              onRestart={() => {
+                setCurrentQuestionIndex(0)
+                setScore(0)
+                setShowResults(false)
+                setSelectedAnswers([])
+              }}
+            />
+          ) : (
+            <W_TestQuestionContent
+              currentNumber={currentQuestionIndex + 1}
+              totalQuestions={test.content.questions.length}
+              title={test.content.questions[currentQuestionIndex].title}
+              answers={test.content.questions[currentQuestionIndex].answers}
+              selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
+              isLastQuestion={currentQuestionIndex === test.content.questions.length - 1}
+              onAnswerSelect={answerIndex => handleAnswerSelect(currentQuestionIndex, answerIndex)}
+              onNext={handleNextQuestion}
+              onBack={handleBack}
+            />
+          )}
+        </div>
       </div>
+      <Q_Grid variant='gray' />
       <O_Footer />
     </div>
   )

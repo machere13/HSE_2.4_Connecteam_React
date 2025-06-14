@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: var(--spacing-15);
 
   width: 100%;
@@ -8,8 +8,15 @@
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: var(--spacing-15);
+
+  width: 100%;
+}
+
+.content > :last-child {
+  margin-left: auto;
+  align-self: flex-start;
 }
 
 .title {

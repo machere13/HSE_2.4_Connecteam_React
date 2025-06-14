@@ -22,9 +22,9 @@ export default function W_TestQuestionHeading({
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <A_TestQuestionNumberTag currentNumber={currentNumber} totalQuestions={totalQuestions} />
-        <h3 className={styles.title}>{title}</h3>
+        <A_BackButton onClick={onBack}>Вернуться назад</A_BackButton>
       </div>
-      <A_BackButton onClick={onBack}>Вернуться назад</A_BackButton>
+      <h3 className={styles.title}>{title}</h3>
     </div>
   )
 }
