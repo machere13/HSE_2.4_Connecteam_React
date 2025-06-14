@@ -1,5 +1,6 @@
 import React from 'react'
 
+import ArrowIcon from '@/assets/icons/ArrowIcon.svg'
 import BurgerMenuIcon from '@/assets/icons/BurgerMenuIcon.svg'
 import CloseIcon from '@/assets/icons/CloseIcon.svg'
 import CopyLinkIcon from '@/assets/icons/CopyLinkIcon.svg'
@@ -32,6 +33,7 @@ import YoutubeIcon from '@/assets/icons/YoutubeIcon.svg'
 
 export type Q_IconProps = {
   name:
+    | 'arrowIcon'
     | 'logoFull'
     | 'logoShort'
     | 'searchIcon'
@@ -79,6 +81,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
   viewBox,
 }) => {
   const icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
+    arrowIcon: ArrowIcon,
     logoFull: LogoFull,
     logoShort: LogoShort,
     searchIcon: SearchIcon,

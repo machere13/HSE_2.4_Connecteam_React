@@ -1,0 +1,41 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-15);
+
+    width: 100%;
+
+    padding: var(--spacing-15) var(--spacing-20);
+
+    background: var(--color-main-main-white);
+    border-radius: var(--border-radius-20);
+
+    transition: all 0.2s;
+}
+
+.wrapper:hover {
+    background: var(--color-light-blue);
+}
+
+.wrapper:active {
+    color: var(--color-main-white);
+  
+    background: var(--color-main-blue);
+}
+
+.wrapper svg path{
+    transition: all .2s;
+}
+
+.wrapper:active svg path {
+    stroke: var(--color-main-white);
+}
+
+.wrapper svg {
+    transition: transform 0.2s;
+}
+
+.wrapper.active svg {
+    transform: rotate(180deg);
+}
