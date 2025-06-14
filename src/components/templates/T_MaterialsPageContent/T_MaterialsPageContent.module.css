@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-45);
+
+    width: 100%;
+
+    max-width: var(--max-width-content);
+
+    padding: var(--spacing-25) var(--spacing-50) var(--spacing-45);
+}
+
+.heading_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-25);
+
+    width: 100%;
+}

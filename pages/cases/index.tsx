@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
 import { getCases } from '@/api/getCases'
+import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import T_MaterialsPageContent from '@/components/templates/T_MaterialsPageContent/T_MaterialsPageContent'
 import W_CaseCards from '@/components/wrappers/W_CaseCards/W_CaseCards'
-import W_FilterTags from '@/components/wrappers/W_FilterTags/W_FilterTags'
-import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 
 import type { CaseData } from '@/types/case'
 import type { GetStaticProps } from 'next'
@@ -42,19 +42,20 @@ export default function CasesPage({ cases }: { cases: CaseData[] }) {
   }
 
   return (
-    <div>
-      <SO_Header />
-      <Q_Grid variant='gray' />
-      <div>
-        <h1>Все кейсы</h1>
-        <W_FilterTags
-          tags={uniqueFilters}
-          activeTags={activeFilters}
-          onTagClick={handleFilterClick}
-        />
-        <W_CaseCards cases={cases} activeFilters={activeFilters} />
-        <W_StickersContainer />
+    <div className='page'>
+      <div className='header_content_gap'>
+        <SO_Header />
+        <T_MaterialsPageContent
+          title='Кейсы'
+          filters={uniqueFilters}
+          activeFilters={activeFilters}
+          onFilterClick={handleFilterClick}
+        >
+          <W_CaseCards cases={cases} activeFilters={activeFilters} />
+        </T_MaterialsPageContent>
       </div>
+      <Q_Grid variant='gray' />
+      <O_Footer />
     </div>
   )
 }
