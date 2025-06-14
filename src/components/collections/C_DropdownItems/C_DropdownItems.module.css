@@ -7,8 +7,12 @@ z-index: 100;
 
   width: 100%;
 
+max-height: 160px;
+
   background: var(--color-main-main-white);
   border-radius: var(--border-radius-20);
+overflow-y: scroll;
+scrollbar-width: none;
 }
 
 .plate {
