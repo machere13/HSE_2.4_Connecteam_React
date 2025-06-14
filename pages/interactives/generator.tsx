@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-import Link from 'next/link'
-
+import { getGeneratorParameters } from '@/api/getGeneratorParameters'
+import A_BackButton from '@/components/atoms/A_BackButton/A_BackButton'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
-import W_Dropdown from '@/components/wrappers/W_Dropdown/W_Dropdown'
 import W_GeneratorAmountSetting from '@/components/wrappers/W_GeneratorAmountSetting/W_GeneratorAmountSetting'
+import W_GeneratorGoalSetting from '@/components/wrappers/W_GeneratorGoalSetting/W_GeneratorGoalSetting'
 import W_GeneratorModeSetting from '@/components/wrappers/W_GeneratorModeSetting/W_GeneratorModeSetting'
 import W_GeneratorTimeSetting from '@/components/wrappers/W_GeneratorTimeSetting/W_GeneratorTimeSetting'
 
+import type { GeneratorParameters } from '@/types/generator'
+
 export default function GeneratorPage() {
-  const modeOptions = ['Режим 1', 'Режим 2', 'Режим 3']
-  const amountOptions = ['1 идея', '3 идеи', '5 идей']
-  const timeOptions = ['5 минут', '10 минут', '15 минут']
+  const [parameters, setParameters] = useState<GeneratorParameters | null>(null)
+
+  useEffect(() => {
+    const fetchParameters = async () => {
+      try {
+        const data = await getGeneratorParameters()
+        setParameters(data)
+      } catch (error) {
+        console.error('Failed to fetch generator parameters:', error)
+      }
+    }
+
+    fetchParameters()
+  }, [])
 
   const handleModeSelect = (option: string) => {
     console.log('Selected mode:', option)
@@ -25,16 +38,24 @@ export default function GeneratorPage() {
     console.log('Selected time:', option)
   }
 
+  const handleGoalSelect = (option: string) => {
+    console.log('Selected goal:', option)
+  }
+
+  if (!parameters) {
+    return <div>Loading...</div>
+  }
+
   return (
     <div>
       <SO_Header />
       <div>
-        <W_GeneratorModeSetting options={modeOptions} onSelect={handleModeSelect} />
-        <W_GeneratorAmountSetting options={amountOptions} onSelect={handleAmountSelect} />
-        <W_GeneratorTimeSetting options={timeOptions} onSelect={handleTimeSelect} />
-        <W_Dropdown title='Выберите опцию' items={['Опция 1', 'Опция 2', 'Опция 3']} />
+        <W_GeneratorGoalSetting options={parameters.purpose} onSelect={handleGoalSelect} />
+        <W_GeneratorModeSetting options={parameters.format} onSelect={handleModeSelect} />
+        <W_GeneratorAmountSetting options={parameters.teamSize} onSelect={handleAmountSelect} />
+        <W_GeneratorTimeSetting options={parameters.duration} onSelect={handleTimeSelect} />
       </div>
-      <Link href='/interactives'>Назад</Link>
+      <A_BackButton />
     </div>
   )
 }
