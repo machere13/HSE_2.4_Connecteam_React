@@ -35,3 +35,9 @@
     background: var(--color-light-blue);
   }
 }
+
+.wrapper:active {
+  color: var(--color-main-white);
+
+  background: var(--color-main-blue);
+}
