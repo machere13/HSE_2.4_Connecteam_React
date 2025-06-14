@@ -14,10 +14,32 @@ export interface GeneratorIdea {
     category: string[]
     format: string[]
   }
-  content: {
-    type: string
-    text?: string
-    title?: string
-    items?: string[] | { title: string; description: string }[]
-  }[]
+  content: (
+    | {
+        type: 'heading-3'
+        text: string
+      }
+    | {
+        type: 'titleParagraph'
+        title: string
+        text: string
+      }
+    | {
+        type: 'purpleBox'
+        title: string
+        text: string
+      }
+    | {
+        type: 'textList'
+        title: string
+        items: string[]
+      }
+    | {
+        type: 'cardList'
+        items: {
+          title: string
+          description: string
+        }[]
+      }
+  )[]
 }

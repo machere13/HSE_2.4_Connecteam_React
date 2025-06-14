@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import W_Dropdown from '../W_Dropdown/W_Dropdown'
 
@@ -15,21 +15,14 @@ export default function W_GeneratorGoalSetting({
   selectedOption,
   onSelect,
 }: W_GeneratorGoalSettingProps) {
-  const [selected, setSelected] = useState<string | undefined>(selectedOption)
-
-  const handleSelect = (option: string) => {
-    setSelected(option)
-    onSelect(option)
-  }
-
   return (
     <div className={styles.wrapper}>
       <p>Цель тимбилдинга</p>
       <W_Dropdown
-        title={selected || 'Выберите цель'}
+        title={selectedOption || 'Выберите цель'}
         items={options}
-        activeItem={selected}
-        onItemSelect={handleSelect}
+        activeItem={selectedOption}
+        onItemSelect={onSelect}
       />
     </div>
   )

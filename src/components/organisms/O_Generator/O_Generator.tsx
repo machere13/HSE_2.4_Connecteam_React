@@ -11,8 +11,16 @@ import styles from './O_Generator.module.css'
 
 import type { GeneratorParameters } from '@/types/generator'
 
-export default function O_Generator() {
+interface O_GeneratorProps {
+  onGenerate: (params: { amount: string; goal: string; time: string; mode: string }) => void
+}
+
+export default function O_Generator({ onGenerate }: O_GeneratorProps) {
   const [parameters, setParameters] = useState<GeneratorParameters | null>(null)
+  const [selectedAmount, setSelectedAmount] = useState<string>()
+  const [selectedGoal, setSelectedGoal] = useState<string>()
+  const [selectedTime, setSelectedTime] = useState<string>()
+  const [selectedMode, setSelectedMode] = useState<string>()
 
   useEffect(() => {
     const fetchParameters = async () => {
@@ -28,35 +36,67 @@ export default function O_Generator() {
   }, [])
 
   const handleModeSelect = (option: string) => {
-    console.log('Selected mode:', option)
+    setSelectedMode(option)
   }
 
   const handleAmountSelect = (option: string) => {
-    console.log('Selected amount:', option)
+    setSelectedAmount(option)
   }
 
   const handleTimeSelect = (option: string) => {
-    console.log('Selected time:', option)
+    setSelectedTime(option)
   }
 
   const handleGoalSelect = (option: string) => {
-    console.log('Selected goal:', option)
+    setSelectedGoal(option)
   }
 
+  const handleGenerateClick = () => {
+    if (selectedAmount && selectedGoal && selectedTime && selectedMode) {
+      onGenerate({
+        amount: selectedAmount,
+        goal: selectedGoal,
+        time: selectedTime,
+        mode: selectedMode,
+      })
+    }
+  }
+
+  const isGenerateButtonDisabled =
+    !selectedAmount || !selectedGoal || !selectedTime || !selectedMode
+
   if (!parameters) {
-    return <div>Loading...</div>
+    return null
   }
 
   return (
     <div className={styles.wrapper}>
       <h3>Генератор тимбилдингов</h3>
       <div className={styles.settings}>
-        <W_GeneratorAmountSetting options={parameters.teamSize} onSelect={handleAmountSelect} />
-        <W_GeneratorGoalSetting options={parameters.purpose} onSelect={handleGoalSelect} />
-        <W_GeneratorTimeSetting options={parameters.duration} onSelect={handleTimeSelect} />
-        <W_GeneratorModeSetting options={parameters.format} onSelect={handleModeSelect} />
+        <W_GeneratorAmountSetting
+          options={parameters.teamSize}
+          selectedOption={selectedAmount}
+          onSelect={handleAmountSelect}
+        />
+        <W_GeneratorGoalSetting
+          options={parameters.purpose}
+          selectedOption={selectedGoal}
+          onSelect={handleGoalSelect}
+        />
+        <W_GeneratorTimeSetting
+          options={parameters.duration}
+          selectedOption={selectedTime}
+          onSelect={handleTimeSelect}
+        />
+        <W_GeneratorModeSetting
+          options={parameters.format}
+          selectedOption={selectedMode}
+          onSelect={handleModeSelect}
+        />
       </div>
-      <A_HandleButton>Сгенерировать</A_HandleButton>
+      <A_HandleButton disabled={isGenerateButtonDisabled} onClick={handleGenerateClick}>
+        Сгенерировать
+      </A_HandleButton>
     </div>
   )
 }
