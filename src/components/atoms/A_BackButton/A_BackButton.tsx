@@ -1,7 +1,7 @@
 import React from 'react'
 
 import cn from 'classnames'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import styles from './A_BackButton.module.css'
 
@@ -20,19 +20,24 @@ export default function A_BackButton({
   children = 'Вернуться назад',
   variant = 'orange',
 }: A_BackButtonProps) {
-  const buttonContent = (
+  const router = useRouter()
+
+  const handleClick = async () => {
+    if (onClick) {
+      onClick()
+    }
+    if (href) {
+      await router.replace(href)
+    }
+  }
+
+  return (
     <button
       className={cn(styles.wrapper, 'text_button_l', styles[variant])}
-      onClick={onClick}
+      onClick={handleClick}
       type='button'
     >
       {children}
     </button>
   )
-
-  if (href) {
-    return <Link href={href}>{buttonContent}</Link>
-  }
-
-  return buttonContent
 }

@@ -13,6 +13,9 @@ import ErrorCode502Icon from '@/assets/icons/ErrorIcons/Q_ErrorCode/Code502.svg'
 import ErrorCode505Icon from '@/assets/icons/ErrorIcons/Q_ErrorCode/Code505.svg'
 import ErrorSignature403Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature403.svg'
 import ErrorSignature404Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature404.svg'
+import ErrorSignature404ArticleIcon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature404Article.svg'
+import ErrorSignature404CaseIcon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature404Case.svg'
+import ErrorSignature404TestIcon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature404Test.svg'
 import ErrorSignature418Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature418.svg'
 import ErrorSignature500Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature500.svg'
 import ErrorSignature502Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature502.svg'
@@ -54,6 +57,9 @@ export type Q_IconProps = {
     | 'errorCode505Icon'
     | 'errorSignature403Icon'
     | 'errorSignature404Icon'
+    | 'errorSignature404TestIcon'
+    | 'errorSignature404ArticleIcon'
+    | 'errorSignature404CaseIcon'
     | 'errorSignature418Icon'
     | 'errorSignature500Icon'
     | 'errorSignature502Icon'
@@ -102,6 +108,9 @@ const Q_Icon: React.FC<Q_IconProps> = ({
     errorCode505Icon: ErrorCode505Icon,
     errorSignature403Icon: ErrorSignature403Icon,
     errorSignature404Icon: ErrorSignature404Icon,
+    errorSignature404TestIcon: ErrorSignature404TestIcon,
+    errorSignature404ArticleIcon: ErrorSignature404ArticleIcon,
+    errorSignature404CaseIcon: ErrorSignature404CaseIcon,
     errorSignature418Icon: ErrorSignature418Icon,
     errorSignature500Icon: ErrorSignature500Icon,
     errorSignature502Icon: ErrorSignature502Icon,

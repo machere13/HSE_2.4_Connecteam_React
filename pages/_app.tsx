@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import A_UserCursor from '@/components/atoms/A_UserCursor/A_UserCursor'
 import Q_ScrollBar from '@/components/quarks/Q_ScrollBar/Q_ScrollBar'
 import { initGA, logPageView } from '@/lib/analytics'
-import { Error418Provider } from '@/providers/Error418Provider'
+import { ErrorProvider } from '@/providers/ErrorProvider'
 
 import type { AppProps } from 'next/app'
 
@@ -45,9 +45,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <A_UserCursor />
       <Q_ScrollBar />
-      <Error418Provider>
+      <ErrorProvider>
         <Component {...pageProps} />
-      </Error418Provider>
+      </ErrorProvider>
     </>
   )
 }
