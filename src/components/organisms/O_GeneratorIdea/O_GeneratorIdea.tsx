@@ -13,11 +13,9 @@ interface O_GeneratorIdeaProps {
 export default function O_GeneratorIdea({ idea }: O_GeneratorIdeaProps) {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.content}>
-        {idea.content.map((block, index) => (
-          <GeneratorBlockRenderer key={index} block={block} index={index} />
-        ))}
-      </div>
+      {idea.content.map((block, index) => (
+        <GeneratorBlockRenderer key={index} block={block} index={index} />
+      ))}
     </div>
   )
 }

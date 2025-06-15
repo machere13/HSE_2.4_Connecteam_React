@@ -3,7 +3,7 @@ import A_MaterialParagraph from '../components/atoms/A_MaterialParagraph/A_Mater
 import C_ArticleExampleItems from '../components/collections/C_ArticleExampleItems/C_ArticleExampleItems'
 import C_Tags from '../components/collections/C_Tags/C_Tags'
 import M_ArticleMoreInCaseBlock from '../components/molecules/M_ArticleMoreInCaseBlock/M_ArticleMoreInCaseBlock'
-import M_CaseTitleParagraph from '../components/molecules/M_CaseTitleParagraph/M_CaseTitleParagraph'
+import M_CaseTitleParagraph from '../components/molecules/M_CaseTitleParagraph/M_TitleParagraph'
 import M_MatetialImageBlock from '../components/molecules/M_MaterialImageBlock/M_MaterialImageBlock'
 import M_MaterialTelegramBlock from '../components/molecules/M_MaterialTelegramBlock/M_MaterialTelegramBlock'
 import M_MaterialVideoBlock from '../components/molecules/M_MaterialVideoBlock/M_MaterialVideoBlock'

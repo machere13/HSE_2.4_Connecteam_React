@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import O_Generator from '@/components/organisms/O_Generator/O_Generator'
 import O_GeneratorIdea from '@/components/organisms/O_GeneratorIdea/O_GeneratorIdea'
+import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import mockedData from '@/mocks/mocked-data/mocked-generator.json'
 
@@ -72,11 +73,12 @@ export default function GeneratorPage() {
   }
 
   return (
-    <>
+    <div className='page'>
       <SO_Header />
       <O_Generator onGenerate={handleGenerate} />
       {selectedIdea && <O_GeneratorIdea idea={selectedIdea} />}
+      <Q_Grid variant='gray' />
       <O_Footer />
-    </>
+    </div>
   )
 }
