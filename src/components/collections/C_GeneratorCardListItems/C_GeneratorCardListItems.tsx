@@ -13,12 +13,12 @@ export interface C_GeneratorCardListItemsProps {
 
 export default function C_GeneratorCardListItems({ items }: C_GeneratorCardListItemsProps) {
   return (
-    <ul className={styles.wrapper}>
+    <div className={styles.wrapper}>
       {items.map((item, index) => {
         const { bgColor, rotate } = getGeneratorCardVariant({ itemIndex: index })
 
         return <M_GeneratorCardListItem key={index} {...item} bgColor={bgColor} rotate={rotate} />
       })}
-    </ul>
+    </div>
   )
 }
