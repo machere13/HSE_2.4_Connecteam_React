@@ -1,8 +1,8 @@
 import React from 'react'
 
-import A_GeneratorPointedItem from '@/components/atoms/A_GeneratorPointedItem/A_GeneratorPointedItem'
 import M_TitleParagraph from '@/components/molecules/M_CaseTitleParagraph/M_TitleParagraph'
 import M_PurpleBox from '@/components/molecules/M_PurpleBox/M_PurpleBox'
+import W_GeneratorPointedSection from '@/components/wrappers/W_GeneratorPointedSection/W_GeneratorPointedSection'
 
 import type { GeneratorIdea } from '@/types/generator'
 
@@ -27,13 +27,7 @@ export default function GeneratorBlockRenderer({
     case 'purpleBox':
       return <M_PurpleBox title={block.title} text={block.text} />
     case 'textList':
-      return (
-        <ul className={styles.textList}>
-          {block.items.map((item, itemIndex) => (
-            <A_GeneratorPointedItem key={itemIndex} text={item} />
-          ))}
-        </ul>
-      )
+      return <W_GeneratorPointedSection items={block.items} title={block.title} />
     case 'cardList':
       return (
         <div className={styles.cardList}>
