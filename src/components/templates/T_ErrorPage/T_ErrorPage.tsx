@@ -7,16 +7,18 @@ import W_ErrorBlock from '@/components/wrappers/W_ErrorBlock/W_ErrorBlock'
 
 import styles from './T_ErrorPage.module.css'
 
+import type { ErrorType } from '@/types/error'
+
 interface T_ErrorPageProps {
-  errorType?: '403' | '404' | '418' | '500' | '502' | '505'
+  errorType?: ErrorType
   onClose?: () => void
 }
 
-export default function T_ErrorPage({ errorType = '404', onClose }: T_ErrorPageProps) {
+export default function T_ErrorPage({ errorType = '404' }: T_ErrorPageProps) {
   return (
     <div className={styles.wrapper}>
       <SO_Header />
-      <W_ErrorBlock errorType={errorType} onClose={onClose} />
+      <W_ErrorBlock errorType={errorType} />
       <Q_Grid variant='gray' />
       <O_Footer />
     </div>
