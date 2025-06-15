@@ -33,6 +33,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next-sitemap.config.js"
-  ],
+, "src/components/wrappers/W_GeneratorPointedSection/W_GeneratorPointedSectiontsx"  ],
   "exclude": ["node_modules"]
 }
