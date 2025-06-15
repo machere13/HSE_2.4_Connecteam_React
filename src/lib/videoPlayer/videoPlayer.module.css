@@ -180,29 +180,29 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.wrapper:hover .controls {
-		opacity: 1;
-	}
+  .wrapper:hover .controls {
+    opacity: 1;
+  }
 
-	.play_button:hover,
-    .volume_button:hover,
-    .fullscreen_button:hover {
-		color: var(--color-main-white);
+  .play_button:hover,
+  .volume_button:hover,
+  .fullscreen_button:hover {
+    color: var(--color-main-white);
 
-		transform: scale(1.1);
-	}
+    transform: scale(1.1);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.wrapper:active .controls {
-		opacity: 1;
-	}
+  .wrapper:active .controls {
+    opacity: 1;
+  }
 
-	.play_button:active,
-    .volume_button:active,
-    .fullscreen_button:active {
-		color: var(--color-main-white);
+  .play_button:active,
+  .volume_button:active,
+  .fullscreen_button:active {
+    color: var(--color-main-white);
 
-		transform: scale(1.1);
-	}
+    transform: scale(1.1);
+  }
 }

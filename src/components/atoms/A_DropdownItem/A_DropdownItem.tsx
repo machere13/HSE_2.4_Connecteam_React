@@ -16,6 +16,7 @@ export default function A_DropdownItem({ title, isActive = false, onClick }: A_D
       className={cn(styles.wrapper, isActive && styles.active)}
       onClick={onClick}
       type='button'
+      data-cursor-type='radio'
     >
       <span className='text_body_1'>{title}</span>
     </button>

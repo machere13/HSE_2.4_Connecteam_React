@@ -1,61 +1,80 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
-import { getGeneratorParameters } from '@/api/getGeneratorParameters'
-import A_BackButton from '@/components/atoms/A_BackButton/A_BackButton'
+import O_Generator from '@/components/organisms/O_Generator/O_Generator'
+import O_GeneratorIdea from '@/components/organisms/O_GeneratorIdea/O_GeneratorIdea'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
-import W_GeneratorAmountSetting from '@/components/wrappers/W_GeneratorAmountSetting/W_GeneratorAmountSetting'
-import W_GeneratorGoalSetting from '@/components/wrappers/W_GeneratorGoalSetting/W_GeneratorGoalSetting'
-import W_GeneratorModeSetting from '@/components/wrappers/W_GeneratorModeSetting/W_GeneratorModeSetting'
-import W_GeneratorTimeSetting from '@/components/wrappers/W_GeneratorTimeSetting/W_GeneratorTimeSetting'
+import mockedData from '@/mocks/mocked-data/mocked-generator.json'
 
-import type { GeneratorParameters } from '@/types/generator'
+import type { GeneratorIdea } from '@/types/generator'
 
 export default function GeneratorPage() {
-  const [parameters, setParameters] = useState<GeneratorParameters | null>(null)
+  const [selectedIdea, setSelectedIdea] = useState<GeneratorIdea | null>(null)
 
-  useEffect(() => {
-    const fetchParameters = async () => {
-      try {
-        const data = await getGeneratorParameters()
-        setParameters(data)
-      } catch (error) {
-        console.error('Failed to fetch generator parameters:', error)
-      }
+  const handleGenerate = (params: { amount: string; goal: string; time: string; mode: string }) => {
+    const bestMatch = mockedData.ideas.find(idea => {
+      const matchesAmount = idea.matches.teamSize.includes(params.amount)
+      const matchesGoal = idea.matches.category.includes(params.goal)
+      const matchesTime = idea.matches.duration.includes(params.time)
+      const matchesMode = idea.matches.format.includes(params.mode)
+
+      return matchesAmount && matchesGoal && matchesTime && matchesMode
+    })
+
+    if (bestMatch) {
+      setSelectedIdea({
+        id: bestMatch.id,
+        title: bestMatch.title,
+        matches: bestMatch.matches,
+        content: bestMatch.content.map(block => {
+          switch (block.type) {
+            case 'heading-3':
+              return { type: 'heading-3' as const, text: block.text || '' }
+            case 'titleParagraph':
+              return {
+                type: 'titleParagraph' as const,
+                title: block.title || '',
+                text: block.text || '',
+              }
+            case 'purpleBox':
+              return {
+                type: 'purpleBox' as const,
+                title: block.title || '',
+                text: block.text || '',
+              }
+            case 'textList':
+              return {
+                type: 'textList' as const,
+                title: block.title || '',
+                items: Array.isArray(block.items)
+                  ? block.items.filter((item): item is string => typeof item === 'string')
+                  : [],
+              }
+            case 'cardList':
+              return {
+                type: 'cardList' as const,
+                items: Array.isArray(block.items)
+                  ? block.items.filter(
+                      (item): item is { title: string; description: string } =>
+                        typeof item === 'object' &&
+                        item !== null &&
+                        'title' in item &&
+                        'description' in item,
+                    )
+                  : [],
+              }
+            default:
+              throw new Error(`Unknown block type: ${block.type}`)
+          }
+        }),
+      })
     }
-
-    fetchParameters()
-  }, [])
-
-  const handleModeSelect = (option: string) => {
-    console.log('Selected mode:', option)
-  }
-
-  const handleAmountSelect = (option: string) => {
-    console.log('Selected amount:', option)
-  }
-
-  const handleTimeSelect = (option: string) => {
-    console.log('Selected time:', option)
-  }
-
-  const handleGoalSelect = (option: string) => {
-    console.log('Selected goal:', option)
-  }
-
-  if (!parameters) {
-    return <div>Loading...</div>
   }
 
   return (
-    <div>
+    <>
       <SO_Header />
-      <div>
-        <W_GeneratorGoalSetting options={parameters.purpose} onSelect={handleGoalSelect} />
-        <W_GeneratorModeSetting options={parameters.format} onSelect={handleModeSelect} />
-        <W_GeneratorAmountSetting options={parameters.teamSize} onSelect={handleAmountSelect} />
-        <W_GeneratorTimeSetting options={parameters.duration} onSelect={handleTimeSelect} />
-      </div>
-      <A_BackButton />
-    </div>
+      <O_Generator onGenerate={handleGenerate} />
+      {selectedIdea && <O_GeneratorIdea idea={selectedIdea} />}
+    </>
   )
 }
