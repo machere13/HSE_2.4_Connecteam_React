@@ -1,0 +1,51 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+
+    width: 100%;
+
+    padding: var(--spacing-30);
+
+    border-radius: var(--border-radius-15);
+
+    transition: all 0.2s;
+}
+
+.bg_gray{
+    color: var(--color-main-black);
+
+    background: var(--color-main-main-white);
+}
+
+.bg_pink {
+  color: var(--color-main-white);
+
+  background: var(--color-main-pink);
+}
+
+.bg_purple{
+    color: var(--color-main-white);
+
+    background: var(--color-main-purple);
+}
+
+.rotate_right{
+    transform: rotate(2deg);
+}
+
+.rotate_none{
+    transform: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .rotate_right:hover {
+      transform: rotate(0);
+    }
+  }
+  
+  @media (hover: none) and (pointer: coarse) {
+    .rotate_right:active {
+      transform: rotate(0);
+    }
+  }

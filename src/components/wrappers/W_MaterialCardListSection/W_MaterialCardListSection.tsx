@@ -2,7 +2,7 @@ import React from 'react'
 
 import cn from 'classnames'
 
-import C_CardListItems from '@/components/collections/C_MaterialCardListItems/C_MaterialCardListItems'
+import C_MaterialCardListItems from '@/components/collections/C_MaterialCardListItems/C_MaterialCardListItems'
 
 import styles from './W_MaterialCardListSection.module.css'
 
@@ -29,7 +29,7 @@ export default function W_MaterialCardListSection({
       ) : (
         <h2 className={styles.title}>{title}</h2>
       )}
-      <C_CardListItems items={items} variant={variant} />
+      <C_MaterialCardListItems items={items} variant={variant} />
     </section>
   )
 }
