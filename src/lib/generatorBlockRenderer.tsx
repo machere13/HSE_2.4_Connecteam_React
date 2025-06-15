@@ -1,5 +1,7 @@
 import React from 'react'
 
+import M_PurpleBox from '@/components/molecules/M_PurpleBox/M_PurpleBox'
+
 import type { GeneratorIdea } from '@/types/generator'
 
 import styles from '@/components/organisms/O_GeneratorIdea/O_GeneratorIdea.module.css'
@@ -21,11 +23,7 @@ export default function GeneratorBlockRenderer({
     case 'titleParagraph':
       return <p className={styles.titleParagraph}>{block.text}</p>
     case 'purpleBox':
-      return (
-        <div className={styles.purpleBox}>
-          <p>{block.text}</p>
-        </div>
-      )
+      return <M_PurpleBox title={block.title} text={block.text} />
     case 'textList':
       return (
         <ul className={styles.textList}>

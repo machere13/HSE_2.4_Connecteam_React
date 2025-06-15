@@ -1,0 +1,13 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-15);
+
+    padding: var(--spacing-30);
+
+    color: var(--color-main-white);
+
+    background: var(--color-main-purple);
+
+    border-radius: var(--border-radius-15);
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import O_Generator from '@/components/organisms/O_Generator/O_Generator'
 import O_GeneratorIdea from '@/components/organisms/O_GeneratorIdea/O_GeneratorIdea'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
@@ -75,6 +76,7 @@ export default function GeneratorPage() {
       <SO_Header />
       <O_Generator onGenerate={handleGenerate} />
       {selectedIdea && <O_GeneratorIdea idea={selectedIdea} />}
+      <O_Footer />
     </>
   )
 }
