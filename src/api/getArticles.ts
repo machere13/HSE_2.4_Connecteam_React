@@ -10,10 +10,20 @@ export const getArticles = async (): Promise<ArticleData[]> => {
     return mockedArticles
   }
 
-  const response = await fetch(`/api/articles`)
-  if (!response.ok) {
-    throw new Error(`getArticles failed: ${response.status}`)
-  }
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+    const response = await fetch(`${baseUrl}/api/articles`)
+    console.log('API response status:', response.status)
 
-  return response.json()
+    if (!response.ok) {
+      console.error('API error:', response.status)
+      throw new Error(`getArticles failed: ${response.status}`)
+    }
+
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.error('Fetch error:', error)
+    throw error
+  }
 }
