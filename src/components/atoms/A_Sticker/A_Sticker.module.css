@@ -13,10 +13,6 @@
   background-repeat: no-repeat;
 }
 
-.wrapper:active {
-  cursor: grabbing;
-}
-
 .wrapper.error {
   position: static;
   cursor: default;
@@ -38,11 +34,6 @@
   background: none;
   border: none;
   touch-action: none;
-}
-
-.sticker:focus-visible {
-  outline: 2px solid #007bff;
-  outline-offset: 2px;
 }
 
 .background {
@@ -89,12 +80,4 @@
 
 .input::-webkit-scrollbar {
   display: none;
-}
-
-.input::placeholder {
-  color: rgb(0 0 0 / 50%);
-}
-
-.input:focus {
-  outline: none;
 }

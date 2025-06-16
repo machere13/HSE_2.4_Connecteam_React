@@ -8,6 +8,32 @@ body {
   cursor: none;
 }
 
+*:focus {
+  outline: 2px solid var(--color-main-purple);
+  outline-offset: 2px;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-main-purple);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:focus,
+[role="button"]:focus,
+[role="link"]:focus,
+[role="menuitem"]:focus,
+[role="option"]:focus,
+[role="tab"]:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-main-purple);
+  outline-offset: 2px;
+}
+
 video::-webkit-media-controls,
 video::-webkit-media-controls-panel,
 video::-webkit-media-controls-enclosure,
@@ -33,6 +59,12 @@ input {
   background: transparent;
   outline: 0;
   border: 0;
+}
+
+button:focus,
+input:focus {
+  outline: 2px solid var(--color-main-purple);
+  outline-offset: 2px;
 }
 
 html {
