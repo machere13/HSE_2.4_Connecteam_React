@@ -18,17 +18,15 @@ export default function W_MaterialHighlightedSection({
   titleType,
 }: W_MaterialHighlightedSectionProps) {
   return (
-    <section className={cn(styles.wrapper, styles[titleType])}>
-      <article>
-        {titleType === 'small' ? (
-          <h5 className={styles.title}>{title}</h5>
-        ) : (
-          <h2 className={styles.title}>{title}</h2>
-        )}
-        <ul>
-          <C_MaterialHighlightedItems items={items} />
-        </ul>
-      </article>
-    </section>
+    <article className={cn(styles.wrapper, styles[titleType])}>
+      {titleType === 'small' ? (
+        <h5 className={styles.title}>{title}</h5>
+      ) : (
+        <h2 className={styles.title}>{title}</h2>
+      )}
+      <ul>
+        <C_MaterialHighlightedItems items={items} />
+      </ul>
+    </article>
   )
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import styles from './A_MaterialHeading.module.css'
+
 interface A_MaterialHeadingProps {
   text: string
   level: 2 | 4
@@ -7,5 +9,5 @@ interface A_MaterialHeadingProps {
 
 export default function A_MaterialHeading({ text, level }: A_MaterialHeadingProps) {
   const TitleTag = level === 2 ? 'h2' : 'h4'
-  return <TitleTag>{text}</TitleTag>
+  return <TitleTag className={styles.wrapper}>{text}</TitleTag>
 }

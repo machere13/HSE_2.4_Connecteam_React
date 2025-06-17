@@ -1,9 +1,22 @@
 .wrapper {
   display: grid;
+  gap: var(--spacing-25);
+
+  width: 100%;
+  max-width: 100%;
 
   padding: var(--spacing-30);
 
   background: var(--color-main-white);
   border-radius: var(--border-radius-15);
-  grid-template-columns: 1fr 740px 1fr;
+  grid-template-columns: 1fr minmax(300px, 740px) 1fr;
+}
+
+@media (max-width: 740px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-15);
+    grid-template-columns: none;
+  }
 }

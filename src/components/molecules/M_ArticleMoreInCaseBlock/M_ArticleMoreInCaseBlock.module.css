@@ -4,6 +4,9 @@
   align-items: center;
   gap: var(--spacing-30);
 
+  width: 100%;
+  max-width: var(--max-width-item);
+
   padding: var(--spacing-30);
 
   color: var(--color-main-white);
@@ -14,4 +17,12 @@
 
 .wrapper > h3 {
   max-width: 350px;
+}
+
+@media (max-width: 430px) {
+  .wrapper{
+    flex-direction: column;
+
+    text-align: center;
+  }
 }
