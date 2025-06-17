@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 768px) {
-  .icon_wrapper{
+  .icon_wrapper {
     width: 56px;
     min-width: 56px;
 
@@ -43,7 +43,7 @@
 }
 
 @media (max-width: 560px) {
-  .wrapper{
+  .wrapper {
     flex-direction: column;
   }
 }

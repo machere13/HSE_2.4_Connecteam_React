@@ -28,9 +28,7 @@
   --color-grid-gray: rgb(226 226 226 / 100%);
   --color-grid-blue: rgb(113 64 255 / 100%);
   --color-background-disabled: rgb(230 230 230 / 100%);
-  --color-text-disabled: rgb(180 180 180 / 100%) 
-  
-  /* Spacing */;
+  --color-text-disabled: rgb(180 180 180 / 100%) /* Spacing */;
   --spacing-3: 3px;
   --spacing-5: 5px;
   --spacing-8: 8px;

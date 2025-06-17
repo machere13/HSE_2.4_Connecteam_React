@@ -5,6 +5,7 @@ import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
+import W_RecommendationsMaterials from '@/components/wrappers/W_RecommendationsMaterials/W_RecommendationsMaterials'
 import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
 
@@ -109,6 +110,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           </div>
         )}
       </div>
+      <W_RecommendationsMaterials />
       <W_StickersContainer />
       <Q_Grid variant='gray' />
       <O_Footer />

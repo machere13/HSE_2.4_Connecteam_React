@@ -23,11 +23,11 @@ body {
 }
 
 a:focus,
-[role="button"]:focus,
-[role="link"]:focus,
-[role="menuitem"]:focus,
-[role="option"]:focus,
-[role="tab"]:focus,
+[role='button']:focus,
+[role='link']:focus,
+[role='menuitem']:focus,
+[role='option']:focus,
+[role='tab']:focus,
 select:focus,
 textarea:focus {
   outline: 2px solid var(--color-main-purple);

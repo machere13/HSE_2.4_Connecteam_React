@@ -20,7 +20,7 @@
 }
 
 @media (max-width: 430px) {
-  .wrapper{
+  .wrapper {
     flex-direction: column;
 
     text-align: center;
