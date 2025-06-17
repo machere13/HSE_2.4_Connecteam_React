@@ -4,6 +4,9 @@
   align-items: center;
   gap: var(--spacing-30);
 
+  width: 100%;
+  max-width: var(--max-width-item);
+
   padding: var(--spacing-30);
 
   background: var(--color-main-white);
@@ -22,9 +25,25 @@
   align-items: center;
 
   width: 68px;
+  min-width: 68px;
 
   height: 68px;
 
   background: var(--color-main-blue);
   border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+  .icon_wrapper{
+    width: 56px;
+    min-width: 56px;
+
+    height: 56px;
+  }
+}
+
+@media (max-width: 560px) {
+  .wrapper{
+    flex-direction: column;
+  }
 }

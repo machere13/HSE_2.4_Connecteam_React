@@ -7,8 +7,6 @@ import W_GeneratorPointedSection from '@/components/wrappers/W_GeneratorPointedS
 
 import type { GeneratorIdea } from '@/types/generator'
 
-import styles from '@/components/organisms/O_GeneratorIdea/O_GeneratorIdea.module.css'
-
 type GeneratorBlock = GeneratorIdea['content'][number]
 
 interface GeneratorBlockRendererProps {
@@ -22,7 +20,7 @@ export default function GeneratorBlockRenderer({
 }: GeneratorBlockRendererProps) {
   switch (block.type) {
     case 'heading-3':
-      return <h3 className={styles.heading}>{block.text}</h3>
+      return <h3>{block.text}</h3>
     case 'titleParagraph':
       return <M_TitleParagraph title={block.title} text={block.text} />
     case 'purpleBox':

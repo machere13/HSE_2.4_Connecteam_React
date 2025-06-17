@@ -2,6 +2,7 @@
   position: relative;
 
   width: 100%;
+  max-width: var(--max-width-item);
 
   height: 450px;
 

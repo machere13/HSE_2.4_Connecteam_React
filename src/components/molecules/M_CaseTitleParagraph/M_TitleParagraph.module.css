@@ -4,4 +4,5 @@
   gap: var(--spacing-15);
 
   width: 100%;
+  max-width: var(--max-width-item);
 }
