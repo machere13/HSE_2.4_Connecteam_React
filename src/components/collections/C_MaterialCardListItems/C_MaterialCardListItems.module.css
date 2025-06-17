@@ -5,7 +5,7 @@
 }
 
 @media (max-width: 768px) {
-  .wrapper{
+  .wrapper {
     display: flex;
     flex-direction: column;
   }

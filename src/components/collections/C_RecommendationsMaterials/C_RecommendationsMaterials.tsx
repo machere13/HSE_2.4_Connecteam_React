@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 import { getArticles } from '@/api/getArticles'
 import { getCases } from '@/api/getCases'
-import M_ArticleCard from '@/components/molecules/M_ArticleCard/M_ArticleCard'
-import M_CaseCard from '@/components/molecules/M_CaseCard/M_CaseCard'
+import A_ComingSoonTag from '@/components/atoms/A_ComingSoonTag/A_ComingSoonTag'
+import Q_ThunderIconTag from '@/components/quarks/Q_ThunderIconTag/Q_ThunderIconTag'
 
 import styles from './C_RecommendationsMaterials.module.css'
 
@@ -13,6 +13,61 @@ import type { CaseData } from '@/types/case'
 interface C_RecommendationsMaterialsProps {
   type?: 'articles' | 'cases' | 'mixed'
   count?: number
+}
+
+const RecommendationArticleCard = ({ article }: { article: ArticleData }) => {
+  const isImageBackground =
+    article.cardDisplay.background.startsWith('http') ||
+    article.cardDisplay.background.startsWith('/')
+  const backgroundStyle = isImageBackground
+    ? { backgroundImage: `url(${article.cardDisplay.background})` }
+    : { backgroundColor: `var(--color-main-${article.cardDisplay.background})` }
+
+  return (
+    <a
+      href={`/articles/${article.id}`}
+      className={styles.recommendation_card}
+      style={backgroundStyle}
+    >
+      <div className={styles.card_content}>
+        <div className={styles.card_additional_info}>
+          {article.cardDisplay.hasIcon && <Q_ThunderIconTag />}
+          {article.cardDisplay.comingSoon && <A_ComingSoonTag />}
+        </div>
+        <div className={styles.card_text}>
+          <h5>{article.title}</h5>
+          <p>{article.description}</p>
+        </div>
+      </div>
+    </a>
+  )
+}
+
+const RecommendationCaseCard = ({ caseItem }: { caseItem: CaseData }) => {
+  const isImageBackground =
+    caseItem.cardDisplay.background.startsWith('http') ||
+    caseItem.cardDisplay.background.startsWith('/')
+  const backgroundStyle = isImageBackground
+    ? { backgroundImage: `url(${caseItem.cardDisplay.background})` }
+    : { backgroundColor: `var(--color-main-${caseItem.cardDisplay.background})` }
+
+  return (
+    <a
+      href={`/cases/${caseItem.id}`}
+      className={styles.recommendation_card}
+      style={backgroundStyle}
+    >
+      <div className={styles.card_content}>
+        <div className={styles.card_additional_info}>
+          {caseItem.cardDisplay.hasIcon && <Q_ThunderIconTag />}
+          {caseItem.cardDisplay.comingSoon && <A_ComingSoonTag />}
+        </div>
+        <div>
+          <h5>{caseItem.title}</h5>
+        </div>
+      </div>
+    </a>
+  )
 }
 
 export default function C_RecommendationsMaterials({
@@ -80,47 +135,17 @@ export default function C_RecommendationsMaterials({
         if ('type' in item) {
           if (item.type === 'article') {
             const article = item as ArticleData & { type: 'article' }
-            return (
-              <M_ArticleCard
-                key={`article-${article.id}`}
-                href={`/articles/${article.id}`}
-                title={article.title}
-                description={article.description}
-                cardDisplay={article.cardDisplay}
-              />
-            )
+            return <RecommendationArticleCard key={`article-${article.id}`} article={article} />
           } else {
             const caseItem = item as CaseData & { type: 'case' }
-            return (
-              <M_CaseCard
-                key={`case-${caseItem.id}`}
-                href={`/cases/${caseItem.id}`}
-                title={caseItem.title}
-                cardDisplay={caseItem.cardDisplay}
-              />
-            )
+            return <RecommendationCaseCard key={`case-${caseItem.id}`} caseItem={caseItem} />
           }
         } else if (type === 'articles') {
           const article = item as ArticleData
-          return (
-            <M_ArticleCard
-              key={`article-${article.id}`}
-              href={`/articles/${article.id}`}
-              title={article.title}
-              description={article.description}
-              cardDisplay={article.cardDisplay}
-            />
-          )
+          return <RecommendationArticleCard key={`article-${article.id}`} article={article} />
         } else {
           const caseItem = item as CaseData
-          return (
-            <M_CaseCard
-              key={`case-${caseItem.id}`}
-              href={`/cases/${caseItem.id}`}
-              title={caseItem.title}
-              cardDisplay={caseItem.cardDisplay}
-            />
-          )
+          return <RecommendationCaseCard key={`case-${caseItem.id}`} caseItem={caseItem} />
         }
       })}
     </div>
