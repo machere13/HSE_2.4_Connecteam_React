@@ -1,4 +1,4 @@
-export type CursorStyle = 'orbital' | 'wave'
+export type CursorStyle = 'orbital' | 'wave' | 'product-demo'
 
 export interface CursorConfig {
   style: CursorStyle
