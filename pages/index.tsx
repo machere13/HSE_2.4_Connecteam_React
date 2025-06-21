@@ -14,7 +14,7 @@ export default function MainPage() {
   return (
     <div className='page'>
       <Meta title='Connecteam' description='Медиа-сервис для IT-специалистов' />
-      <SO_Header />
+      <SO_Header position='absolute' />
       <T_StartingPageSection>
         <A_Cursor cursors={firstMainPageCursors} />
       </T_StartingPageSection>
