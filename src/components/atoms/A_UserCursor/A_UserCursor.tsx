@@ -79,6 +79,25 @@ export default function A_UserCursor() {
       rafId.current = requestAnimationFrame(resetTiltGradually)
     }
 
+    const handleScroll = () => {
+      if (isCursorActive.current) {
+        const elementAtCursor = document.elementFromPoint(position.x, position.y)
+
+        if (elementAtCursor) {
+          const fakeEvent = {
+            target: elementAtCursor,
+            clientX: position.x,
+            clientY: position.y,
+          } as unknown as MouseEvent
+
+          handleMouseOver(fakeEvent)
+        } else {
+          setIsHovering(false)
+          setHoverLabel('')
+        }
+      }
+    }
+
     const resetTiltGradually = () => {
       if (velocityRef.current < 0.1) {
         tiltRef.current *= 0.85
@@ -155,6 +174,7 @@ export default function A_UserCursor() {
     }, 200)
 
     window.addEventListener('mousemove', handleMouseMove)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('mouseover', handleMouseOver)
     document.addEventListener('mouseleave', handleMouseLeave)
     document.addEventListener('visibilitychange', handleVisibilityChange)
@@ -163,11 +183,12 @@ export default function A_UserCursor() {
       clearInterval(checkCursorInactive)
       cancelAnimationFrame(rafId.current)
       window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('mouseover', handleMouseOver)
       document.removeEventListener('mouseleave', handleMouseLeave)
       document.removeEventListener('visibilitychange', handleVisibilityChange)
     }
-  }, [])
+  }, [position.x, position.y])
 
   if (isTouch) {
     return null
