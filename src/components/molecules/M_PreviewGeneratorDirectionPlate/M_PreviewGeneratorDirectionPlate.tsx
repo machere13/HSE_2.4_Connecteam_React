@@ -5,13 +5,16 @@ import { ROUTES } from '@/routes'
 
 import styles from './M_PreviewGeneratorDirectionPlate.module.css'
 
+import type gsap from 'gsap'
+
 export default function M_PreviewGeneratorDirectionPlate() {
   const backgroundRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    let scrollTrigger: ReturnType<typeof gsap.to> | null = null
+    let killed = false
+    let localTrigger: gsap.core.Tween | null = null
 
     const initGSAP = async () => {
       const { gsap } = await import('gsap')
@@ -21,13 +24,16 @@ export default function M_PreviewGeneratorDirectionPlate() {
 
       const background = backgroundRef.current
 
-      if (background) {
-        if (scrollTrigger) {
-          scrollTrigger.kill()
-          scrollTrigger = null
-        }
+      if (localTrigger) {
+        localTrigger.kill()
+        localTrigger = null
+      }
 
-        scrollTrigger = gsap.to(background, {
+      if (background) {
+        gsap.set(background, { clearProps: 'all' })
+        void background.offsetHeight
+
+        localTrigger = gsap.to(background, {
           y: -100,
           ease: 'none',
           scrollTrigger: {
@@ -42,7 +48,7 @@ export default function M_PreviewGeneratorDirectionPlate() {
 
     const handleResize = () => {
       setTimeout(() => {
-        initGSAP()
+        if (!killed) initGSAP()
       }, 100)
     }
 
@@ -50,11 +56,10 @@ export default function M_PreviewGeneratorDirectionPlate() {
     window.addEventListener('resize', handleResize)
 
     return () => {
+      killed = true
       window.removeEventListener('resize', handleResize)
-      if (typeof window !== 'undefined') {
-        import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
-          ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-        })
+      if (localTrigger) {
+        localTrigger.kill()
       }
     }
   }, [])
