@@ -11,6 +11,7 @@ import type { CursorConfig } from '@/types/cursor'
 type Position = { x: number; y: number }
 
 const CURSOR_SIZE = 30
+const PADDING = 100
 
 const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
   const [positions, setPositions] = useState<Position[]>([])
@@ -22,8 +23,8 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect()
       const initialPositions = cursors.map(() => ({
-        x: Math.random() * (rect.width - CURSOR_SIZE),
-        y: Math.random() * (rect.height - CURSOR_SIZE),
+        x: PADDING + Math.random() * (rect.width - CURSOR_SIZE - PADDING * 2),
+        y: PADDING + Math.random() * (rect.height - CURSOR_SIZE - PADDING * 2),
       }))
       setPositions(initialPositions)
     }
@@ -59,8 +60,8 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
                 }
               }
               case 'wave': {
-                const newX = pos.x + Math.sin(elapsed * config.speed) * 1
-                const newY = pos.y + Math.cos(elapsed * config.speed * 0.7) * 1.5
+                const newX = pos.x + Math.sin(elapsed * config.speed) * 0.8
+                const newY = pos.y + Math.cos(elapsed * config.speed * 0.7) * 0.7
 
                 return {
                   x: clamp(newX, 0, rect.width - CURSOR_SIZE),
