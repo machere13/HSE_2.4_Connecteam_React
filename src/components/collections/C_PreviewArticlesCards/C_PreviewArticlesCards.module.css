@@ -32,6 +32,18 @@
   background: none;
 }
 
+.left {
+  transform: rotate(-2deg);
+}
+
+.right {
+  transform: rotate(2deg);
+}
+
+.none {
+  transform: none;
+}
+
 .card_content {
   display: flex;
   flex-direction: column;
@@ -76,10 +88,20 @@
   .article_card:hover {
     transform: translateY(-3px);
   }
+
+  .left:hover,
+  .right:hover {
+    transform: rotate(0);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
   .article_card:active {
     transform: translateY(-3px);
+  }
+
+  .left:active,
+  .right:active {
+    transform: rotate(0);
   }
 }

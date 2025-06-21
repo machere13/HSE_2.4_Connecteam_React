@@ -1,9 +1,9 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
 import { firstMainPageCursors } from '@/components/atoms/A_Cursor/data/cursors'
-import C_PreviewArticlesCards from '@/components/collections/C_PreviewArticlesCards/C_PreviewArticlesCards'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import W_PreviewArticlesCards from '@/components/wrappers/W_PreviewArticlesCards/W_PreviewArticlesCards'
 import { Meta } from '@/lib/meta'
 
 export default function MainPage() {
@@ -11,7 +11,7 @@ export default function MainPage() {
     <>
       <Meta title='Connecteam' description='Медиа-сервис для IT-специалистов' />
       <SO_Header />
-      <C_PreviewArticlesCards />
+      <W_PreviewArticlesCards />
       <Q_Grid variant='gray' />
       <A_Cursor cursors={firstMainPageCursors} />
       <O_Footer />

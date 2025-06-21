@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+import cn from 'classnames'
 import Link from 'next/link'
 
 import { getArticles } from '@/api/getArticles'
@@ -13,19 +14,11 @@ import type { ArticleData } from '@/types/article'
 
 export default function C_PreviewArticlesCards() {
   const [articles, setArticles] = useState<ArticleData[]>([])
-  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchArticles = async () => {
-      try {
-        setLoading(true)
-        const articlesData = await getArticles()
-        setArticles(articlesData)
-      } catch (error) {
-        console.error('Ошибка загрузки статей:', error)
-      } finally {
-        setLoading(false)
-      }
+      const articlesData = await getArticles()
+      setArticles(articlesData)
     }
 
     fetchArticles()
@@ -37,18 +30,6 @@ export default function C_PreviewArticlesCards() {
   }
 
   const previewArticles = getRandomArticles(3)
-
-  if (loading) {
-    return (
-      <div className={styles.wrapper}>
-        {Array.from({ length: 3 }).map((_, index) => (
-          <div key={index} className={styles.skeleton}>
-            Загрузка...
-          </div>
-        ))}
-      </div>
-    )
-  }
 
   return (
     <div className={styles.wrapper}>
@@ -64,7 +45,7 @@ export default function C_PreviewArticlesCards() {
           <Link
             key={article.id}
             href={ROUTES.ARTICLES.bySlug(article.slug)}
-            className={styles.article_card}
+            className={cn(styles.article_card, styles[article.cardDisplay.rotate])}
             style={backgroundStyle}
           >
             <div className={styles.card_content}>
