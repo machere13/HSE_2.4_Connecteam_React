@@ -6,6 +6,7 @@ import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_PreviewArticlesCardsBlock from '@/components/wrappers/W_PreviewArticlesCardsBlock/W_PreviewArticlesCardsBlock'
 import W_PreviewCasesCardsBlock from '@/components/wrappers/W_PreviewCasesCardsBlock/W_PreviewCasesCardsBlock'
+import W_PreviewContentSection from '@/components/wrappers/W_PreviewContentSection/W_PreviewContentSection'
 import { Meta } from '@/lib/meta'
 
 export default function MainPage() {
@@ -16,6 +17,7 @@ export default function MainPage() {
       <div className='preview_content_wrapper'>
         <W_PreviewArticlesCardsBlock />
         <M_PreviewTestsDirectionPlate />
+        <W_PreviewContentSection />
         <M_PreviewGeneratorDirectionPlate />
         <W_PreviewCasesCardsBlock />
       </div>

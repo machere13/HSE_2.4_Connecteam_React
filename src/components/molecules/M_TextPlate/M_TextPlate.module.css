@@ -31,3 +31,7 @@
 .pink{
     background: var(--color-main-pink);
 }
+
+.wrapper path {
+    fill: var(--color-main-black);
+}

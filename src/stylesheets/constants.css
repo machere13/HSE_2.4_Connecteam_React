@@ -101,6 +101,7 @@
 
   /* Max Width */
   --max-width-content: 1440px;
+  --max-width-content-2: 976px;
   --max-width-item: 740px;
 }
 
