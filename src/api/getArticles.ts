@@ -13,7 +13,6 @@ export const getArticles = async (): Promise<ArticleData[]> => {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
     const response = await fetch(`${baseUrl}/api/articles`)
-    console.log('API response status:', response.status)
 
     if (!response.ok) {
       console.error('API error:', response.status)

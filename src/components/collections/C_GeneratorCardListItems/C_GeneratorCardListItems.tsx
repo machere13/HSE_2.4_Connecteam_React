@@ -1,7 +1,7 @@
 import React from 'react'
 
 import M_GeneratorCardListItem from '@/components/molecules/M_GeneratorCardListItem/M_GeneratorCardListItem'
-import { getGeneratorCardVariant } from '@/lib/getGeneratorCardVariant'
+import { getGeneratorCardListVariant } from '@/lib/getGeneratorCardListVariant'
 
 import styles from './C_GeneratorCardListItems.module.css'
 
@@ -15,7 +15,7 @@ export default function C_GeneratorCardListItems({ items }: C_GeneratorCardListI
   return (
     <div className={styles.wrapper}>
       {items.map((item, index) => {
-        const { bgColor, rotate } = getGeneratorCardVariant({ itemIndex: index })
+        const { bgColor, rotate } = getGeneratorCardListVariant({ itemIndex: index })
 
         return <M_GeneratorCardListItem key={index} {...item} bgColor={bgColor} rotate={rotate} />
       })}

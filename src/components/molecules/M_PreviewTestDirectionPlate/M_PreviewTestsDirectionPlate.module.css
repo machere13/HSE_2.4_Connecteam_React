@@ -42,9 +42,3 @@
     background: url('../../../assets/images/M_PreviewTestsDirectionPlate/M_PreviewTestsDirectionPlate.svg') no-repeat center/cover;
     overflow: visible;
 }
-
-@media (max-width: 968px) {
-    .background{
-        transform: rotate(-30deg);
-    }
-}
