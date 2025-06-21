@@ -20,10 +20,6 @@
   background: var(--color-main-purple);
 }
 
-.purple:active {
-  background: var(--color-click-purple);
-}
-
 .pink {
   height: fit-content;
 
@@ -34,10 +30,6 @@
   background: var(--color-main-pink);
 }
 
-.pink:active {
-  background: var(--color-click-pink);
-}
-
 .blue {
   height: fit-content;
 
@@ -46,10 +38,6 @@
   color: var(--color-main-white);
 
   background: var(--color-main-blue);
-}
-
-.blue:active {
-  background: var(--color-click-blue);
 }
 
 .orange_l {
@@ -74,12 +62,6 @@
   border: 1.5px solid var(--color-main-orange);
 }
 
-.orange_l:active,
-.orange_s:active {
-  background: var(--color-click-orange);
-  border-color: var(--color-click-orange);
-}
-
 @media (hover: hover) and (pointer: fine) {
   .purple:hover {
     background: var(--color-light-purple);
@@ -94,7 +76,7 @@
   }
 
   .orange_l:hover,
-  .orange_s:active {
+  .orange_s:hover {
     color: var(--color-main-white);
 
     background: var(--color-main-orange);
@@ -120,4 +102,22 @@
 
     background: var(--color-main-orange);
   }
+}
+
+.purple:active {
+  background: var(--color-click-purple);
+}
+
+.pink:active {
+  background: var(--color-click-pink);
+}
+
+.blue:active {
+  background: var(--color-click-blue);
+}
+
+.orange_l:active,
+.orange_s:active {
+  background: var(--color-click-orange);
+  border-color: var(--color-click-orange);
 }
