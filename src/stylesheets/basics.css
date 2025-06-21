@@ -120,3 +120,14 @@ mark {
 
   padding: 0 var(--spacing-50);
 }
+
+.preview_content_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-85);
+
+  max-width: var(--max-width-content);
+
+  padding: 0 var(--spacing-50);
+}
