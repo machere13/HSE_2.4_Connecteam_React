@@ -53,6 +53,8 @@
   --spacing-300: 300px;
 
   /* Border Radius */
+  --border-radius-5: 5px;
+  --border-radius-10: 10px;
   --border-radius-15: 15px;
   --border-radius-20: 20px;
 
@@ -142,6 +144,8 @@
     --spacing-300: 165px;
 
     /* Border Radius */
+    --border-radius-5: 5px;
+    --border-radius-10: 10px;
     --border-radius-15: 15px;
     --border-radius-20: 20px;
   }
@@ -187,6 +191,8 @@
     --spacing-300: 25px;
 
     /* Border Radius */
+    --border-radius-5: 5px;
+    --border-radius-10: 7px;
     --border-radius-15: 10px;
     --border-radius-20: 15px;
   }
