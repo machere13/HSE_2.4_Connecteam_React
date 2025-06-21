@@ -1,5 +1,6 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
 import { firstMainPageCursors } from '@/components/atoms/A_Cursor/data/cursors'
+import M_PreviewGeneratorDirectionPlate from '@/components/molecules/M_PreviewGeneratorDirectionPlate/M_PreviewGeneratorDirectionPlate'
 import M_PreviewTestsDirectionPlate from '@/components/molecules/M_PreviewTestDirectionPlate/M_PreviewTestsDirectionPlate'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
@@ -15,6 +16,7 @@ export default function MainPage() {
       <div className='preview_content_wrapper'>
         <W_PreviewArticlesCardsBlock />
         <M_PreviewTestsDirectionPlate />
+        <M_PreviewGeneratorDirectionPlate />
         <W_PreviewCasesCardsBlock />
       </div>
       <A_Cursor cursors={firstMainPageCursors} />

@@ -7,7 +7,7 @@ interface GeneratorCardVariant {
   rotate: 'right' | 'none'
 }
 
-export function getGeneratorCardVariant({
+export function getGeneratorCardListVariant({
   itemIndex,
 }: GetGeneratorCardVariantProps): GeneratorCardVariant {
   if (itemIndex === 0) {

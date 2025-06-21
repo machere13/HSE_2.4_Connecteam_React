@@ -8,6 +8,7 @@ import {
   Fullscreen,
   FullscreenExit,
 } from '@mui/icons-material'
+import cn from 'classnames'
 
 import styles from './videoPlayer.module.css'
 
@@ -126,7 +127,7 @@ export default function VideoPlayer({ video, className = '' }: VideoPlayerProps)
   }
 
   return (
-    <div className={`${styles.wrapper} ${isFullscreen ? styles.fullscreen : ''} ${className}`}>
+    <div className={cn(styles.wrapper, isFullscreen ? styles.fullscreen : '', className)}>
       <video
         ref={videoRef}
         src={video}
