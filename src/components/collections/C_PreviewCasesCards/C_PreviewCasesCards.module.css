@@ -1,0 +1,99 @@
+.wrapper {
+  display: grid;
+  gap: var(--spacing-25);
+
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.case_card {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  height: 276px;
+
+  padding: var(--spacing-30);
+
+  color: var(--color-main-white);
+
+  background: no-repeat center/cover;
+  border-radius: var(--border-radius-15);
+
+  transition: transform 0.2s ease;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.case_card[style*="background-color"] {
+  background: none;
+}
+
+.left {
+  transform: rotate(-2deg);
+}
+
+.right {
+  transform: rotate(2deg);
+}
+
+.none {
+  transform: none;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--spacing-10);
+
+  height: 100%;
+}
+
+.card_additional_info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-10);
+}
+
+.card_text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    gap: var(--spacing-15);
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .case_card:hover {
+    transform: translateY(-3px);
+  }
+
+  .left:hover,
+  .right:hover {
+    transform: rotate(0);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .case_card:active {
+    transform: translateY(-3px);
+  }
+
+  .left:active,
+  .right:active {
+    transform: rotate(0);
+  }
+}
