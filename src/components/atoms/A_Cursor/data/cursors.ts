@@ -18,13 +18,13 @@ export const firstMainPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
-    speed: 2,
+    speed: 1.2,
     color: '#952AFF',
     label: 'Артем',
   },
 ]
 
-export const secondPageCursors: CursorConfig[] = [
+export const secondMainPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
