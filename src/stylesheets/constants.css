@@ -57,6 +57,7 @@
   --border-radius-10: 10px;
   --border-radius-15: 15px;
   --border-radius-20: 20px;
+  --border-radius-35: 35px;
 
   /* Font Family */
   --font-family-inter: 'Inter', sans-serif;
@@ -149,6 +150,7 @@
     --border-radius-10: 10px;
     --border-radius-15: 15px;
     --border-radius-20: 20px;
+    --border-radius-35: 35px;
   }
 }
 
@@ -196,6 +198,7 @@
     --border-radius-10: 7px;
     --border-radius-15: 10px;
     --border-radius-20: 15px;
+    --border-radius-35: 25px; 
   }
 }
 

@@ -10,11 +10,17 @@ import styles from './O_Search.module.css'
 type O_SearchProps = {
   isOpen?: boolean
   onToggle?: (isOpen: boolean) => void
+  variant?: 'default' | 'animated'
 }
 
-export default function O_Search({ isOpen: propIsOpen, onToggle }: O_SearchProps) {
+export default function O_Search({
+  isOpen: propIsOpen,
+  onToggle,
+  variant = 'default',
+}: O_SearchProps) {
   const [internalIsOpen, setInternalIsOpen] = useState(false)
   const [shouldRender, setShouldRender] = useState(false)
+  const [showResults, setShowResults] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
   const isControlled = propIsOpen !== undefined
   const isOpen = isControlled ? propIsOpen : internalIsOpen
@@ -37,6 +43,11 @@ export default function O_Search({ isOpen: propIsOpen, onToggle }: O_SearchProps
       const isSearch = searchRef.current?.contains(target)
 
       if (!isSearch && !isHeader) {
+        if (variant === 'animated') {
+          setShowResults(false)
+          return
+        }
+
         if (onToggle) {
           onToggle(false)
         } else if (!isControlled) {
@@ -45,13 +56,13 @@ export default function O_Search({ isOpen: propIsOpen, onToggle }: O_SearchProps
       }
     }
 
-    if (isOpen) {
+    if (variant === 'animated' || isOpen) {
       document.addEventListener('click', handleClickOutside)
       return () => document.removeEventListener('click', handleClickOutside)
     }
 
     return undefined
-  }, [isOpen, onToggle, isControlled])
+  }, [isOpen, onToggle, isControlled, variant])
 
   useEffect(() => {
     if (propIsOpen !== undefined) {
@@ -61,19 +72,30 @@ export default function O_Search({ isOpen: propIsOpen, onToggle }: O_SearchProps
   }, [propIsOpen])
 
   useEffect(() => {
+    if (variant === 'animated') {
+      setShouldRender(true)
+      setInternalIsOpen(true)
+    }
+  }, [variant])
+
+  useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
-        if (onToggle) {
-          onToggle(false)
-        } else if (!isControlled) {
-          setInternalIsOpen(false)
+      if (e.key === 'Escape') {
+        if (variant === 'animated') {
+          setShowResults(false)
+        } else if (isOpen) {
+          if (onToggle) {
+            onToggle(false)
+          } else if (!isControlled) {
+            setInternalIsOpen(false)
+          }
         }
       }
     }
 
     document.addEventListener('keydown', handleEscape)
     return () => document.removeEventListener('keydown', handleEscape)
-  }, [isOpen, onToggle, isControlled])
+  }, [isOpen, onToggle, isControlled, variant])
 
   useEffect(() => {
     if (!isOpen && shouldRender) {
@@ -85,17 +107,35 @@ export default function O_Search({ isOpen: propIsOpen, onToggle }: O_SearchProps
   }, [isOpen, shouldRender])
 
   useEffect(() => {
+    if (!isOpen && variant !== 'animated') {
+      setShowResults(false)
+    }
+  }, [isOpen, variant])
+
+  useEffect(() => {
     if (isOpen) {
       searchRef.current?.querySelector('input')?.focus()
     }
   }, [isOpen])
 
   return (
-    <div className={styles.wrapper} ref={searchRef}>
-      <div className={cn(styles.search_wrapper, isOpen && styles.visible)}>
-        {shouldRender && <W_SearchBarWithResults />}
+    <div className={cn(styles.wrapper, variant === 'animated' && styles.animated)} ref={searchRef}>
+      <div
+        className={cn(
+          styles.search_wrapper,
+          isOpen && styles.visible,
+          variant === 'animated' && styles.animated,
+        )}
+      >
+        {shouldRender && (
+          <W_SearchBarWithResults
+            variant={variant}
+            showResults={variant === 'animated' ? showResults : isOpen}
+            onShowResults={variant === 'animated' ? setShowResults : undefined}
+          />
+        )}
       </div>
-      <A_SearchButton onClick={toggleSearch} isActive={isOpen} />
+      {variant !== 'animated' && <A_SearchButton onClick={toggleSearch} isActive={isOpen} />}
     </div>
   )
 }

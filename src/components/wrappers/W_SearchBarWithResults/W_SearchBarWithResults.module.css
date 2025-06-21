@@ -3,3 +3,8 @@
 
   max-width: 206px;
 }
+
+.wrapper.animated {
+  width: 100%;
+  max-width: 657px;
+}
