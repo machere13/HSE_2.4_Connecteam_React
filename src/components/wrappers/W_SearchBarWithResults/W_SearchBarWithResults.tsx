@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import cn from 'classnames'
+
 import { getSearchResults } from '@/api/getSearchResults'
 import C_SearchResults from '@/components/collections/C_SearchResults/C_SearchResults'
 import M_SearchBar from '@/components/molecules/M_SearchBar/M_SearchBar'
@@ -11,17 +13,35 @@ import type { SearchResult } from '@/api/getSearchResults'
 type W_SearchBarWithResultsProps = {
   initialValue?: string
   isLoading?: boolean
+  variant?: 'default' | 'animated'
+  showResults?: boolean
+  onShowResults?: (show: boolean) => void
 }
 
-export default function W_SearchBarWithResults({ initialValue = '' }: W_SearchBarWithResultsProps) {
+export default function W_SearchBarWithResults({
+  initialValue = '',
+  variant = 'default',
+  showResults = true,
+  onShowResults,
+}: W_SearchBarWithResultsProps) {
   const [query, setQuery] = useState(initialValue)
   const [results, setResults] = useState<SearchResult[]>([])
   const [isLoading, setIsLoading] = useState(false)
+  const [isClosing, setIsClosing] = useState(false)
+  const [shouldRender, setShouldRender] = useState(false)
 
   useEffect(() => {
     if (!query) {
       setResults([])
+      setIsLoading(false)
+      if (variant === 'animated' && onShowResults) {
+        onShowResults(false)
+      }
       return
+    }
+
+    if (variant === 'animated' && onShowResults) {
+      onShowResults(true)
     }
 
     setIsLoading(true)
@@ -35,17 +55,50 @@ export default function W_SearchBarWithResults({ initialValue = '' }: W_SearchBa
     }, 300)
 
     return () => clearTimeout(timer)
-  }, [query])
+  }, [query, variant, onShowResults])
+
+  useEffect(() => {
+    if (variant === 'animated' && !showResults) {
+      setIsClosing(true)
+      const timer = setTimeout(() => {
+        setIsClosing(false)
+        setShouldRender(false)
+        setResults([])
+      }, 300)
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [showResults, variant])
+
+  useEffect(() => {
+    if (query) {
+      if (variant === 'animated') {
+        if (showResults || isClosing) {
+          setShouldRender(true)
+        }
+      } else {
+        setShouldRender(true)
+      }
+    } else {
+      setShouldRender(false)
+    }
+  }, [query, showResults, isClosing, variant])
 
   return (
-    <div className={styles.wrapper}>
+    <div className={cn(styles.wrapper, variant === 'animated' ? styles.animated : '')}>
       <M_SearchBar
+        variant={variant}
         onSearchChange={setQuery}
         onClear={() => setQuery('')}
         initialValue={initialValue}
       />
-      {query && (
-        <C_SearchResults results={results} isLoading={isLoading} emptyMessage='Ничего не найдено' />
+      {shouldRender && (
+        <C_SearchResults
+          results={results}
+          isLoading={isLoading}
+          emptyMessage='Ничего не найдено'
+          isClosing={isClosing}
+        />
       )}
     </div>
   )

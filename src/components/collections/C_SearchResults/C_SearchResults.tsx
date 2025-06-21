@@ -1,5 +1,7 @@
 import React from 'react'
 
+import cn from 'classnames'
+
 import M_SearchResult from '@/components/molecules/M_SearchResult/M_SearchResult'
 import Q_HeaderSearchResultsLoader from '@/components/quarks/Q_HeaderSearchResultsLoader/Q_HeaderSearchResultsLoader'
 
@@ -16,15 +18,17 @@ interface C_SearchResultsProps {
   results: SearchResultItem[]
   isLoading?: boolean
   emptyMessage?: string
+  isClosing?: boolean
 }
 
 export default function C_SearchResults({
   results = [],
   isLoading = false,
   emptyMessage = 'Ничего не найдено',
+  isClosing = false,
 }: C_SearchResultsProps) {
   return (
-    <div className={styles.wrapper}>
+    <div className={cn(styles.wrapper, isClosing && styles.closing)}>
       <div className={styles.plate}></div>
       {isLoading ? (
         <Q_HeaderSearchResultsLoader />
