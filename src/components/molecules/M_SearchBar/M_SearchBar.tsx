@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 
 import cn from 'classnames'
 
+import { getSearchResults } from '@/api/getSearchResults'
 import Q_Icon from '@/components/quarks/Q_Icon/Q_Icon'
 
 import styles from './M_SearchBar.module.css'
@@ -13,13 +14,6 @@ interface M_SearchBarProps {
   variant?: 'default' | 'animated'
 }
 
-const animatedPlaceholders = [
-  'Поиск статей...',
-  'Поиск кейсов...',
-  'Поиск материалов...',
-  'Поиск тестов...',
-]
-
 export default function M_SearchBar({
   onSearchChange,
   onClear,
@@ -28,26 +22,81 @@ export default function M_SearchBar({
 }: M_SearchBarProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [showClearIcon, setShowClearIcon] = useState(false)
-  const [currentPlaceholderIndex, setCurrentPlaceholderIndex] = useState(0)
-  const [currentPlaceholder, setCurrentPlaceholder] = useState(animatedPlaceholders[0])
+  const [searchTitles, setSearchTitles] = useState<string[]>([])
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
+  const [displayedText, setDisplayedText] = useState('')
+  const [isTyping, setIsTyping] = useState(false)
+  const [showCursor, setShowCursor] = useState(true)
+  const [isFocused, setIsFocused] = useState(false)
 
   useEffect(() => {
     if (variant === 'animated') {
-      const interval = setInterval(() => {
-        setCurrentPlaceholderIndex(prev => (prev + 1) % animatedPlaceholders.length)
-      }, 3000)
-
-      return () => clearInterval(interval)
+      const loadSearchData = async () => {
+        try {
+          const results = await getSearchResults('')
+          const titles = results.map(item => item.title)
+          setSearchTitles(titles)
+        } catch (error) {
+          console.error('Ошибка загрузки данных для placeholder:', error)
+          setSearchTitles([
+            'Геймификация для улучшения командного взаимодействия',
+            'Дружба с коллегой',
+            'Общение с командой при горящих дедлайнах',
+          ])
+        }
+      }
+      loadSearchData()
     }
-    return undefined
   }, [variant])
 
   useEffect(() => {
-    if (variant === 'animated') {
-      const placeholder = animatedPlaceholders[currentPlaceholderIndex]
-      setCurrentPlaceholder(placeholder)
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev)
+    }, 500)
+    return () => clearInterval(cursorInterval)
+  }, [])
+
+  useEffect(() => {
+    if (variant === 'animated' && searchTitles.length > 0 && !isFocused) {
+      const currentTitle = searchTitles[currentTitleIndex]
+
+      if (!isTyping) {
+        setIsTyping(true)
+        setDisplayedText('')
+
+        let charIndex = 0
+        const typeInterval = setInterval(() => {
+          if (charIndex < currentTitle.length) {
+            setDisplayedText(currentTitle.slice(0, charIndex + 1))
+            charIndex++
+          } else {
+            clearInterval(typeInterval)
+            setTimeout(() => {
+              setCurrentTitleIndex(prev => (prev + 1) % searchTitles.length)
+              setIsTyping(false)
+            }, 2000)
+          }
+        }, 100)
+
+        return () => clearInterval(typeInterval)
+      }
     }
-  }, [currentPlaceholderIndex, variant])
+    return undefined
+  }, [currentTitleIndex, isTyping, variant, searchTitles, isFocused])
+
+  useEffect(() => {
+    if (variant === 'animated' && searchTitles.length > 0) {
+      setCurrentTitleIndex(0)
+      setIsTyping(false)
+      setDisplayedText('')
+    }
+  }, [searchTitles.length, variant])
+
+  useEffect(() => {
+    if (variant === 'animated' && searchTitles.length > 0 && !isFocused) {
+      setIsTyping(false)
+    }
+  }, [currentTitleIndex, searchTitles.length, variant, isFocused])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
@@ -64,6 +113,23 @@ export default function M_SearchBar({
     onClear()
   }
 
+  const handleFocus = () => {
+    setIsFocused(true)
+    setDisplayedText('')
+  }
+
+  const handleBlur = () => {
+    setIsFocused(false)
+    setDisplayedText('')
+  }
+
+  const getPlaceholder = () => {
+    if (variant === 'animated' && searchTitles.length > 0 && !isFocused) {
+      return `${displayedText}${showCursor ? '|' : ''}`
+    }
+    return ''
+  }
+
   return (
     <div className={cn(styles.wrapper, styles[variant])}>
       <input
@@ -71,8 +137,10 @@ export default function M_SearchBar({
         className='text_captions_l'
         ref={inputRef}
         onChange={handleInputChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         defaultValue={initialValue}
-        placeholder={variant === 'animated' ? currentPlaceholder : ''}
+        placeholder={getPlaceholder()}
       />
       {showClearIcon && (
         <button onClick={handleClearInput} className={styles.button} aria-label='Очистить поиск'>
