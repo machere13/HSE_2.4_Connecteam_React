@@ -13,6 +13,9 @@ export const getSearchResults = async (query: string): Promise<SearchResult[]> =
   }
 
   if (config.mocked) {
+    if (!query.trim()) {
+      return mockedSearchResults
+    }
     return mockedSearchResults.filter(item =>
       item.title.toLowerCase().includes(query.toLowerCase()),
     )
