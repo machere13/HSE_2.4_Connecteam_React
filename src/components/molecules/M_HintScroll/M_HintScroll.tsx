@@ -19,7 +19,7 @@ export default function M_HintScroll() {
       const scrollY = window.scrollY
       const viewportHeight = window.innerHeight
 
-      if (scrollY > viewportHeight && !hasScrolled) {
+      if (scrollY > viewportHeight * 0.5 && !hasScrolled) {
         setHasScrolled(true)
 
         const tl = gsap.timeline()
@@ -50,7 +50,7 @@ export default function M_HintScroll() {
             },
             '-=0.5',
           )
-      } else if (scrollY <= viewportHeight && hasScrolled) {
+      } else if (scrollY <= viewportHeight * 0.5 && hasScrolled) {
         setHasScrolled(false)
 
         const tl = gsap.timeline()
