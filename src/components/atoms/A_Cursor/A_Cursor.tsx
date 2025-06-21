@@ -10,45 +10,69 @@ import type { CursorConfig } from '@/types/cursor'
 
 type Position = { x: number; y: number }
 
+const CURSOR_SIZE = 30
+
 const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
   const [positions, setPositions] = useState<Position[]>([])
+  const containerRef = useRef<HTMLDivElement>(null)
   const animationRef = useRef<number>(0)
   const startTimeRef = useRef<number>(0)
 
-  useEffect(() => {
-    const initialPositions = cursors.map(() => ({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-    }))
-    setPositions(initialPositions)
-    startTimeRef.current = performance.now()
+  const initializePositions = useCallback(() => {
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect()
+      const initialPositions = cursors.map(() => ({
+        x: Math.random() * (rect.width - CURSOR_SIZE),
+        y: Math.random() * (rect.height - CURSOR_SIZE),
+      }))
+      setPositions(initialPositions)
+    }
   }, [cursors])
+
+  useEffect(() => {
+    initializePositions()
+    startTimeRef.current = performance.now()
+  }, [initializePositions])
 
   const animate = useCallback(
     (time: number) => {
       if (!startTimeRef.current) startTimeRef.current = time
       const elapsed = (time - startTimeRef.current) / 1000
 
-      setPositions(prevPositions =>
-        prevPositions.map((pos, index) => {
-          const config = cursors[index]
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect()
+        const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max)
 
-          switch (config.style) {
-            case 'orbital':
-              return {
-                x: window.innerWidth / 2 + Math.cos(elapsed * config.speed * 0.5) * 200,
-                y: window.innerHeight / 2 + Math.sin(elapsed * config.speed) * 150,
+        setPositions(prevPositions =>
+          prevPositions.map((pos, index) => {
+            const config = cursors[index]
+
+            switch (config.style) {
+              case 'orbital': {
+                const orbitalX =
+                  rect.width / 2 + Math.cos(elapsed * config.speed * 0.5) * (rect.width / 10)
+                const orbitalY =
+                  rect.height / 2 + Math.sin(elapsed * config.speed) * (rect.height / 10)
+                return {
+                  x: clamp(orbitalX, 0, rect.width - CURSOR_SIZE),
+                  y: clamp(orbitalY, 0, rect.height - CURSOR_SIZE),
+                }
               }
-            case 'wave':
-              return {
-                x: pos.x + Math.sin(elapsed * config.speed) * 2,
-                y: pos.y + Math.cos(elapsed * config.speed * 0.7) * 3,
+              case 'wave': {
+                const newX = pos.x + Math.sin(elapsed * config.speed) * 1
+                const newY = pos.y + Math.cos(elapsed * config.speed * 0.7) * 1.5
+
+                return {
+                  x: clamp(newX, 0, rect.width - CURSOR_SIZE),
+                  y: clamp(newY, 0, rect.height - CURSOR_SIZE),
+                }
               }
-            default:
-              return pos
-          }
-        }),
-      )
+              default:
+                return pos
+            }
+          }),
+        )
+      }
 
       animationRef.current = requestAnimationFrame(animate)
     },
@@ -65,21 +89,12 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
   }, [animate])
 
   useEffect(() => {
-    const handleResize = () => {
-      setPositions(prev =>
-        prev.map(pos => ({
-          x: Math.min(pos.x, window.innerWidth),
-          y: Math.min(pos.y, window.innerHeight),
-        })),
-      )
-    }
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    window.addEventListener('resize', initializePositions)
+    return () => window.removeEventListener('resize', initializePositions)
+  }, [initializePositions])
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={containerRef}>
       {positions.map((pos, index) => {
         const config = cursors[index]
         return (
