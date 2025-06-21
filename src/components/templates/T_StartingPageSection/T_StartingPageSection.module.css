@@ -1,0 +1,15 @@
+.wrapper{
+    position: relative;
+    z-index: -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    height: 663px;
+
+    background: var(--color-main-blue);
+    border-radius: 0 0 var(--border-radius-20) var(--border-radius-20);
+}

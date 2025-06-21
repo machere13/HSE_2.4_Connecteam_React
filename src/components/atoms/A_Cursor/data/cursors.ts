@@ -4,7 +4,7 @@ export const firstMainPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
-    speed: 1,
+    speed: 1.2,
     color: '#F64704',
     label: 'Анастасия',
   },
@@ -18,7 +18,7 @@ export const firstMainPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
-    speed: 1.2,
+    speed: 1.5,
     color: '#952AFF',
     label: 'Артем',
   },
