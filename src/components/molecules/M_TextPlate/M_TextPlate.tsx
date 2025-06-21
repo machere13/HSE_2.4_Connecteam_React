@@ -38,9 +38,7 @@ export default function M_TextPlate({
       )}
       style={{ maxWidth, rotate }}
     >
-      {showIcon && (
-        <Q_Icon name='thunderIcon' width='12' height='25' viewBox='0 0 12 25' fill='#000' />
-      )}
+      {showIcon && <Q_Icon name='thunderIcon' width='12' height='25' viewBox='0 0 12 25' />}
       <p>{children}</p>
     </div>
   )
