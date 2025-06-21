@@ -2,9 +2,9 @@ import type { CursorConfig } from '@/types/cursor'
 
 export const firstMainPageCursors: CursorConfig[] = [
   {
-    style: 'orbital',
+    style: 'product-demo',
     icon: 'cursor-orbital',
-    speed: 1.2,
+    speed: 0.3,
     color: '#F64704',
     label: 'Анастасия',
   },

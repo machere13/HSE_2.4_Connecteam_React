@@ -68,6 +68,77 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
                   y: clamp(newY, 0, rect.height - CURSOR_SIZE),
                 }
               }
+              case 'product-demo': {
+                const points = [
+                  { x: rect.width * 0.2, y: rect.height * 0.3 },
+                  { x: rect.width * 0.8, y: rect.height * 0.4 },
+                  { x: rect.width * 0.6, y: rect.height * 0.7 },
+                  { x: rect.width * 0.3, y: rect.height * 0.6 },
+                  { x: rect.width * 0.7, y: rect.height * 0.2 },
+                ]
+
+                if (points.length === 0) {
+                  return { x: 0, y: 0 }
+                }
+
+                const cycleDuration = 8
+                const pointDuration = cycleDuration / points.length
+                const currentCycle = (elapsed % cycleDuration) / pointDuration
+                const currentPointIndex = Math.floor(currentCycle)
+                const nextPointIndex = (currentPointIndex + 1) % points.length
+                const progress = currentCycle - currentPointIndex
+
+                const easeInOut = (t: number) => {
+                  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+                }
+
+                const easedProgress = easeInOut(progress)
+
+                const currentPoint = points[currentPointIndex]
+                const nextPoint = points[nextPointIndex]
+
+                if (!currentPoint || !nextPoint) {
+                  return { x: 0, y: 0 }
+                }
+
+                const controlPoint1 = {
+                  x:
+                    currentPoint.x +
+                    (nextPoint.x - currentPoint.x) * 0.3 +
+                    Math.sin(elapsed * 0.5) * 10,
+                  y:
+                    currentPoint.y +
+                    (nextPoint.y - currentPoint.y) * 0.3 +
+                    Math.cos(elapsed * 0.3) * 15,
+                }
+                const controlPoint2 = {
+                  x:
+                    currentPoint.x +
+                    (nextPoint.x - currentPoint.x) * 0.7 +
+                    Math.sin(elapsed * 0.7) * 12,
+                  y:
+                    currentPoint.y +
+                    (nextPoint.y - currentPoint.y) * 0.7 +
+                    Math.cos(elapsed * 0.4) * 20,
+                }
+
+                const t = easedProgress
+                const x =
+                  Math.pow(1 - t, 3) * currentPoint.x +
+                  3 * Math.pow(1 - t, 2) * t * controlPoint1.x +
+                  3 * (1 - t) * Math.pow(t, 2) * controlPoint2.x +
+                  Math.pow(t, 3) * nextPoint.x
+                const y =
+                  Math.pow(1 - t, 3) * currentPoint.y +
+                  3 * Math.pow(1 - t, 2) * t * controlPoint1.y +
+                  3 * (1 - t) * Math.pow(t, 2) * controlPoint2.y +
+                  Math.pow(t, 3) * nextPoint.y
+
+                return {
+                  x: clamp(x, 0, rect.width - CURSOR_SIZE),
+                  y: clamp(y, 0, rect.height - CURSOR_SIZE),
+                }
+              }
               default:
                 return pos
             }
