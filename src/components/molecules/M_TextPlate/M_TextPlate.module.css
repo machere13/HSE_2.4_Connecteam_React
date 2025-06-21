@@ -1,0 +1,33 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-15);
+}
+
+.r_5{
+    border-radius: var(--border-radius-5);
+}
+
+.r_10{
+    border-radius: var(--border-radius-10);
+}
+
+.p_8_15{
+    padding: var(--spacing-8) var(--spacing-15);
+}
+
+.p_15_25{
+    padding: var(--spacing-15) var(--spacing-25);
+}
+
+.white{
+    background: var(--color-main-white);
+}
+
+.orange{
+    background: var(--color-main-orange);
+}
+
+.pink{
+    background: var(--color-main-pink);
+}
