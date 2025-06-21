@@ -1,5 +1,6 @@
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
 import { firstMainPageCursors } from '@/components/atoms/A_Cursor/data/cursors'
+import M_HintScroll from '@/components/molecules/M_HintScroll/M_HintScroll'
 import M_PreviewGeneratorDirectionPlate from '@/components/molecules/M_PreviewGeneratorDirectionPlate/M_PreviewGeneratorDirectionPlate'
 import M_PreviewTestsDirectionPlate from '@/components/molecules/M_PreviewTestDirectionPlate/M_PreviewTestsDirectionPlate'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
@@ -15,6 +16,7 @@ export default function MainPage() {
   return (
     <div className='page'>
       <Meta title='Connecteam' description='Медиа-сервис для IT-специалистов' />
+      <M_HintScroll />
       <SO_Header position='absolute' />
       <T_StartingPageSection>
         <A_Cursor cursors={firstMainPageCursors} />
