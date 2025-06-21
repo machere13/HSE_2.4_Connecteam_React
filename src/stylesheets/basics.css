@@ -8,30 +8,20 @@ body {
   cursor: none;
 }
 
-*:focus {
+button,
+input {
+  background: transparent;
+  outline: 0;
+  border: 0;
+}
+
+*:focus-visible:not(input), *:focus-visible:not(textarea) {
   outline: 2px solid var(--color-main-purple);
   outline-offset: 2px;
 }
 
-*:focus-visible {
-  outline: 2px solid var(--color-main-purple);
-  outline-offset: 2px;
-}
-
-*:focus:not(:focus-visible) {
-  outline: none;
-}
-
-a:focus,
-[role='button']:focus,
-[role='link']:focus,
-[role='menuitem']:focus,
-[role='option']:focus,
-[role='tab']:focus,
-select:focus,
-textarea:focus {
-  outline: 2px solid var(--color-main-purple);
-  outline-offset: 2px;
+input:focus, input:focus-visible, textarea:focus, textarea:focus-visible {
+  outline: 0;
 }
 
 video::-webkit-media-controls,
@@ -52,19 +42,6 @@ video::-webkit-media-controls-return-to-realtime-button,
 video::-webkit-media-controls-toggle-closed-captions-button,
 video::-webkit-media-controls-overlay-enclosure {
   cursor: none;
-}
-
-button,
-input {
-  background: transparent;
-  outline: 0;
-  border: 0;
-}
-
-button:focus,
-input:focus {
-  outline: 2px solid var(--color-main-purple);
-  outline-offset: 2px;
 }
 
 html {
