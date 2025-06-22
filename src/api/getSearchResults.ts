@@ -1,11 +1,7 @@
 import { config } from '@/config'
 import mockedSearchResults from '@/mocks/mocked-data/mocked-search.json'
 
-export type SearchResult = {
-  title: string
-  description: string
-  url: string
-}
+import type { SearchResult } from '@/types/search'
 
 export const getSearchResults = async (query: string): Promise<SearchResult[]> => {
   if (typeof window !== 'undefined' && typeof window.__storybookSearchOverride === 'function') {
@@ -21,10 +17,21 @@ export const getSearchResults = async (query: string): Promise<SearchResult[]> =
     )
   }
 
-  const response = await fetch(`url`)
+  if (typeof window === 'undefined') {
+    const fs = await import('fs')
+    const path = await import('path')
+    const filePath = path.join(process.cwd(), 'public', 'data', 'search.json')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    const results = JSON.parse(fileContents) as SearchResult[]
+    if (!query.trim()) {
+      return results
+    }
+    return results.filter(item => item.title.toLowerCase().includes(query.toLowerCase()))
+  }
+
+  const response = await fetch(`/api/searchResults?query=${encodeURIComponent(query)}`)
   if (!response.ok) {
     throw new Error(`getSearchResults failed: ${response.status}`)
   }
-
   return response.json()
 }

@@ -15,12 +15,16 @@ input {
   border: 0;
 }
 
-*:focus-visible:not(input), *:focus-visible:not(textarea) {
+*:focus-visible:not(input),
+*:focus-visible:not(textarea) {
   outline: 2px solid var(--color-main-purple);
   outline-offset: 2px;
 }
 
-input:focus, input:focus-visible, textarea:focus, textarea:focus-visible {
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
   outline: 0;
 }
 
@@ -98,13 +102,13 @@ mark {
   padding: 0 var(--spacing-50);
 }
 
-.preview_content_wrapper{
+.preview_content_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-85);
 
-width: 100%;
+  width: 100%;
 
   max-width: var(--max-width-content);
 

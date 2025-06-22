@@ -1,19 +1,18 @@
-.wrapper{
-    position: relative;
+.wrapper {
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-15);
 
-    width: 100%;
+  width: 100%;
 
-    max-width: var(--max-width-content-2);
+  max-width: var(--max-width-content-2);
 
-    padding: var(--spacing-100) 0;
+  padding: var(--spacing-100) 0;
 }
 
-.wrapper > h2{
-    text-align: center;
-
+.wrapper > h2 {
+  text-align: center;
 }

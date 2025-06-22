@@ -28,7 +28,7 @@
   text-decoration: none;
 }
 
-.article_card[style*="background-color"] {
+.article_card[style*='background-color'] {
   background: none;
 }
 

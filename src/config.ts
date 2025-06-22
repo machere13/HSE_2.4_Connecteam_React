@@ -1,3 +1,3 @@
 export const config = {
-  mocked: false,
+  mocked: process.env.NEXT_PUBLIC_USE_MOCKS === 'true',
 }

@@ -10,19 +10,17 @@ export const getArticles = async (): Promise<ArticleData[]> => {
     return mockedArticles
   }
 
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-    const response = await fetch(`${baseUrl}/api/articles`)
-
-    if (!response.ok) {
-      console.error('API error:', response.status)
-      throw new Error(`getArticles failed: ${response.status}`)
-    }
-
-    const data = await response.json()
-    return data
-  } catch (error) {
-    console.error('Fetch error:', error)
-    throw error
+  if (typeof window === 'undefined') {
+    const fs = await import('fs')
+    const path = await import('path')
+    const filePath = path.join(process.cwd(), 'public', 'data', 'articles.json')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(fileContents) as ArticleData[]
   }
+
+  const response = await fetch('/api/articles')
+  if (!response.ok) {
+    throw new Error(`getArticles failed: ${response.status}`)
+  }
+  return response.json()
 }

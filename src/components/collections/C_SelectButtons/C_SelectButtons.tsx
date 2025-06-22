@@ -15,6 +15,7 @@ export default function C_SelectButtons({
   selectedOption,
   onSelect,
 }: C_SelectButtonsProps) {
+  if (!Array.isArray(options)) return null
   return (
     <div className={styles.wrapper}>
       {options.map(option => (
