@@ -9,7 +9,7 @@ interface GenerateMetaProps {
 export function generateMeta({
   title = 'Connecteam',
   description = 'Connecteam — медиа-сервис про деловую коммуникацию в IT-команде',
-  image = '/metaImage.jpg',
+  image = 'https://connecteam.space/metaImage.jpg',
   url = 'https://connecteam.space',
   type = 'website',
 }: GenerateMetaProps) {
