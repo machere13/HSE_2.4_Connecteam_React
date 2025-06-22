@@ -41,11 +41,11 @@ export const secondMainPageCursors: CursorConfig[] = [
   },
 ]
 
-export const firstAboutPageCursors: CursorConfig[] = [
+export const secondAboutPageCursors: CursorConfig[] = [
   {
-    style: 'orbital',
+    style: 'product-demo',
     icon: 'cursor-orbital',
-    speed: 1,
+    speed: 0.5,
     color: '#952AFF',
     label: 'Аналитик',
   },
@@ -57,7 +57,7 @@ export const firstAboutPageCursors: CursorConfig[] = [
     label: 'Product manager',
   },
   {
-    style: 'orbital',
+    style: 'product-demo',
     icon: 'cursor-orbital',
     speed: 1,
     color: '#FF3DA8',
@@ -71,9 +71,9 @@ export const firstAboutPageCursors: CursorConfig[] = [
     label: 'Backend-dev',
   },
   {
-    style: 'orbital',
+    style: 'product-demo',
     icon: 'cursor-orbital',
-    speed: 1,
+    speed: 0.7,
     color: '#FF3DA8',
     label: 'SMM',
   },
@@ -86,14 +86,17 @@ export const firstAboutPageCursors: CursorConfig[] = [
   },
 ]
 
-export const secondAboutPageCursors: CursorConfig[] = [
+export const thirdOneAboutPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
     speed: 2,
-    color: '#952AFF',
+    color: '#FF3DA8',
     label: 'Василиса',
   },
+]
+
+export const thirdTwoAboutPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
@@ -101,11 +104,14 @@ export const secondAboutPageCursors: CursorConfig[] = [
     color: '#952AFF',
     label: 'Вероника',
   },
+]
+
+export const thirdThreeAboutPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
     speed: 2,
-    color: '#952AFF',
-    label: 'Артем',
+    color: '#F64704',
+    label: 'machere13',
   },
 ]
