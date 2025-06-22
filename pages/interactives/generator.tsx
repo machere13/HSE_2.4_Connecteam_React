@@ -5,6 +5,7 @@ import O_Generator from '@/components/organisms/O_Generator/O_Generator'
 import O_GeneratorIdea from '@/components/organisms/O_GeneratorIdea/O_GeneratorIdea'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import { Meta } from '@/lib/Meta'
 import mockedData from '@/mocks/mocked-data/mocked-generator.json'
 
 import type { GeneratorIdea } from '@/types/generator'
@@ -76,6 +77,10 @@ export default function GeneratorPage() {
 
   return (
     <div className='page'>
+      <Meta
+        title='Генератор тимбилдингов | Connecteam'
+        description='Придумали за вас классные идеи тимбилдингов для вашего командного коннекта'
+      />
       <SO_Header />
       <O_Generator onGenerate={handleGenerate} />
       {selectedIdea && <O_GeneratorIdea idea={selectedIdea} />}

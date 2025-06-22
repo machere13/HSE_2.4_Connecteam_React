@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-40);
@@ -23,4 +23,4 @@
   .row:nth-child(even) {
     justify-content: center;
   }
-} 
+}
