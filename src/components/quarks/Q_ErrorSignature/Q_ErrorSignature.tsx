@@ -42,6 +42,8 @@ export default function Q_ErrorSignature({
 
   const iconName = getIconName(errorType)
   const defaultSize = iconSizes[iconName]
+  const finalWidth = width || defaultSize.width
+  const finalHeight = height || defaultSize.height
 
   return (
     <div className={styles.wrapper}>
@@ -59,9 +61,9 @@ export default function Q_ErrorSignature({
             | 'errorSignature505Icon'
         }
         className={styles.icon}
-        width={width || defaultSize.width}
-        height={height || defaultSize.height}
-        viewBox={`0 0 ${width} ${height}`}
+        width='100%'
+        height='100%'
+        viewBox={`0 0 ${finalWidth} ${finalHeight}`}
       />
     </div>
   )
