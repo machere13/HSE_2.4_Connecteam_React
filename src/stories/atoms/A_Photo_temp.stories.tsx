@@ -3,9 +3,9 @@ import { MemoryRouter } from 'react-router-dom'
 import Photo_01 from '@/assets/images/A_Photo/A_Photo_01.webp'
 import Photo_02 from '@/assets/images/A_Photo/A_Photo_02.webp'
 import Photo_03 from '@/assets/images/A_Photo/A_Photo_03.webp'
-import A_Photo from '@/components/atoms/A_Photo_temp/A_Photo_temp'
+import A_Photo from '@/components/atoms/A_Photo/A_Photo'
 
-import type { A_PhotoProps } from '@/components/atoms/A_Photo_temp/A_Photo_temp'
+import type { A_PhotoProps } from '@/components/atoms/A_Photo/A_Photo'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<A_PhotoProps> = {

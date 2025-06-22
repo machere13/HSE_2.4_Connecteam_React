@@ -1,6 +1,6 @@
 import React from 'react'
 
-import A_Photo from '@/components/atoms/A_Photo_temp/A_Photo_temp'
+import A_Photo from '@/components/atoms/A_Photo/A_Photo'
 
 import styles from './M_Person.module.css'
 
