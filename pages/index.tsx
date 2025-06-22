@@ -10,7 +10,7 @@ import T_StartingPageSection from '@/components/templates/T_StartingPageSection/
 import W_PreviewArticlesCardsBlock from '@/components/wrappers/W_PreviewArticlesCardsBlock/W_PreviewArticlesCardsBlock'
 import W_PreviewCasesCardsBlock from '@/components/wrappers/W_PreviewCasesCardsBlock/W_PreviewCasesCardsBlock'
 import W_PreviewContentSection from '@/components/wrappers/W_PreviewContentSection/W_PreviewContentSection'
-import { Meta } from '@/lib/meta'
+import { Meta } from '@/lib/Meta'
 
 export default function MainPage() {
   return (

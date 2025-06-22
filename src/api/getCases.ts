@@ -10,10 +10,13 @@ export const getCases = async (): Promise<CaseData[]> => {
     return mockedCases
   }
 
-  const response = await fetch(`/api/cases`)
+  if (typeof window === 'undefined') {
+    return rawData as CaseData[]
+  }
+
+  const response = await fetch('/api/cases')
   if (!response.ok) {
     throw new Error(`getCases failed: ${response.status}`)
   }
-
   return response.json()
 }

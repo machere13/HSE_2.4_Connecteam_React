@@ -10,10 +10,13 @@ export const getTests = async (): Promise<TestData[]> => {
     return mockedTests
   }
 
-  const response = await fetch(`/api/articles`)
+  if (typeof window === 'undefined') {
+    return rawData as TestData[]
+  }
+
+  const response = await fetch('/api/tests')
   if (!response.ok) {
     throw new Error(`getTests failed: ${response.status}`)
   }
-
   return response.json()
 }

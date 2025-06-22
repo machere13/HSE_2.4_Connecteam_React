@@ -1,0 +1,325 @@
+[
+  {
+    "id": 1,
+    "slug": "yandex-music-rebranding",
+    "metatags": {
+      "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+      "type": "article"
+    },
+    "title": "Ребрендинг «Яндекс Музыки»",
+    "description": "В декабре 2023 года «Яндекс Музыка» провела первый за девять лет ребрендинг, обновив логотип, визуальный стиль и функциональность сервиса.",
+    "cardDisplay": {
+      "background": "pink",
+      "card": "big",
+      "rotate": "none",
+      "textColor": "white",
+      "hasIcon": true,
+      "comingSoon": false
+    },
+    "filter": "experience",
+    "case": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
+      },
+      "type": "big",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "Ребрендинг «Яндекс Музыки»"
+        },
+        {
+          "type": "tags",
+          "items": ["Дизайн", "Опыт команды", "7 мин"]
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+          "alt": "Иллюстрация логотипа Яндекс Музыки"
+        },
+        {
+          "type": "previewParagraph",
+          "text": "В декабре 2023 года «Яндекс Музыка» провела первый за девять лет ребрендинг, обновив логотип, визуальный стиль и функциональность сервиса. Помимо обновлений в пользовательском опыте, этот кейс является ярким примером того, как слаженная коммуникация между членами команды может стать ключевым фактором успеха."
+        },
+        {
+          "type": "titleParagraph",
+          "title": "Планирование и стратегия",
+          "text": "Ребрендинг начался с анализа текущего положения сервиса и ожиданий пользователей. Основной вызов заключался в необходимости интеграции новых технологий и свежей айдентики без потери узнаваемости бренда. Чтобы добиться этого, команды сформулировали единое видение проекта:"
+        },
+        {
+          "type": "cardList",
+          "items": [
+            {
+              "title": "Цель",
+              "description": "Создать сервис, который вдохновляет пользователей и подчеркивает их индивидуальность"
+            },
+            {
+              "title": "Задачи",
+              "description": "Обновить визуальный стиль, улучшить систему рекомендаций и повысить удобство интерфейса"
+            },
+            {
+              "title": "Коммуникация",
+              "description": "Были созданы рабочие группы с четко определенными ролями, чтобы каждый участник понимал свою зону ответственности"
+            }
+          ]
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Коммуникация и координация",
+          "titleType": "small",
+          "items": [
+            "Эффективная коммуникация между командами «Яндекс Музыки» стала фундаментом для успешной реализации проекта. Использовались современные инструменты управления проектами и регулярные встречи, чтобы синхронизировать действия всех подразделений.",
+            "Продуктовые менеджеры стали связующим звеном между дизайнерами, разработчиками и маркетологами. Они координировали процесс, следили за соблюдением сроков и устраняли возникающие препятствия.",
+            "После завершения каждого этапа команды проводили ретроспективы  для анализа успехов и сложностей. Это помогало оперативно корректировать планы и предотвращать повторение ошибок."
+          ]
+        },
+        {
+          "type": "titleParagraph",
+          "title": "Маркетинговая стратегия и анонс",
+          "text": "Ребрендинг сопровождался масштабной маркетинговой кампанией. Основной акцент был сделан на эмоциональной составляющей изменений, чтобы подчеркнуть близость сервиса к пользователям."
+        },
+        {
+          "type": "telegram",
+          "link": "https://t.me/connecteam"
+        },
+        {
+          "type": "video",
+          "title": "Подробнее кейс разобрали в видео формате)",
+          "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Коммуникация и координация",
+          "titleType": "small",
+          "items": [
+            "Социальные сети для интерактивного общения с аудиторией",
+            "Видеоролики: объясняют как обновления улучшают пользовательский опыт",
+            "Посты в блогах с детальным разбором нововведений"
+          ]
+        },
+        {
+          "type": "titleParagraph",
+          "title": "Обратная связь",
+          "text": "Команда активно работала с отзывами пользователей, собирая комментарии через соцсети и внутри приложения. Это позволило оперативно устранять недочеты и укреплять доверие к бренду."
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Советы по внедрению",
+          "titleType": "small",
+          "items": [
+            "Начинайте с малого — не нужно сразу превращать всю работу в MMORPG",
+            "Используйте простые и понятные механики: рейтинги, ачивки, награды",
+            "Подбирайте систему под свою команду: кто-то любит соревнования, а кому-то важнее кооперация",
+            "Не перегибайте — если геймификация начнет напрягать, эффект будет обратным"
+          ]
+        },
+        {
+          "type": "cardList",
+          "title": "Выводы",
+          "titleType": "small",
+          "items": [
+            {
+              "title": "Единое видение",
+              "description": "Успех проекта обеспечивается четким пониманием общей цели и задач каждым участником"
+            },
+            {
+              "title": "Гибкость в подходе",
+              "description": "Быстрая адаптация к изменениям и отзывам пользователей помогла улучшить конечный результат"
+            },
+            {
+              "title": "Технологии и креатив",
+              "description": "Сотрудничество между командами дизайна, разработки и маркетинга позволило объединить инновационные решения с яркой визуальной подачей"
+            },
+            {
+              "title": "Пользователь в центре",
+              "description": "Все изменения были направлены на улучшение взаимодействия с сервисом и создание вдохновляющего опыта для пользователей"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ребрендинг «Яндекс Музыки» стал успешным примером того, как благодаря эффективной коммуникации и координации между командами можно достичь значительных результатов. Этот проект не только обновил визуальную составляющую и функциональность сервиса, но и подчеркнул ценность командной работы в создании продукта, вдохновляющего миллионы пользователей."
+        }
+      ],
+      "comments": [
+        {
+          "comment": "«Яндекс Музыка создаёт для каждого персональный музыкальный мир. Это возможно благодаря умной системе рекомендаций — она открывает именно тех артистов, которых нужно услышать прямо сейчас»",
+          "author": "Никита Квасник, дизайн-директор Яндекс Музыки"
+        },
+        {
+          "comment": "«Если вы хотите проверить свой дизайн на успех, попробуйте методологию DMS (Distinctive Memory Assets)»",
+          "author": "Никита Квасник, дизайн-директор Яндекс Музыки"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "testing-filter-management",
+    "metatags": {
+      "image": "url",
+      "type": "articlezzzz"
+    },
+    "title": "testing filter 'Руководство командой'",
+    "description": "testing filter 'Руководство командой'",
+    "cardDisplay": {
+      "background": "purple",
+      "card": "standard",
+      "rotate": "left",
+      "textColor": "white",
+      "hasIcon": false,
+      "comingSoon": false
+    },
+    "filter": "management",
+    "case": {
+      "author": {
+        "image": "url",
+        "name": "machere13",
+        "description": "Frontend Developer"
+      },
+      "type": "big",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "testing filter 'Руководство командой'"
+        },
+        {
+          "type": "tags",
+          "items": ["testing filter", "Руководство командой"]
+        },
+        {
+          "type": "previewParagraph",
+          "text": "testing filter 'Руководство командой'"
+        },
+        {
+          "type": "titleParagraph",
+          "title": "testing filter 'Руководство командой'",
+          "text": "testing filter 'Руководство командой'"
+        }
+      ],
+      "comments": [
+        {
+          "comment": "testing filter 'Руководство командой'",
+          "author": "testing filter 'Руководство командой'"
+        },
+        {
+          "comment": "testing filter 'Руководство командой'",
+          "author": "testing filter 'Руководство командой'"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "slug": "testing-filter-history",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "testing filter 'История компании'",
+    "description": "testing filter 'История компании'",
+    "cardDisplay": {
+      "background": "pink",
+      "card": "standard",
+      "rotate": "right",
+      "textColor": "white",
+      "hasIcon": true,
+      "comingSoon": true
+    },
+    "filter": "history",
+    "case": {
+      "author": {
+        "image": "url",
+        "name": "machere13",
+        "description": "Frontend Developer"
+      },
+      "type": "big",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "testing filter 'История компании'"
+        },
+        {
+          "type": "tags",
+          "items": ["testing filter", "История компании"]
+        },
+        {
+          "type": "previewParagraph",
+          "text": "testing filter 'История компании'"
+        },
+        {
+          "type": "titleParagraph",
+          "title": "testing filter 'История компании'",
+          "text": "testing filter 'История компании'"
+        }
+      ],
+      "comments": [
+        {
+          "comment": "testing filter 'История компании'",
+          "author": "testing filter 'История компании'"
+        },
+        {
+          "comment": "testing filter 'История компании'",
+          "author": "testing filter 'История компании'"
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "slug": "testing-filter-lifehacks",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "testing filter 'Лайфхаки от команды'",
+    "description": "testing filter 'Лайфхаки от команды'",
+    "cardDisplay": {
+      "background": "purple",
+      "card": "big",
+      "rotate": "none",
+      "textColor": "white",
+      "hasIcon": false,
+      "comingSoon": true
+    },
+    "filter": "lifehacks",
+    "case": {
+      "author": {
+        "image": "url",
+        "name": "machere13",
+        "description": "Frontend Developer"
+      },
+      "type": "big",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "testing filter 'Лайфхаки от команды'"
+        },
+        {
+          "type": "tags",
+          "items": ["testing filter", "Лайфхаки от команды"]
+        },
+        {
+          "type": "previewParagraph",
+          "text": "testing filter 'Лайфхаки от команды'"
+        },
+        {
+          "type": "titleParagraph",
+          "title": "testing filter 'Лайфхаки от команды'",
+          "text": "testing filter 'Лайфхаки от команды'"
+        }
+      ],
+      "comments": [
+        {
+          "comment": "testing filter 'Лайфхаки от команды'",
+          "author": "testing filter 'Лайфхаки от команды'"
+        },
+        {
+          "comment": "testing filter 'Лайфхаки от команды'",
+          "author": "testing filter 'Лайфхаки от команды'"
+        }
+      ]
+    }
+  }
+]

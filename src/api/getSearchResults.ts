@@ -21,10 +21,18 @@ export const getSearchResults = async (query: string): Promise<SearchResult[]> =
     )
   }
 
-  const response = await fetch(`url`)
+  if (typeof window === 'undefined') {
+    if (!query.trim()) {
+      return mockedSearchResults
+    }
+    return mockedSearchResults.filter(item =>
+      item.title.toLowerCase().includes(query.toLowerCase()),
+    )
+  }
+
+  const response = await fetch(`/api/searchResults?query=${encodeURIComponent(query)}`)
   if (!response.ok) {
     throw new Error(`getSearchResults failed: ${response.status}`)
   }
-
   return response.json()
 }

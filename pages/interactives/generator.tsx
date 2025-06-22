@@ -48,14 +48,16 @@ export default function GeneratorPage() {
                 type: 'textList' as const,
                 title: block.title || '',
                 items: Array.isArray(block.items)
-                  ? block.items.filter((item): item is string => typeof item === 'string')
+                  ? (block.items as unknown[]).filter(
+                      (item): item is string => typeof item === 'string',
+                    )
                   : [],
               }
             case 'cardList':
               return {
                 type: 'cardList' as const,
                 items: Array.isArray(block.items)
-                  ? block.items.filter(
+                  ? (block.items as unknown[]).filter(
                       (item): item is { title: string; description: string } =>
                         typeof item === 'object' &&
                         item !== null &&

@@ -10,10 +10,13 @@ export const getGeneratorParameters = async (): Promise<GeneratorParameters> => 
     return mockedParameters
   }
 
-  const response = await fetch(`/api/generator/parameters`)
+  if (typeof window === 'undefined') {
+    return rawData.parameters as GeneratorParameters
+  }
+
+  const response = await fetch('/api/generator/parameters')
   if (!response.ok) {
     throw new Error(`getGeneratorParameters failed: ${response.status}`)
   }
-
   return response.json()
 }
