@@ -34,21 +34,23 @@
 }
 
 .w_50 {
-  width: 50%
+  width: 50%;
 }
 
 .w_33 {
-  width: 33%
+  width: 33%;
 }
 
 @media (max-width: 968px) {
-    .w_50, .w_33{
-        width: calc(50% - var(--spacing-40)/2);
-    }
+  .w_50,
+  .w_33 {
+    width: calc(50% - var(--spacing-40) / 2);
+  }
 }
 
 @media (max-width: 768px) {
-    .w_50, .w_33{
-        width: 100%;
-    }
+  .w_50,
+  .w_33 {
+    width: 100%;
+  }
 }
