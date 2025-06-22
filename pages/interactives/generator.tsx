@@ -80,6 +80,7 @@ export default function GeneratorPage() {
       <Meta
         title='Генератор тимбилдингов | Connecteam'
         description='Придумали за вас классные идеи тимбилдингов для вашего командного коннекта'
+        url='https://connecteam.space/interactives/generator'
       />
       <SO_Header />
       <O_Generator onGenerate={handleGenerate} />
