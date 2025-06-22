@@ -11,7 +11,11 @@ export const getArticles = async (): Promise<ArticleData[]> => {
   }
 
   if (typeof window === 'undefined') {
-    return rawData as ArticleData[]
+    const fs = await import('fs')
+    const path = await import('path')
+    const filePath = path.join(process.cwd(), 'public', 'data', 'articles.json')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(fileContents) as ArticleData[]
   }
 
   const response = await fetch('/api/articles')

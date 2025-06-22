@@ -11,7 +11,11 @@ export const getTests = async (): Promise<TestData[]> => {
   }
 
   if (typeof window === 'undefined') {
-    return rawData as TestData[]
+    const fs = await import('fs')
+    const path = await import('path')
+    const filePath = path.join(process.cwd(), 'public', 'data', 'tests.json')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(fileContents) as TestData[]
   }
 
   const response = await fetch('/api/tests')

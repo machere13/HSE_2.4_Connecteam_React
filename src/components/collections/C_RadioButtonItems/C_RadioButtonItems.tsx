@@ -15,6 +15,7 @@ export default function C_RadioButtonItems({
   selectedOption,
   onSelect,
 }: C_RadioButtonItemsProps) {
+  if (!Array.isArray(options)) return null
   return (
     <div className={styles.wrapper}>
       {options.map(option => (

@@ -8,7 +8,7 @@ import M_SearchBar from '@/components/molecules/M_SearchBar/M_SearchBar'
 
 import styles from './W_SearchBarWithResults.module.css'
 
-import type { SearchResult } from '@/api/getSearchResults'
+import type { SearchResult } from '@/types/search'
 
 type W_SearchBarWithResultsProps = {
   initialValue?: string

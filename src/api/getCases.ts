@@ -11,7 +11,11 @@ export const getCases = async (): Promise<CaseData[]> => {
   }
 
   if (typeof window === 'undefined') {
-    return rawData as CaseData[]
+    const fs = await import('fs')
+    const path = await import('path')
+    const filePath = path.join(process.cwd(), 'public', 'data', 'cases.json')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(fileContents) as CaseData[]
   }
 
   const response = await fetch('/api/cases')

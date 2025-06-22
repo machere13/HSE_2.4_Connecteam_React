@@ -11,11 +11,8 @@ import type { ArticleData } from '@/types/article'
 import type { GetStaticProps } from 'next'
 
 export const getStaticProps: GetStaticProps = async () => {
-  console.log('getStaticProps called')
   try {
-    console.log('Calling getArticles...')
     const articles = await getArticles()
-    console.log('Articles received:', articles.length)
 
     return {
       props: {
