@@ -11,11 +11,11 @@ interface Q_ErrorCodeProps {
 }
 
 const iconSizes: Record<string, { width: string; height: string }> = {
-  errorCode403Icon: { width: '359', height: '140' },
-  errorCode404Icon: { width: '359', height: '140' },
-  errorCode418Icon: { width: '359', height: '140' },
-  errorCode500Icon: { width: '359', height: '140' },
-  errorCode502Icon: { width: '359', height: '140' },
+  errorCode403Icon: { width: '368', height: '140' },
+  errorCode404Icon: { width: '368', height: '140' },
+  errorCode418Icon: { width: '235', height: '140' },
+  errorCode500Icon: { width: '392', height: '140' },
+  errorCode502Icon: { width: '358', height: '140' },
   errorCode505Icon: { width: '359', height: '140' },
 }
 
@@ -29,24 +29,28 @@ export default function Q_ErrorCode({ errorType = '404', width, height }: Q_Erro
 
   const iconName = getIconName(errorType)
   const defaultSize = iconSizes[iconName]
+  const finalWidth = width || defaultSize.width
+  const finalHeight = height || defaultSize.height
 
   return (
     <div className={styles.wrapper}>
-      <Q_Icon
-        name={
-          iconName as
-            | 'errorCode403Icon'
-            | 'errorCode404Icon'
-            | 'errorCode418Icon'
-            | 'errorCode500Icon'
-            | 'errorCode502Icon'
-            | 'errorCode505Icon'
-        }
-        className={styles.icon}
-        width={width || defaultSize.width}
-        height={height || defaultSize.height}
-        viewBox={`0 0 ${width} ${height}`}
-      />
+      <div className={styles.icon_wrapper}>
+        <Q_Icon
+          name={
+            iconName as
+              | 'errorCode403Icon'
+              | 'errorCode404Icon'
+              | 'errorCode418Icon'
+              | 'errorCode500Icon'
+              | 'errorCode502Icon'
+              | 'errorCode505Icon'
+          }
+          className={styles.icon}
+          width="100%"
+          height="100%"
+          viewBox={`0 0 ${finalWidth} ${finalHeight}`}
+        />
+      </div>
     </div>
   )
 }
