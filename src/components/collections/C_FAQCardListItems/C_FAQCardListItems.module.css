@@ -1,5 +1,26 @@
-.list {
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-40);
+}
+
+.row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--spacing-40);
+}
+
+.row:nth-child(odd) {
+  justify-content: flex-end;
+}
+
+.row:nth-child(even) {
+  justify-content: flex-start;
+}
+
+@media (max-width: 968px) {
+  .row:nth-child(odd),
+  .row:nth-child(even) {
+    justify-content: center;
+  }
 } 
