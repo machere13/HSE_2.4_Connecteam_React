@@ -46,11 +46,22 @@ export default function Q_ErrorSignature({
   return (
     <div className={styles.wrapper}>
       <Q_Icon
-        name={iconName as any}
+        name={
+          iconName as
+            | 'errorSignature403Icon'
+            | 'errorSignature404Icon'
+            | 'errorSignature404ArticleIcon'
+            | 'errorSignature404CaseIcon'
+            | 'errorSignature404TestIcon'
+            | 'errorSignature418Icon'
+            | 'errorSignature500Icon'
+            | 'errorSignature502Icon'
+            | 'errorSignature505Icon'
+        }
         className={styles.icon}
         width={width || defaultSize.width}
         height={height || defaultSize.height}
-        viewBox={`0 0 ${defaultSize.width} ${defaultSize.height}`}
+        viewBox={`0 0 ${width} ${height}`}
       />
     </div>
   )

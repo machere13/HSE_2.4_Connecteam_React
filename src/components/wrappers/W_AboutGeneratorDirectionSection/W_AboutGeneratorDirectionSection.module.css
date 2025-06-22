@@ -1,0 +1,57 @@
+.wrapper{
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    height: 833px;
+
+    background: var(--color-main-blue);
+    border-radius: var(--border-radius-20);
+    overflow: hidden;
+}
+
+.content{
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-25);
+
+    width: 100%;
+    max-width: calc(600px + 2*var(--spacing-50));
+
+    padding: 0 var(--spacing-50);
+}
+
+.content > h2{
+    color: var(--color-main-white);
+    text-align: center;
+}
+
+.background{
+    position: absolute;
+    top: -150px;
+    left: 0;
+
+    width: 100%;
+
+    height: 1050px;
+
+    background: url('../../../assets/images/M_PreviewGeneratorDirectionPlate/M_PreviewGeneratorDirectionPlate.svg') no-repeat center/cover;
+
+    overflow: visible;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .wrapper{
+        height: 500px;
+    }
+}

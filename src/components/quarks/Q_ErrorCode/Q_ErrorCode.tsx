@@ -33,11 +33,19 @@ export default function Q_ErrorCode({ errorType = '404', width, height }: Q_Erro
   return (
     <div className={styles.wrapper}>
       <Q_Icon
-        name={iconName as any}
+        name={
+          iconName as
+            | 'errorCode403Icon'
+            | 'errorCode404Icon'
+            | 'errorCode418Icon'
+            | 'errorCode500Icon'
+            | 'errorCode502Icon'
+            | 'errorCode505Icon'
+        }
         className={styles.icon}
         width={width || defaultSize.width}
         height={height || defaultSize.height}
-        viewBox={`0 0 ${defaultSize.width} ${defaultSize.height}`}
+        viewBox={`0 0 ${width} ${height}`}
       />
     </div>
   )
