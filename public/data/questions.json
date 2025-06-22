@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "questionSvg": "/icons/faq1.svg",
+    "answer": "Ответ на первый вопрос."
+  },
+  {
+    "id": 2,
+    "questionSvg": "/icons/faq2.svg",
+    "answer": "Ответ на второй вопрос."
+  }
+] 
