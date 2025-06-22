@@ -3,9 +3,10 @@
   gap: var(--spacing-5);
 }
 
-.wrapper.animated, .search_wrapper.animated{
+.wrapper.animated,
+.search_wrapper.animated {
   width: 100%;
-  max-width: calc(657px + 2*var(--spacing-25));
+  max-width: calc(657px + 2 * var(--spacing-25));
 
   padding: 0 var(--spacing-25);
 

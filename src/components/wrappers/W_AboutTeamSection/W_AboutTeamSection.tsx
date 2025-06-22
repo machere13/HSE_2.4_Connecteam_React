@@ -8,7 +8,7 @@ import {
   thirdTwoAboutPageCursors,
   thirdThreeAboutPageCursors,
 } from '@/components/atoms/A_Cursor/data/cursors'
-import A_Photo from '@/components/atoms/A_Photo/A_Photo'
+import A_Photo from '@/components/atoms/A_Photo_temp/A_Photo_temp'
 import M_TextPlate from '@/components/molecules/M_TextPlate/M_TextPlate'
 
 import styles from './W_AboutTeamSection.module.css'

@@ -21,4 +21,4 @@ export default async function handler(
     console.error('Error reading generator data:', error)
     res.status(500).json({ error: 'Failed to fetch generator data' })
   }
-} 
+}

@@ -27,7 +27,7 @@
   text-decoration: none;
 }
 
-.case_card[style*="background-color"] {
+.case_card[style*='background-color'] {
   background: none;
 }
 
