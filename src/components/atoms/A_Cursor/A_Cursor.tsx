@@ -8,7 +8,15 @@ import styles from './A_Cursor.module.css'
 
 import type { CursorConfig } from '@/types/cursor'
 
-type Position = { x: number; y: number }
+type Position = {
+  x: number
+  y: number
+  phaseOffset: number
+  anchorX: number
+  anchorY: number
+  orbitRadius: number
+  speedMultiplier: number
+}
 
 const CURSOR_SIZE = 30
 const PADDING = 100
@@ -22,17 +30,29 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
   const initializePositions = useCallback(() => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect()
-      const initialPositions = cursors.map(() => ({
-        x: PADDING + Math.random() * (rect.width - CURSOR_SIZE - PADDING * 2),
-        y: PADDING + Math.random() * (rect.height - CURSOR_SIZE - PADDING * 2),
-      }))
+      const initialPositions = cursors.map(() => {
+        const anchorX = PADDING + Math.random() * (rect.width - CURSOR_SIZE - PADDING * 2)
+        const anchorY = PADDING + Math.random() * (rect.height - CURSOR_SIZE - PADDING * 2)
+        return {
+          x: anchorX,
+          y: anchorY,
+          phaseOffset: Math.random() * Math.PI * 2,
+          anchorX,
+          anchorY,
+          orbitRadius: 30 + Math.random() * 60,
+          speedMultiplier: 0.7 + Math.random() * 0.6,
+        }
+      })
       setPositions(initialPositions)
     }
   }, [cursors])
 
   useEffect(() => {
-    initializePositions()
-    startTimeRef.current = performance.now()
+    const raf = requestAnimationFrame(() => {
+      initializePositions()
+      startTimeRef.current = performance.now()
+    })
+    return () => cancelAnimationFrame(raf)
   }, [initializePositions])
 
   const animate = useCallback(
@@ -47,23 +67,33 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
         setPositions(prevPositions =>
           prevPositions.map((pos, index) => {
             const config = cursors[index]
+            const phase = pos.phaseOffset
 
             switch (config.style) {
               case 'orbital': {
                 const orbitalX =
-                  rect.width / 2 + Math.cos(elapsed * config.speed * 0.5) * (rect.width / 10)
+                  pos.anchorX +
+                  Math.cos(elapsed * config.speed * pos.speedMultiplier * 0.5 + phase) *
+                    pos.orbitRadius
                 const orbitalY =
-                  rect.height / 2 + Math.sin(elapsed * config.speed) * (rect.height / 10)
+                  pos.anchorY +
+                  Math.sin(elapsed * config.speed * pos.speedMultiplier + phase) * pos.orbitRadius
                 return {
+                  ...pos,
                   x: clamp(orbitalX, 0, rect.width - CURSOR_SIZE),
                   y: clamp(orbitalY, 0, rect.height - CURSOR_SIZE),
                 }
               }
               case 'wave': {
-                const newX = pos.x + Math.sin(elapsed * config.speed) * 0.8
-                const newY = pos.y + Math.cos(elapsed * config.speed * 0.7) * 0.7
-
+                const newX =
+                  pos.anchorX +
+                  Math.sin(elapsed * config.speed * pos.speedMultiplier + phase) * pos.orbitRadius
+                const newY =
+                  pos.anchorY +
+                  Math.cos(elapsed * config.speed * pos.speedMultiplier * 0.7 + phase) *
+                    pos.orbitRadius
                 return {
+                  ...pos,
                   x: clamp(newX, 0, rect.width - CURSOR_SIZE),
                   y: clamp(newY, 0, rect.height - CURSOR_SIZE),
                 }
@@ -78,12 +108,14 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
                 ]
 
                 if (points.length === 0) {
-                  return { x: 0, y: 0 }
+                  return { ...pos, x: 0, y: 0 }
                 }
+
+                const cursorElapsed = elapsed + pos.phaseOffset * 2
 
                 const cycleDuration = 8
                 const pointDuration = cycleDuration / points.length
-                const currentCycle = (elapsed % cycleDuration) / pointDuration
+                const currentCycle = (cursorElapsed % cycleDuration) / pointDuration
                 const currentPointIndex = Math.floor(currentCycle)
                 const nextPointIndex = (currentPointIndex + 1) % points.length
                 const progress = currentCycle - currentPointIndex
@@ -98,28 +130,28 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
                 const nextPoint = points[nextPointIndex]
 
                 if (!currentPoint || !nextPoint) {
-                  return { x: 0, y: 0 }
+                  return { ...pos, x: 0, y: 0 }
                 }
 
                 const controlPoint1 = {
                   x:
                     currentPoint.x +
                     (nextPoint.x - currentPoint.x) * 0.3 +
-                    Math.sin(elapsed * 0.5) * 10,
+                    Math.sin(cursorElapsed * 0.5 + phase) * 10,
                   y:
                     currentPoint.y +
                     (nextPoint.y - currentPoint.y) * 0.3 +
-                    Math.cos(elapsed * 0.3) * 15,
+                    Math.cos(cursorElapsed * 0.3 + phase) * 15,
                 }
                 const controlPoint2 = {
                   x:
                     currentPoint.x +
                     (nextPoint.x - currentPoint.x) * 0.7 +
-                    Math.sin(elapsed * 0.7) * 12,
+                    Math.sin(cursorElapsed * 0.7 + phase) * 12,
                   y:
                     currentPoint.y +
                     (nextPoint.y - currentPoint.y) * 0.7 +
-                    Math.cos(elapsed * 0.4) * 20,
+                    Math.cos(cursorElapsed * 0.4 + phase) * 20,
                 }
 
                 const t = easedProgress
@@ -135,6 +167,7 @@ const A_Cursor: React.FC<{ cursors: CursorConfig[] }> = ({ cursors }) => {
                   Math.pow(t, 3) * nextPoint.y
 
                 return {
+                  ...pos,
                   x: clamp(x, 0, rect.width - CURSOR_SIZE),
                   y: clamp(y, 0, rect.height - CURSOR_SIZE),
                 }
