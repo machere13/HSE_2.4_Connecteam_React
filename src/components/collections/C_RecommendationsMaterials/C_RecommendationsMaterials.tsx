@@ -25,7 +25,7 @@ const RecommendationArticleCard = ({ article }: { article: ArticleData }) => {
 
   return (
     <a
-      href={`/articles/${article.id}`}
+      href={`/articles/${article.slug}`}
       className={styles.recommendation_card}
       style={backgroundStyle}
     >
@@ -53,7 +53,7 @@ const RecommendationCaseCard = ({ caseItem }: { caseItem: CaseData }) => {
 
   return (
     <a
-      href={`/cases/${caseItem.id}`}
+      href={`/cases/${caseItem.slug}`}
       className={styles.recommendation_card}
       style={backgroundStyle}
     >
