@@ -46,8 +46,8 @@ export default function Q_ErrorCode({ errorType = '404', width, height }: Q_Erro
               | 'errorCode505Icon'
           }
           className={styles.icon}
-          width="100%"
-          height="100%"
+          width='100%'
+          height='100%'
           viewBox={`0 0 ${finalWidth} ${finalHeight}`}
         />
       </div>
