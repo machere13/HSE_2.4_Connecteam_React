@@ -104,6 +104,8 @@ mark {
   align-items: center;
   gap: var(--spacing-85);
 
+width: 100%;
+
   max-width: var(--max-width-content);
 
   padding: 0 var(--spacing-50);
