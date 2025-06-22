@@ -9,7 +9,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^7.1.1",
     "@mui/material": "^7.1.1",
-    "@netlify/plugin-nextjs": "^5.10.3",
+    "@netlify/plugin-nextjs": "^5.11.3",
     "@svgr/plugin-svgo": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "airtable": "^0.12.2",
