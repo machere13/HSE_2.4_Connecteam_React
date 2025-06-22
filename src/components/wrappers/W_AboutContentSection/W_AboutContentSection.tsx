@@ -8,7 +8,7 @@ import styles from './W_AboutContentSection.module.css'
 
 export default function W_AboutContentSection() {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className={styles.text_wrapper}>
         <h2>Сконнектим тебя с&nbsp;коллегами, даже если вы&nbsp;не&nbsp;знаете имён друг друга</h2>
       </div>
@@ -16,6 +16,6 @@ export default function W_AboutContentSection() {
         <W_AboutContentSectionImage />
       </div>
       <A_Cursor cursors={secondAboutPageCursors} />
-    </div>
+    </section>
   )
 }

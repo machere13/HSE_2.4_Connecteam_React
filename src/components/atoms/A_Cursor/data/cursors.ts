@@ -86,14 +86,17 @@ export const secondAboutPageCursors: CursorConfig[] = [
   },
 ]
 
-export const thirdAboutPageCursors: CursorConfig[] = [
+export const thirdOneAboutPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
     speed: 2,
-    color: '#952AFF',
+    color: '#FF3DA8',
     label: 'Василиса',
   },
+]
+
+export const thirdTwoAboutPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
@@ -101,11 +104,14 @@ export const thirdAboutPageCursors: CursorConfig[] = [
     color: '#952AFF',
     label: 'Вероника',
   },
+]
+
+export const thirdThreeAboutPageCursors: CursorConfig[] = [
   {
     style: 'orbital',
     icon: 'cursor-orbital',
     speed: 2,
-    color: '#952AFF',
-    label: 'Артем',
+    color: '#F64704',
+    label: 'machere13',
   },
 ]

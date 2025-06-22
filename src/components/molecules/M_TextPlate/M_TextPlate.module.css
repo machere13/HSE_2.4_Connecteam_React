@@ -25,10 +25,14 @@
 }
 
 .orange{
-    background: var(--color-main-orange);
+    color: var(--color-main-white);
+
+    background: var(--color-main-pink);
 }
 
 .pink{
+    color: var(--color-main-white);
+
     background: var(--color-main-pink);
 }
 
