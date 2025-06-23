@@ -9,6 +9,7 @@ import W_AboutContentSection from '@/components/wrappers/W_AboutContentSection/W
 import W_AboutGeneratorDirectionSection from '@/components/wrappers/W_AboutGeneratorDirectionSection/W_AboutGeneratorDirectionSection'
 import W_AboutStartingPageSection from '@/components/wrappers/W_AboutStartingPageSection/W_AboutStartingPageSection'
 import W_AboutTeamSection from '@/components/wrappers/W_AboutTeamSection/W_AboutTeamSection'
+import { Meta } from '@/lib/Meta'
 
 import type { Questions } from '@/types/questions'
 import type { GetStaticProps } from 'next'
@@ -20,6 +21,11 @@ interface AboutPageProps {
 export default function AboutPage({ questions }: AboutPageProps) {
   return (
     <div className='page'>
+      <Meta
+        title='О нас | Connecteam'
+        description='Узнайте больше о команде Connecteam и нашем подходе к деловой коммуникации в IT'
+        url='https://connecteam.space/about'
+      />
       <SO_Header position='absolute' />
       <W_AboutStartingPageSection />
       <div className='preview_content_wrapper'>

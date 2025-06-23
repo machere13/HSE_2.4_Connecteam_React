@@ -6,6 +6,7 @@ import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import T_MaterialsPageContent from '@/components/templates/T_MaterialsPageContent/T_MaterialsPageContent'
 import W_CaseCards from '@/components/wrappers/W_CaseCards/W_CaseCards'
+import { Meta } from '@/lib/Meta'
 
 import type { CaseData } from '@/types/case'
 import type { GetStaticProps } from 'next'
@@ -43,6 +44,11 @@ export default function CasesPage({ cases }: { cases: CaseData[] }) {
 
   return (
     <div className='page'>
+      <Meta
+        title='Кейсы | Connecteam'
+        description='Реальные кейсы деловой коммуникации в IT-командах'
+        url='https://connecteam.space/cases'
+      />
       <div className='header_content_gap'>
         <SO_Header />
         <T_MaterialsPageContent

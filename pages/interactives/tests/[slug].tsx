@@ -8,6 +8,7 @@ import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_TestQuestionContent from '@/components/wrappers/W_TestQuestionContent/W_TestQuestionContent'
 import W_TestResults from '@/components/wrappers/W_TestResults/W_TestResults'
+import { Meta } from '@/lib/Meta'
 
 import type { TestData, TestResult } from '@/types/test'
 import type { GetStaticPaths, GetStaticProps } from 'next'
@@ -76,6 +77,12 @@ export default function TestPage({ test }: { test: TestData }) {
 
   return (
     <div className='page'>
+      <Meta
+        title={`${test.title} | Connecteam`}
+        description={test.description}
+        url={`https://connecteam.space/interactives/tests/${test.slug}`}
+        type='article'
+      />
       <div className='header_tests_content_gap'>
         <SO_Header />
         <div className='height_100'>
