@@ -1,6 +1,7 @@
 import React from 'react'
 
 import C_StyleguideValueCardListItems from '@/components/collections/C_StyleguideValueCardListItems/C_StyleguideValueCardListItems'
+import M_StyleguideImageBlock from '@/components/molecules/M_StyleguideImageBlock/M_StyleguideImageBlock'
 
 import styles from './W_StyleguideSectionOne.module.css'
 
@@ -34,6 +35,17 @@ export default function W_StyleguideSectionOne() {
             </p>
           </div>
         </div>
+        <M_StyleguideImageBlock
+          images={[
+            {
+              url: 'https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750669977/StyleguideImage_01_bvmqie.jpg',
+              alt: 'Логотип Connecteam на здании',
+              objectFit: 'cover',
+            },
+          ]}
+          description='Пример использования полной версии логотипа'
+          height={409}
+        />
         <div className={styles.text_wrapper}>
           <p className='text_body_2'>
             Медиа-сервис представляет собой рабочее пространство, где каждый элемент&nbsp;&mdash;
