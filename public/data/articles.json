@@ -3,25 +3,25 @@
     "id": 1,
     "slug": "team-gamification",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Геймификация для улучшения командного взаимодействия",
     "description": "Как поднять мотивацию и улучшить взаимодействие, го сыграем?",
     "cardDisplay": {
-      "background": "url",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750696580/ArticleImage_01_Preview_xceomn.svg",
       "card": "big",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
     "filter": "tools",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "big",
       "content": [
@@ -39,7 +39,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750696365/ArticleImage_01_01_f3vtbl.svg",
           "alt": "Иллюстрация игральных кубиков"
         },
         {
@@ -57,7 +57,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750696367/ArticleImage_01_02_lfsiol.webp",
           "description": "Брейншторм команды стартапа над внедрением геймификации в интерфейс продуктового магазина"
         },
         {
@@ -168,19 +168,19 @@
     "title": "Психология мотивации в команде",
     "description": "Когда «спасибо» спасает дедлайны",
     "cardDisplay": {
-      "background": "url",
-      "card": "big",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750696682/ArticleImage_02_Preview_a4mvf1.svg",
+      "card": "standard",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
-    "filter": "psychology",
+    "filter": "communication",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "big",
       "content": [
@@ -198,7 +198,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750696810/ArticleImage_02_01_xeyylx.svg",
           "alt": "Иллюстрация: мотивация в команде"
         },
         {
@@ -216,8 +216,8 @@
         },
         {
           "type": "image",
-          "image": "url",
-          "description": "Руководитель дизайн-студии 'Pigrin' раз в 3-4 месяца устраивает тематические вечеринки"
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750696812/ArticleImage_02_02_nv0nem.webp",
+          "description": "Если ничего не поможет – в помощь вам мемы с котиками, но мы вам этого не говорили"
         },
         {
           "type": "whiteBox",
@@ -244,6 +244,10 @@
               "index": 3
             }
           ]
+        },
+        {
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
@@ -279,8 +283,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "Правильно подобранное слово или подход могут значительно повлиять на атмосферу в команде. Развивая не только хард скиллы, но и софт скиллы, включая эмоциональный интеллект, можно научиться чувствовать, когда похвала будет воспринята как поддержка, а когда — как давление. Умение учитывать чувства других — это не только залог продуктивной работы, но и основа здоровых рабочих отношений."
         },
         {
           "type": "cardList",
@@ -306,16 +310,16 @@
   },
   {
     "id": 3,
-    "slug": "colleague-friendship",
+    "slug": "constructive-feedback",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Дружба с коллегой",
-    "description": "«Сделай по-братски» или как работа может вас поссорить",
+    "title": "Обратная связь: культура конструктивных бесед",
+    "description": "Как создавать поддерживающую атмосферу обратной связи",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
-      "card": "standard",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750697285/ArticleImage_03_Preview_lqdfza.svg",
+      "card": "big",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
@@ -324,119 +328,9 @@
     "filter": "communication",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
-      },
-      "type": "short",
-      "content": [
-        {
-          "type": "heading-2",
-          "text": "Дружба с коллегой"
-        },
-        {
-          "type": "heading-4",
-          "text": "«Сделай по-братски» или как работа может вас поссорить"
-        },
-        {
-          "type": "tags",
-          "items": ["Руководство", "3 мин"]
-        },
-        {
-          "type": "image",
-          "image": "[TODO: URL изображения]",
-          "alt": "Иллюстрация конфликта в IT-команде"
-        },
-        {
-          "type": "highlightedSection",
-          "title": "Ситуация",
-          "titleType": "big",
-          "items": [
-            "Дима и Илья — друзья и коллеги, разработчики в одной IT-команде. Они работают над проектом и делят фронтенд и бекенд. Все было отлично, пока во время демо клиенту бекенд Ильи не справился с запросом от фронта, что поразило клиента. Дима начал жестко критиковать код Ильи при всех, после чего оба перестали общаться. Командной динамике пришел крах."
-          ]
-        },
-        {
-          "type": "cardList",
-          "title": "Что делать?",
-          "titleType": "big",
-          "items": [
-            {
-              "title": "Обсудите ситуацию тет-а-тет",
-              "description": "Спокойно и тактично обсудите, что пошло не так. Ваша цель — улучшить взаимопонимание."
-            },
-            {
-              "title": "Разграничьте роли друга и коллеги",
-              "description": "Определите, где критика кода конструктивна, а где начинаются личные ощущения."
-            },
-            {
-              "title": "Упрощайте общение",
-              "description": "Поставьте правило: всегда дайте решение следом за критикой."
-            },
-            {
-              "title": "Проведите защиту своей работы",
-              "description": "Подготовьте аргументы, почему выбрали именно такой подход."
-            }
-          ]
-        },
-        {
-          "type": "highlightedSection",
-          "title": "Почему это супер?",
-          "titleType": "big",
-          "items": [
-            "Обсуждение тет-а-тет исключает излишнюю публичность, которая часто усугубляет конфликты.",
-            "Разделение ролей друга и коллеги позволяет избежать эмоционального переноса.",
-            "Простое и ясное общение делает рабочий процесс предсказуемым."
-          ]
-        },
-        {
-          "type": "telegram",
-          "link": "[TODO: Ссылка на Telegram]"
-        },
-        {
-          "type": "cardList",
-          "title": "Что не надо делать?",
-          "titleType": "big",
-          "items": [
-            {
-              "title": "Избегать разговора",
-              "description": "Молчание — не золото, а только глубже закапывает проблему."
-            },
-            {
-              "title": "Критиковать прилюдно",
-              "description": "Это разрушает доверие и может превратить рабочее обсуждение в личную обиду."
-            },
-            {
-              "title": "Перекладывать вину",
-              "description": "Уход от ответственности лишь добавит напряжения в отношениях."
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "id": 3,
-    "slug": "constructive-feedback",
-    "metatags": {
-      "image": "url",
-      "type": "article"
-    },
-    "title": "Обратная связь: культура конструктивных бесед",
-    "description": "Как создавать поддерживающую атмосферу обратной связи",
-    "cardDisplay": {
-      "background": "url",
-      "card": "big",
-      "rotate": "none",
-      "textColor": "black",
-      "hasIcon": false,
-      "comingSoon": true
-    },
-    "filter": "communication",
-    "article": {
-      "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "big",
       "content": [
@@ -454,7 +348,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750697284/ArticleImage_03_01_cfexu0.svg",
           "alt": "Иллюстрация: диалог в команде"
         },
         {
@@ -471,9 +365,14 @@
           "text": "Важно, чтобы обратная связь была не только своевременной, но и корректной. Непродуманная критика или ее отсутствие могут вызывать стресс и демотивацию. Когда обратная связь подается в уважительной и конструктивной форме, сотрудники воспринимают её как инструмент развития, а не как способ указать на ошибки."
         },
         {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750697282/ArticleImage_03_02_lmaxpe.webp",
+          "description": "Руководитель  дизайн-студии “Pigrin” раз в 3-4 месяца устраивает тематические вечеринки"
+        },
+        {
           "type": "whiteBox",
           "title": "В чём профит?",
-          "text": "Исследования Google в рамках проекта 'Aristotle' показали, что одним из ключевых факторов успешных команд является психологическая безопасность, основанная на доверии. В таких командах сотрудники чувствуют себя комфортно, обсуждая ошибки и предлагая идеи, не опасаясь осуждения."
+          "text": "Признание в команде повышает мотивацию и вовлеченность. Когда кто-то получает похвалу, это вдохновляет остальных работать на том же уровне. В условиях дедлайнов признание особенно важно: оно подтверждает, что усилия не остаются незамеченными. Это укрепляет командный дух и повышает готовность всех работать на общий результат."
         },
         {
           "type": "elements",
@@ -502,29 +401,28 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "Команда 'Connecteam' во время разработки дизайн-системы"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
           "title": "История появления",
-          "text": "Практика конструктивной обратной связи берет свое начало из методов управления качеством, разработанных в середине XX века. С течением времени компании осознали, что регулярная и честная обратная связь не только улучшает производственные процессы, но и способствует развитию человеческого капитала."
+          "text": "Практика конструктивной обратной связи берет свое начало из методов управления качеством, разработанных в середине XX века. С течением времени компании осознали, что регулярная и честная обратная связь не только улучшает производственные процессы, но и способствует развитию человеческого капитала. Сегодня многие организации внедряют систематические подходы к обратной связи, интегрируя их в корпоративную культуру."
         },
         {
           "type": "examples",
           "items": [
             {
               "title": "Google",
-              "text": "В Google регулярно проводятся оценки эффективности сотрудников, где каждый получает конструктивные отзывы о своей работе"
+              "text": "В Google регулярно проводятся оценки эффективности сотрудников, где каждый получает конструктивные отзывы о своей работе. Такой подход помогает выявлять сильные стороны и области для развития, способствуя профессиональному росту"
             },
             {
               "title": "Microsoft",
-              "text": "Microsoft внедрила систему регулярных встреч между сотрудниками и руководством, на которых обсуждаются достижения и возможные улучшения"
+              "text": "Microsoft внедрила систему регулярных встреч между сотрудниками и руководством, на которых обсуждаются достижения и возможные улучшения. Это способствует открытому диалогу и повышает доверие внутри команды"
             },
             {
               "title": "SAP",
-              "text": "В SAP используется практика «360-градусной обратной связи», где сотрудники получают отзывы не только от руководства, но и от коллег и подчиненных"
+              "text": "В SAP используется практика «360-градусной обратной связи», где сотрудники получают отзывы не только от руководства, но и от коллег и подчиненных. Это обеспечивает всесторонний взгляд на эффективность работы и помогает в личностном развитии"
             }
           ]
         },
@@ -540,8 +438,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "Внедрение культуры конструктивной обратной связи требует времени и усилий, но результаты оправдывают затраты. Создавая среду, где каждый чувствует себя ценным и услышанным, вы способствуете не только профессиональному росту сотрудников, но и повышению общей эффективности команды."
         },
         {
           "type": "cardList",
@@ -565,30 +463,29 @@
       ]
     }
   },
-
   {
     "id": 4,
     "slug": "trust-in-it-teams",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Роль доверия в построении IT-команд",
     "description": "Что делать, когда говорят про команду: «у нас всё прозрачно»",
     "cardDisplay": {
-      "background": "url",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750699235/ArticleImage_04_Preview_zotkjg.svg",
       "card": "big",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
-    "filter": "team-building",
+    "filter": "communication",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "big",
       "content": [
@@ -606,7 +503,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750699233/ArticleImage_04_01_by0mzj.svg",
           "alt": "Иллюстрация: доверие в команде"
         },
         {
@@ -621,6 +518,11 @@
         {
           "type": "paragraph",
           "text": "Формирование доверия требует прозрачности во всех процессах. Когда информация о целях, задачах и результатах доступна каждому, это устраняет почву для недопонимания и сплетен. Прозрачность способствует созданию культуры ответственности, где каждый осознает свою роль и вклад в общий успех."
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750699232/ArticleImage_04_02_xddw9w.webp",
+          "description": "Порой самый простой вариант — выговориться друг с другом, желательно за едой)"
         },
         {
           "type": "whiteBox",
@@ -654,21 +556,20 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "Команда Invison на конференции"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
           "title": "История появления",
-          "text": "Концепция доверия в рабочих коллективах начала активно развиваться с переходом от иерархических структур к более гибким и автономным командам. В IT-сфере, где проекты часто требуют креативности и быстрого принятия решений, доверие стало фундаментом эффективной работы."
+          "text": "Концепция доверия в рабочих коллективах начала активно развиваться с переходом от иерархических структур к более гибким и автономным командам. В IT-сфере, где проекты часто требуют креативности и быстрого принятия решений, доверие стало фундаментом эффективной работы. Компании начали осознавать, что без доверительных отношений между сотрудниками невозможно достичь высокой адаптивности и инновационности."
         },
         {
           "type": "examples",
           "items": [
             {
               "title": "Zappos",
-              "text": "Известная своей уникальной корпоративной культурой, Zappos ставит доверие и прозрачность во главу угла. Руководство поощряет сотрудников быть открытыми и честными."
+              "text": "Известная своей уникальной корпоративной культурой, Zappos ставит доверие и прозрачность во главу угла. Руководство поощряет сотрудников быть открытыми и честными, что создает атмосферу взаимного уважения и поддержки"
             },
             {
               "title": "ODIN Group",
@@ -676,7 +577,7 @@
             },
             {
               "title": "Goodt",
-              "text": "Переход на Agile-подход потребовал высокого уровня доверия. Через открытые обсуждения и совместное принятие решений компания создала культуру прозрачности."
+              "text": "Руководство решило перейти на Agile-подход, что потребовало высокого уровня доверия между членами команды. Постепенно, через открытые обсуждения и совместное принятие решений, удалось создать культуру, основанную на доверии и прозрачность"
             }
           ]
         },
@@ -692,8 +593,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "Внедрение культуры доверия требует времени и усилий, но результаты оправдывают затраты. Сформировав доверительные отношения, команда становится более сплоченной, продуктивной и готовой к вызовам. Создавая атмосферу доверия, компании не только повышают эффективность работы, но и создают условия для профессионального и личностного роста каждого сотрудника. "
         },
         {
           "type": "cardList",
@@ -717,30 +618,29 @@
       ]
     }
   },
-
   {
     "id": 5,
     "slug": "design-dev-collaboration",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Лучшее взаимодействие дизайна-разработки от Аарона Уолтера",
     "description": "Узнали все секреты Аарона Уолтера из InVision Studio",
     "cardDisplay": {
-      "background": "url",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750699888/ArticleImage_05_Preview_xdbhi2.svg",
       "card": "big",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
-    "filter": "design",
+    "filter": "organization",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "big",
       "content": [
@@ -758,7 +658,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750699886/ArticleImage_05_01_nmnakw.svg",
           "alt": "Аарон Уолтер и команда InVision"
         },
         {
@@ -773,6 +673,11 @@
         {
           "type": "paragraph",
           "text": "Ещё один аспект — понимание языка друг друга. Дизайнерам не обязательно становиться экспертами в кодинге, но базовое понимание процессов разработки поможет им лучше коммуницировать с разработчиками. Аналогично, разработчики, знакомые с основами дизайна, смогут более эффективно сотрудничать с дизайнерами. Такое взаимное понимание способствует созданию продуктов, где дизайн и функциональность гармонично сочетаются."
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750699892/ArticleImage_05_03_bflqi3.webp",
+          "description": "Команда Invison на конференции"
         },
         {
           "type": "whiteBox",
@@ -806,9 +711,8 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "Команда 'Connecteam' во время разработки дизайн-системы"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
@@ -844,8 +748,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "Реализация этих шагов требует времени и усилий, но в долгосрочной перспективе они приведут к более эффективному сотрудничеству и лучшим результатам."
         },
         {
           "type": "cardList",
@@ -869,30 +773,29 @@
       ]
     }
   },
-
   {
     "id": 6,
     "slug": "magic-solution",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "А есть волшебная таблетка?",
     "description": "Трактат о смыслах и законах командной работы",
     "cardDisplay": {
-      "background": "url",
-      "card": "big",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700353/ArticleImage_06_Preview_dfgicv.svg",
+      "card": "standard",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
-    "filter": "methodology",
+    "filter": "tools",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "big",
       "content": [
@@ -910,7 +813,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700350/ArticleImage_06_01_tqgwit.svg",
           "alt": "Иллюстрация: поиск решений"
         },
         {
@@ -925,6 +828,11 @@
         {
           "type": "paragraph",
           "text": "Выделяются три ключевых принципа эффективной командной работы: скромность, уважение и доверие. Скромность позволяет признавать ошибки и учиться, уважение создаёт комфортную среду для взаимодействия, а доверие помогает команде двигаться вперёд, не тратя силы на внутренние конфликты. Если один из этих компонентов отсутствует, начинаются проблемы: споры превращаются в соревнования, критика воспринимается в штыки, а коллективная работа буксует."
+        },
+                {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700250/ArticleImage_06_02_edoen0.jpg",
+          "description": "Мы? Мы. И вы тоже, мы знаем) Источник: SlovoDna"
         },
         {
           "type": "whiteBox",
@@ -958,9 +866,8 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "Фотка коллектива, который решил попробовать наш генератор тимбилдингов"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
@@ -996,10 +903,6 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
-        },
-        {
           "type": "cardList",
           "title": "Выводы",
           "titleType": "big",
@@ -1021,30 +924,29 @@
       ]
     }
   },
-
   {
     "id": 7,
     "slug": "team-diagnostics-tools",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Инструменты для диагностики вашей команды",
     "description": "Рассказали про разные виды тестирования эффективности команды и почему тебе это нужно",
     "cardDisplay": {
-      "background": "url",
-      "card": "big",
-      "rotate": "none",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700473/ArticleImage_07_Preview_kcvg8m.jpg",
+      "card": "standard",
+      "rotate": "left",
       "textColor": "black",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
     "filter": "tools",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "big",
       "content": [
@@ -1062,12 +964,26 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700358/ArticleImage_07_01_ofnlav.svg",
           "alt": "Иллюстрация: диагностика команды"
         },
         {
           "type": "previewParagraph",
           "text": "Командная работа — это не только про совместные проекты, но и про динамику взаимодействия, распределение ролей и общий психологический климат. Чтобы понять, как обстоят дела в вашей команде, существуют специальные инструменты диагностики. Они помогут выявить сильные стороны коллектива, зоны роста и оптимальные пути для улучшения совместной работы."
+        },
+        {
+          "type": "whiteBox",
+          "title": "История появления",
+          "text": "Истоки понятия «командообразование» уходят в 1920-30-е годы, когда проводились исследования Хотторна. Тогда ученые выяснили, что эффективная команда формируется не только за счет навыков участников, но и благодаря чувству социальной поддержки, гордости за общие достижения и возможности влиять на рабочие процессы."
+        },
+        {
+          "type": "paragraph",
+          "text": "Эти идеи актуальны до сих пор: чем больше у сотрудников чувства принадлежности и доверия друг к другу, тем выше их вовлеченность и продуктивность. Поэтому современные компании уделяют внимание не только найму профессионалов, но и формированию комфортной атмосферы внутри команды."
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700361/ArticleImage_07_02_kbsiiw.jpg",
+          "description": "Даже если результаты вдруг тебя расстроят, просто думай, что у кого марс в Весах"
         },
         {
           "type": "whiteBox",
@@ -1101,14 +1017,44 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "Даже если результаты вдруг тебя расстроят, просто думай, что у кого марс в Весах"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
-          "title": "Что делают другие?",
+          "title": "Виды диагностик",
           "text": "Использование инструментов диагностики давно стало стандартом в ведущих компаниях. Это помогает им оптимизировать работу и удерживать талантливых специалистов."
+        },
+        {
+          "type": "pointedSection",
+          "title": "Психологические тесты и диагностика ролей",
+          "items": [
+            "Тест FIRO (определяет, насколько члены команды готовы к совместной работе)",
+            "Тест Белбина (выявляет командные роли, помогает понять, каких типов людей не хватает для эффективного взаимодействия)",
+            "Тест Адизеса (анализирует стиль управления в команде, показывает баланс ролей по четырём ключевым функциям: производитель, администратор, предприниматель, интегратор)",
+            "Тест Майер-Бриггс или MBTI (выстраивает взаимодействие с учётом индивидуальных особенностей)",
+            "DISC-оценка (анализирует стиль поведения каждого участника, выявляя его склонности к доминированию, влиянию, стабильности и добросовестности)",
+            "Тест «Определение роли лидера в команде» (анонимное исследование, которое помогает руководителю понять, как его воспринимают коллеги)",
+            "Тест «Оценка команды изнутри» (помогает оценить уровень доверия, эффективности и общего климата в коллективе)"
+          ]
+        },
+        {
+          "type": "pointedSection",
+          "title": "Методы фасилитации и ценностного анализа",
+          "items": [
+            "Фасилитация «Определение ценностей команды» (выявление и согласование ключевых ценностей, влияющих на работу)",
+            "Моделирование ситуаций (помогает выявить скрытые конфликты и протестировать командные роли на практике)",
+            "Определение стадии развития команды по Такману (диагностика этапа жизненного цикла команды: формирование, конфликт, нормализация, продуктивность, спад)"
+          ]
+        },
+        {
+          "type": "pointedSection",
+          "title": "Оценка эффективности работы команды",
+          "items": [
+            "360-градусная обратная связь (сбор анонимных отзывов от коллег, подчинённых и руководителей)",
+            "Анализ KPI и OKR (оценка командных и индивидуальных показателей эффективности)",
+            "Ретроспектива и дебрифинг (обсуждение проделанной работы и поиск точек роста)"
+          ]
         },
         {
           "type": "highlightedSection",
@@ -1122,8 +1068,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "Не бойтесь адаптировать инструменты под свою команду. Иногда полезно комбинировать методы: например, после прохождения теста Белбина провести фасилитационную сессию, а результаты DISC-анализа использовать при настройке рабочих процессов. Чем гибче ваш подход, тем точнее будет диагностика и эффективнее последующие изменения."
         },
         {
           "type": "cardList",
@@ -1147,30 +1093,29 @@
       ]
     }
   },
-
   {
     "id": 8,
     "slug": "roleplay-team-building",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Сюжетно-ролевой тимбилдинг",
     "description": "Что это такое и зачем оно команде. Актёрское образование не требуется",
     "cardDisplay": {
-      "background": "url",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700479/ArticleImage_08_Preview_c9o4xu.jpg",
       "card": "big",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
-    "filter": "team-building",
+    "filter": "tools",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "big",
       "content": [
@@ -1188,7 +1133,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700719/ArticleImage_08_01_kis8cv.svg",
           "alt": "Иллюстрация: ролевой тимбилдинг"
         },
         {
@@ -1203,6 +1148,11 @@
         {
           "type": "paragraph",
           "text": "Сегодня командообразование перестало быть синонимом корпоративных вечеринок. Это полноценная управленческая практика, позволяющая команде развить внутренние связи, найти новые пути решения задач и даже определить скрытых лидеров. Вовлечение сотрудников в совместные задачи и креативные симуляции позволяет создать прочную основу для взаимодействия."
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700722/ArticleImage_08_02_wlujp3.jpg",
+          "description": "Фотка коллектива, который решил попробовать наш генератор тимбилдингов"
         },
         {
           "type": "whiteBox",
@@ -1236,9 +1186,8 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "Фотка коллектива, который решил попробовать наш генератор тимбилдингов"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
@@ -1274,8 +1223,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "Важно помнить, что командообразование — это не разовая акция, а постоянный процесс. Лишь системная работа даст ощутимые результаты."
         },
         {
           "type": "cardList",
@@ -1304,25 +1253,25 @@
     "id": 9,
     "slug": "effective-meetings",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Виды созвонов",
     "description": "«Опять созвон?!»: вводим в курс про абсолютно все типы созвонов",
     "cardDisplay": {
-      "background": "url",
-      "card": "big",
-      "rotate": "none",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700854/ArticleImage_09_Preview_ri4hae.svg",
+      "card": "standard",
+      "rotate": "right",
       "textColor": "black",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
-    "filter": "communication",
+    "filter": "organization",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "big",
       "content": [
@@ -1340,7 +1289,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700857/ArticleImage_09_01_ic0n6q.svg",
           "alt": "Иллюстрация: типы встреч"
         },
         {
@@ -1355,6 +1304,11 @@
         {
           "type": "paragraph",
           "text": "Sprint Planning — встречи, проводимые в начале каждого спринта (обычно двухнедельного периода), где команда определяет, какие задачи будут выполнены в течение этого времени. Это позволяет установить четкие цели и распределить обязанности."
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750700860/ArticleImage_09_02_tuwfv6.jpg",
+          "description": "Команда “Connecteam” во время разработки дизайн-системы"
         },
         {
           "type": "whiteBox",
@@ -1388,9 +1342,8 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "На крайняк просто устройте тайм-аут с мемами и приколами"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
@@ -1426,8 +1379,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "Правильная организация и проведение созвонов могут значительно повысить эффективность работы команды и привести к успешной реализации проектов."
         },
         {
           "type": "cardList",
@@ -1440,41 +1393,40 @@
             },
             {
               "title": "Асинхронность спасает",
-              "text": "Не обязательно всё обсуждать голосом — иногда текстовый чат или видео намного удобнее"
+              "description": "Не обязательно всё обсуждать голосом — иногда текстовый чат или видео намного удобнее"
             },
             {
               "title": "Чем меньше, тем лучше",
-              "text": "Оптимальное количество встреч — столько, сколько реально нужно для синхронизации"
+              "description": "Оптимальное количество встреч — столько, сколько реально нужно для синхронизации"
             }
           ]
         }
       ]
     }
   },
-
   {
     "id": 10,
     "slug": "engineering-product-teams",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Эффективное взаимодействие инженерной и продуктовой команд",
     "description": "Когда продукт — это космос, а инженер — Земля: миссия «понимай друг друга»",
     "cardDisplay": {
-      "background": "url",
+      "background": "purple",
       "card": "big",
       "rotate": "none",
-      "textColor": "black",
+      "textColor": "white",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
-    "filter": "teamwork",
+    "filter": "communication",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "big",
       "content": [
@@ -1492,7 +1444,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750701036/ArticleImage_10_01_nzi05z.jpg",
           "alt": "Иллюстрация взаимодействия команд"
         },
         {
@@ -1507,6 +1459,11 @@
         {
           "type": "paragraph",
           "text": "Это не всегда просто. Иногда коммуникация превращается в пинг-понг из созвонов, иногда продукт ставит сроки, не вникая в реалии разработки, а инженерка «отбивается» сложностью системы. А бывает и так, что обе стороны стараются, но процесс всё равно вязнет. Почему? Потому что нет прозрачности, понятных приоритетов и общего понимания, кто за что отвечает и что происходит в целом."
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750701033/ArticleImage_10_02_iiiukp.jpg",
+          "description": "Выйти в окно — вариант, но сааамый крайний"
         },
         {
           "type": "whiteBox",
@@ -1540,9 +1497,8 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "Мы? Мы. И вы тоже, мы знаем) Источник: SlovoDna"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
@@ -1578,8 +1534,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "И не забывай регулярно пересматривать процессы. То, что работает сейчас, может устареть через полгода. Постоянная настройка — залог успеха."
         },
         {
           "type": "cardList",
@@ -1603,30 +1559,29 @@
       ]
     }
   },
-
   {
     "id": 11,
     "slug": "daily-standups",
     "metatags": {
-      "image": "url",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Ежедневные стендап встречи",
     "description": "В чём поинт и зачем нарушать правила?",
     "cardDisplay": {
-      "background": "url",
+      "background": "pink",
       "card": "big",
       "rotate": "none",
-      "textColor": "black",
+      "textColor": "white",
       "hasIcon": false,
-      "comingSoon": true
+      "comingSoon": false
     },
-    "filter": "agile",
+    "filter": "organization",
     "article": {
       "author": {
-        "image": "url",
-        "name": "author_name",
-        "description": "author_description"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "big",
       "content": [
@@ -1644,7 +1599,7 @@
         },
         {
           "type": "image",
-          "image": "url",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750701055/ArticleImage_11_01_vpccpo.jpg",
           "alt": "Иллюстрация: стендап встреча"
         },
         {
@@ -1659,6 +1614,11 @@
         {
           "type": "paragraph",
           "text": "Классическое «утро понедельника» — не всегда лучшее время. Ранние стендапы часто превращаются в пустые разговоры, потому что люди ещё не погрузились в задачи. Поздние — мешают глубокой работе. Оптимальное время зависит от ритма команды: например, после первого рабочего блока, когда уже есть что обсудить."
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750701052/ArticleImage_11_02_nmce0b.jpg",
+          "description": "Выйти в окно — вариант, но сааамый крайний"
         },
         {
           "type": "whiteBox",
@@ -1692,9 +1652,8 @@
           ]
         },
         {
-          "type": "image",
-          "image": "url",
-          "description": "Выйти в окно — вариант, но сааамый крайний"
+          "type": "telegram",
+          "link": "url"
         },
         {
           "type": "whiteBox",
@@ -1730,8 +1689,8 @@
           ]
         },
         {
-          "type": "telegram",
-          "link": "url"
+          "type": "paragraph",
+          "text": "Главное — не бояться пробовать. Даже небольшие изменения могут сделать стендапы ценнее."
         },
         {
           "type": "cardList",
@@ -1759,25 +1718,25 @@
     "id": 12,
     "slug": "colleague-friendship",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Дружба с коллегой",
     "description": "«Сделай по-братски» или как работа может вас поссорить",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750704372/ArticleImage_12_Preview_gjoftx.jpg",
       "card": "standard",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "communication",
+    "filter": "conflict",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "short",
       "content": [
@@ -1795,7 +1754,7 @@
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750704112/ArticleImage_12_01_ebodbc.jpg",
           "alt": "Иллюстрация конфликта в IT-команде"
         },
         {
@@ -1868,15 +1827,15 @@
 
   {
     "id": 13,
-    "slug": "designer-developer-conflict",
+    "slug": "technical-jargon",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Извините за мой французский: как говорить с командой на понятном языке",
-    "description": "Как не допустить ситуацию: «круто, div “blabla”»",
+    "title": "Технический жаргон",
+    "description": "Извините за мой французский: как говорить с командой на понятном языке?",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750704402/ArticleImage_13_Preview_qfm9ln.svg",
       "card": "standard",
       "rotate": "none",
       "textColor": "black",
@@ -1886,19 +1845,19 @@
     "filter": "communication",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "short",
       "content": [
         {
           "type": "heading-2",
-          "text": "Эффективная коммуникация между QA и разработчиками"
+          "text": "Технический жаргон"
         },
         {
           "type": "heading-4",
-          "text": "Как не допустить ситуацию: «круто, div “blabla”»"
+          "text": "Извините за мой французский: как говорить с командой на понятном языке?"
         },
         {
           "type": "tags",
@@ -1906,7 +1865,7 @@
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750704410/ArticleImage_13_01_m7fa4j.svg",
           "alt": "Иллюстрация обсуждения между дизайнером и разработчиком"
         },
         {
@@ -1980,18 +1939,17 @@
       ]
     }
   },
-
   {
     "id": 14,
-    "slug": "designer-frontend-conflict",
+    "slug": "joint-developers-work",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "От багов к доверию",
-    "description": "Тебе, подгон) Рассказываем от первопричины до решения",
+    "title": "Совместная работа разработчиков",
+    "description": "Как не допустить ситуацию: «круто, div “blabla”»",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750704437/ArticleImage_14_Preview_fqth6o.svg",
       "card": "standard",
       "rotate": "none",
       "textColor": "black",
@@ -2001,9 +1959,9 @@
     "filter": "communication",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "short",
       "content": [
@@ -2021,7 +1979,7 @@
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750704441/ArticleImage_14_01_cu6skt.svg",
           "alt": "Иллюстрация конфликта между дизайнером и разработчиком"
         },
         {
@@ -2091,40 +2049,39 @@
       ]
     }
   },
-
   {
     "id": 15,
-    "slug": "qa-dev-conflict",
+    "slug": "qa-dev-communication",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Холодная война между отделами",
-    "description": "Как превратить противостояние в продуктивное сотрудничество",
+    "title": "Эффективная коммуникация между QA и разработчиками",
+    "description": "От багов к доверию",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
-      "card": "standard",
+      "background": "purple",
+      "card": "big",
       "rotate": "none",
-      "textColor": "black",
+      "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
     "filter": "communication",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "short",
       "content": [
         {
           "type": "heading-2",
-          "text": "Профессия медиатора"
+          "text": "Эффективная коммуникация между QA и разработчиками"
         },
         {
           "type": "heading-4",
-          "text": "Медиатор, для гитары который?"
+          "text": "От багов к доверию"
         },
         {
           "type": "tags",
@@ -2132,7 +2089,7 @@
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707158/Article_15_01_egxagi.svg",
           "alt": "Иллюстрация конфликта между тестировщиком и разработчиком"
         },
         {
@@ -2202,40 +2159,39 @@
       ]
     }
   },
-
   {
     "id": 16,
-    "slug": "release-crisis-management",
+    "slug": "it-templates",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Работа в большой корпорации — это...",
-    "description": "Как не утонуть в хаосе и быстро найти решение",
+    "title": "Шаблон решения проблем для IT-команд",
+    "description": "Тебе, подгон) Рассказываем от первопричины до решения",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
-      "card": "standard",
+      "background": "pink",
+      "card": "big",
       "rotate": "none",
-      "textColor": "black",
+      "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "management",
+    "filter": "tools",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "short",
       "content": [
         {
           "type": "heading-2",
-          "text": "Оптимизация коммуникаций в Scrum-командах"
+          "text": "Шаблон решения проблем для IT-команд"
         },
         {
           "type": "heading-4",
-          "text": "Испорченный телефон с 1000 участников"
+          "text": "Тебе, подгон) Рассказываем от первопричины до решения"
         },
         {
           "type": "tags",
@@ -2243,7 +2199,7 @@
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707174/Article_16_01_f7sief.svg",
           "alt": "Иллюстрация проблем коммуникации в большой команде"
         },
         {
@@ -2313,36 +2269,35 @@
       ]
     }
   },
-
   {
     "id": 17,
-    "slug": "team-mediation",
+    "slug": "cold-war",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Такие знакомые конфликты в команде",
+    "title": "Холодная война между отделами",
     "description": "Как не допустить и предотвратить начало баттла",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707226/ArticleImage_17_Preview_f5wx8d.jpg",
       "card": "standard",
       "rotate": "none",
       "textColor": "black",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "teamwork",
+    "filter": "conflict",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "medium",
       "content": [
         {
           "type": "heading-2",
-          "text": "Медиация в IT-командах"
+          "text": "Холодная война между отделами"
         },
         {
           "type": "heading-4",
@@ -2354,7 +2309,7 @@
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707232/ArticleImage_17_01_gas3ro.jpg",
           "alt": "Иллюстрация медиации в команде"
         },
         {
@@ -2362,7 +2317,7 @@
           "title": "Ситуация",
           "titleType": "big",
           "items": [
-            "Твоя IT-команда работает над важным проектом, сроки поджимают, а тут ещё и конфликт между разработчиками из-за разных подходов к решению задачи. Знакомо? В таких ситуациях на помощь приходит медиатор — не тот, что для гитары, а специалист по разрешению конфликтов."
+            "У команды Пети и Даши горит релиз. Всё шло по плану, но за сутки до выката сервер начал падать без видимых причин. Логи пустые, баг-репорты не помогают, дедлайн дышит в затылок. Начинаются паника, метание и бесконечные «может, это из-за вчерашнего фикса?». Разработчики спорят с DevOps, а менеджер нервно обновляет Jira. Как не утонуть в хаосе и быстро найти решение?"
           ]
         },
         {
@@ -2371,20 +2326,20 @@
           "titleType": "big",
           "items": [
             {
-              "title": "Организация эффективного общения",
-              "description": "Медиатор помогает наладить диалог между сторонами конфликта, создавая условия для открытого и честного обмена мнениями"
+              "title": "Общее пространство",
+              "description": "Посадить команды вместе, чтобы обсуждать задачи напрямую и видеть, как их решения влияют на коллег"
             },
             {
-              "title": "Управление процессом медиации",
-              "description": "Он контролирует ход переговоров, следит за соблюдением регламента, объявляет перерывы для снижения напряжённости"
+              "title": "Личное знакомство",
+              "description": "Ввести регулярные неформальные встречи — совместные обеды или чаепития без разговоров о работе"
             },
             {
-              "title": "Анализ информации и выявление интересов",
-              "description": "Медиатор собирает, анализирует информацию от обеих сторон, чтобы выявить их истинные интересы и потребности"
+              "title": "Прямой контакт",
+              "description": "Операторы после назначения встречи лично сообщают менеджерам детали о клиенте, чтобы улучшить подготовку"
             },
             {
-              "title": "Содействие в достижении соглашения",
-              "description": "Его задача — помочь сторонам прийти к соглашению, которое сможет удовлетворить интересы всех участников"
+              "title": "Создайте единую для всех цель",
+              "description": "Измените мотивацию операторов, привязав их KPI именно к качеству потенциальных клиентов"
             }
           ]
         },
@@ -2393,9 +2348,9 @@
           "title": "Почему это супер?",
           "titleType": "big",
           "items": [
-            "Медиация помогает сэкономить время, деньги и эмоциональные силы участников спора",
-            "Эффективное использование медиации способствует созданию благоприятной атмосферы в коллективе",
-            "Разрешение конфликтов и улучшение коммуникации ведут к более слаженной работе команды"
+            "Личное общение сокращает дистанцию и снижает недопонимание между отделами",
+            "Совместная работа делает успехи и проблемы общими, а не «чужими»",
+            "Фокус на результат помогает командам видеть конечную цель — продажи, а не просто выполнение своей части задачи"
           ]
         },
         {
@@ -2408,6 +2363,116 @@
           "titleType": "big",
           "items": [
             {
+              "title": "Избегать личных встреч",
+              "description": "Это усиливает анонимность, обостряет конфликты и вообще не ведёт ни к чему хорошему"
+            },
+            {
+              "title": "Оставлять старые KPI",
+              "description": "Формальные цели без связи с реальными продажами провоцируют пустую активность"
+            },
+            {
+              "title": "Изолировать команды",
+              "description": "Работа через одни только мессенджеры и CRM разрушает командный дух"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "slug": "mediator",
+    "metatags": {
+      "image": "https://connecteam.space/metaImage.jpg",
+      "type": "article"
+    },
+    "title": "Профессия медиатора",
+    "description": "Медиатор, для гитары который?",
+    "cardDisplay": {
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707246/ArticleImage_18_Preview_j0aduu.svg",
+      "card": "standard",
+      "rotate": "none",
+      "textColor": "black",
+      "hasIcon": false,
+      "comingSoon": false
+    },
+    "filter": "organization",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
+      },
+      "type": "medium",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "Профессия медиатора"
+        },
+        {
+          "type": "heading-4",
+          "text": "Медиатор, для гитары который?"
+        },
+        {
+          "type": "tags",
+          "items": ["Методика", "3 мин"]
+        },
+        {
+          "type": "image",
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707251/ArticleImage_18_01_warjtc.svg",
+          "alt": "Изображение медиатора"
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Ситуация",
+          "titleType": "big",
+          "items": [
+            "Твоя IT-команда работает над важным проектом, сроки поджимают, а тут ещё и конфликт между разработчиками из-за разных подходов к решению задачи. Знакомо? В таких ситуациях на помощь приходит медиатор — не тот, что для гитары, а специалист по разрешению конфликтов."
+          ]
+        },
+        {
+          "type": "cardList",
+          "title": "Что делает медиатор, какие у него задачи?",
+          "titleType": "big",
+          "items": [
+            {
+              "title": "Организация эффективного общения",
+              "description": "Медиатор помогает наладить диалог между сторонами конфликта, создавая условия для открытого и честного обмена мнениями"
+            },
+            {
+              "title": "Управление процессом медиации",
+              "description": "Он контролирует ход переговоров, следит за соблюдением регламента, объявляет перерывы для снижения напряжённости"
+            },
+            {
+              "title": "Анализ информации и выявление интересов",
+              "description": "Медиатор собирает, анализирует информацию от обеих сторон, чтобы выявить их истинные интересы и потребности и найти взаимовыгодное решение"
+            },
+            {
+              "title": "Содействие в достижении",
+              "description": "Его задача — помочь сторонам прийти к соглашению, которое сможет удовлетворить интересы всех участников конфликта, чтобы было всё чики-пуки"
+            }
+          ]
+        },
+        {
+          "type": "highlightedSection",
+          "title": "Почему это супер?",
+          "titleType": "big",
+          "items": [
+            "Медиация помогает сэкономить время, деньги и эмоциональные силы участников спора",
+            "Эффективное использование медиации способствует созданию благоприятной атмосферы в коллективе, что напрямую влияет на продуктивность работы и общий успех компании",
+            "Разрешение конфликтов и улучшение коммуникации ведут к более слаженной работе команды и повышению её эффективности"
+          ]
+        },
+        {
+          "type": "telegram",
+          "link": "[TODO: Ссылка на Telegram]"
+        },
+        {
+          "type": "cardList",
+          "title": "Как медиатор помогает?",
+          "titleType": "big",
+          "items": [
+            {
               "title": "Предотвращение конфликтов",
               "description": "Присутствие медиатора снижает степень деструктивности, создавая благоприятную обстановку для чёткого диалога"
             },
@@ -2417,47 +2482,46 @@
             },
             {
               "title": "Сохранение рабочих отношений",
-              "description": "Благодаря медиации стороны могут преодолеть разногласия и сохранить профессиональные отношения"
+              "description": "Благодаря медиации стороны могут преодолеть разногласия, сфокусироваться на общих интересах и сохранить профессиональные отношения"
             }
           ]
         }
       ]
     }
   },
-
   {
-    "id": 18,
-    "slug": "large-team-communication",
+    "id": 19,
+    "slug": "scrum-optimization",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Особенности работы в большом коллективе",
-    "description": "Почему меня не слушают и что делать в таком случае",
+    "title": "Оптимизация коммуникаций в Scrum-командах",
+    "description": "Испорченный телефон с 1000 участников",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
+      "background": "purple",
       "card": "standard",
       "rotate": "none",
-      "textColor": "black",
+      "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "communication",
+    "filter": "organization",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "medium",
       "content": [
         {
           "type": "heading-2",
-          "text": "Корпоративные коммуникации"
+          "text": "Оптимизация коммуникаций в Scrum-командах"
         },
         {
           "type": "heading-4",
-          "text": "Почему меня не слушают и что делать в таком случае"
+          "text": "Испорченный телефон с 1000 участников"
         },
         {
           "type": "tags",
@@ -2465,8 +2529,8 @@
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
-          "alt": "Иллюстрация работы в большом коллективе"
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707266/ArticleImage_19_01_zl6afp.svg",
+          "alt": "Scrum-изображение"
         },
         {
           "type": "highlightedSection",
@@ -2491,11 +2555,11 @@
             },
             {
               "title": "Глубокая интеграция в корпоративный стек",
-              "description": "Лучшие практики МТС показывают: инструмент должен быть встроен в основной рабочий интерфейс. Их решение в виде плагина для JIRA увеличило adoption rate до 89%"
+              "description": "Лучшие практики МТС показывают: инструмент должен быть встроен в основной рабочий интерфейс. Их решение в виде плагина для JIRA (аналогично Atlassian Atlas) увеличило adoption rate до 89%"
             },
             {
               "title": "Стандартизировать форматы",
-              "description": "В крупных командах эффективен метод '4К': Коммит (что сделано), Код (изменения), Конфликты (блокеры), Контекст (что влияет на других)"
+              "description": "В крупных командах эффективен метод '4К': Коммит (что сделано), Код (изменения), Конфликты (блокеры), Контекст (что влияет на других). Такой подход сократил время standup-встреч в Тинькофф на 25%"
             }
           ]
         },
@@ -2537,47 +2601,47 @@
   },
 
   {
-    "id": 19,
-    "slug": "team-leadership-challenges",
+    "id": 20,
+    "slug": "team-conflicts",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Авторитет в команде",
-    "description": "Как сохранить уважение и не потерять лицо в конфликте",
+    "title": "Такие знакомые конфликты в команде",
+    "description": "Почему меня не слушают и что делать в таком случае?",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
+      "background": "pink",
       "card": "standard",
       "rotate": "none",
-      "textColor": "black",
+      "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "leadership",
+    "filter": "conflict",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
-      "type": "medium",
+      "type": "long",
       "content": [
         {
           "type": "heading-2",
-          "text": "Управление командными конфликтами"
+          "text": "Такие знакомые конфликты в команде"
         },
         {
           "type": "heading-4",
-          "text": "Как сохранить уважение и не потерять лицо в конфликте"
+          "text": "Почему меня не слушают и что делать в таком случае?"
         },
         {
           "type": "tags",
-          "items": ["Руководство командой", "3 мин"]
+          "items": ["Коммуникация", "3 мин"]
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
-          "alt": "Иллюстрация управления командным конфликтом"
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707301/ArticleImage_20_01_bb9gyy.svg",
+          "alt": "Иллюстрация работы в крупной компании"
         },
         {
           "type": "highlightedSection",
@@ -2646,49 +2710,48 @@
       ]
     }
   },
-
   {
-    "id": 20,
-    "slug": "corporate-survival-guide",
+    "id": 21,
+    "slug": "big-corporation-work",
     "metatags": {
-      "image": "[TODO: URL обложки]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Работа в большой корпорации — это...",
-    "description": "Как выжить и не потерять мотивацию в корпоративной среде",
+    "title": "Работа в большой корпорации — это ...",
+    "description": "Особенности работы в большом коллективе, о которых молчат",
     "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
-      "card": "standard",
+      "background": "purple",
+      "card": "big",
       "rotate": "none",
-      "textColor": "black",
+      "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "career",
+    "filter": "communication",
     "article": {
       "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
-      "type": "long",
+      "type": "short",
       "content": [
         {
           "type": "heading-2",
-          "text": "Корпоративная адаптация"
+          "text": "Работа в большой корпорации — это ..."
         },
         {
           "type": "heading-4",
-          "text": "Как выжить и не потерять мотивацию"
+          "text": "Особенности работы в большом коллективе, о которых молчат"
         },
         {
           "type": "tags",
-          "items": ["Коммуникация", "5 мин"]
+          "items": ["Коммуникация", "3 мин"]
         },
         {
           "type": "image",
-          "image": "[TODO: URL изображения]",
-          "alt": "Иллюстрация работы в крупной компании"
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750707332/ArticleImage_21_01_blwiel.jpg",
+          "alt": "Иллюстрация команды в большой корпорации"
         },
         {
           "type": "highlightedSection",
@@ -2705,7 +2768,7 @@
           "items": [
             {
               "title": "Найди своих «агентов влияния»",
-              "description": "Познакомься с теми, кто двигает процессы: проджектами, тимлидами, и другими. Они скажут, где искать одобрение и как обходить согласования"
+              "description": " Познакомься с теми, кто двигает процессы: проджектами, тимлидами, и другими. Они скажут, где искать одобрение и как обходить согласования"
             },
             {
               "title": "Освой корпоративный «эзопов язык»",
@@ -2726,9 +2789,9 @@
           "title": "Почему это супер?",
           "titleType": "big",
           "items": [
-            "Доступ к крутым ресурсам — корпорации дают обучение, тестовые среды, мощное железо и экспертизу, которую не найдешь в стартапах",
-            "Горизонтальная мобильность — если надоел проект, можно перейти в другой отдел, не увольняясь",
-            "Стабильность (но не всегда) — даже в кризис крупные компании реже разваливаются, чем маленькие"
+            "Доступ к крутым ресурсам – корпорации дают обучение, тестовые среды, мощное железо и экспертизу, которую не найдешь в стартапах",
+            "Горизонтальная мобильность – если надоел проект, можно перейти в другой отдел, не увольняясь",
+            "Стабильность (но не всегда) – даже в кризис крупные компании реже разваливаются, чем маленькие"
           ]
         },
         {
@@ -2746,132 +2809,12 @@
             },
             {
               "title": "Замыкаться в своем отделе",
-              "description": "Если общаться только со своей командой, можно пропустить классные возможности или не узнать о скрытых конфликтах"
+              "description": "Если общаться только со своей командой, можно пропустить классные возможности или не узнать о скрытых конфликтах, а нам этого не надо"
             },
             {
               "title": "«Корпоративная культура» без фильтра",
-              "description": "Пицца-пати и тимбилдинги — это весело, но не забывай, что компания в первую очередь хочет от тебя результата"
+              "description": "Пицца-пати и тимбилдинги — это весело, но не забывай, что компания в первую очередь хочет от тебя результата. Не превращайся в «офисного зомби»"
             }
-          ]
-        }
-      ]
-    }
-  },
-
-  {
-    "id": 21,
-    "slug": "corporate-communication-challenges",
-    "metatags": {
-      "image": "[TODO: URL обложки]",
-      "type": "article"
-    },
-    "title": "Коммуникация в распределённых командах",
-    "description": "Как преодолеть барьеры в большой организации",
-    "cardDisplay": {
-      "background": "[TODO: URL фона карточки]",
-      "card": "standard",
-      "rotate": "none",
-      "textColor": "black",
-      "hasIcon": false,
-      "comingSoon": false
-    },
-    "filter": "communication",
-    "article": {
-      "author": {
-        "image": "[TODO: URL аватара автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
-      },
-      "type": "long",
-      "content": [
-        {
-          "type": "heading-2",
-          "text": "Проблемы корпоративной коммуникации"
-        },
-        {
-          "type": "heading-4",
-          "text": "Как преодолеть барьеры в большой организации"
-        },
-        {
-          "type": "tags",
-          "items": ["Коммуникация", "5 мин"]
-        },
-        {
-          "type": "image",
-          "image": "[TODO: URL изображения]",
-          "alt": "Иллюстрация коммуникационных барьеров в корпорации"
-        },
-        {
-          "type": "highlightedSection",
-          "title": "Ситуация",
-          "titleType": "big",
-          "items": [
-            "В распределённых командах крупных корпораций ежедневно теряется до 40% рабочего времени из-за неэффективной коммуникации. Разные часовые пояса, перегруженные каналы связи, конфликтующие приоритеты отделов — всё это создаёт «эффект испорченного телефона» в масштабах всей организации."
-          ]
-        },
-        {
-          "type": "cardList",
-          "title": "Что делать?",
-          "titleType": "big",
-          "items": [
-            {
-              "title": "Создать единое информационное пространство",
-              "description": "Внедрить корпоративную wiki с чёткими правилами документирования и системой контроля версий"
-            },
-            {
-              "title": "Оптимизировать meeting-культуру",
-              "description": "Ввести правило «50/25»: 50 минут вместо часа для стандартных встреч, 25 минут вместо получаса для quick sync"
-            },
-            {
-              "title": "Разработать коммуникационный протокол",
-              "description": "Чёткие правила: что в email, что в чат, что в трекер задач. Например: «Все решения с impact на другие команды — только через RFC»"
-            },
-            {
-              "title": "Автоматизировать рутинный обмен данными",
-              "description": "Боты для регулярных отчётов, интеграция систем мониторинга с чатами, автоматические дайджесты изменений"
-            }
-          ]
-        },
-        {
-          "type": "highlightedSection",
-          "title": "Почему это супер?",
-          "titleType": "big",
-          "items": [
-            "Снижение когнитивной нагрузки — сотрудники тратят меньше сил на поиск информации и восстановление контекста",
-            "Уменьшение количества дублирующих вопросов — по данным исследований, на 60-70%",
-            "Более осознанное потребление информации — сотрудники учатся работать с релевантными данными"
-          ]
-        },
-        {
-          "type": "telegram",
-          "link": "[TODO: Ссылка на Telegram]"
-        },
-        {
-          "type": "cardList",
-          "title": "Что не надо делать?",
-          "titleType": "big",
-          "items": [
-            {
-              "title": "Закрывать глаза на культурные различия",
-              "description": "В международных командах важно учитывать разницу в коммуникационных стилях разных культур"
-            },
-            {
-              "title": "Дублировать информацию в нескольких каналах",
-              "description": "Это создаёт путаницу и увеличивает нагрузку на сотрудников"
-            },
-            {
-              "title": "Игнорировать feedback-механизмы",
-              "description": "Регулярные опросы сотрудников помогают выявлять узкие места в коммуникации"
-            }
-          ]
-        },
-        {
-          "type": "stickers",
-          "items": [
-            "Провести аудит коммуникационных каналов",
-            "Создать глоссарий терминов",
-            "Запустить серию обучающих вебинаров",
-            "Внедрить систему рейтинга полезности встреч"
           ]
         }
       ]
@@ -2881,7 +2824,7 @@
     "id": 22,
     "slug": "team-communication-deadlines",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Общение с командой при горящих дедлайнах",
@@ -2897,9 +2840,9 @@
     "filter": "communication",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "superShort",
       "content": [
@@ -2966,25 +2909,25 @@
     "id": 23,
     "slug": "over-friendship-at-work",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Опасности «чрезмерной дружбы» на работе",
     "description": "Передружба-недоработа",
     "cardDisplay": {
-      "background": "pink",
+      "background": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750713759/ArticleImage_23_uuf4ny.jpg",
       "card": "standard",
-      "rotate": "right",
-      "textColor": "white",
+      "rotate": "none",
+      "textColor": "black",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "communication",
+    "filter": "conflict",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "superShort",
       "content": [
@@ -3051,13 +2994,13 @@
     "id": 24,
     "slug": "new-team-integration",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Знакомство новеньких с коллективом",
     "description": "Как предотвратить раскол между «старожилами» и «новичками»",
     "cardDisplay": {
-      "background": "pink",
+      "background": "purple",
       "card": "standard",
       "rotate": "right",
       "textColor": "white",
@@ -3067,9 +3010,9 @@
     "filter": "communication",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "superShort",
       "content": [
@@ -3136,25 +3079,25 @@
     "id": 25,
     "slug": "startup-team-dynamics",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Кто ты такой? Сплочение нового коллектива",
     "description": "Лайфхаки и советы по дружной атмосфере в команде",
     "cardDisplay": {
       "background": "pink",
-      "card": "standard",
-      "rotate": "right",
+      "card": "big",
+      "rotate": "none",
       "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "communication",
+    "filter": "organization",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "superShort",
       "content": [
@@ -3216,30 +3159,29 @@
       ]
     }
   },
-
   {
     "id": 26,
     "slug": "team-conflict-resolution",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Конфликт в команде",
     "description": "Пути решения назойливой проблемы",
     "cardDisplay": {
-      "background": "pink",
+      "background": "purple",
       "card": "standard",
-      "rotate": "right",
+      "rotate": "none",
       "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "conflicts",
+    "filter": "conflict",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "superShort",
       "content": [
@@ -3306,25 +3248,25 @@
     "id": 27,
     "slug": "team-motivation-without-budget",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Как поднять мотивацию в команде",
     "description": "Что делать, если денег на мотивацию нет, но хочется, чтобы команда работала лучше",
     "cardDisplay": {
-      "background": "pink",
-      "card": "standard",
-      "rotate": "right",
+      "background": "purple",
+      "card": "big",
+      "rotate": "none",
       "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "management",
+    "filter": "organization",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "superShort",
       "content": [
@@ -3386,20 +3328,19 @@
       ]
     }
   },
-
   {
     "id": 28,
     "slug": "new-team-member-integration",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Работа в новом коллективе",
     "description": "Как новичку быстро влиться в команду и не чувствовать себя чужим",
     "cardDisplay": {
-      "background": "pink",
+      "background": "purple",
       "card": "standard",
-      "rotate": "right",
+      "rotate": "left",
       "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
@@ -3407,9 +3348,9 @@
     "filter": "communication",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "superShort",
       "content": [
@@ -3471,12 +3412,11 @@
       ]
     }
   },
-
   {
     "id": 29,
     "slug": "work-dispute-resolution",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Как спорить с коллегой",
@@ -3489,12 +3429,12 @@
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "communication",
+    "filter": "conflict",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "superShort",
       "content": [
@@ -3556,51 +3496,50 @@
       ]
     }
   },
-
   {
     "id": 30,
     "slug": "work-dispute-resolution",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
-    "title": "Как спорить с коллегой",
-    "description": "Что делать, если у вас разные взгляды на задачу",
+    "title": "Профессиональное выгорание",
+    "description": "Не в ресурсе, не в потоке, на низких вибрациях, это конец?",
     "cardDisplay": {
       "background": "pink",
-      "card": "standard",
-      "rotate": "right",
+      "card": "big",
+      "rotate": "none",
       "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "communication",
+    "filter": "tools",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "superShort",
       "content": [
         {
           "type": "heading-2",
-          "text": "Как спорить с коллегой"
+          "text": "Профессиональное выгорание"
         },
         {
           "type": "heading-4",
-          "text": "Что делать, если у вас разные взгляды на задачу"
+          "text": "Не в ресурсе, не в потоке, на низких вибрациях, это конец?"
         },
         {
           "type": "tags",
-          "items": ["Коммуникация", "3 мин"]
+          "items": ["Методика", "3 мин"]
         },
         {
           "type": "highlightedSection",
           "title": "Ситуация",
           "titleType": "big",
           "items": [
-            "Ты считаешь, что нужно сделать интерфейс минималистичным, а коллега уверен, что нужна куча кнопок. Или вы не можете решить, какие метрики важнее. В итоге обсуждение превращается в спор, и никто не хочет уступать."
+            "Ты открываешь ноутбук, но не можешь сосредоточиться. Все раздражает, задачи не вдохновляют, работа кажется рутиной. Это похоже на выгорание, и его нельзя игнорировать."
           ]
         },
         {
@@ -3609,24 +3548,24 @@
           "titleType": "big",
           "items": [
             {
-              "title": "Поговорите по душам",
-              "description": "Сначала поймите аргументы друг друга – возможно, у каждого есть своя логика"
+              "title": "Помогите Даше найти кое-что",
+              "description": "Определи причину усталости: много задач, отсутствие интереса, стресс?"
             },
             {
-              "title": "Нам нужны факты",
-              "description": "Опирайтесь на данные, метрики, тесты и всё, что поможет принять объективное решение"
+              "title": "Смена фокуса",
+              "description": "Переключайся на другие задачи, смена активности помогает отвлечься и набраться сил"
             },
             {
-              "title": "Станьте тестировщиками",
-              "description": "Предложите протестировать оба варианта – иногда лучший способ проверить идею – запустить её"
+              "title": "Keep calm and take a break",
+              "description": "Делай небольшие перерывы, иногда стоит просто отдохнуть, а там появятся новые идеи и силы"
             },
             {
-              "title": "Знайте границы друг друга",
-              "description": "Не переходите на личности: обсуждайте проблему, а не обвиняйте друг друга"
+              "title": "Действуем по чуть-чуть",
+              "description": "Ставь маленькие, но достижимые цели — это помогает почувствовать прогресс"
             },
             {
-              "title": "Зовите подмогу",
-              "description": "Если спор не решается – зовите медиатора (руководителя или коллегу), который поможет найти компромисс"
+              "title": "Попробуй выговориться",
+              "description": "Обсуждай свою нагрузку с командой. Возможно, коллеги знают как помочь"
             }
           ]
         },
@@ -3635,26 +3574,25 @@
           "title": "Какой итог?",
           "titleType": "big",
           "items": [
-            "Рабочие споры – это нормально. Главное – уметь конструктивно обсуждать разногласия и приходить к решениям."
+            "Работать на износ – плохая стратегия, на себе проверяли( Важно следить за своим состоянием и вовремя перезагружаться."
           ]
         }
       ]
     }
   },
-
   {
     "id": 31,
     "slug": "designer-developer-communication",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Общение дизайнера с кодером",
     "description": "Как правильно давать комменты на работу друг друга",
     "cardDisplay": {
-      "background": "pink",
-      "card": "standard",
-      "rotate": "right",
+      "background": "purple",
+      "card": "big",
+      "rotate": "none",
       "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
@@ -3662,9 +3600,9 @@
     "filter": "communication",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "machere13",
+        "description": "Frontend Developer"
       },
       "type": "superShort",
       "content": [
@@ -3731,7 +3669,7 @@
     "id": 32,
     "slug": "effective-meetings",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Бесконечные митинги",
@@ -3739,17 +3677,17 @@
     "cardDisplay": {
       "background": "pink",
       "card": "standard",
-      "rotate": "right",
+      "rotate": "left",
       "textColor": "white",
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "productivity",
+    "filter": "organization",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_03_ky9nnm.webp",
+        "name": "Ника Косарева",
+        "description": "Бывалый дизайнер"
       },
       "type": "superShort",
       "content": [
@@ -3816,7 +3754,7 @@
     "id": 33,
     "slug": "task-overload-solutions",
     "metatags": {
-      "image": "[URL]",
+      "image": "https://connecteam.space/metaImage.jpg",
       "type": "article"
     },
     "title": "Работа при потоке задач",
@@ -3829,12 +3767,12 @@
       "hasIcon": false,
       "comingSoon": false
     },
-    "filter": "productivity",
+    "filter": "organization",
     "article": {
       "author": {
-        "image": "[URL_фото_автора]",
-        "name": "[Не указано]",
-        "description": "[Не указано]"
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_02_a9eu0v.webp",
+        "name": "Василиса Кольченко",
+        "description": "Бывалый дизайнер"
       },
       "type": "superShort",
       "content": [
