@@ -1,29 +1,30 @@
-.title{
-    color: var(--color-main-white);
-    rotate: -1deg;
+.title {
+  color: var(--color-main-white);
+  rotate: -1deg;
 }
 
-.position_absolute_1{
-    position: absolute;
-    top: 190px;
-    left: 25%;
+.position_absolute_1 {
+  position: absolute;
+  top: 190px;
+  left: 25%;
 }
 
-.position_absolute_2{
-    position: absolute;
-    right: 25%;
-    bottom: 180px;
+.position_absolute_2 {
+  position: absolute;
+  right: 25%;
+  bottom: 180px;
 }
 
 @media (max-width: 720px) {
-    .title{
-        padding: var(--spacing-15) var(--spacing-25);
+  .title {
+    padding: var(--spacing-15) var(--spacing-25);
 
-        background: var(--color-main-orange);
-        border-radius: var(--border-radius-10);
-    }
+    background: var(--color-main-orange);
+    border-radius: var(--border-radius-10);
+  }
 
-    .position_absolute_1, .position_absolute_2{
-        display: none;
-    }
+  .position_absolute_1,
+  .position_absolute_2 {
+    display: none;
+  }
 }
