@@ -35,8 +35,8 @@ export default function C_StyleguideValueCardListItems() {
       title: 'Непредвзятость',
       description: 'Показываем взгляд на работу всех участников команды',
       cardDisplay: {
-        background: 'gray' as CardBackground,
-        rotate: 'right',
+        background: 'main-white' as CardBackground,
+        rotate: 'none',
         textColor: 'black',
         hasIcon: false,
       },
@@ -46,9 +46,10 @@ export default function C_StyleguideValueCardListItems() {
       description:
         'На реальных кейсах рассказываем про ошибки  и создаем классные игры для сплочения коллектива',
       cardDisplay: {
-        background: '/images/styleguide/creative.jpg',
+        background:
+          'https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750669207/M_StyleguideValueCard_wz0pww.svg',
         rotate: 'none',
-        textColor: 'white',
+        textColor: 'black',
         hasIcon: false,
       },
     },
