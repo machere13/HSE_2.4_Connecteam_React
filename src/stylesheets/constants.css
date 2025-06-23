@@ -84,6 +84,7 @@
   --font-letter-spacing-buttons: 1.5%;
 
   /* Font Size */
+  --font-size-headers-0: 94px;
   --font-size-headers-1: 64px;
   --font-size-headers-2: 45px;
   --font-size-headers-3: 35px;
@@ -107,6 +108,7 @@
 @media (max-width: 1028px) {
   :root {
     /* Font Size */
+    --font-size-headers-0: 94px;
     --font-size-headers-1: 64px;
     --font-size-headers-2: 45px;
     --font-size-headers-3: 35px;
@@ -155,6 +157,7 @@
 @media (max-width: 720px) {
   :root {
     /* Font Size */
+    --font-size-headers-0: 45px;
     --font-size-headers-1: 40px;
     --font-size-headers-2: 23px;
     --font-size-headers-3: 23px;
@@ -198,6 +201,14 @@
     --border-radius-20: 15px;
     --border-radius-35: 25px;
   }
+}
+
+.h0{
+  font-family: var(--font-family-inter-tight);
+  font-size: var(--font-size-headers-0);
+  font-weight: var(--font-weight-headers);
+  line-height: var(--font-line-height-headers);
+  letter-spacing: var(--font-letter-spacing-headers);
 }
 
 h1 {
