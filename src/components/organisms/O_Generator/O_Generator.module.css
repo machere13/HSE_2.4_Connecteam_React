@@ -18,3 +18,10 @@
   gap: var(--spacing-35);
   grid-template-columns: repeat(2, 1fr);
 }
+
+@media (max-width: 676px) {
+  .settings{
+    display: flex;
+    flex-direction: column;
+  }
+}

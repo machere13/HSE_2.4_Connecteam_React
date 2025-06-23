@@ -6,6 +6,8 @@
 
   padding: var(--spacing-15);
 
+  text-align: start;
+
   background: var(--color-main-main-white);
 
   transition: all 0.2s;
