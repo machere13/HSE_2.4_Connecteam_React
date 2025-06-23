@@ -8,6 +8,7 @@ import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_Artic
 import W_RecommendationsMaterials from '@/components/wrappers/W_RecommendationsMaterials/W_RecommendationsMaterials'
 import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
+import { Meta } from '@/lib/Meta'
 
 import type { M_PersonProps } from '@/components/molecules/M_Person/M_Person'
 import type { ArticleData } from '@/types/article'
@@ -69,6 +70,12 @@ export default function ArticlePage({ article }: ArticlePageProps) {
 
   return (
     <div className='page'>
+      <Meta
+        title={`${article.title} | Connecteam`}
+        description={article.description}
+        url={`https://connecteam.space/articles/${article.slug}`}
+        type='article'
+      />
       <SO_Header />
       <div className='materials_content_wrapper'>
         <W_ArticleAboutInfo author={authorProps} />

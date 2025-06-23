@@ -6,6 +6,7 @@ import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import T_MaterialsPageContent from '@/components/templates/T_MaterialsPageContent/T_MaterialsPageContent'
 import W_ArticleCards from '@/components/wrappers/W_ArticleCards/W_ArticleCards'
+import { Meta } from '@/lib/Meta'
 
 import type { ArticleData } from '@/types/article'
 import type { GetStaticProps } from 'next'
@@ -43,6 +44,11 @@ export default function ArticlesPage({ articles }: { articles: ArticleData[] }) 
 
   return (
     <div className='page'>
+      <Meta
+        title='Статьи | Connecteam'
+        description='Полезные статьи о деловой коммуникации в IT-командах'
+        url='https://connecteam.space/articles'
+      />
       <div className='header_content_gap'>
         <SO_Header />
         <T_MaterialsPageContent

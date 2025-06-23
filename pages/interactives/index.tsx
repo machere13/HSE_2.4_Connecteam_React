@@ -5,6 +5,7 @@ import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 import W_TestCardsWithTitle from '@/components/wrappers/W_TestCardsWithTitle/W_TestCardsWithTitle'
+import { Meta } from '@/lib/Meta'
 
 import type { TestData } from '@/types/test'
 
@@ -19,6 +20,11 @@ export const getStaticProps = async () => {
 export default function InteractivesPage({ tests }: { tests: TestData[] }) {
   return (
     <div className='page'>
+      <Meta
+        title='Интерактивы | Connecteam'
+        description='Интерактивные тесты и генераторы для улучшения коммуникации в IT-командах'
+        url='https://connecteam.space/interactives'
+      />
       <SO_Header />
       <Q_Grid variant='gray' />
       <div className='preview_content_wrapper'>

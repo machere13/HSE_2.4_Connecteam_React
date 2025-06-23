@@ -7,6 +7,7 @@ import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
 import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
+import { Meta } from '@/lib/Meta'
 
 import type { M_PersonProps } from '@/components/molecules/M_Person/M_Person'
 import type { CaseData } from '@/types/case'
@@ -41,6 +42,12 @@ export default function CasePage({ case: caseArticle }: { case: CaseData }) {
 
   return (
     <div className='page'>
+      <Meta
+        title={`${caseArticle.title} | Connecteam`}
+        description={caseArticle.description}
+        url={`https://connecteam.space/cases/${caseArticle.slug}`}
+        type='article'
+      />
       <SO_Header />
       <div className='materials_content_wrapper'>
         <W_ArticleAboutInfo author={authorProps} />
