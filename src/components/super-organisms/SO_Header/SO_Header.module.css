@@ -17,7 +17,22 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 999;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1001;
+
+  width: 100%;
+
+  height: 100vh;
+
+  background: rgb(0 0 0 / 50%);
+  border: none;
 }
 
 .logo_wrapper {
@@ -63,5 +78,11 @@
 
   .logo_full {
     display: none;
+  }
+}
+
+@media (max-width: 676px) {
+  .overlay {
+    clip-path: none;
   }
 }

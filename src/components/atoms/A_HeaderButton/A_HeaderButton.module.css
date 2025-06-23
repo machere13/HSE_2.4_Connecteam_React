@@ -36,3 +36,13 @@
     border-color: var(--color-main-white);
   }
 }
+
+@media (max-width: 1024px) {
+  .wrapper{
+    font-family: var(--font-family-hauora);
+    font-size: var(--font-size-headers-5);
+    font-weight: var(--font-weight-headers);
+    line-height: var(--font-line-height-headers);
+    letter-spacing: var(--font-letter-spacing-headers);
+  }
+}
