@@ -1,5 +1,7 @@
 import React from 'react'
 
+import cn from 'classnames'
+
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 
 import styles from './T_StartingPageSection.module.css'
@@ -11,7 +13,7 @@ interface T_StartingPageSectionProps {
 
 export default function T_StartingPageSection({ children, className }: T_StartingPageSectionProps) {
   return (
-    <section className={`${styles.wrapper} ${className || ''}`}>
+    <section className={cn(styles.wrapper, className || '')}>
       <Q_Grid variant='blue' />
       {children}
     </section>

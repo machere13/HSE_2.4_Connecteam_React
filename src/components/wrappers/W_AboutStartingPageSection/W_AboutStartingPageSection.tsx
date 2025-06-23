@@ -2,17 +2,17 @@ import React from 'react'
 
 import cn from 'classnames'
 
+import W_AboutStartingPageSectionImage from '@/assets/images/W_AboutStartingPageSection/W_AboutStartingPageSection.svg'
 import A_Cursor from '@/components/atoms/A_Cursor/A_Cursor'
-import { firstMainPageCursors } from '@/components/atoms/A_Cursor/data/cursors'
+import { firstAboutPageCursors } from '@/components/atoms/A_Cursor/data/cursors'
 import M_TextPlate from '@/components/molecules/M_TextPlate/M_TextPlate'
-import O_Search from '@/components/organisms/O_Search/O_Search'
 import T_StartingPageSection from '@/components/templates/T_StartingPageSection/T_StartingPageSection'
 
-import styles from './W_PreviewStartingPageSection.module.css'
+import styles from './W_AboutStartingPageSection.module.css'
 
-export default function W_PreviewStartingPageSection() {
+export default function W_AboutStartingPageSection() {
   return (
-    <T_StartingPageSection>
+    <T_StartingPageSection className={styles.template_wrapper}>
       <div className={styles.wrapper}>
         <M_TextPlate
           backgroundColor='orange'
@@ -37,13 +37,15 @@ export default function W_PreviewStartingPageSection() {
         </M_TextPlate>
         <div className={styles.content}>
           <h1 className={cn(styles.title, 'text_headers_0')}>
-            <span>Коннектим тебя</span>
-            <span>с коллегами</span>
+            <span>База знаний</span>
+            <span>для IT-команд</span>
           </h1>
-          <O_Search variant='animated' />
+          <div className={styles.image_wrapper}>
+            <W_AboutStartingPageSectionImage />
+          </div>
         </div>
       </div>
-      <A_Cursor cursors={firstMainPageCursors} />
+      <A_Cursor cursors={firstAboutPageCursors} />
     </T_StartingPageSection>
   )
 }

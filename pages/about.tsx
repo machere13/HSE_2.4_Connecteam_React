@@ -7,6 +7,7 @@ import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_AboutContentSection from '@/components/wrappers/W_AboutContentSection/W_AboutContentSection'
 import W_AboutGeneratorDirectionSection from '@/components/wrappers/W_AboutGeneratorDirectionSection/W_AboutGeneratorDirectionSection'
+import W_AboutStartingPageSection from '@/components/wrappers/W_AboutStartingPageSection/W_AboutStartingPageSection'
 import W_AboutTeamSection from '@/components/wrappers/W_AboutTeamSection/W_AboutTeamSection'
 
 import type { Questions } from '@/types/questions'
@@ -19,7 +20,8 @@ interface AboutPageProps {
 export default function AboutPage({ questions }: AboutPageProps) {
   return (
     <div className='page'>
-      <SO_Header />
+      <SO_Header position='absolute' />
+      <W_AboutStartingPageSection />
       <div className='preview_content_wrapper'>
         <W_AboutContentSection />
       </div>

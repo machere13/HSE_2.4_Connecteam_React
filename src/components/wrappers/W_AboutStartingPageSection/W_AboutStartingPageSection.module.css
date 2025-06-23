@@ -1,3 +1,7 @@
+.template_wrapper{
+    height: 883px;
+}
+
 .wrapper{
     position: relative;
 
@@ -28,7 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-45);
+    gap: var(--spacing-73);
 
     width: 100%;
 
@@ -47,6 +51,20 @@
     right: 65px;
 }
 
+.image_wrapper {
+    width: 100%;
+    max-width: 514px;
+  }
+  
+  .image_wrapper > svg {
+    display: block;
+  
+    width: 100%;
+  
+    height: 100%;
+    object-fit: contain;
+  }
+
 @media (max-width: 1340px) {
     .position_absolute_1, .position_absolute_2{
         display: none;
@@ -56,5 +74,13 @@
 @media (max-width: 720px) {
     .title{
         max-width: 400px;
+    }
+
+    .template_wrapper{
+        height: 663px;
+    }
+
+    .content{
+        gap: var(--spacing-165);
     }
 }
