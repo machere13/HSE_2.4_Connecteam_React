@@ -1,27 +1,5 @@
 const fetch = require('node-fetch')
 
-const mockedArticles = [
-  {
-    slug: 'yandex-rebranding',
-    updatedAt: '2024-03-20',
-  },
-  {
-    slug: 'spotify-race',
-    updatedAt: '2024-03-19',
-  },
-]
-
-const mockedCases = [
-  {
-    slug: 'testing-filter-management',
-    updatedAt: '2024-03-18',
-  },
-  {
-    slug: 'testing-filter-history',
-    updatedAt: '2024-03-17',
-  },
-]
-
 const staticPages = [
   '/',
   '/about',
@@ -29,8 +7,6 @@ const staticPages = [
   '/articles',
   '/interactives',
   '/interactives/generator',
-  '/interactives/itbunker',
-  '/interactives/itmafia',
   '/styleguide',
 ]
 
@@ -58,26 +34,61 @@ module.exports = {
   },
 
   additionalPaths: async () => {
-    return [
+    const paths = []
+
+    paths.push(
       ...staticPages.map(page => ({
         loc: page,
         lastmod: new Date().toISOString(),
         priority: page === '/' ? 1.0 : 0.9,
         changefreq: 'daily',
-      })),
-      ...mockedArticles.map(article => ({
-        loc: `/articles/${article.slug}`,
-        lastmod: new Date(article.updatedAt || Date.now()).toISOString(),
-        priority: 0.7,
-        changefreq: 'weekly',
-      })),
-      ...mockedCases.map(caseArticle => ({
-        loc: `/cases/${caseArticle.slug}`,
-        lastmod: new Date(caseArticle.updatedAt || Date.now()).toISOString(),
-        priority: 0.7,
-        changefreq: 'weekly',
-      })),
-    ]
+      }))
+    )
+
+    try {
+      const articlesResponse = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/articles`)
+      if (articlesResponse.ok) {
+        const articles = await articlesResponse.json()
+        paths.push(
+          ...articles.map(article => ({
+            loc: `/articles/${article.slug}`,
+            lastmod: new Date(article.updatedAt || article.createdAt || Date.now()).toISOString(),
+            priority: 0.7,
+            changefreq: 'weekly',
+          }))
+        )
+      }
+
+      const casesResponse = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/cases`)
+      if (casesResponse.ok) {
+        const cases = await casesResponse.json()
+        paths.push(
+          ...cases.map(caseArticle => ({
+            loc: `/cases/${caseArticle.slug}`,
+            lastmod: new Date(caseArticle.updatedAt || caseArticle.createdAt || Date.now()).toISOString(),
+            priority: 0.7,
+            changefreq: 'weekly',
+          }))
+        )
+      }
+
+      const testsResponse = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/tests`)
+      if (testsResponse.ok) {
+        const tests = await testsResponse.json()
+        paths.push(
+          ...tests.map(test => ({
+            loc: `/interactives/tests/${test.slug}`,
+            lastmod: new Date(test.updatedAt || test.createdAt || Date.now()).toISOString(),
+            priority: 0.6,
+            changefreq: 'monthly',
+          }))
+        )
+      }
+    } catch (error) {
+      console.error('Error fetching data for sitemap:', error)
+    }
+
+    return paths
   },
 
   robotsTxtOptions: {
