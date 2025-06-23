@@ -36,8 +36,10 @@ export default function GeneratorPage() {
         url='https://connecteam.space/interactives/generator'
       />
       <SO_Header />
-      <O_Generator onGenerate={handleGenerate} />
-      {selectedIdea && <O_GeneratorIdea idea={selectedIdea} />}
+      <div className='preview_content_wrapper'>
+        <O_Generator onGenerate={handleGenerate} />
+        {selectedIdea && <O_GeneratorIdea idea={selectedIdea} />}
+      </div>
       <Q_Grid variant='gray' />
       <O_Footer />
     </div>
