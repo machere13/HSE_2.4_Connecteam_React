@@ -35,25 +35,29 @@
   }
   
   .content {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     gap: var(--spacing-15);
-    position: relative;
+
     height: 100%;
   }
   
   .additional_info_wrapper {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     gap: var(--spacing-10);
+
     transform: scale(.5);
-    position: absolute;
-    right: -12px;
-    top: -12px;
   }
   
   .text_wrapper {

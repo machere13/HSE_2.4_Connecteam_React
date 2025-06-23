@@ -41,6 +41,16 @@ export const secondMainPageCursors: CursorConfig[] = [
   },
 ]
 
+export const firstAboutPageCursors: CursorConfig[] = [
+  {
+    style: 'product-demo',
+    icon: 'cursor-orbital',
+    speed: 0.5,
+    color: '#FF3DA8',
+    label: 'Ваня',
+  },
+]
+
 export const secondAboutPageCursors: CursorConfig[] = [
   {
     style: 'product-demo',
