@@ -6,7 +6,9 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<{ parameters: GeneratorParameters; ideas: GeneratorIdea[] } | { error: string }>,
+  res: NextApiResponse<
+    { parameters: GeneratorParameters; ideas: GeneratorIdea[] } | { error: string }
+  >,
 ) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })

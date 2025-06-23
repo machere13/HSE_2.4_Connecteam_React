@@ -6,6 +6,7 @@ import O_Generator from '@/components/organisms/O_Generator/O_Generator'
 import O_GeneratorIdea from '@/components/organisms/O_GeneratorIdea/O_GeneratorIdea'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import { findBestGeneratorIdea } from '@/lib/findBestGeneratorIdea'
 import { Meta } from '@/lib/Meta'
 
 import type { GeneratorIdea } from '@/types/generator'
@@ -15,19 +16,13 @@ export default function GeneratorPage() {
   const [ideas, setIdeas] = useState<GeneratorIdea[]>([])
 
   useEffect(() => {
-    getGeneratorIdeas().then(setIdeas)
+    getGeneratorIdeas().then(data => {
+      setIdeas(data)
+    })
   }, [])
 
   const handleGenerate = (params: { amount: string; goal: string; time: string; mode: string }) => {
-    const bestMatch = ideas.find(idea => {
-      const matchesAmount = idea.matches.teamSize.includes(params.amount)
-      const matchesGoal = idea.matches.category.includes(params.goal)
-      const matchesTime = idea.matches.duration.includes(params.time)
-      const matchesMode = idea.matches.format.includes(params.mode)
-
-      return matchesAmount && matchesGoal && matchesTime && matchesMode
-    })
-
+    const bestMatch = findBestGeneratorIdea(ideas, params)
     if (bestMatch) {
       setSelectedIdea(bestMatch)
     }
