@@ -61,7 +61,8 @@ mark {
   background: transparent;
 }
 
-.page, .page_styleguide {
+.page,
+.page_styleguide {
   position: relative;
 
   display: flex;
@@ -73,7 +74,7 @@ mark {
   min-height: 100vh;
 }
 
-.page_styleguide{
+.page_styleguide {
   background: var(--color-main-white);
 }
 
