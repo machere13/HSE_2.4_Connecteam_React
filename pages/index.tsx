@@ -10,6 +10,7 @@ import T_StartingPageSection from '@/components/templates/T_StartingPageSection/
 import W_PreviewArticlesCardsBlock from '@/components/wrappers/W_PreviewArticlesCardsBlock/W_PreviewArticlesCardsBlock'
 import W_PreviewCasesCardsBlock from '@/components/wrappers/W_PreviewCasesCardsBlock/W_PreviewCasesCardsBlock'
 import W_PreviewContentSection from '@/components/wrappers/W_PreviewContentSection/W_PreviewContentSection'
+import W_PreviewStartingPageSection from '@/components/wrappers/W_PreviewStartingPageSection/W_PreviewStartingPageSection'
 import { Meta } from '@/lib/Meta'
 
 export default function MainPage() {
@@ -18,10 +19,7 @@ export default function MainPage() {
       <Meta title='Connecteam' description='Медиа-сервис для IT-специалистов' />
       <M_HintScroll />
       <SO_Header position='absolute' />
-      <T_StartingPageSection>
-        <A_Cursor cursors={firstMainPageCursors} />
-        <O_Search variant='animated' />
-      </T_StartingPageSection>
+      <W_PreviewStartingPageSection />
       <div className='preview_content_wrapper'>
         <W_PreviewArticlesCardsBlock />
         <M_PreviewTestsDirectionPlate />

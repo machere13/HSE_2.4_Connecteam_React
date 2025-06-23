@@ -6,9 +6,7 @@
 .wrapper.animated,
 .search_wrapper.animated {
   width: 100%;
-  max-width: calc(657px + 2 * var(--spacing-25));
-
-  padding: 0 var(--spacing-25);
+  max-width: 657px;
 
   opacity: 1;
 }
@@ -32,8 +30,6 @@
 .search_wrapper.animated {
   width: 100%;
   max-width: 657px;
-
-  padding: 0 var(--spacing-25);
 
   opacity: 1;
 }

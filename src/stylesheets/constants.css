@@ -70,6 +70,7 @@
   --font-weight-buttons: 500;
 
   /* Line Height */
+  --font-line-height-header-0: 1;
   --font-line-height-headers: 1.2;
   --font-line-height-body-1: 1.2;
   --font-line-height-body-2: 1.2;
@@ -207,7 +208,7 @@
   font-family: var(--font-family-inter-tight);
   font-size: var(--font-size-headers-0);
   font-weight: var(--font-weight-headers);
-  line-height: var(--font-line-height-headers);
+  line-height: var(--font-line-height-header-0);
   letter-spacing: var(--font-letter-spacing-headers);
 }
 
