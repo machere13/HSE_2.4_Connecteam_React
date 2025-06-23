@@ -6,7 +6,7 @@ import W_StyleguideSectionOne from '@/components/wrappers/W_StyleguideSectionOne
 
 export default function StyleguidePage() {
   return (
-    <div className='page'>
+    <div className='page_styleguide'>
       <SO_Header />
       <W_StyleguideSectionOne />
       <O_Footer />

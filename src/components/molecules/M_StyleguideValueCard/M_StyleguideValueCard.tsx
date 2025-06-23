@@ -7,7 +7,7 @@ import Q_ThunderIconTag from '@/components/quarks/Q_ThunderIconTag/Q_ThunderIcon
 import styles from './M_StyleguideValueCard.module.css'
 
 type CardRotation = 'left' | 'right' | 'none'
-type CardBackground = 'pink' | 'purple'
+type CardBackground = 'pink' | 'purple' | 'main-white'
 type TextColor = 'white' | 'black'
 
 interface M_StyleguideValueCardProps {

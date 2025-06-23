@@ -61,7 +61,7 @@ mark {
   background: transparent;
 }
 
-.page {
+.page, .page_styleguide {
   position: relative;
 
   display: flex;
@@ -71,6 +71,10 @@ mark {
   gap: var(--spacing-85);
 
   min-height: 100vh;
+}
+
+.page_styleguide{
+  background: var(--color-main-white);
 }
 
 .header_content_gap {
