@@ -1,0 +1,13 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-30);
+    max-width: 615px;
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .wrapper {
+    gap: var(--spacing-15);
+  }
+}

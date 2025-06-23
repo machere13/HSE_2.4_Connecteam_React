@@ -1,0 +1,17 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-85);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-50);
+}
+
+.text_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+}
