@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-85);
+    width: 100%;
 }
 
 .content{
@@ -14,4 +15,16 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-10);
+
+    max-width: 654px;
+}
+
+.block_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-30);
+}
+
+.wrapper > h2, .block_wrapper > h3{
+    color: var(--color-main-blue);
 }
