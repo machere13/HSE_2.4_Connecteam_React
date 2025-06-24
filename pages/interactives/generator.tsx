@@ -21,7 +21,13 @@ export default function GeneratorPage() {
     })
   }, [])
 
-  const handleGenerate = (params: { amount: string; goal: string; time: string; mode: string }) => {
+  const handleGenerate = async (params: {
+    amount: string
+    goal: string
+    time: string
+    mode: string
+  }) => {
+    await new Promise(resolve => setTimeout(resolve, 2000))
     const bestMatch = findBestGeneratorIdea(ideas, params)
     if (bestMatch) {
       setSelectedIdea(bestMatch)
