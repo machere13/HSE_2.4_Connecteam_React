@@ -61,45 +61,45 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.nav_item:hover h6,
-.nav_item.active h6 {
-		color: var(--color-main-white);
-	}
+  .nav_item:hover h6,
+  .nav_item.active h6 {
+    color: var(--color-main-white);
+  }
 
-	.nav_item:hover,
-.nav_item.active {
-		background: var(--color-main-blue);
-	}
+  .nav_item:hover,
+  .nav_item.active {
+    background: var(--color-main-blue);
+  }
 
-	.nav_item:hover .nav_item_circle,
-.nav_item.active .nav_item_circle {
-		background: var(--color-main-white);
-	}
+  .nav_item:hover .nav_item_circle,
+  .nav_item.active .nav_item_circle {
+    background: var(--color-main-white);
+  }
 
-	.nav_item:hover p,
-.nav_item.active p {
-		color: var(--color-main-blue);
-	}
+  .nav_item:hover p,
+  .nav_item.active p {
+    color: var(--color-main-blue);
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.nav_item:active h6,
-.nav_item.active h6 {
-		color: var(--color-main-white);
-	}
+  .nav_item:active h6,
+  .nav_item.active h6 {
+    color: var(--color-main-white);
+  }
 
-	.nav_item:active,
-.nav_item.active {
-		background: var(--color-main-blue);
-	}
+  .nav_item:active,
+  .nav_item.active {
+    background: var(--color-main-blue);
+  }
 
-	.nav_item:active .nav_item_circle,
-.nav_item.active .nav_item_circle {
-		background: var(--color-main-white);
-	}
+  .nav_item:active .nav_item_circle,
+  .nav_item.active .nav_item_circle {
+    background: var(--color-main-white);
+  }
 
-	.nav_item:active p,
-.nav_item.active p {
-		color: var(--color-main-blue);
-	}
+  .nav_item:active p,
+  .nav_item.active p {
+    color: var(--color-main-blue);
+  }
 }
