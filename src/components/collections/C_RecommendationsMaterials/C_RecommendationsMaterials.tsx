@@ -20,8 +20,8 @@ const RecommendationArticleCard = ({ article }: { article: ArticleData }) => {
     article.cardDisplay.background.startsWith('http') ||
     article.cardDisplay.background.startsWith('/')
   const backgroundStyle = isImageBackground
-    ? { backgroundImage: `url(${article.cardDisplay.background})` }
-    : { backgroundColor: `var(--color-main-${article.cardDisplay.background})` }
+    ? { backgroundImage: `url(${article.cardDisplay.background})`, color: '#000' }
+    : { backgroundColor: `var(--color-main-${article.cardDisplay.background})`, color: '#fff' }
 
   return (
     <a
@@ -48,8 +48,8 @@ const RecommendationCaseCard = ({ caseItem }: { caseItem: CaseData }) => {
     caseItem.cardDisplay.background.startsWith('http') ||
     caseItem.cardDisplay.background.startsWith('/')
   const backgroundStyle = isImageBackground
-    ? { backgroundImage: `url(${caseItem.cardDisplay.background})` }
-    : { backgroundColor: `var(--color-main-${caseItem.cardDisplay.background})` }
+    ? { backgroundImage: `url(${caseItem.cardDisplay.background})`, color: '#000' }
+    : { backgroundColor: `var(--color-main-${caseItem.cardDisplay.background})`, color: '#fff' }
 
   return (
     <a
