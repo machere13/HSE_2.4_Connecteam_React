@@ -20,8 +20,8 @@ import ErrorSignature418Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Si
 import ErrorSignature500Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature500.svg'
 import ErrorSignature502Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature502.svg'
 import ErrorSignature505Icon from '@/assets/icons/ErrorIcons/Q_ErrorSignature/Signature505.svg'
-import HeaderSearchResultsLoaderIcon from '@/assets/icons/HeaderSearchResultsLoaderIcon.svg'
 import LinkIcon from '@/assets/icons/LinkIcon.svg'
+import LoaderIcon from '@/assets/icons/LoaderIcon.svg'
 import LogoFull from '@/assets/icons/LogoFull.svg'
 import LogoShort from '@/assets/icons/LogoShort.svg'
 import M_ArticleElementItemIcon01 from '@/assets/icons/M_ArticleElementItem/M_ArticleElementItemIcon01.svg'
@@ -48,7 +48,7 @@ export type Q_IconProps = {
     | 'cursorIcon'
     | 'closeIcon'
     | 'copyLinkIcon'
-    | 'headerSearchResultsLoaderIcon'
+    | 'loaderIcon'
     | 'errorCode403Icon'
     | 'errorCode404Icon'
     | 'errorCode418Icon'
@@ -99,7 +99,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
     cursorIcon: CursorIcon,
     closeIcon: CloseIcon,
     copyLinkIcon: CopyLinkIcon,
-    headerSearchResultsLoaderIcon: HeaderSearchResultsLoaderIcon,
+    loaderIcon: LoaderIcon,
     errorCode403Icon: ErrorCode403Icon,
     errorCode404Icon: ErrorCode404Icon,
     errorCode418Icon: ErrorCode418Icon,
