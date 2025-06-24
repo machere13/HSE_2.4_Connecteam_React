@@ -646,5 +646,153 @@
         }
       ]
     }
+  },
+  {
+    "id": 10,
+    "slug": "error-403",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "Тест ошибки 403",
+    "description": "Страница для тестирования ошибки 403",
+    "cardDisplay": {
+      "background": "red",
+      "card": "standard",
+      "rotate": "none",
+      "textColor": "white",
+      "hasIcon": false,
+      "comingSoon": false
+    },
+    "filter": "tools",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "Test Author",
+        "description": "Test Description"
+      },
+      "type": "short",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "Тест ошибки 403"
+        },
+        {
+          "type": "paragraph",
+          "text": "Эта страница должна вызвать ошибку 403"
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "slug": "error-500",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "Тест ошибки 500",
+    "description": "Страница для тестирования ошибки 500",
+    "cardDisplay": {
+      "background": "red",
+      "card": "standard",
+      "rotate": "none",
+      "textColor": "white",
+      "hasIcon": false,
+      "comingSoon": false
+    },
+    "filter": "tools",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "Test Author",
+        "description": "Test Description"
+      },
+      "type": "short",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "Тест ошибки 500"
+        },
+        {
+          "type": "paragraph",
+          "text": "Эта страница должна вызвать ошибку 500"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "slug": "error-502",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "Тест ошибки 502",
+    "description": "Страница для тестирования ошибки 502",
+    "cardDisplay": {
+      "background": "red",
+      "card": "standard",
+      "rotate": "none",
+      "textColor": "white",
+      "hasIcon": false,
+      "comingSoon": false
+    },
+    "filter": "tools",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "Test Author",
+        "description": "Test Description"
+      },
+      "type": "short",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "Тест ошибки 502"
+        },
+        {
+          "type": "paragraph",
+          "text": "Эта страница должна вызвать ошибку 502"
+        }
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "slug": "error-505",
+    "metatags": {
+      "image": "url",
+      "type": "article"
+    },
+    "title": "Тест ошибки 505",
+    "description": "Страница для тестирования ошибки 505",
+    "cardDisplay": {
+      "background": "red",
+      "card": "standard",
+      "rotate": "none",
+      "textColor": "white",
+      "hasIcon": false,
+      "comingSoon": false
+    },
+    "filter": "tools",
+    "article": {
+      "author": {
+        "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1748957231/A_Photo_01_ewdt73.webp",
+        "name": "Test Author",
+        "description": "Test Description"
+      },
+      "type": "short",
+      "content": [
+        {
+          "type": "heading-2",
+          "text": "Тест ошибки 505"
+        },
+        {
+          "type": "paragraph",
+          "text": "Эта страница должна вызвать ошибку 505"
+        }
+      ]
+    }
   }
 ]

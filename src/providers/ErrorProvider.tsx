@@ -12,48 +12,42 @@ interface ErrorProviderProps {
 
 export const ErrorProvider = ({ children }: ErrorProviderProps) => {
   const [error, setError] = useState<ErrorType | null>(null)
+  const [keySequence, setKeySequence] = useState<string>('')
   const router = useRouter()
 
   useEffect(() => {
-    let buffer: string[] = []
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (error && e.key === 'Escape') {
-        setError(null)
-        return
-      }
-
-      const isNumber = /^[0-9]$/.test(e.key)
-      if (!isNumber) return
-
-      buffer = [...buffer, e.key].slice(-3)
-      const code = buffer.join('')
-
-      if (code === '418') {
-        setError('418')
-      } else if (code === '403') {
-        setError('403')
-      } else if (code === '500') {
-        setError('500')
-      } else if (code === '502') {
-        setError('502')
-      } else if (code === '505') {
-        setError('505')
-      }
-    }
-
     const handleRouteChange = () => {
       setError(null)
     }
 
-    window.addEventListener('keydown', handleKeyDown)
     router.events.on('routeChangeComplete', handleRouteChange)
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown)
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [error, router])
+  }, [router])
+
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key >= '0' && event.key <= '9') {
+        const newSequence = keySequence + event.key
+        setKeySequence(newSequence)
+        if (newSequence === '418') {
+          setError('418')
+          setKeySequence('')
+        }
+        setTimeout(() => {
+          setKeySequence('')
+        }, 2000)
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyPress)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [keySequence])
 
   const showError = (type: ErrorType) => {
     setError(type)
