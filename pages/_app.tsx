@@ -21,10 +21,36 @@ export default function App({ Component, pageProps }: AppProps) {
       logPageView(url)
     }
 
+    const handleError = (event: ErrorEvent) => {
+      console.error('JavaScript error:', event.error)
+
+      if (event.error && 'status' in event.error && typeof event.error.status === 'number') {
+        const status = event.error.status
+        if ([403, 500, 502, 505].includes(status)) {
+          window.showError(status.toString() as '403' | '500' | '502' | '505')
+        }
+      }
+    }
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      console.error('Unhandled promise rejection:', event.reason)
+
+      if (event.reason && 'status' in event.reason && typeof event.reason.status === 'number') {
+        const status = event.reason.status
+        if ([403, 500, 502, 505].includes(status)) {
+          window.showError(status.toString() as '403' | '500' | '502' | '505')
+        }
+      }
+    }
+
     router.events.on('routeChangeComplete', handleRouteChange)
+    window.addEventListener('error', handleError)
+    window.addEventListener('unhandledrejection', handleUnhandledRejection)
 
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
+      window.removeEventListener('error', handleError)
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection)
     }
   }, [router.events])
 
