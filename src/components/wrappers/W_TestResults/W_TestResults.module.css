@@ -57,7 +57,8 @@
 }
 
 @media (max-width: 787px) {
-  .image_wrapper_01, .image_wrapper_02{
+  .image_wrapper_01,
+  .image_wrapper_02 {
     display: none;
   }
 }
