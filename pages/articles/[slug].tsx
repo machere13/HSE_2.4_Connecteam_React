@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 import { getArticles, getArticleBySlug } from '@/api/getArticles'
+import A_DirectionButton from '@/components/atoms/A_DirectionButton/A_DirectionButton'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import Q_PageLoader, { usePageLoader } from '@/components/quarks/Q_PageLoader/Q_PageLoader'
@@ -14,6 +15,7 @@ import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_Sti
 import { handleHttpError } from '@/lib/handleHttpError'
 import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
 import { Meta } from '@/lib/Meta'
+import { ROUTES } from '@/routes'
 
 import type { M_PersonProps } from '@/components/molecules/M_Person/M_Person'
 import type { ArticleData } from '@/types/article'
@@ -115,6 +117,11 @@ export default function ArticlePage({ article, errorCode }: ArticlePageProps) {
         />
         <SO_Header />
         <div className='materials_content_wrapper'>
+          <div className='position_right'>
+            <A_DirectionButton variant='orange_s' href={ROUTES.ARTICLES.INDEX}>
+              Вернуться назад
+            </A_DirectionButton>
+          </div>
           <W_ArticleAboutInfo author={authorProps} />
           {article.article.content.map((block, index) => {
             if (block.type === 'cardList') {
