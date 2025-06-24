@@ -1,16 +1,16 @@
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 960px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 960px;
 
-    width: 100%;
-    max-width: 276px;
+  width: 100%;
+  max-width: 276px;
 
-    margin-top: 960px;
+  margin-top: 960px;
 }
 
 @media (max-width: 967px) {
-    .wrapper{
-        display: none;
-    }
+  .wrapper {
+    display: none;
+  }
 }

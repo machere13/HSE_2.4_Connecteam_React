@@ -1,8 +1,8 @@
-.wrapper{
-    padding: var(--spacing-9) var(--spacing-20);
+.wrapper {
+  padding: var(--spacing-9) var(--spacing-20);
 
-    color: var(--color-main-white);
+  color: var(--color-main-white);
 
-    border-radius: var(--border-radius-20);
-    border: 1.5px solid var(--color-main-white);
+  border-radius: var(--border-radius-20);
+  border: 1.5px solid var(--color-main-white);
 }
