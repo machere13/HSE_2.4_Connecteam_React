@@ -1,4 +1,5 @@
 import { config } from '@/config'
+import { handleHttpError } from '@/lib/handleHttpError'
 import rawData from '@/mocks/mocked-data/mocked-generator.json'
 
 import type { GeneratorIdea } from '@/types/generator'
@@ -68,10 +69,27 @@ export const getGeneratorIdeas = async (): Promise<GeneratorIdea[]> => {
     return data.ideas.map((idea: unknown) => fixIdeaContent(idea as RawIdea))
   }
 
-  const response = await fetch('/api/generator')
-  if (!response.ok) {
-    throw new Error(`getGeneratorIdeas failed: ${response.status}`)
+  try {
+    const response = await fetch('/api/generator')
+    if (!response.ok) {
+      if (!handleHttpError(response.status)) {
+        throw new Error(`getGeneratorIdeas failed: ${response.status}`)
+      }
+      return []
+    }
+    const { ideas } = await response.json()
+    return ideas.map((idea: unknown) => fixIdeaContent(idea as RawIdea))
+  } catch (error) {
+    if (
+      error &&
+      typeof error === 'object' &&
+      'status' in error &&
+      typeof error.status === 'number'
+    ) {
+      if (!handleHttpError(error.status)) {
+        throw error
+      }
+    }
+    return []
   }
-  const { ideas } = await response.json()
-  return ideas.map((idea: unknown) => fixIdeaContent(idea as RawIdea))
 }

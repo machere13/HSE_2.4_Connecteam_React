@@ -1,4 +1,5 @@
 import { config } from '@/config'
+import { handleHttpError } from '@/lib/handleHttpError'
 import rawData from '@/mocks/mocked-data/mocked-cases.json'
 
 import type { CaseData } from '@/types/case'
@@ -18,9 +19,26 @@ export const getCases = async (): Promise<CaseData[]> => {
     return JSON.parse(fileContents) as CaseData[]
   }
 
-  const response = await fetch('/api/cases')
-  if (!response.ok) {
-    throw new Error(`getCases failed: ${response.status}`)
+  try {
+    const response = await fetch('/api/cases')
+    if (!response.ok) {
+      if (!handleHttpError(response.status)) {
+        throw new Error(`getCases failed: ${response.status}`)
+      }
+      return []
+    }
+    return response.json()
+  } catch (error) {
+    if (
+      error &&
+      typeof error === 'object' &&
+      'status' in error &&
+      typeof error.status === 'number'
+    ) {
+      if (!handleHttpError(error.status)) {
+        throw error
+      }
+    }
+    return []
   }
-  return response.json()
 }

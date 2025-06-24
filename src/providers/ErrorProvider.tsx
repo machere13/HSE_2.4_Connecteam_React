@@ -27,8 +27,18 @@ export const ErrorProvider = ({ children }: ErrorProviderProps) => {
       if (!isNumber) return
 
       buffer = [...buffer, e.key].slice(-3)
-      if (buffer.join('') === '418') {
+      const code = buffer.join('')
+
+      if (code === '418') {
         setError('418')
+      } else if (code === '403') {
+        setError('403')
+      } else if (code === '500') {
+        setError('500')
+      } else if (code === '502') {
+        setError('502')
+      } else if (code === '505') {
+        setError('505')
       }
     }
 
