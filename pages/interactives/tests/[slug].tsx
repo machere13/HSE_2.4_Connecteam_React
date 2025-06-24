@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 
 import { useRouter } from 'next/router'
@@ -5,6 +6,7 @@ import { useRouter } from 'next/router'
 import { getTests } from '@/api/getTests'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
+import Q_PageLoader, { usePageLoader } from '@/components/quarks/Q_PageLoader/Q_PageLoader'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_TestQuestionContent from '@/components/wrappers/W_TestQuestionContent/W_TestQuestionContent'
 import W_TestResults from '@/components/wrappers/W_TestResults/W_TestResults'
@@ -34,8 +36,19 @@ export default function TestPage({ test }: { test: TestData }) {
   const [score, setScore] = useState(0)
   const [showResults, setShowResults] = useState(false)
   const [selectedAnswers, setSelectedAnswers] = useState<(number | undefined)[]>([])
+  const { isLoading, stopLoading } = usePageLoader()
 
-  if (router.isFallback) return <div>Загрузка...</div>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      stopLoading()
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [stopLoading])
+
+  if (router.isFallback) {
+    return <Q_PageLoader isLoading={true} />
+  }
 
   const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
     const newSelectedAnswers = [...selectedAnswers]
@@ -76,45 +89,50 @@ export default function TestPage({ test }: { test: TestData }) {
   }
 
   return (
-    <div className='page'>
-      <Meta
-        title={`${test.title} | Connecteam`}
-        description={test.description}
-        url={`https://connecteam.space/interactives/tests/${test.slug}`}
-        type='article'
-      />
-      <div className='header_tests_content_gap'>
-        <SO_Header />
-        <div className='height_100'>
-          {showResults ? (
-            <W_TestResults
-              result={getResult()}
-              score={score}
-              totalQuestions={test.content.questions.length}
-              onRestart={() => {
-                setCurrentQuestionIndex(0)
-                setScore(0)
-                setShowResults(false)
-                setSelectedAnswers([])
-              }}
-            />
-          ) : (
-            <W_TestQuestionContent
-              currentNumber={currentQuestionIndex + 1}
-              totalQuestions={test.content.questions.length}
-              title={test.content.questions[currentQuestionIndex].title}
-              answers={test.content.questions[currentQuestionIndex].answers}
-              selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
-              isLastQuestion={currentQuestionIndex === test.content.questions.length - 1}
-              onAnswerSelect={answerIndex => handleAnswerSelect(currentQuestionIndex, answerIndex)}
-              onNext={handleNextQuestion}
-              onBack={handleBack}
-            />
-          )}
+    <>
+      <Q_PageLoader isLoading={isLoading} />
+      <div className='page'>
+        <Meta
+          title={`${test.title} | Connecteam`}
+          description={test.description}
+          url={`https://connecteam.space/interactives/tests/${test.slug}`}
+          type='article'
+        />
+        <div className='header_tests_content_gap'>
+          <SO_Header />
+          <div className='height_100'>
+            {showResults ? (
+              <W_TestResults
+                result={getResult()}
+                score={score}
+                totalQuestions={test.content.questions.length}
+                onRestart={() => {
+                  setCurrentQuestionIndex(0)
+                  setScore(0)
+                  setShowResults(false)
+                  setSelectedAnswers([])
+                }}
+              />
+            ) : (
+              <W_TestQuestionContent
+                currentNumber={currentQuestionIndex + 1}
+                totalQuestions={test.content.questions.length}
+                title={test.content.questions[currentQuestionIndex].title}
+                answers={test.content.questions[currentQuestionIndex].answers}
+                selectedAnswerIndex={selectedAnswers[currentQuestionIndex]}
+                isLastQuestion={currentQuestionIndex === test.content.questions.length - 1}
+                onAnswerSelect={answerIndex =>
+                  handleAnswerSelect(currentQuestionIndex, answerIndex)
+                }
+                onNext={handleNextQuestion}
+                onBack={handleBack}
+              />
+            )}
+          </div>
         </div>
+        <Q_Grid variant='gray' />
+        <O_Footer />
       </div>
-      <Q_Grid variant='gray' />
-      <O_Footer />
-    </div>
+    </>
   )
 }
