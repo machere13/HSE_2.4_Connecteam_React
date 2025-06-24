@@ -45,7 +45,6 @@ export default function W_StyleguideSectionTwo() {
               objectFit: 'contain',
             },
           ]}
-          description='Пример использования полной версии логотипа'
           height={180}
           maxWidth='fit-content'
         />
@@ -58,49 +57,57 @@ export default function W_StyleguideSectionTwo() {
               пробелы, размер которых меняется в&nbsp;зависимости от&nbsp;размера знака.
             </p>
           </div>
+          <M_StyleguideImageBlock
+            images={[
+              {
+                url: 'https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750746631/StyleguideImage_04_igffwi.svg',
+                alt: 'Логотип Connecteam',
+                objectFit: 'contain',
+              },
+            ]}
+            height={241}
+            maxWidth='fit-content'
+          />
         </div>
         <div className={styles.block_wrapper}>
-          <h3>Метафора</h3>
           <div className={styles.text_wrapper}>
             <p className='text_body_2'>
-              В&nbsp;основе метафоры лежит идея воссоздания коллективного непрерывного рабочего
-              процесса. Это передаёт основной посыл сервиса: эффективное общение&nbsp;&mdash; это
-              не&nbsp;конечный результат, а&nbsp;постоянный процесс, который требует вовлечённости
-              всех участников и&nbsp;открытости к&nbsp;новым подходам.
+              Для веб-сайтов и&nbsp;планшетов минимальное пространство над и&nbsp;под логотипом
+              должно быть высотой в&nbsp;30&nbsp;пикселей, отступ слева равен 50&nbsp;пикселям. Это
+              всегда должно совпадать с&nbsp;полями страницы.
             </p>
           </div>
-        </div>
-        <M_StyleguideImageBlock
-          images={[
-            {
-              url: 'https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750669977/StyleguideImage_01_bvmqie.jpg',
-              alt: 'Логотип Connecteam на здании',
-              objectFit: 'cover',
-            },
-          ]}
-          description='Пример использования полной версии логотипа'
-          height={409}
-        />
-        <div className={styles.text_wrapper}>
-          <p className='text_body_2'>
-            Медиа-сервис представляет собой рабочее пространство, где каждый элемент&nbsp;&mdash;
-            это новая идея или шаг в&nbsp;проекте, что отражает организацию рабочего процесса
-            и&nbsp;его постоянное развитие. Сочетание ярких элементов и&nbsp;покосившихся блоков
-            визуализируют незавершённость и&nbsp;живое взаимодействие, как будто команда обсуждает
-            идеи, оставляет заметки и&nbsp;ведёт совместную работу в&nbsp;реальном времени. Всё это
-            подчёркивает гибкость и&nbsp;креативность, свойственные IT-командам.
-          </p>
+          <M_StyleguideImageBlock
+            images={[
+              {
+                url: 'https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750751826/StyleguideImage_05_fitwpj.svg',
+                alt: 'Пример полной версии логотипа в веб-версии',
+                objectFit: 'cover',
+              },
+            ]}
+            description='Пример полной версии логотипа в веб-версии'
+            height={409}
+          />
         </div>
         <div className={styles.block_wrapper}>
-          <h3>Tone of voice</h3>
+          <h3>Знак</h3>
           <div className={styles.text_wrapper}>
             <p className='text_body_2'>
-              В&nbsp;основе метафоры лежит идея воссоздания коллективного непрерывного рабочего
-              процесса. Это передаёт основной посыл сервиса: эффективное общение&nbsp;&mdash; это
-              не&nbsp;конечный результат, а&nbsp;постоянный процесс, который требует вовлечённости
-              всех участников и&nbsp;открытости к&nbsp;новым подходам.
+              Краткая версия логотипа используется в&nbsp;айдентике как альтернатива полной версии.
+              Работает как самостоятельный знак. Применяется, если не&nbsp;хватает пространства для
+              полной версии или из&nbsp;эстетических соображений.
             </p>
           </div>
+          <M_StyleguideImageBlock
+            images={[
+              {
+                url: 'https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750751826/StyleguideImage_06_kyc3g1.svg',
+                alt: 'Пример полной версии логотипа в веб-версии',
+                objectFit: 'contain',
+              },
+            ]}
+            height={180}
+          />
         </div>
       </div>
     </section>
