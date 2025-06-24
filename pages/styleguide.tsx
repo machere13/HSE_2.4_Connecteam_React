@@ -30,8 +30,13 @@ export default function StyleguidePage() {
         />
         <M_StyleguideHeader />
         <W_StyleguideStartingPageSection />
-        <W_StyleguideSectionOne />
-        <W_StyleguideSectionTwo />
+        <div className='styleguide_columns'>
+          <p style={{ width: '360px' }}>fef</p>
+          <div className='styleguide_content_wrapper'>
+            <W_StyleguideSectionOne />
+            <W_StyleguideSectionTwo />
+          </div>
+        </div>
         <O_Footer />
       </div>
     </>

@@ -86,7 +86,7 @@
         {
           "type": "video",
           "title": "Подробнее кейс разобрали в видео формате)",
-          "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          "video": "https://res.cloudinary.com/dkmaxwe8e/video/upload/v1750748797/aj4exxcct4ohlhiwrzxv.mov"
         },
         {
           "type": "highlightedSection",
@@ -190,8 +190,8 @@
         },
         {
           "type": "image",
-          "image": "",
-          "alt": ""
+          "image": "https://res.cloudinary.com/dkmaxwe8e/image/upload/v1750736330/CaseImage_02_01_bviagu.jpg",
+          "alt": "Spotify"
         },
         {
           "type": "previewParagraph",

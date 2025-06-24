@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
 
+  min-height: 104px;
+
   padding: var(--spacing-30);
 
   background: var(--color-main-white);

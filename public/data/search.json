@@ -5,33 +5,198 @@
     "url": "/articles/team-gamification"
   },
   {
+    "title": "Психология мотивации в команде",
+    "description": "Когда «спасибо» спасает дедлайны",
+    "url": "/articles/team-motivation-psychology"
+  },
+  {
+    "title": "Обратная связь: культура конструктивных бесед",
+    "description": "Как создавать поддерживающую атмосферу обратной связи",
+    "url": "/articles/constructive-feedback"
+  },
+  {
+    "title": "Роль доверия в построении IT-команд",
+    "description": "Что делать, когда говорят про команду: «у нас всё прозрачно»",
+    "url": "/articles/trust-in-it-teams"
+  },
+  {
+    "title": "Лучшее взаимодействие дизайна-разработки от Аарона Уолтера",
+    "description": "Узнали все секреты Аарона Уолтера из InVision Studio",
+    "url": "/articles/design-dev-collaboration"
+  },
+  {
+    "title": "А есть волшебная таблетка?",
+    "description": "Трактат о смыслах и законах командной работы",
+    "url": "/articles/magic-solution"
+  },
+  {
+    "title": "Инструменты для диагностики вашей команды",
+    "description": "Рассказали про разные виды тестирования эффективности команды и почему тебе это нужно",
+    "url": "/articles/team-diagnostics-tools"
+  },
+  {
+    "title": "Сюжетно-ролевой тимбилдинг",
+    "description": "Что это такое и зачем оно команде. Актёрское образование не требуется",
+    "url": "/articles/roleplay-team-building"
+  },
+  {
+    "title": "Виды созвонов",
+    "description": "«Опять созвон?!»: вводим в курс про абсолютно все типы созвонов",
+    "url": "/articles/effective-meetings"
+  },
+  {
+    "title": "Эффективное взаимодействие инженерной и продуктовой команд",
+    "description": "Когда продукт — это космос, а инженер — Земля: миссия «понимай друг друга»",
+    "url": "/articles/engineering-product-teams"
+  },
+  {
+    "title": "Ежедневные стендап встречи",
+    "description": "В чём поинт и зачем нарушать правила?",
+    "url": "/articles/daily-standups"
+  },
+  {
     "title": "Дружба с коллегой",
     "description": "«Сделай по-братски» или как работа может вас поссорить",
     "url": "/articles/colleague-friendship"
   },
   {
+    "title": "Технический жаргон",
+    "description": "Извините за мой французский: как говорить с командой на понятном языке?",
+    "url": "/articles/technical-jargon"
+  },
+  {
+    "title": "Совместная работа разработчиков",
+    "description": "Как не допустить ситуацию: «круто, div \"blabla\"»",
+    "url": "/articles/joint-developers-work"
+  },
+  {
+    "title": "Эффективная коммуникация между QA и разработчиками",
+    "description": "От багов к доверию",
+    "url": "/articles/qa-dev-communication"
+  },
+  {
+    "title": "Шаблон решения проблем для IT-команд",
+    "description": "Тебе, подгон) Рассказываем от первопричины до решения",
+    "url": "/articles/it-templates"
+  },
+  {
+    "title": "Холодная война между отделами",
+    "description": "Как не допустить и предотвратить начало баттла",
+    "url": "/articles/cold-war"
+  },
+  {
+    "title": "Профессия медиатора",
+    "description": "Медиатор, для гитары который?",
+    "url": "/articles/mediator"
+  },
+  {
+    "title": "Оптимизация коммуникаций в Scrum-командах",
+    "description": "Испорченный телефон с 1000 участников",
+    "url": "/articles/scrum-optimization"
+  },
+  {
+    "title": "Такие знакомые конфликты в команде",
+    "description": "Почему меня не слушают и что делать в таком случае?",
+    "url": "/articles/team-conflicts"
+  },
+  {
+    "title": "Работа в большой корпорации — это ...",
+    "description": "Особенности работы в большом коллективе, о которых молчат",
+    "url": "/articles/big-corporation-work"
+  },
+  {
     "title": "Общение с командой при горящих дедлайнах",
     "description": "Джингл белс нервной системы",
-    "url": "/articles/team-psychology-motivation"
+    "url": "/articles/team-communication-deadlines"
   },
   {
-    "title": "testing filter 'Организация'",
-    "description": "testing filter 'Организация'",
-    "url": "/articles/testing-filter-organization"
+    "title": "Опасности «чрезмерной дружбы» на работе",
+    "description": "Передружба-недоработа",
+    "url": "/articles/over-friendship-at-work"
   },
   {
-    "title": "testing filter 'Личный конфликт'",
-    "description": "testing filter 'Личный конфликт'",
-    "url": "/articles/testing-filter-conflict"
+    "title": "Знакомство новеньких с коллективом",
+    "description": "Как предотвратить раскол между «старожилами» и «новичками»",
+    "url": "/articles/new-team-integration"
   },
   {
-    "title": "Ребрендинг «Яндекс Музыки»",
-    "description": "Ребрендинг «Яндекс Музыки»",
-    "url": "/cases/yandex-music-rebranding"
+    "title": "Кто ты такой? Сплочение нового коллектива",
+    "description": "Лайфхаки и советы по дружной атмосфере в команде",
+    "url": "/articles/startup-team-dynamics"
   },
   {
-    "title": "testing filter 'Личный конфликт'",
-    "description": "testing filter 'Личный конфликт'",
-    "url": "/cases/testing-filter-management"
-  }
+    "title": "Конфликт в команде",
+    "description": "Пути решения назойливой проблемы",
+    "url": "/articles/team-conflict-resolution"
+  },
+  {
+    "title": "Как поднять мотивацию в команде",
+    "description": "Что делать, если денег на мотивацию нет, но хочется, чтобы команда работала лучше",
+    "url": "/articles/team-motivation-without-budget"
+  },
+  {
+    "title": "Работа в новом коллективе",
+    "description": "Как новичку быстро влиться в команду и не чувствовать себя чужим",
+    "url": "/articles/new-team-member-integration"
+  },
+  {
+    "title": "Как спорить с коллегой",
+    "description": "Что делать, если у вас разные взгляды на задачу",
+    "url": "/articles/work-dispute-resolution"
+  },
+  {
+    "title": "Профессиональное выгорание",
+    "description": "Не в ресурсе, не в потоке, на низких вибрациях, это конец?",
+    "url": "/articles/work-dispute-resolution"
+  },
+  {
+    "title": "Общение дизайнера с кодером",
+    "description": "Как правильно давать комменты на работу друг друга",
+    "url": "/articles/designer-developer-communication"
+  },
+  {
+    "title": "Бесконечные митинги",
+    "description": "Как избежать бесконечных митингов и работать продуктивно",
+    "url": "/articles/effective-meetings"
+  },
+  {
+    "title": "Работа при потоке задач",
+    "description": "Как не потеряться, растеряться и работать эффективно",
+    "url": "/articles/task-overload-solutions"
+  },
+    {
+      "title": "Ребрендинг «Яндекс Музыки»",
+      "description": "В декабре 2023 года «Яндекс Музыка» провела первый за девять лет ребрендинг...",
+      "url": "/cases/yandex-music-rebranding"
+    },
+    {
+      "title": "Как Spotify выигрывает гонку стриминговых сервисов — взгляд изнутри команды",
+      "description": "Spotify произвел революцию в индустрии музыкальных стриминговых сервисов...",
+      "url": "/cases/spotify-streaming-race"
+    },
+    {
+      "title": "«Рука помощи» от Сбербанка: провал запуска ИИ-ассистента",
+      "description": "Когда Сбербанк решил внедрить собственного ИИ-ассистента «Рука помощи»...",
+      "url": "/cases/sberbank-ai-assistant-fail"
+    },
+    {
+      "title": "Как IBM остаются техно-гигантом больше 80 лет",
+      "description": "IBM — это не просто компания, а целая эпоха...",
+      "url": "/cases/ibm-tech-giant-80-years"
+    },
+    {
+      "title": "Фейлы ребрендингов: 5 неудачных запусков и что из этого вынесли компании",
+      "description": "Ребрендинг — это как пластическая операция: можно стать...",
+      "url": "/cases/rebranding-fails-5-cases"
+    },
+    {
+      "title": "Как Netflix избежал банкротства, когда перешёл от DVD к стримингу",
+      "description": "Когда Netflix только начинал свой путь в 1997 году, мало кто мог...",
+      "url": "/cases/netflix-dvd-to-streaming"
+    },
+    {
+      "title": "Как Slack спас свой стартап от банкротства с помощью смены стратегии",
+      "description": "Slack — это не просто мессенджер для офисных срачей, а легендарный пример того, как...",
+      "url": "/cases/slack-pivot-from-failure"
+    }
 ]
