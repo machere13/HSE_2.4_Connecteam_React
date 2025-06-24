@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 
 import { getArticles } from '@/api/getArticles'
+import M_HintScroll from '@/components/molecules/M_HintScroll/M_HintScroll'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import Q_PageLoader, { usePageLoader } from '@/components/quarks/Q_PageLoader/Q_PageLoader'
@@ -64,6 +65,7 @@ export default function ArticlesPage({ articles }: { articles: ArticleData[] }) 
         />
         <div className='header_content_gap'>
           <SO_Header />
+          <M_HintScroll />
           <T_MaterialsPageContent
             title='Статьи'
             filters={uniqueFilters}
