@@ -28,6 +28,7 @@ import M_ArticleElementItemIcon01 from '@/assets/icons/M_ArticleElementItem/M_Ar
 import M_ArticleElementItemIcon02 from '@/assets/icons/M_ArticleElementItem/M_ArticleElementItemIcon02.svg'
 import M_ArticleElementItemIcon03 from '@/assets/icons/M_ArticleElementItem/M_ArticleElementItemIcon03.svg'
 import M_ArticleElementItemIcon04 from '@/assets/icons/M_ArticleElementItem/M_ArticleElementItemIcon04.svg'
+import PageLoaderIcon from '@/assets/icons/PageLoaderIcon.svg'
 import SearchIcon from '@/assets/icons/SearchIcon.svg'
 import TelegramIcon from '@/assets/icons/TelegramIcon.svg'
 import ThunderIcon from '@/assets/icons/ThunderIcon.svg'
@@ -69,6 +70,7 @@ export type Q_IconProps = {
     | 'articleElementItemIcon02'
     | 'articleElementItemIcon03'
     | 'articleElementItemIcon04'
+    | 'pageLoaderIcon'
   width?: string
   height?: string
   fill?: string
@@ -120,6 +122,7 @@ const Q_Icon: React.FC<Q_IconProps> = ({
     articleElementItemIcon02: M_ArticleElementItemIcon02,
     articleElementItemIcon03: M_ArticleElementItemIcon03,
     articleElementItemIcon04: M_ArticleElementItemIcon04,
+    pageLoaderIcon: PageLoaderIcon,
   }
 
   const SvgIcon = icons[name]

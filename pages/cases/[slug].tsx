@@ -1,8 +1,11 @@
+import React, { useEffect } from 'react'
+
 import { useRouter } from 'next/router'
 
 import { getCases } from '@/api/getCases'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
+import Q_PageLoader, { usePageLoader } from '@/components/quarks/Q_PageLoader/Q_PageLoader'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
 import W_RecommendationsMaterials from '@/components/wrappers/W_RecommendationsMaterials/W_RecommendationsMaterials'
@@ -31,9 +34,20 @@ export const getStaticProps: GetStaticProps<{ case: CaseData }> = async ({ param
 
 export default function CasePage({ case: caseArticle }: { case: CaseData }) {
   const router = useRouter()
+  const { isLoading, stopLoading } = usePageLoader()
   let cardListIndex = 0
 
-  if (router.isFallback) return <div>Загрузка...</div>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      stopLoading()
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [stopLoading])
+
+  if (router.isFallback) {
+    return <Q_PageLoader isLoading={true} />
+  }
 
   const authorProps: M_PersonProps = {
     name: caseArticle.case.author.name,
@@ -42,20 +56,34 @@ export default function CasePage({ case: caseArticle }: { case: CaseData }) {
   }
 
   return (
-    <div className='page'>
-      <Meta
-        title={`${caseArticle.title} | Connecteam`}
-        description={caseArticle.description}
-        url={`https://connecteam.space/cases/${caseArticle.slug}`}
-        type='article'
-      />
-      <SO_Header />
-      <div className='materials_content_wrapper'>
-        <W_ArticleAboutInfo author={authorProps} />
-        {caseArticle.case.content.map((block, index) => {
-          if (block.type === 'cardList') {
-            const currentIndex = cardListIndex
-            cardListIndex++
+    <>
+      <Q_PageLoader isLoading={isLoading} />
+      <div className='page'>
+        <Meta
+          title={`${caseArticle.title} | Connecteam`}
+          description={caseArticle.description}
+          url={`https://connecteam.space/cases/${caseArticle.slug}`}
+          type='article'
+        />
+        <SO_Header />
+        <div className='materials_content_wrapper'>
+          <W_ArticleAboutInfo author={authorProps} />
+          {caseArticle.case.content.map((block, index) => {
+            if (block.type === 'cardList') {
+              const currentIndex = cardListIndex
+              cardListIndex++
+              return (
+                <MaterialBlockRenderer
+                  key={index}
+                  block={block}
+                  variant={{
+                    type: 'case',
+                    positionIndex: index,
+                  }}
+                  cardListIndex={currentIndex}
+                />
+              )
+            }
             return (
               <MaterialBlockRenderer
                 key={index}
@@ -64,36 +92,25 @@ export default function CasePage({ case: caseArticle }: { case: CaseData }) {
                   type: 'case',
                   positionIndex: index,
                 }}
-                cardListIndex={currentIndex}
               />
             )
-          }
-          return (
-            <MaterialBlockRenderer
-              key={index}
-              block={block}
-              variant={{
-                type: 'case',
-                positionIndex: index,
-              }}
-            />
-          )
-        })}
-        {caseArticle.case.comments.length > 0 && (
-          <div>
-            {caseArticle.case.comments.map((comment, index) => (
-              <div key={index}>
-                <p>{comment.comment}</p>
-                <p>{comment.author}</p>
-              </div>
-            ))}
-          </div>
-        )}
+          })}
+          {caseArticle.case.comments.length > 0 && (
+            <div>
+              {caseArticle.case.comments.map((comment, index) => (
+                <div key={index}>
+                  <p>{comment.comment}</p>
+                  <p>{comment.author}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        <W_RecommendationsMaterials />
+        <W_StickersContainer />
+        <Q_Grid variant='gray' />
+        <O_Footer />
       </div>
-      <W_RecommendationsMaterials />
-      <W_StickersContainer />
-      <Q_Grid variant='gray' />
-      <O_Footer />
-    </div>
+    </>
   )
 }

@@ -1,11 +1,13 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import { useRouter } from 'next/router'
 
 import { getArticles, getArticleBySlug } from '@/api/getArticles'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
+import Q_PageLoader, { usePageLoader } from '@/components/quarks/Q_PageLoader/Q_PageLoader'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
+import T_ErrorPage from '@/components/templates/T_ErrorPage/T_ErrorPage'
 import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
 import W_RecommendationsMaterials from '@/components/wrappers/W_RecommendationsMaterials/W_RecommendationsMaterials'
 import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
@@ -65,6 +67,7 @@ interface ArticlePageProps {
 
 export default function ArticlePage({ article, errorCode }: ArticlePageProps) {
   const router = useRouter()
+  const { isLoading, stopLoading } = usePageLoader()
 
   useEffect(() => {
     if (errorCode) {
@@ -72,8 +75,16 @@ export default function ArticlePage({ article, errorCode }: ArticlePageProps) {
     }
   }, [errorCode])
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      stopLoading()
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [stopLoading])
+
   if (router.isFallback) {
-    return <div>Загрузка...</div>
+    return <Q_PageLoader isLoading={true} />
   }
 
   if (errorCode) {
@@ -81,7 +92,7 @@ export default function ArticlePage({ article, errorCode }: ArticlePageProps) {
   }
 
   if (!article) {
-    return <div>Статья не найдена</div>
+    return <T_ErrorPage errorType='404-article' />
   }
 
   let cardListIndex = 0
@@ -93,20 +104,35 @@ export default function ArticlePage({ article, errorCode }: ArticlePageProps) {
   }
 
   return (
-    <div className='page'>
-      <Meta
-        title={`${article.title} | Connecteam`}
-        description={article.description}
-        url={`https://connecteam.space/articles/${article.slug}`}
-        type='article'
-      />
-      <SO_Header />
-      <div className='materials_content_wrapper'>
-        <W_ArticleAboutInfo author={authorProps} />
-        {article.article.content.map((block, index) => {
-          if (block.type === 'cardList') {
-            const currentIndex = cardListIndex
-            cardListIndex++
+    <>
+      <Q_PageLoader isLoading={isLoading} />
+      <div className='page'>
+        <Meta
+          title={`${article.title} | Connecteam`}
+          description={article.description}
+          url={`https://connecteam.space/articles/${article.slug}`}
+          type='article'
+        />
+        <SO_Header />
+        <div className='materials_content_wrapper'>
+          <W_ArticleAboutInfo author={authorProps} />
+          {article.article.content.map((block, index) => {
+            if (block.type === 'cardList') {
+              const currentIndex = cardListIndex
+              cardListIndex++
+              return (
+                <MaterialBlockRenderer
+                  key={index}
+                  block={block}
+                  variant={{
+                    type: 'article',
+                    articleType: article.article.type as 'big' | 'short' | 'superShort',
+                    positionIndex: index,
+                  }}
+                  cardListIndex={currentIndex}
+                />
+              )
+            }
             return (
               <MaterialBlockRenderer
                 key={index}
@@ -116,35 +142,23 @@ export default function ArticlePage({ article, errorCode }: ArticlePageProps) {
                   articleType: article.article.type as 'big' | 'short' | 'superShort',
                   positionIndex: index,
                 }}
-                cardListIndex={currentIndex}
               />
             )
-          }
-          return (
-            <MaterialBlockRenderer
-              key={index}
-              block={block}
-              variant={{
-                type: 'article',
-                articleType: article.article.type as 'big' | 'short' | 'superShort',
-                positionIndex: index,
-              }}
-            />
-          )
-        })}
+          })}
 
-        {article.article.stickers && article.article.stickers.length > 0 && (
-          <div>
-            {article.article.stickers.map((sticker, index) => (
-              <span key={index}>{sticker}</span>
-            ))}
-          </div>
-        )}
+          {article.article.stickers && article.article.stickers.length > 0 && (
+            <div>
+              {article.article.stickers.map((sticker, index) => (
+                <span key={index}>{sticker}</span>
+              ))}
+            </div>
+          )}
+        </div>
+        <W_RecommendationsMaterials />
+        <W_StickersContainer />
+        <Q_Grid variant='gray' />
+        <O_Footer />
       </div>
-      <W_RecommendationsMaterials />
-      <W_StickersContainer />
-      <Q_Grid variant='gray' />
-      <O_Footer />
-    </div>
+    </>
   )
 }
