@@ -38,8 +38,11 @@ export default function C_PreviewCasesCards() {
           caseItem.cardDisplay.background.startsWith('http') ||
           caseItem.cardDisplay.background.startsWith('/')
         const backgroundStyle = isImageBackground
-          ? { backgroundImage: `url(${caseItem.cardDisplay.background})` }
-          : { backgroundColor: `var(--color-main-${caseItem.cardDisplay.background})` }
+          ? { backgroundImage: `url(${caseItem.cardDisplay.background})`, color: '#000' }
+          : {
+              backgroundColor: `var(--color-main-${caseItem.cardDisplay.background})`,
+              color: '#fff',
+            }
 
         return (
           <Link

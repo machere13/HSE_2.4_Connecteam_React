@@ -38,8 +38,11 @@ export default function C_PreviewArticlesCards() {
           article.cardDisplay.background.startsWith('http') ||
           article.cardDisplay.background.startsWith('/')
         const backgroundStyle = isImageBackground
-          ? { backgroundImage: `url(${article.cardDisplay.background})` }
-          : { backgroundColor: `var(--color-main-${article.cardDisplay.background})` }
+          ? { backgroundImage: `url(${article.cardDisplay.background})`, color: '#000' }
+          : {
+              backgroundColor: `var(--color-main-${article.cardDisplay.background})`,
+              color: '#fff',
+            }
 
         return (
           <Link
