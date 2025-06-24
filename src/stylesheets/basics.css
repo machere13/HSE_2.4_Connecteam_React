@@ -138,6 +138,14 @@ mark {
   padding: 0 var(--spacing-50);
 }
 
+.position_right{
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+  max-width: var(--max-width-item);
+}
+
 @media (max-width: 967px) {
   .materials_columns{
     display: flex;

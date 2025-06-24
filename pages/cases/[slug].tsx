@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 import { getCases } from '@/api/getCases'
+import A_DirectionButton from '@/components/atoms/A_DirectionButton/A_DirectionButton'
 import C_CaseComments from '@/components/collections/C_CaseComments/C_CaseComments'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
@@ -13,6 +14,7 @@ import W_RecommendationsMaterials from '@/components/wrappers/W_RecommendationsM
 import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
 import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
 import { Meta } from '@/lib/Meta'
+import { ROUTES } from '@/routes'
 
 import type { M_PersonProps } from '@/components/molecules/M_Person/M_Person'
 import type { CaseData } from '@/types/case'
@@ -70,6 +72,11 @@ export default function CasePage({ case: caseArticle }: { case: CaseData }) {
         <div className='materials_columns'>
           <C_CaseComments comments={caseArticle.case.comments} />
           <div className='cases_content_wrapper'>
+            <div className='position_right'>
+              <A_DirectionButton variant='orange_s' href={ROUTES.CASES.INDEX}>
+                Вернуться назад
+              </A_DirectionButton>
+            </div>
             <W_ArticleAboutInfo author={authorProps} />
             {caseArticle.case.content.map((block, index) => {
               if (block.type === 'cardList') {
