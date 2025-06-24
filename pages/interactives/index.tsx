@@ -1,5 +1,6 @@
 import { getTests } from '@/api/getTests'
 import M_InteractivesGeneratorDirectionPlate from '@/components/molecules/M_InteractivesGeneratorDirectionPlate/M_InteractivesGeneratorDirectionPlate'
+import M_InteractivesITMafiaDirectionPlate from '@/components/molecules/M_InteractivesITMafiaDirectionPlate/M_InteractivesITMafiaDirectionPlate'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
@@ -29,6 +30,7 @@ export default function InteractivesPage({ tests }: { tests: TestData[] }) {
       <Q_Grid variant='gray' />
       <div className='preview_content_wrapper'>
         <h1>Интерактивы</h1>
+        <M_InteractivesITMafiaDirectionPlate />
         <M_InteractivesGeneratorDirectionPlate />
         <W_TestCardsWithTitle tests={tests} />
       </div>
