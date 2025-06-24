@@ -25,11 +25,11 @@
 }
 
 .big {
-  width: 50%;
+  width: calc(50% - var(--spacing-30));
 }
 
 .standard {
-  width: 33.33%;
+  width: calc(33.33% - var(--spacing-30));
 }
 
 .left {
