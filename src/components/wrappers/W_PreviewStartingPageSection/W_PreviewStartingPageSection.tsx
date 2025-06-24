@@ -8,6 +8,8 @@ import M_TextPlate from '@/components/molecules/M_TextPlate/M_TextPlate'
 import O_Search from '@/components/organisms/O_Search/O_Search'
 import T_StartingPageSection from '@/components/templates/T_StartingPageSection/T_StartingPageSection'
 
+import W_PopularTags from '../W_PopularTags/W_PopularTags'
+
 import styles from './W_PreviewStartingPageSection.module.css'
 
 export default function W_PreviewStartingPageSection() {
@@ -41,6 +43,7 @@ export default function W_PreviewStartingPageSection() {
             <span>с коллегами</span>
           </h1>
           <O_Search variant='animated' />
+          <W_PopularTags />
         </div>
       </div>
       <A_Cursor cursors={firstMainPageCursors} />

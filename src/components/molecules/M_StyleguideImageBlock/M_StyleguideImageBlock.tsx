@@ -15,15 +15,24 @@ interface M_StyleguideImageBlockProps {
   images: ImageItem[]
   description?: string
   height?: number
+  maxWidth?: number | string
 }
 
 export default function M_StyleguideImageBlock({
   images,
   description,
   height = 300,
+  maxWidth,
 }: M_StyleguideImageBlockProps) {
   return (
-    <div className={styles.wrapper}>
+    <div
+      className={styles.wrapper}
+      style={
+        maxWidth
+          ? { maxWidth: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth }
+          : undefined
+      }
+    >
       <div className={styles.images_container}>
         {images.map((image, index) => (
           <div key={index} className={styles.image_wrapper} style={{ height: `${height}px` }}>

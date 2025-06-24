@@ -138,6 +138,26 @@ mark {
   padding: 0 var(--spacing-50);
 }
 
+.styleguide_columns{
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-165);
+
+  width: 100%;
+  max-width: var(--max-width-content);
+
+  padding: 0 var(--spacing-50); 
+}
+
+.styleguide_content_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-165);
+
+  width: 100%;
+  max-width: 883px;
+}
+
 .position_right{
   display: flex;
   justify-content: flex-end;

@@ -47,6 +47,7 @@ export default function W_StyleguideSectionTwo() {
           ]}
           description='Пример использования полной версии логотипа'
           height={180}
+          maxWidth='fit-content'
         />
         <div className={styles.block_wrapper}>
           <h3>Пространство</h3>
