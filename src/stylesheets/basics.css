@@ -96,6 +96,24 @@ mark {
   width: 100%;
 }
 
+.materials_columns{
+  display: grid;
+  gap: var(--spacing-35);
+
+  max-width: var(--max-width-content);
+
+  padding: 0 var(--spacing-50);
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.cases_content_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-25);
+
+}
+
 .materials_content_wrapper {
   display: flex;
   flex-direction: column;
@@ -118,4 +136,10 @@ mark {
   max-width: var(--max-width-content);
 
   padding: 0 var(--spacing-50);
+}
+
+@media (max-width: 967px) {
+  .materials_columns{
+    display: flex;
+  }
 }

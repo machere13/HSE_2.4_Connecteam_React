@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 import { getCases } from '@/api/getCases'
+import C_CaseComments from '@/components/collections/C_CaseComments/C_CaseComments'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import Q_PageLoader, { usePageLoader } from '@/components/quarks/Q_PageLoader/Q_PageLoader'
@@ -66,12 +67,26 @@ export default function CasePage({ case: caseArticle }: { case: CaseData }) {
           type='article'
         />
         <SO_Header />
-        <div className='materials_content_wrapper'>
-          <W_ArticleAboutInfo author={authorProps} />
-          {caseArticle.case.content.map((block, index) => {
-            if (block.type === 'cardList') {
-              const currentIndex = cardListIndex
-              cardListIndex++
+        <div className='materials_columns'>
+          <C_CaseComments comments={caseArticle.case.comments} />
+          <div className='cases_content_wrapper'>
+            <W_ArticleAboutInfo author={authorProps} />
+            {caseArticle.case.content.map((block, index) => {
+              if (block.type === 'cardList') {
+                const currentIndex = cardListIndex
+                cardListIndex++
+                return (
+                  <MaterialBlockRenderer
+                    key={index}
+                    block={block}
+                    variant={{
+                      type: 'case',
+                      positionIndex: index,
+                    }}
+                    cardListIndex={currentIndex}
+                  />
+                )
+              }
               return (
                 <MaterialBlockRenderer
                   key={index}
@@ -80,31 +95,10 @@ export default function CasePage({ case: caseArticle }: { case: CaseData }) {
                     type: 'case',
                     positionIndex: index,
                   }}
-                  cardListIndex={currentIndex}
                 />
               )
-            }
-            return (
-              <MaterialBlockRenderer
-                key={index}
-                block={block}
-                variant={{
-                  type: 'case',
-                  positionIndex: index,
-                }}
-              />
-            )
-          })}
-          {caseArticle.case.comments.length > 0 && (
-            <div>
-              {caseArticle.case.comments.map((comment, index) => (
-                <div key={index}>
-                  <p>{comment.comment}</p>
-                  <p>{comment.author}</p>
-                </div>
-              ))}
-            </div>
-          )}
+            })}
+          </div>
         </div>
         <W_RecommendationsMaterials />
         <W_StickersContainer />
