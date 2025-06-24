@@ -165,8 +165,42 @@ mark {
   max-width: var(--max-width-item);
 }
 
+.styleguide_section_image {
+  width: 100%;
+  max-width: 883px;
+}
+
+.styleguide_section_image svg {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+  object-fit: contain;
+}
+
 @media (max-width: 967px) {
   .materials_columns {
     display: flex;
+  }
+}
+
+@media (max-width: 1440px) {
+  .styleguide_columns {
+    padding: 0 var(--spacing-20);
+  }
+}
+
+@media (max-width: 768px) {
+  .styleguide_columns {
+    flex-direction: column;
+
+    padding: 0 var(--spacing-15);
+  }
+
+  .styleguide_columns > div:first-child {
+    width: 100% !important;
+
+    margin-bottom: var(--spacing-30);
   }
 }
