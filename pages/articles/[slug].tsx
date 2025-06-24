@@ -1,12 +1,15 @@
+import { useEffect } from 'react'
+
 import { useRouter } from 'next/router'
 
-import { getArticles } from '@/api/getArticles'
+import { getArticles, getArticleBySlug } from '@/api/getArticles'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_Grid from '@/components/quarks/Q_Grid/Q_Grid'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
 import W_ArticleAboutInfo from '@/components/wrappers/W_ArticleAboutInfo/W_ArticleAboutInfo'
 import W_RecommendationsMaterials from '@/components/wrappers/W_RecommendationsMaterials/W_RecommendationsMaterials'
 import W_StickersContainer from '@/components/wrappers/W_StickersContainer/W_StickersContainer'
+import { handleHttpError } from '@/lib/handleHttpError'
 import { MaterialBlockRenderer } from '@/lib/materialBlockRenderer'
 import { Meta } from '@/lib/Meta'
 
@@ -27,19 +30,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<{ article: ArticleData }, { slug: string }> = async ({
-  params,
-}) => {
+export const getStaticProps: GetStaticProps<
+  { article: ArticleData | null; errorCode: number | null },
+  { slug: string }
+> = async ({ params }) => {
   try {
-    const articles = await getArticles()
-    const article = articles.find(a => a.slug === params?.slug)
+    const slug = params?.slug
+    if (!slug) {
+      return { notFound: true }
+    }
 
-    if (!article) {
+    const { article, errorCode } = await getArticleBySlug(slug)
+
+    if (!article && !errorCode) {
       return { notFound: true }
     }
 
     return {
-      props: { article },
+      props: { article, errorCode },
       revalidate: 10,
     }
   } catch (error) {
@@ -51,16 +59,32 @@ export const getStaticProps: GetStaticProps<{ article: ArticleData }, { slug: st
 }
 
 interface ArticlePageProps {
-  article: ArticleData
+  article: ArticleData | null
+  errorCode: number | null
 }
 
-export default function ArticlePage({ article }: ArticlePageProps) {
+export default function ArticlePage({ article, errorCode }: ArticlePageProps) {
   const router = useRouter()
-  let cardListIndex = 0
+
+  useEffect(() => {
+    if (errorCode) {
+      handleHttpError(errorCode)
+    }
+  }, [errorCode])
 
   if (router.isFallback) {
     return <div>Загрузка...</div>
   }
+
+  if (errorCode) {
+    return null
+  }
+
+  if (!article) {
+    return <div>Статья не найдена</div>
+  }
+
+  let cardListIndex = 0
 
   const authorProps: M_PersonProps = {
     name: article.article.author.name,
