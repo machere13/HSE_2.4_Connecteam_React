@@ -42,11 +42,13 @@ module.exports = {
         lastmod: new Date().toISOString(),
         priority: page === '/' ? 1.0 : 0.9,
         changefreq: 'daily',
-      }))
+      })),
     )
 
     try {
-      const articlesResponse = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/articles`)
+      const articlesResponse = await fetch(
+        `${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/articles`,
+      )
       if (articlesResponse.ok) {
         const articles = await articlesResponse.json()
         paths.push(
@@ -55,24 +57,30 @@ module.exports = {
             lastmod: new Date(article.updatedAt || article.createdAt || Date.now()).toISOString(),
             priority: 0.7,
             changefreq: 'weekly',
-          }))
+          })),
         )
       }
 
-      const casesResponse = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/cases`)
+      const casesResponse = await fetch(
+        `${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/cases`,
+      )
       if (casesResponse.ok) {
         const cases = await casesResponse.json()
         paths.push(
           ...cases.map(caseArticle => ({
             loc: `/cases/${caseArticle.slug}`,
-            lastmod: new Date(caseArticle.updatedAt || caseArticle.createdAt || Date.now()).toISOString(),
+            lastmod: new Date(
+              caseArticle.updatedAt || caseArticle.createdAt || Date.now(),
+            ).toISOString(),
             priority: 0.7,
             changefreq: 'weekly',
-          }))
+          })),
         )
       }
 
-      const testsResponse = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/tests`)
+      const testsResponse = await fetch(
+        `${process.env.NEXT_PUBLIC_SITE_URL || 'https://connecteam.space'}/api/tests`,
+      )
       if (testsResponse.ok) {
         const tests = await testsResponse.json()
         paths.push(
@@ -81,7 +89,7 @@ module.exports = {
             lastmod: new Date(test.updatedAt || test.createdAt || Date.now()).toISOString(),
             priority: 0.6,
             changefreq: 'monthly',
-          }))
+          })),
         )
       }
     } catch (error) {

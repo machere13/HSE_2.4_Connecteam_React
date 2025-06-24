@@ -38,7 +38,7 @@
 }
 
 @media (max-width: 1024px) {
-  .wrapper{
+  .wrapper {
     font-family: var(--font-family-hauora);
     font-size: var(--font-size-headers-5);
     font-weight: var(--font-weight-headers);

@@ -20,7 +20,7 @@
 }
 
 @media (max-width: 676px) {
-  .settings{
+  .settings {
     display: flex;
     flex-direction: column;
   }
