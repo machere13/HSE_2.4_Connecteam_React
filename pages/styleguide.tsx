@@ -15,6 +15,37 @@ import W_StyleguideSectionOne from '@/components/wrappers/W_StyleguideSectionOne
 import W_StyleguideStartingPageSection from '@/components/wrappers/W_StyleguideStartingPageSection/W_StyleguideStartingPageSection'
 import { Meta } from '@/lib/Meta'
 
+const sections = [
+  {
+    id: 'section-one',
+    Component: W_StyleguideSectionOne,
+  },
+  {
+    id: 'section-two',
+    Component: W_StyleguideSectionTwoImage,
+  },
+  {
+    id: 'section-three',
+    Component: W_StyleguideSectionThreeImage,
+  },
+  {
+    id: 'section-four',
+    Component: W_StyleguideSectionFourImage,
+  },
+  {
+    id: 'section-five',
+    Component: W_StyleguideSectionFiveImage,
+  },
+  {
+    id: 'section-six',
+    Component: W_StyleguideSectionSixImage,
+  },
+  {
+    id: 'section-seven',
+    Component: W_StyleguideSectionSevenImage,
+  },
+]
+
 export default function StyleguidePage() {
   const { isLoading, stopLoading } = usePageLoader()
 
@@ -43,27 +74,15 @@ export default function StyleguidePage() {
             <M_StyleguideNavigation />
           </div>
           <div className='styleguide_content_wrapper'>
-            <div id='section-one'>
-              <W_StyleguideSectionOne />
-            </div>
-            <div id='section-two'>
-              <W_StyleguideSectionTwoImage />
-            </div>
-            <div id='section-three'>
-              <W_StyleguideSectionThreeImage />
-            </div>
-            <div id='section-four'>
-              <W_StyleguideSectionFourImage />
-            </div>
-            <div id='section-five'>
-              <W_StyleguideSectionFiveImage />
-            </div>
-            <div id='section-six'>
-              <W_StyleguideSectionSixImage />
-            </div>
-            <div id='section-seven'>
-              <W_StyleguideSectionSevenImage />
-            </div>
+            {sections.map(({ id, Component }) => (
+              <div key={id} id={id}>
+                {Component && (
+                  <div className='styleguide_section_image'>
+                    <Component />
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
         <O_Footer />

@@ -16,7 +16,6 @@ export default function MainPage() {
   const { isLoading, stopLoading } = usePageLoader()
 
   useEffect(() => {
-    // Останавливаем загрузку после монтирования компонента
     const timer = setTimeout(() => {
       stopLoading()
     }, 1000)

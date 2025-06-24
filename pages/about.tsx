@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { getQuestions } from '@/api/getQuestions'
 import C_FAQCardListItems from '@/components/collections/C_FAQCardListItems/C_FAQCardListItems'
 import M_AboutArticlesDirectionPlate from '@/components/molecules/M_AboutArticlesDirectionPlate/M_AboutArticlesDirectionPlate'
+import M_HintScroll from '@/components/molecules/M_HintScroll/M_HintScroll'
 import O_Footer from '@/components/organisms/O_Footer/O_Footer'
 import Q_PageLoader, { usePageLoader } from '@/components/quarks/Q_PageLoader/Q_PageLoader'
 import SO_Header from '@/components/super-organisms/SO_Header/SO_Header'
@@ -40,6 +41,7 @@ export default function AboutPage({ questions }: AboutPageProps) {
           url='https://connecteam.space/about'
         />
         <SO_Header position='absolute' />
+        <M_HintScroll />
         <W_AboutStartingPageSection />
         <div className='preview_content_wrapper'>
           <W_AboutContentSection />
